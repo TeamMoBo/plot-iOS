@@ -14,8 +14,8 @@
 
 ### Todo 
 
-* SignInView 
-* SignUp
+* SignInView - [ujcheon](https://github.com/ujcheon)
+* SignUp - [ujcheon](https://github.com/ujcheon)
 * CustomPopupView
 * Chatting View
 * Horizontal CollectionView
@@ -46,14 +46,22 @@
 
 
 
+---
+
+### co-workers
+
+### [ujcheon](https://github.com/ujcheon)
+
+
+
+---
+
 ### references
 
 [iOS 채팅 구현](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
 
 
 
-### co-workers
+---
 
-
-
-ffffx
+### Issues
