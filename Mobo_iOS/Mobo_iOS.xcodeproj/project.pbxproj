@@ -37,6 +37,9 @@
 		EAE23E6E23B13EDA007615CD /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6D23B13EDA007615CD /* SignInService.swift */; };
 		EAE23E7023B13F28007615CD /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6F23B13F28007615CD /* SignUpService.swift */; };
 		EAE23E7223B14B96007615CD /* StartHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE23E7123B14B96007615CD /* StartHome.storyboard */; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		EAE23E6D23B13EDA007615CD /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		EAE23E6F23B13F28007615CD /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		EAE23E7123B14B96007615CD /* StartHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartHome.storyboard; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /* End PBXFileReference section */
 
@@ -150,7 +156,10 @@
 			isa = PBXGroup;
 			children = (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 				EAE23E6623B13D75007615CD /* Sign */,
 				390BD68523B08AEF00FF7E68 /* Model */,
 >>>>>>> Stashed changes
@@ -172,6 +181,9 @@
 				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
 				EAE23E5F23B13241007615CD /* SignInStoryboard.storyboard */,
 				EAE23E7123B14B96007615CD /* StartHome.storyboard */,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			);
 			path = Storyboards;
@@ -317,6 +329,9 @@
 =======
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				EAE23E7223B14B96007615CD /* StartHome.storyboard in Resources */,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
@@ -333,7 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 				EAE23E6523B132B4007615CD /* SignUpViewController.swift in Sources */,
 				390BD68723B08AF800FF7E68 /* Movie.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
@@ -345,6 +363,9 @@
 =======
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				EAE23E6E23B13EDA007615CD /* SignInService.swift in Sources */,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
@@ -359,12 +380,18 @@
 				EAE23E6823B13DE4007615CD /* APIService.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
 				EAE23E6A23B13E0B007615CD /* APIConstants.swift in Sources */,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
 				EA740D8C23B06C4700D9E9BC /* SignInViewController.swift in Sources */,
 				398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 				EAE23E6C23B13E9F007615CD /* ResponseString.swift in Sources */,
 				39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */,
 >>>>>>> Stashed changes
