@@ -11,7 +11,6 @@ import UIKit
 class MovieTabOneViewController: UIViewController {
     
     @IBOutlet weak var movieCollectionView: UICollectionView!
-    
     @IBOutlet weak var title1: UILabel!
     @IBOutlet var button1: UIButton!
     
@@ -42,8 +41,10 @@ class MovieTabOneViewController: UIViewController {
         
         
         self.title1.text = "예매율TOP 10"
+        self.button1.setTitle("다 골랐어~", for: .normal)
         self.button1.backgroundColor = .mainOragne
         self.button1.tintColor = .white
+        
         
         setMovieListCollectionView()
        
@@ -63,6 +64,19 @@ class MovieTabOneViewController: UIViewController {
     }
     
         
+    
+    @IBAction func PickFinishBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
+                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+                self.show(vc, sender: nil)
+        
+                //self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
+        
+    }
+    
     
     func getMovieList(orderType: String) {
         

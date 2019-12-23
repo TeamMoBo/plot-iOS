@@ -1,25 +1,29 @@
 PODS:
   - AutoInsetter (1.8.0)
+  - lottie-ios (3.1.5)
   - Pageboy (3.5.0)
   - Tabman (2.6.3):
     - AutoInsetter (~> 1.8.0)
     - Pageboy (~> 3.5.0)
 
 DEPENDENCIES:
+  - lottie-ios
   - Pageboy (~> 3.2)
   - Tabman (~> 2.6)
 
 SPEC REPOS:
   trunk:
     - AutoInsetter
+    - lottie-ios
     - Pageboy
     - Tabman
 
 SPEC CHECKSUMS:
   AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   Pageboy: 3794c578aae5fcce06e90b3ed4a0ad6b807d75bb
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
 
-PODFILE CHECKSUM: 81f4d11296bedef27a111629a3f40491c4c877d1
+PODFILE CHECKSUM: 0a3becdd79c562bdef2ffe2f389d5eb0046d6948
 
 COCOAPODS: 1.8.4

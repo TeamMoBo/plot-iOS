@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var AnimationView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startAnimation()
         // Do any additional setup after loading the view.
         
     }
 
+    func startAnimation() {
+        let animationView = Lottie.AnimationView(name:"loader")
+              
+              animationView.frame = CGRect(x:0, y:0, width:400, height:400)
+              animationView.center = self.view.center
+              animationView.contentMode = .scaleAspectFill
+              
+              AnimationView.addSubview(animationView)
+              animationView.play()
+    }
+    
 
 }
 
