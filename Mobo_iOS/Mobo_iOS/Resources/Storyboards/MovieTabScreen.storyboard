@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="dXH-Mf-vJN"/>
                     </view>
                     <navigationItem key="navigationItem" id="rpI-Cb-3PL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Qjb-x1-m33"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Qjb-x1-m33"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDF-2o-9i4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -127,6 +127,9 @@
                                 <state key="normal" title="친구 찾으러 가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="FindFriendBtn:" destination="bVC-4M-zD9" eventType="touchUpInside" id="xSG-d7-T3d"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY0-Ov-dTt">
                                 <rect key="frame" x="10" y="80" width="354" height="578"/>

@@ -13,12 +13,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
 //    }()
     
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        self.addSubview(MovieImage)
-//        self.backgroundColor = .white
-//    }
-//
     override func prepareForReuse() {
         
     }

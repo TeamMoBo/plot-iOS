@@ -16,6 +16,8 @@
 		390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68823B08B1500FF7E68 /* ServerURLs.swift */; };
 		390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68A23B08B9300FF7E68 /* DataManager.swift */; };
 		390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */; };
+		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
+		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
 		398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522B723B05F8D009C9AE3 /* AppDelegate.swift */; };
 		398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522B923B05F8D009C9AE3 /* SceneDelegate.swift */; };
 		398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522BB23B05F8D009C9AE3 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		390BD68823B08B1500FF7E68 /* ServerURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLs.swift; sourceTree = "<group>"; };
 		390BD68A23B08B9300FF7E68 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
+		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
+		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
 		398522B423B05F8D009C9AE3 /* Mobo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		398522B723B05F8D009C9AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		398522B923B05F8D009C9AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 				390BD68A23B08B9300FF7E68 /* DataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		391CEEBB23B0DD5000E4C71D /* FindFriend */ = {
+			isa = PBXGroup;
+			children = (
+				391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */,
+			);
+			path = FindFriend;
 			sourceTree = "<group>";
 		};
 		398522AB23B05F8D009C9AE3 = {
@@ -186,6 +198,7 @@
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
 				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
 				39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */,
+				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -194,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
+				391CEEBB23B0DD5000E4C71D /* FindFriend */,
 				39C84F5123B0C43F000130B4 /* MovieCollection */,
 				39C84F5023B0C422000130B4 /* MovieTimeTable */,
 				39C84F4F23B0C415000130B4 /* PopUp */,
@@ -304,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
@@ -367,6 +382,7 @@
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
+				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,

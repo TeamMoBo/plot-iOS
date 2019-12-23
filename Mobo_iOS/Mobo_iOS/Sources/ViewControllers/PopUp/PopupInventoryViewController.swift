@@ -12,9 +12,16 @@ class PopupInventoryViewController: UIViewController {
     
     @IBOutlet weak var MoveBtn: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MoveBtn.backgroundColor = .mainOragne
         
     }
+    
+    @IBAction func exitBtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
