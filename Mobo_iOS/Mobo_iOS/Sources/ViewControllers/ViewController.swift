@@ -42,6 +42,16 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func chattingAct(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
+               let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
+               vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+               
+               self.present(vc, animated: true, completion: nil)
+        
+    }
+    
     
     
 }
