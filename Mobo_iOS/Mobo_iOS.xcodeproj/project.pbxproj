@@ -19,8 +19,25 @@
 		398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D623B064DD009C9AE3 /* Extensions+UIView.swift */; };
 		398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D723B064DD009C9AE3 /* Extension+CALayer.swift */; };
 		398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D823B064DD009C9AE3 /* Extension+UITextField.swift */; };
+<<<<<<< Updated upstream
 		EA740D8A23B06BEF00D9E9BC /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */; };
 		EA740D8C23B06C4700D9E9BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */; };
+=======
+		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
+		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
+		39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */; };
+		39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */; };
+		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
+		EAE23E6023B13241007615CD /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE23E5F23B13241007615CD /* SignInStoryboard.storyboard */; };
+		EAE23E6323B132A8007615CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6223B132A8007615CD /* SignInViewController.swift */; };
+		EAE23E6523B132B4007615CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6423B132B4007615CD /* SignUpViewController.swift */; };
+		EAE23E6823B13DE4007615CD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6723B13DE4007615CD /* APIService.swift */; };
+		EAE23E6A23B13E0B007615CD /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6923B13E0B007615CD /* APIConstants.swift */; };
+		EAE23E6C23B13E9F007615CD /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6B23B13E9F007615CD /* ResponseString.swift */; };
+		EAE23E6E23B13EDA007615CD /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6D23B13EDA007615CD /* SignInService.swift */; };
+		EAE23E7023B13F28007615CD /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE23E6F23B13F28007615CD /* SignUpService.swift */; };
+		EAE23E7223B14B96007615CD /* StartHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE23E7123B14B96007615CD /* StartHome.storyboard */; };
+>>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +55,25 @@
 		398522D623B064DD009C9AE3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		398522D723B064DD009C9AE3 /* Extension+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+CALayer.swift"; sourceTree = "<group>"; };
 		398522D823B064DD009C9AE3 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+=======
+		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
+		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpScreen.storyboard; sourceTree = "<group>"; };
+		39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInventoryViewController.swift; sourceTree = "<group>"; };
+		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EAE23E5F23B13241007615CD /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
+		EAE23E6223B132A8007615CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EAE23E6423B132B4007615CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EAE23E6723B13DE4007615CD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EAE23E6923B13E0B007615CD /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		EAE23E6B23B13E9F007615CD /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		EAE23E6D23B13EDA007615CD /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		EAE23E6F23B13F28007615CD /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		EAE23E7123B14B96007615CD /* StartHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartHome.storyboard; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +149,11 @@
 		398522D123B06467009C9AE3 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
+=======
+				EAE23E6623B13D75007615CD /* Sign */,
+				390BD68523B08AEF00FF7E68 /* Model */,
+>>>>>>> Stashed changes
 				398522C323B05F8F009C9AE3 /* Assets.xcassets */,
 			);
 			path = APIServices;
@@ -125,7 +164,15 @@
 			children = (
 				398522BD23B05F8D009C9AE3 /* Main.storyboard */,
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
+<<<<<<< Updated upstream
 				EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */,
+=======
+				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
+				39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */,
+				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
+				EAE23E5F23B13241007615CD /* SignInStoryboard.storyboard */,
+				EAE23E7123B14B96007615CD /* StartHome.storyboard */,
+>>>>>>> Stashed changes
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -133,12 +180,80 @@
 		398522D323B06482009C9AE3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EAE23E6123B1327F007615CD /* Sign */,
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
 				EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
+=======
+		39C84F4F23B0C415000130B4 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		39C84F5023B0C422000130B4 /* MovieTimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
+			);
+			path = MovieTimeTable;
+			sourceTree = "<group>";
+		};
+		39C84F5123B0C43F000130B4 /* MovieCollection */ = {
+			isa = PBXGroup;
+			children = (
+				390BD67923B06ACB00FF7E68 /* MovieTabViewController.swift */,
+				390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */,
+				390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */,
+			);
+			path = MovieCollection;
+			sourceTree = "<group>";
+		};
+		98EFE733EC63355B60E93E37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAE23E6123B1327F007615CD /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				EAE23E6223B132A8007615CD /* SignInViewController.swift */,
+				EAE23E6423B132B4007615CD /* SignUpViewController.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		EAE23E6623B13D75007615CD /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				EAE23E6723B13DE4007615CD /* APIService.swift */,
+				EAE23E6923B13E0B007615CD /* APIConstants.swift */,
+				EAE23E6B23B13E9F007615CD /* ResponseString.swift */,
+				EAE23E6D23B13EDA007615CD /* SignInService.swift */,
+				EAE23E6F23B13F28007615CD /* SignUpService.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		F52E4EFEF420A286635EEC3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0264162D43B295069FF65561 /* Pods-Mobo_iOS.debug.xcconfig */,
+				47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,9 +312,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				EA740D8A23B06BEF00D9E9BC /* SignIn.storyboard in Resources */,
+=======
+				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
+				EAE23E7223B14B96007615CD /* StartHome.storyboard in Resources */,
+>>>>>>> Stashed changes
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
+				EAE23E6023B13241007615CD /* SignInStoryboard.storyboard in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,16 +332,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
+=======
+				EAE23E6523B132B4007615CD /* SignUpViewController.swift in Sources */,
+				390BD68723B08AF800FF7E68 /* Movie.swift in Sources */,
+				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
+				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
+>>>>>>> Stashed changes
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
+				EAE23E6E23B13EDA007615CD /* SignInService.swift in Sources */,
+>>>>>>> Stashed changes
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
+				EAE23E7023B13F28007615CD /* SignUpService.swift in Sources */,
+				EAE23E6323B132A8007615CD /* SignInViewController.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */,
+				EAE23E6823B13DE4007615CD /* APIService.swift in Sources */,
+				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
+				EAE23E6A23B13E0B007615CD /* APIConstants.swift in Sources */,
+>>>>>>> Stashed changes
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
 				EA740D8C23B06C4700D9E9BC /* SignInViewController.swift in Sources */,
 				398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				EAE23E6C23B13E9F007615CD /* ResponseString.swift in Sources */,
+				39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
