@@ -30,6 +30,8 @@
 		398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D823B064DD009C9AE3 /* Extension+UITextField.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
+		39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */; };
+		39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		398522D823B064DD009C9AE3 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpScreen.storyboard; sourceTree = "<group>"; };
+		39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInventoryViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +185,7 @@
 				398522BD23B05F8D009C9AE3 /* Main.storyboard */,
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
 				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
+				39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -189,12 +194,37 @@
 			isa = PBXGroup;
 			children = (
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
+				39C84F5123B0C43F000130B4 /* MovieCollection */,
+				39C84F5023B0C422000130B4 /* MovieTimeTable */,
+				39C84F4F23B0C415000130B4 /* PopUp */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39C84F4F23B0C415000130B4 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		39C84F5023B0C422000130B4 /* MovieTimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
+			);
+			path = MovieTimeTable;
+			sourceTree = "<group>";
+		};
+		39C84F5123B0C43F000130B4 /* MovieCollection */ = {
+			isa = PBXGroup;
+			children = (
 				390BD67923B06ACB00FF7E68 /* MovieTabViewController.swift */,
 				390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */,
 				390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */,
-				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
 			);
-			path = ViewControllers;
+			path = MovieCollection;
 			sourceTree = "<group>";
 		};
 		98EFE733EC63355B60E93E37 /* Frameworks */ = {
@@ -279,6 +309,7 @@
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				39C84F4C23B0BD2E000130B4 /* loader.json in Resources */,
+				39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +376,7 @@
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
+				39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
 				398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */,

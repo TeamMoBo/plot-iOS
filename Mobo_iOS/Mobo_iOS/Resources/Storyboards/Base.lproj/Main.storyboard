@@ -15,28 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SJ-2L-Y2T" customClass="LottieView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SJ-2L-Y2T" customClass="LottieView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="44" width="375" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E2-BQ-dZi">
+                                <rect key="frame" x="164" y="561" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="PopUpAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FRd-hT-Lqd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="3SJ-2L-Y2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8qg-kr-ze9"/>
-                            <constraint firstItem="3SJ-2L-Y2T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dbn-xk-bnN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3SJ-2L-Y2T" secondAttribute="trailing" id="Q7P-nb-yEe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3SJ-2L-Y2T" secondAttribute="bottom" id="sYv-l5-Ytb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="마이페이지" id="6NH-pY-LDy"/>
                     <connections>
                         <outlet property="AnimationView" destination="3SJ-2L-Y2T" id="OzP-D8-DzT"/>
+                        <outlet property="PopupBtn" destination="3E2-BQ-dZi" id="d88-zg-tuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="841"/>
+            <point key="canvasLocation" x="316" y="840.88669950738915"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="l1b-sj-4BE">
