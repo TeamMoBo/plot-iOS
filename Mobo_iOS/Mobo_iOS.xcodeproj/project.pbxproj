@@ -19,6 +19,8 @@
 		398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D623B064DD009C9AE3 /* Extensions+UIView.swift */; };
 		398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D723B064DD009C9AE3 /* Extension+CALayer.swift */; };
 		398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D823B064DD009C9AE3 /* Extension+UITextField.swift */; };
+		EA740D8A23B06BEF00D9E9BC /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */; };
+		EA740D8C23B06C4700D9E9BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		398522D623B064DD009C9AE3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		398522D723B064DD009C9AE3 /* Extension+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+CALayer.swift"; sourceTree = "<group>"; };
 		398522D823B064DD009C9AE3 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				398522BD23B05F8D009C9AE3 /* Main.storyboard */,
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
+				EA740D8923B06BEF00D9E9BC /* SignIn.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
+				EA740D8B23B06C4700D9E9BC /* SignInViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA740D8A23B06BEF00D9E9BC /* SignIn.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
@@ -212,6 +219,7 @@
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
+				EA740D8C23B06C4700D9E9BC /* SignInViewController.swift in Sources */,
 				398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
