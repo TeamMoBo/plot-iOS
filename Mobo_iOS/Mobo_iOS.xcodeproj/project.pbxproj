@@ -45,6 +45,15 @@
 		39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB23D123B20ADA00FFA95A /* ChatViewController.swift */; };
 		39FB23D423B20B7D00FFA95A /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB23D323B20B7D00FFA95A /* ChatModel.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
+		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
+		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
+		EAC8C3EC23B221BF0061AEEB /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EB23B221BF0061AEEB /* SignInService.swift */; };
+		EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */; };
+		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
+		EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F123B222590061AEEB /* NetworkResults.swift */; };
+		EAC8C3F423B2264D0061AEEB /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F323B2264D0061AEEB /* SignUpService.swift */; };
+		EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */; };
+		EAC8C3F823B228E10061AEEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +99,15 @@
 		39FB23D123B20ADA00FFA95A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		39FB23D323B20B7D00FFA95A /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
+		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EAC8C3EB23B221BF0061AEEB /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		EAC8C3EF23B222340061AEEB /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		EAC8C3F123B222590061AEEB /* NetworkResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResults.swift; sourceTree = "<group>"; };
+		EAC8C3F323B2264D0061AEEB /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpScreen.storyboard; sourceTree = "<group>"; };
+		EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +125,7 @@
 		390BD68123B08A0100FF7E68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAC8C3E723B220400061AEEB /* Sign */,
 				390BD68223B08A0500FF7E68 /* Cell */,
 				398522D323B06482009C9AE3 /* ViewControllers */,
 			);
@@ -221,6 +240,7 @@
 		398522D123B06467009C9AE3 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				EAC8C3EA23B221A80061AEEB /* Sign */,
 				390BD68523B08AEF00FF7E68 /* Model */,
 				398522C323B05F8F009C9AE3 /* Assets.xcassets */,
 			);
@@ -236,6 +256,8 @@
 				39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */,
 				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
+				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
+				EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -285,6 +307,27 @@
 				02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAC8C3E723B220400061AEEB /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */,
+				EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		EAC8C3EA23B221A80061AEEB /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				EAC8C3EB23B221BF0061AEEB /* SignInService.swift */,
+				EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */,
+				EAC8C3EF23B222340061AEEB /* APIConstants.swift */,
+				EAC8C3F123B222590061AEEB /* NetworkResults.swift */,
+				EAC8C3F323B2264D0061AEEB /* SignUpService.swift */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 		F52E4EFEF420A286635EEC3C /* Pods */ = {
@@ -356,12 +399,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */,
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
+				EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */,
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
 				39C84F4C23B0BD2E000130B4 /* loader.json in Resources */,
@@ -418,25 +463,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC8C3EC23B221BF0061AEEB /* SignInService.swift in Sources */,
 				390BD68723B08AF800FF7E68 /* Movie.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
+				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
-				39FB23D423B20B7D00FFA95A /* ChatModel.swift in Sources */,
+
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
+				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
+				EAC8C3F423B2264D0061AEEB /* SignUpService.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
+				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */,
