@@ -78,9 +78,15 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
                 
                 
                 
-           //     let imageUrl = data?.downloadURL()
+                //     let imageUrl = data?.downloadURL()
+                let values = ["userName":self.name.text!,"profileImageUrl":"","uid":Auth.auth().currentUser?.uid]
 
+                
                 Database.database().reference().child("users").child(uid!).setValue(["userName":self.name.text!,"profileImageUrl":""])
+                
+                if(err==nil){
+                    self.cancelEvent()
+                }
                 
             })
             
