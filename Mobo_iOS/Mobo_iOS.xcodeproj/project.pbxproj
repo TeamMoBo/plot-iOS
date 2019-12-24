@@ -43,6 +43,7 @@
 		39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */; };
 		39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
+		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingSignUpViewController.swift; sourceTree = "<group>"; };
 		39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPeopleViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */,
 				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
+				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
+				EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */,
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
 				39C84F4C23B0BD2E000130B4 /* loader.json in Resources */,
