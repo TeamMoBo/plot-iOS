@@ -17,9 +17,9 @@ class ChattingLoginViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUp: UIButton!
+    
     let remoteconfig = RemoteConfig.remoteConfig()
     var color : String!
     

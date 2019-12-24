@@ -13,6 +13,7 @@ class UserModel: NSObject {
     
     @objc var profileImageUrl :String?
     @objc var userName :String?
+    @objc var uid: String?
     
 
 }
