@@ -40,10 +40,6 @@ class MovieTimeTableViewController: UIViewController {
     
     func navigationSetup() { //네비게이션 투명색만들기
             
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
             self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
             self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
