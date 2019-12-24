@@ -99,7 +99,9 @@ class ChattingPeopleViewController: UIViewController, UITableViewDelegate, UITab
               func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
                   
                  let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController
+                
                   view?.destinationUid = self.array[indexPath.row].uid
+                
                   self.navigationController?.pushViewController(view!, animated: true)
               }
               
