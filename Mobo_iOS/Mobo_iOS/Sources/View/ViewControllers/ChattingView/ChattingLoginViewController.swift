@@ -67,6 +67,7 @@ class ChattingLoginViewController: UIViewController {
             if(err != nil){
                 let alret = UIAlertController(title: "에러", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
                 alret.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+                
                 self.present(alret, animated: true, completion: nil)
             }
         }
@@ -76,6 +77,7 @@ class ChattingLoginViewController: UIViewController {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatSignupVC") as! ChattingSignUpViewController
         
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
         
         

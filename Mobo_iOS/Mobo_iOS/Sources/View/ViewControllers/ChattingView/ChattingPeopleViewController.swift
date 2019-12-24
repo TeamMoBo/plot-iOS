@@ -59,6 +59,7 @@ class ChattingPeopleViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for :indexPath)
         
         let imageview = UIImageView()
+//        imageview.image = #imageLiteral(resourceName: "img1")
         cell.addSubview(imageview)
         imageview.snp.makeConstraints{(m) in
             m.centerY.equalTo(cell)
@@ -66,14 +67,14 @@ class ChattingPeopleViewController: UIViewController, UITableViewDelegate, UITab
             m.height.width.equalTo(50)
         }
         
-        URLSession.shared.dataTask(with: URL(string: array[indexPath.row].profileImageUrl!)!) { (data, response, err) in
-            
-            DispatchQueue.main.async {
-                imageview.image = UIImage(data: data!)
-                imageview.layer.cornerRadius = imageview.frame.size.width/2
-                imageview.clipsToBounds = true
-            }
-        }.resume()
+//        URLSession.shared.dataTask(with: URL(string: array[indexPath.row].profileImageUrl!)!) { (data, response, err) in
+//            
+//            DispatchQueue.main.async {
+//                imageview.image = UIImage(data: data!)
+//                imageview.layer.cornerRadius = imageview.frame.size.width/2
+//                imageview.clipsToBounds = true
+//            }
+//        }.resume()
         
         let label = UILabel()
         cell.addSubview(label)

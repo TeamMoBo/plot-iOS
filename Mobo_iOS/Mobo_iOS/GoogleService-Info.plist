@@ -31,6 +31,6 @@
 	<key>GOOGLE_APP_ID</key>
 	<string>1:931355605258:ios:67ed2a6563a4c5452e62f3</string>
 	<key>DATABASE_URL</key>
-	<string>https://chotalk-65363.firebaseio.com/people/users</string>
+	<string>https://chotalk-65363.firebaseio.com</string>
 </dict>
 </plist>
