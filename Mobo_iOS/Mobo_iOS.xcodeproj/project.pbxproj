@@ -102,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				390BD68223B08A0500FF7E68 /* Cell */,
+				398522D323B06482009C9AE3 /* ViewControllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				390BD68123B08A0100FF7E68 /* View */,
-				398522D323B06482009C9AE3 /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
