@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gxO-nF-ICm">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,65 @@
             <objects>
                 <viewController storyboardIdentifier="SignUp" id="gxO-nF-ICm" customClass="SignUpViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nf5-t6-ytL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1031"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-yW-URL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="997"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLo-gf-6jf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1075"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset12X" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-Dm-S7e">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1031"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1031" id="pWI-iZ-8QB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clF-Ij-Ode">
+                                                <rect key="frame" x="0.0" y="166" width="344" height="832"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="XBR-Dm-S7e" secondAttribute="trailing" id="5au-75-2Ji"/>
+                                            <constraint firstItem="XBR-Dm-S7e" firstAttribute="top" secondItem="tLo-gf-6jf" secondAttribute="top" id="huv-6a-Rrp"/>
+                                            <constraint firstItem="XBR-Dm-S7e" firstAttribute="leading" secondItem="tLo-gf-6jf" secondAttribute="leading" id="viB-mz-VPQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tLo-gf-6jf" firstAttribute="centerY" secondItem="W6o-yW-URL" secondAttribute="centerY" constant="39" id="0Hm-lU-SbQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="tLo-gf-6jf" secondAttribute="bottom" constant="-78" id="QOG-78-Oh9"/>
+                                    <constraint firstAttribute="trailing" secondItem="tLo-gf-6jf" secondAttribute="trailing" id="X4h-ss-Lny"/>
+                                    <constraint firstItem="tLo-gf-6jf" firstAttribute="top" secondItem="W6o-yW-URL" secondAttribute="top" id="bS7-Vt-y49"/>
+                                    <constraint firstItem="tLo-gf-6jf" firstAttribute="width" secondItem="W6o-yW-URL" secondAttribute="width" id="o0g-WN-V1S"/>
+                                    <constraint firstItem="tLo-gf-6jf" firstAttribute="leading" secondItem="W6o-yW-URL" secondAttribute="leading" id="rpp-to-i1N"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W6o-yW-URL" firstAttribute="top" secondItem="Opm-G8-WUG" secondAttribute="top" constant="-44" id="2FL-Nf-cDZ"/>
+                            <constraint firstItem="W6o-yW-URL" firstAttribute="leading" secondItem="Opm-G8-WUG" secondAttribute="leading" id="Ify-Er-qvN"/>
+                            <constraint firstItem="W6o-yW-URL" firstAttribute="trailing" secondItem="Opm-G8-WUG" secondAttribute="trailing" id="j3a-ot-iYn"/>
+                            <constraint firstItem="W6o-yW-URL" firstAttribute="bottom" secondItem="Opm-G8-WUG" secondAttribute="bottom" id="uuR-Iw-99j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Opm-G8-WUG"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1031"/>
+                    <connections>
+                        <outlet property="SignUpview" destination="clF-Ij-Ode" id="HBS-ih-8E7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac2-HL-BkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="119"/>
+            <point key="canvasLocation" x="370" y="45"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="asset12X" width="375" height="1262"/>
+    </resources>
 </document>

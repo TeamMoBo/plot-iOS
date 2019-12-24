@@ -9,13 +9,19 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    @IBOutlet weak var SignUpview: UIView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        UIView.layer.applySmoothRoundedCorner()
+    }
+   
+    }
+    override func viewDidLoad() {
+       
+    }
+
 
     /*
     // MARK: - Navigation
@@ -27,4 +33,4 @@ class SignUpViewController: UIViewController {
     }
     */
 
-}
+
