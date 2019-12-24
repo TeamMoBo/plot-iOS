@@ -14,8 +14,8 @@ class ChatModel: NSObject {
        public var comments :Dictionary<String,Comment> = [:] //채팅방의 대화내용
        
        public class Comment{
-           public var uid : String?
-           public var message : String?
+           @objc public var uid : String?
+           @objc public var message : String?
        }
 
 }

@@ -41,26 +41,35 @@ class ChatViewController: UIViewController {
     
     @objc func createRoom(){
         
+//       let createRoomInfo = [
+//            "uid":Auth.auth().currentUser?.uid,
+//            "destinationUid" : destinationUid
+//        ]
+//
+//        Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo)
+        
+       
         let createRoomInfo : Dictionary<String,Any> = [ "users" : [
-            
-                       uid!: true,
-                       destinationUid! : true
+                   uid!: true,
+                   destinationUid! :true
+                   ]
+               ]
+
+
+               if(chatRoomUid == nil){
+                   // 방 생성 코드
+                   Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo)
+               }else{
+                   let value :Dictionary<String,Any> = [
+                       "comments":[
+                           "uid" : uid!,
+                           "message" : textfield_message.text!
                        ]
                    ]
-                   
-                   if(chatRoomUid == nil){
-                   Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo)
-                   }else{
-                       let value: Dictionary<String,Any> = [
-                           "comments":[
-                               "uid" : uid!,
-                               "messaage" : textfield_message.text!
-                           ]
-                       ]
-                       Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
-                   }
+
+                   Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+               }
                
-        
     }
     
     func checkChatRoom(){
