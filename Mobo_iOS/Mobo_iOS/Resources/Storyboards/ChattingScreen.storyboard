@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By3-sB-E7P">
-                                <rect key="frame" x="313" y="748" width="46" height="30"/>
+                                <rect key="frame" x="313" y="709" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="9E9-SW-3fu"/>
                                     <constraint firstAttribute="height" constant="30" id="M1r-rr-Gkn"/>
@@ -111,7 +111,7 @@
                                 <state key="normal" title="전송"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="air-cn-DG0">
-                                <rect key="frame" x="16" y="746" width="289" height="34"/>
+                                <rect key="frame" x="16" y="707" width="289" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="QpE-xV-jZj"/>
                                     <constraint firstAttribute="width" constant="289" id="WfY-iM-uzb"/>
@@ -122,15 +122,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ocU-nV-qxa" firstAttribute="trailing" secondItem="By3-sB-E7P" secondAttribute="trailing" constant="16" id="D30-Al-DaA"/>
-                            <constraint firstAttribute="bottom" secondItem="air-cn-DG0" secondAttribute="bottom" constant="32" id="MUN-NP-OOC"/>
-                            <constraint firstItem="air-cn-DG0" firstAttribute="leading" secondItem="ocU-nV-qxa" secondAttribute="leading" constant="16" id="RA1-BP-XV7"/>
-                            <constraint firstItem="By3-sB-E7P" firstAttribute="bottom" secondItem="ocU-nV-qxa" secondAttribute="bottom" id="hGN-KO-Cwb"/>
+                            <constraint firstItem="By3-sB-E7P" firstAttribute="leading" secondItem="air-cn-DG0" secondAttribute="trailing" constant="8" id="SDI-xv-3Vj"/>
+                            <constraint firstItem="By3-sB-E7P" firstAttribute="centerY" secondItem="air-cn-DG0" secondAttribute="centerY" id="Urk-id-f6Y"/>
+                            <constraint firstItem="ocU-nV-qxa" firstAttribute="bottom" secondItem="air-cn-DG0" secondAttribute="bottom" constant="37" id="hce-99-OIn"/>
+                            <constraint firstItem="air-cn-DG0" firstAttribute="leading" secondItem="ocU-nV-qxa" secondAttribute="leading" constant="16" id="w0Z-pY-Jwe"/>
+                            <constraint firstItem="ocU-nV-qxa" firstAttribute="trailing" secondItem="By3-sB-E7P" secondAttribute="trailing" constant="16" id="yQh-EH-LED"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ocU-nV-qxa"/>
                     </view>
                     <connections>
                         <outlet property="sendButton" destination="By3-sB-E7P" id="mIi-u7-vcf"/>
+                        <outlet property="textfield_message" destination="air-cn-DG0" id="OBD-Zq-fwa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pk-rh-w4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
