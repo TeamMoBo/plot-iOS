@@ -12,6 +12,7 @@ import Firebase
 
 class ChattingSignUpViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -33,6 +34,7 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
             m.right.top.left.equalTo(self.view)
             m.height.equalTo(20)
         }
+        
         color = remoteconfig["splash_background"].stringValue
         statusBar.backgroundColor = UIColor(hex: color!)
         signup.backgroundColor = UIColor(hex: color!)
@@ -69,31 +71,100 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
     }
     
     @objc func signupEvent(){
-        Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
-            let uid = user?.user.uid
-            
-            let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
-            
-            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
-                
-                
-                
-                //     let imageUrl = data?.downloadURL()
-                let values = ["userName":self.name.text!,"profileImageUrl":"","uid":Auth.auth().currentUser?.uid]
-
-                
-                Database.database().reference().child("users").child(uid!).setValue(["userName":self.name.text!,"profileImageUrl":""])
-                
-                if(err==nil){
-                    self.cancelEvent()
-                }
-                
-            })
-            
-            
-            
-        }
+    Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
+        let uid = user?.user.uid
+        
+        let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
+        
+        Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
+                       
+                      // let imageUrl = data?.downloadURL()?.absoluteString
+                       let values = ["userName":self.name.text!,"profileImageUrl":"https://user-images.githubusercontent.com/46750574/67218949-32564e00-f462-11e9-9852-6c68178f9810.png","uid":Auth.auth().currentUser?.uid]
+                       
+                       Database.database().reference().child("users").child(uid!).setValue(values, withCompletionBlock: { (err, ref) in
+                           
+                           if(err==nil){
+                               self.cancelEvent()
+                           }
+                           
+                       })
+                       
+                   })
+                   
+                   
+                   
+               }
+               
     }
+//    @objc func signupEvent(){
+//
+//        Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
+//            let uid = user?.user.uid
+//
+//           let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
+//
+//
+//            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
+//
+//               // let imageUrl = data?.downloadURL()?.absoluteString
+//
+//                let values = ["userName":self.name.text!,"profileImageUrl":"","uid":Auth.auth().currentUser?.uid]
+//
+//                Database.database().reference().child("users").child(uid!).setValue(values, withCompletionBlock: { (err, ref) in
+//
+//                    if(err==nil){
+//                        self.cancelEvent()
+//                    }
+//
+//                })
+//
+//            })
+//
+//
+//
+//        }
+        
+        
+//        Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
+//            let uid = user?.user.uid
+//
+//            let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
+//
+//            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
+//
+//
+//               // let imageUrl = (data?.downloadURL() as AnyObject).absoluteString
+//
+////                let image = self.imageView.image?.jpegData(compressionQuality: 0.1)
+////
+////                       let imageRef = Storage.storage().reference().child("userImages").child(uid!)
+////
+////                       imageRef.putData(image!, metadata: nil, completion: {(StorageMetadata, Error) in
+////
+////                           imageRef.downloadURL(completion: { (url, err) in
+////
+////                               Database.database().reference().child("user").child(uid!).setValue(["name":self.name.text,"profileImageUrl":url?.absoluteString])
+////
+////                           })
+////                       })
+//
+//                       let values = ["userName":self.name.text!,"profileImageUrl":"","uid":Auth.auth().currentUser?.uid]
+//
+//                       Database.database().reference().child("users").child(uid!).setValue(values, withCompletionBlock: { (err, ref) in
+//
+//                           if(err==nil){
+//                               self.cancelEvent()
+//                           }
+//
+//                       })
+//
+//                   })
+//
+//
+//
+//               }
+        
+    //}
     
     
     //
