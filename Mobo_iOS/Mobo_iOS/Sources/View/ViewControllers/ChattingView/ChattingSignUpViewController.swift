@@ -17,8 +17,9 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var cancel: UIButton!
+    
     @IBOutlet weak var imageView: UIImageView!
-
+    
     
     let remoteconfig = RemoteConfig.remoteConfig()
     var color : String?
@@ -58,76 +59,99 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
         
     }
     
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//
-//        if let originalImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            self.imageView.image = originalImage
-//        }
-//
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        
+        imageView.image = (info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
+        
+        dismiss(animated: true, completion: nil)
+    }
     
     @objc func signupEvent(){
-        
-        Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {
+        Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
+            let uid = user?.user.uid
             
-            (user, error) in
+            let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
             
-           // let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
-            
-            if error != nil{
+            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
                 
-                if let ErrorCode = AuthErrorCode(rawValue: (error?._code)!) {
-                    
-                    switch ErrorCode {
-                        
-                    case AuthErrorCode.invalidEmail:
-                        self.showAlert(message: "유효하지 않은 이메일 입니다")
-                        
-                    case AuthErrorCode.emailAlreadyInUse:
-                        self.showAlert(message: "이미 가입한 회원 입니다")
-                        
-                    case AuthErrorCode.weakPassword:
-                        self.showAlert(message: "비밀번호는 6자리 이상이여야해요")
-                        
-                    default:
-                        print(ErrorCode)
-                    }
-                }
                 
-            } else{
-                print("회원가입 성공")
-                dump(user)
-            }
-        })
-        
+                
+                //let imageUrl = data?.downloadURL()
+
+//                Database.database().reference().child("users").child(uid!).setValue(["userName":self.name.text!,"profileImageUrl":imageUrl])
+                
+            })
+            
+            
+            
+        }
     }
     
     
-@objc func cancelEvent(){
+    //
+    //    @objc func signupEvent(){
+    //
+    //        Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {
+    //
+    //            (user, error) in
+    //
+    //        let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
+    //
+    //            if error != nil{
+    //
+    //                if let ErrorCode = AuthErrorCode(rawValue: (error?._code)!) {
+    //
+    //                    switch ErrorCode {
+    //
+    //                    case AuthErrorCode.invalidEmail:
+    //                        self.showAlert(message: "유효하지 않은 이메일 입니다")
+    //
+    //                    case AuthErrorCode.emailAlreadyInUse:
+    //                        self.showAlert(message: "이미 가입한 회원 입니다")
+    //
+    //                    case AuthErrorCode.weakPassword:
+    //                        self.showAlert(message: "비밀번호는 6자리 이상이여야해요")
+    //
+    //                    default:
+    //                        print(ErrorCode)
+    //                    }
+    //                }
+    //
+    //            } else{
+    //                print("회원가입 성공")
+    //                dump(user)
+    //            }
+    //        })
+    //
+    //    }
     
-    self.dismiss(animated: true, completion: nil)
-}
-
+    
+    @objc func cancelEvent(){
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func showAlert(message:String){
         let alert = UIAlertController(title: "회원가입 실패",message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default))
         self.present(alert, animated: true, completion: nil)
     }
     
-override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-}
-
-
-/*
- // MARK: - Navigation
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

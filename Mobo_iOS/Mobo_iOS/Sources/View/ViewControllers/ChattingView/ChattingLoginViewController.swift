@@ -51,7 +51,9 @@ class ChattingLoginViewController: UIViewController {
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if(user != nil){
-                let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatMainViewController") as! ChattingMainViewController
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatMainViewTabbarController") as! UITabBarController
+                
+                view.modalPresentationStyle = .fullScreen
                 self.present(view, animated: true, completion: nil)
                 
             }

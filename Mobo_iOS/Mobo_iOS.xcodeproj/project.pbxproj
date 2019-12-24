@@ -32,6 +32,7 @@
 		398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D623B064DD009C9AE3 /* Extensions+UIView.swift */; };
 		398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D723B064DD009C9AE3 /* Extension+CALayer.swift */; };
 		398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D823B064DD009C9AE3 /* Extension+UITextField.swift */; };
+		3989599E23B1D30D00340400 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989599D23B1D30D00340400 /* UserModel.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
 		39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */; };
@@ -40,7 +41,7 @@
 		39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */; };
 		39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */; };
 		39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */; };
-		39CC50A123B14BE100E24F95 /* ChattingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC50A023B14BE100E24F95 /* ChattingMainViewController.swift */; };
+		39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		398522D623B064DD009C9AE3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		398522D723B064DD009C9AE3 /* Extension+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+CALayer.swift"; sourceTree = "<group>"; };
 		398522D823B064DD009C9AE3 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		3989599D23B1D30D00340400 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 		39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingScreen.storyboard; sourceTree = "<group>"; };
 		39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingLoginViewController.swift; sourceTree = "<group>"; };
 		39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingSignUpViewController.swift; sourceTree = "<group>"; };
-		39CC50A023B14BE100E24F95 /* ChattingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingMainViewController.swift; sourceTree = "<group>"; };
+		39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPeopleViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				390BD68623B08AF800FF7E68 /* Movie.swift */,
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
 				390BD68A23B08B9300FF7E68 /* DataManager.swift */,
+				3989599D23B1D30D00340400 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 				3962D19823B12947004B11AB /* ChattingViewController.swift */,
 				39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */,
 				39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */,
-				39CC50A023B14BE100E24F95 /* ChattingMainViewController.swift */,
+				39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */,
 			);
 			path = ChattingView;
 			sourceTree = "<group>";
@@ -417,9 +420,10 @@
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
+				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
-				39CC50A123B14BE100E24F95 /* ChattingMainViewController.swift in Sources */,
+				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,

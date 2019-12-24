@@ -19,18 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>chotalk-65363.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:931355605258:ios:67ed2a6563a4c5452e62f3</string>
 	<key>DATABASE_URL</key>
-	<string>https://chotalk-65363.firebaseio.com</string>
+	<string>https://chotalk-65363.firebaseio.com/people/users</string>
 </dict>
 </plist>
