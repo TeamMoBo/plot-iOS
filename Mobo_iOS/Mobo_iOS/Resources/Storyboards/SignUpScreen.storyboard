@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign Up View Controller-->
+        <!--Sign Up First View Controller-->
         <scene sceneID="olM-tk-GIv">
             <objects>
-                <viewController storyboardIdentifier="SignUp" id="gxO-nF-ICm" customClass="SignUpViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="gxO-nF-ICm" customClass="SignUpFirstViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nf5-t6-ytL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1031"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,17 +227,19 @@
                     </view>
                     <size key="freeformSize" width="375" height="1031"/>
                     <connections>
-                        <outlet property="SignUpview" destination="clF-Ij-Ode" id="HBS-ih-8E7"/>
+                        <outlet property="SignUp" destination="clF-Ij-Ode" id="sEV-F3-Crh"/>
+                        <outlet property="background" destination="XBR-Dm-S7e" id="wbK-s7-vUk"/>
+                        <outlet property="whiteback" destination="clF-Ij-Ode" id="cpQ-HM-xXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac2-HL-BkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368.80000000000001" y="44.704433497536947"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Second View Controller-->
         <scene sceneID="avD-Zj-cbs">
             <objects>
-                <viewController id="Txu-EL-4Li" sceneMemberID="viewController">
+                <viewController id="Txu-EL-4Li" customClass="SignUpSecondViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7i-aO-Ghe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +252,7 @@
                                 <rect key="frame" x="0.0" y="166" width="344" height="646"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="기본 정보 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-hd-vw1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="추가 정보 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-hd-vw1">
                                         <rect key="frame" x="30" y="32" width="152" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -324,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="1119" y="-30"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Last View Controller-->
         <scene sceneID="R8b-lj-3md">
             <objects>
-                <viewController id="8gH-3Y-Va6" sceneMemberID="viewController">
+                <viewController id="8gH-3Y-Va6" customClass="SignUpLastViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emx-fr-u3X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
