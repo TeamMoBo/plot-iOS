@@ -9,12 +9,13 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    @IBOutlet weak var LoginImage: UIImageView!
     
     @IBOutlet weak var SignUpButton: UIButton!
     @IBAction func SignUpButton(_ sender: Any) {
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUp")
-      
-       self.present(nextVC, animated: true, completion: nil)
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUp") else { return <#default value#> }
+        
+       self.present(nextVC, animated: true)
     }
     @IBOutlet weak var Userid: UITextField!
     @IBOutlet weak var Userpwd: UITextField!
@@ -64,6 +65,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginImage.layer.cornerRadius = 10
+        LoginImage.layer.masksToBounds = true
         
     }
     
