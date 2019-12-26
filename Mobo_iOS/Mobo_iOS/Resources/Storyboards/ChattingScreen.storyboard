@@ -103,14 +103,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By3-sB-E7P">
-                                <rect key="frame" x="313" y="717" width="46" height="43"/>
+                                <rect key="frame" x="313" y="718" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="9E9-SW-3fu"/>
                                 </constraints>
                                 <state key="normal" title="전송"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="air-cn-DG0">
-                                <rect key="frame" x="16" y="719" width="289" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="air-cn-DG0">
+                                <rect key="frame" x="16" y="718" width="289" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="289" id="WfY-iM-uzb"/>
                                 </constraints>
@@ -118,7 +118,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="red-sz-AQf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="693"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyMessageCell" id="Cs5-IE-gzb" customClass="MyMessageCell" customModule="Mobo_iOS" customModuleProvider="target">
@@ -128,13 +128,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="27.666666030883789"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_blue" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-8o-haq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_blue" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-8o-haq">
                                                     <rect key="frame" x="303.33333333333331" y="-7" width="61.666666666666686" height="41.333333333333336"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-7q-him">
                                                     <rect key="frame" x="313.33333333333331" y="3" width="41.666666666666686" height="21.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -167,7 +167,7 @@
                                                         <constraint firstAttribute="height" constant="28" id="d0G-ve-xkg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_gray" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Qr-drX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_gray" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Qr-drX">
                                                     <rect key="frame" x="40" y="-7" width="61.666666666666657" height="40.666666666666664"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-fT-X2h">
@@ -214,12 +214,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="By3-sB-E7P" firstAttribute="trailing" secondItem="ux9-Cf-HNc" secondAttribute="trailingMargin" id="1xd-S4-p45"/>
-                            <constraint firstItem="By3-sB-E7P" firstAttribute="top" secondItem="red-sz-AQf" secondAttribute="bottom" constant="4" id="95Q-b2-dbw"/>
+                            <constraint firstItem="By3-sB-E7P" firstAttribute="top" secondItem="red-sz-AQf" secondAttribute="bottom" constant="8" id="95Q-b2-dbw"/>
                             <constraint firstItem="ocU-nV-qxa" firstAttribute="trailing" secondItem="red-sz-AQf" secondAttribute="trailing" id="LG4-vR-V7M"/>
                             <constraint firstItem="red-sz-AQf" firstAttribute="leading" secondItem="ux9-Cf-HNc" secondAttribute="leading" id="NNH-Hg-V0N"/>
-                            <constraint firstAttribute="bottom" secondItem="By3-sB-E7P" secondAttribute="bottom" constant="52" id="eRO-r7-ncV"/>
-                            <constraint firstItem="air-cn-DG0" firstAttribute="top" secondItem="red-sz-AQf" secondAttribute="bottom" constant="6" id="fL5-7G-yhU"/>
-                            <constraint firstItem="ocU-nV-qxa" firstAttribute="bottom" secondItem="air-cn-DG0" secondAttribute="bottom" constant="25" id="hce-99-OIn"/>
+                            <constraint firstAttribute="bottom" secondItem="By3-sB-E7P" secondAttribute="bottom" constant="64" id="VhU-GV-PyK"/>
+                            <constraint firstItem="air-cn-DG0" firstAttribute="top" secondItem="red-sz-AQf" secondAttribute="bottom" constant="8" id="fL5-7G-yhU"/>
+                            <constraint firstAttribute="bottom" secondItem="By3-sB-E7P" secondAttribute="bottom" constant="64" id="hMG-f3-BQq"/>
                             <constraint firstItem="red-sz-AQf" firstAttribute="top" secondItem="ux9-Cf-HNc" secondAttribute="top" constant="20" symbolic="YES" id="os3-Ho-6Pg"/>
                             <constraint firstItem="air-cn-DG0" firstAttribute="leading" secondItem="ocU-nV-qxa" secondAttribute="leading" constant="16" id="w0Z-pY-Jwe"/>
                             <constraint firstItem="ocU-nV-qxa" firstAttribute="trailing" secondItem="By3-sB-E7P" secondAttribute="trailing" constant="16" id="yQh-EH-LED"/>
@@ -227,7 +227,8 @@
                         <viewLayoutGuide key="safeArea" id="ocU-nV-qxa"/>
                     </view>
                     <connections>
-                        <outlet property="bottomConstraint" destination="eRO-r7-ncV" id="7FB-tV-Tq3"/>
+                        <outlet property="bottomConstraint" destination="hMG-f3-BQq" id="nZs-qI-ffR"/>
+                        <outlet property="bottomTextFieldConstraint" destination="VhU-GV-PyK" id="3V4-4M-lxT"/>
                         <outlet property="sendButton" destination="By3-sB-E7P" id="mIi-u7-vcf"/>
                         <outlet property="tableview" destination="red-sz-AQf" id="uYg-aa-UrO"/>
                         <outlet property="textfield_message" destination="air-cn-DG0" id="OBD-Zq-fwa"/>

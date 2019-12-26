@@ -50,21 +50,47 @@
             </objects>
             <point key="canvasLocation" x="316" y="840.88669950738915"/>
         </scene>
-        <!--회원가입-->
+        <!--Data Source-->
         <scene sceneID="l1b-sj-4BE">
             <objects>
-                <viewController id="TGd-qO-mc1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainHomeVC" id="TGd-qO-mc1" customClass="MainHomeViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qp-8b-QEy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-Qd-y16">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVL-Dx-N0c" customClass="iCarousel">
+                                <rect key="frame" x="35" y="100" width="306" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TGd-qO-mc1" id="f5g-7x-a0o"/>
+                                    <outlet property="delegate" destination="TGd-qO-mc1" id="dC5-6m-aEf"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6yA-Qd-y16" firstAttribute="trailing" secondItem="PHy-Eo-Myd" secondAttribute="trailing" id="dmJ-3E-1ex"/>
+                            <constraint firstAttribute="bottom" secondItem="6yA-Qd-y16" secondAttribute="bottom" id="gkP-DE-tcH"/>
+                            <constraint firstItem="6yA-Qd-y16" firstAttribute="top" secondItem="4qp-8b-QEy" secondAttribute="top" id="jEL-kK-ta7"/>
+                            <constraint firstItem="6yA-Qd-y16" firstAttribute="leading" secondItem="PHy-Eo-Myd" secondAttribute="leading" id="pjs-cw-IsY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PHy-Eo-Myd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="회원가입" id="MBf-Tk-hkJ"/>
+                    <navigationItem key="navigationItem" id="B1s-VC-CRZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="tZL-Fq-5CX"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="cjZ-a7-jy2"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="iCarouselView" destination="bVL-Dx-N0c" id="6HK-m4-iMw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wz-xs-9XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="841"/>
+            <point key="canvasLocation" x="-32.799999999999997" y="10.344827586206897"/>
         </scene>
         <!--MovieTabVC-->
         <scene sceneID="Puz-Yn-bfM">
@@ -87,14 +113,35 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TGd-qO-mc1" kind="relationship" relationship="viewControllers" id="Msh-2V-s7g"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ddF-dd-jOC"/>
                         <segue destination="8lj-9f-mTH" kind="relationship" relationship="viewControllers" id="AbU-3I-9hS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5El-79-wb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="-345"/>
+            <point key="canvasLocation" x="2010.4000000000001" y="-92.364532019704441"/>
+        </scene>
+        <!--회원가입-->
+        <scene sceneID="c0Z-3w-SLK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="68H-ev-sMK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="회원가입" id="MBf-Tk-hkJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dnj-WM-mOx">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TGd-qO-mc1" kind="relationship" relationship="rootViewController" id="41a-iH-LFX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epw-sC-SrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="10.344827586206897"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainImgBackground" width="375" height="812"/>
+    </resources>
 </document>
