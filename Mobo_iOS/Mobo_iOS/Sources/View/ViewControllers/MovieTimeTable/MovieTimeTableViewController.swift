@@ -28,7 +28,7 @@ class MovieTimeTableViewController: UIViewController {
         super.viewDidLoad()
         //navigationSetup()
         
-        FindBtn.backgroundColor = .mainOragne
+        FindBtn.backgroundColor = .mainOrange
         view.backgroundColor = UIColor.init(red: 211/255, green: 211/255, blue: 211/255, alpha: 1)
        
 //        nextView.backgroundColor = UIColor.init(red: 211/255, green: 211/255, blue: 211/255, alpha: 1)

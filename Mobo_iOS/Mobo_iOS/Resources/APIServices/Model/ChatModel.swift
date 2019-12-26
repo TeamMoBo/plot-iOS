@@ -11,7 +11,6 @@ import ObjectMapper
 
 class ChatModel: Mappable {
     
-
     
     public var users :Dictionary<String,Bool> = [:] //채팅방에 참여한 사람들
     public var comments :Dictionary<String,Comment> = [:] //채팅방의 대화내용

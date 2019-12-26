@@ -86,7 +86,7 @@ extension UIColor {
         
         
         
-        scanner.scanLocation = 1
+       // scanner.scanLocation = 1
         
         var rgbValue: UInt64 = 0
         

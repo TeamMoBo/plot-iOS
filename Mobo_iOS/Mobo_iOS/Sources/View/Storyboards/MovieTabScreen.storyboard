@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WBS-8m-okX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie Tab View Controller-->
+        <!--Movie Selection View Controller-->
         <scene sceneID="MVN-MO-d7z">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="7cP-Rg-22z" customClass="MovieTabViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieSelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7cP-Rg-22z" customClass="MovieSelectionViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zQZ-yO-BEe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,10 +86,6 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="211" height="215"/>
-                                        <connections>
-                                            <outlet property="ImageThumbnail" destination="a2x-od-yeP" id="tS1-Fu-kXB"/>
-                                            <outlet property="gradeImage" destination="YNz-J5-dHq" id="h2H-76-F23"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -104,7 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="button1" destination="AQw-rT-496" id="rIM-cN-DvQ"/>
-                        <outlet property="movieCollectionView" destination="oJP-z5-5qZ" id="Lxk-eq-C4F"/>
+                        <outlet property="movieCollectionView" destination="oJP-z5-5qZ" id="eJj-0K-Aa8"/>
                         <outlet property="title1" destination="gdc-FB-Eth" id="4Kl-Dj-cLU"/>
                     </connections>
                 </viewController>
@@ -472,25 +468,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfi-70-pEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3756" y="46.326836581709152"/>
-        </scene>
-        <!--영화선택-->
-        <scene sceneID="yME-2S-Xm8">
-            <objects>
-                <navigationController storyboardIdentifier="MovieTabVC" automaticallyAdjustsScrollViewInsets="NO" id="WBS-8m-okX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="영화선택" id="fuK-vk-BCr"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L6t-Ea-l76">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="7cP-Rg-22z" kind="relationship" relationship="rootViewController" id="E2o-Zh-WAH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rBS-bk-jvv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1058.4000000000001" y="47.226386806596707"/>
         </scene>
     </scenes>
 </document>
