@@ -2,11 +2,15 @@
 
 ---
 
-### Movie Matching Service 
+### Movie Matching Service && Workflow
 
 영화 같이 볼 친구 찾기 어플리케이션
 
 
+
+---
+
+### screenshots
 
 
 
@@ -16,7 +20,7 @@
 
 * SignInView - [ujcheon](https://github.com/ujcheon)
 * SignUp - [ujcheon](https://github.com/ujcheon)
-* CustomPopupView
+* CustomPopupView - [ujcheon](https://github.com/ujcheon)
 * Chatting View
 * Horizontal CollectionView
 * Rating, Star
@@ -27,22 +31,29 @@
 * Color, Font, Image Extensions
 * GradientView
 * ProgressBar
-* SlideButton
 * 통신
 
 ---
 
-### Using Library
+### 개발 환경 및 Using Library
 
 * Alamofire
 * FloatRatingView
 * SwiftGif
 * Lottie
 * Tabman
+* Firebase/Analytics
+* Firebase/RemoteConfig
+* SnapKit
+* TextFieldEffects
+* Firebase/Database
+* Firebase/Auth
+* Firebase/Storage
+* ObjectMapper
 
 ---
 
-### screenshots
+### 기능 소개
 
 
 
@@ -52,7 +63,7 @@
 
 ### [ujcheon](https://github.com/ujcheon)
 
-
+[chokyungjin](https://github.com/chokyungjin)
 
 ---
 
@@ -64,4 +75,6 @@
 
 ---
 
-### Issues
+### Issues && Report 
+
+* Merge , Branch, Checkout 
