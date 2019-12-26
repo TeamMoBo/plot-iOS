@@ -23,6 +23,9 @@ class SignInViewController: UIViewController {
     @IBAction func SignInButton(_ sender: Any) {
         
     }
+    @IBOutlet weak var Useridview: UIView!
+    @IBOutlet weak var Userpwdview: UIView!
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
@@ -34,6 +37,11 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         LoginImage.layer.cornerRadius = 10
         LoginImage.layer.masksToBounds = true
+        Useridview.layer.cornerRadius = 10
+        Userpwdview.layer.cornerRadius = 10
+        
+        Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero , opacity: 1, radius: 3)
+        Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero, opacity: 1, radius: 3)
         
     }
     

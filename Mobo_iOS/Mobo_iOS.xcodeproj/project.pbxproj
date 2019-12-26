@@ -493,6 +493,7 @@
 				39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
+				EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */,
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
