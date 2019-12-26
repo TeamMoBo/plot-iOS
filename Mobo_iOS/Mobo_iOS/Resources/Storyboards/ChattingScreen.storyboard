@@ -162,12 +162,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-fT-X2h">
-                                                    <rect key="frame" x="50" y="3" width="41.666666666666657" height="21.666666666666668"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIR-UV-Z1x">
                                                     <rect key="frame" x="11" y="4" width="28" height="28"/>
                                                     <constraints>
@@ -175,15 +169,21 @@
                                                         <constraint firstAttribute="height" constant="28" id="d0G-ve-xkg"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_gray" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Qr-drX">
+                                                    <rect key="frame" x="40" y="-7" width="61.666666666666657" height="41.666666666666664"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-fT-X2h">
+                                                    <rect key="frame" x="50" y="3" width="41.666666666666657" height="21.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-MB-a4s">
                                                     <rect key="frame" x="11.999999999999998" y="20" width="26.333333333333329" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_gray" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Qr-drX">
-                                                    <rect key="frame" x="40" y="-7" width="61.666666666666657" height="41.666666666666664"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MIR-UV-Z1x" firstAttribute="leading" secondItem="KmL-9d-7Bc" secondAttribute="leading" constant="11" id="59I-Pn-ccG"/>
@@ -200,6 +200,11 @@
                                                 <constraint firstItem="S2t-Qr-drX" firstAttribute="trailing" secondItem="vzC-fT-X2h" secondAttribute="trailing" constant="10" id="z0P-yB-mj6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageview_profile" destination="MIR-UV-Z1x" id="3qf-sj-LGV"/>
+                                            <outlet property="label_message" destination="vzC-fT-X2h" id="6My-x6-gVe"/>
+                                            <outlet property="label_name" destination="ujb-MB-a4s" id="l3m-np-fdl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
