@@ -17,6 +17,10 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var textfield_message: UITextField!
     
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    
     public var destinationUid :String? // 나중에 내가 채팅할 대상의 uid
     
     var uid : String?
@@ -31,15 +35,66 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         uid = Auth.auth().currentUser?.uid
         sendButton.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
         checkChatRoom()
+        self.tabBarController?.tabBar.isHidden = true
+        let tap :UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+              view.addGestureRecognizer(tap)
         
         // Do any additional setup after loading the view.
     }
+    
+   override func viewWillAppear(_ animated: Bool) {
+           
+           
+           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:  UIResponder.keyboardWillShowNotification, object: nil)
+           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+       }
+       
+       
+       //종료
+       override func viewWillDisappear(_ animated: Bool) {
+           NotificationCenter.default.removeObserver(self)
+           self.tabBarController?.tabBar.isHidden = false
+       }
+    
+    @objc func keyboardWillShow(notification : Notification){
+           
+        if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+               
+               self.bottomConstraint.constant = keyboardSize.height
+           }
+           
+           UIView.animate(withDuration: 0, animations: {
+               self.view.layoutIfNeeded()
+           }, completion: {
+               (complete) in
+               
+               if self.comments.count > 0{
+                self.tableview.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableView.ScrollPosition.bottom, animated: true)
+               
+               }
+               
+               
+           })
+       }
+    @objc func keyboardWillHide(notification:Notification){
+           
+           self.bottomConstraint.constant = 20
+           self.view.layoutIfNeeded()
+           
+       }
+       
+    @objc func dismissKeyboard(){
+           
+           self.view.endEditing(true)
+       }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
@@ -49,16 +104,23 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         if(self.comments[indexPath.row].uid == uid){
             let view = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell", for: indexPath) as! MyMessageCell
+            
+            view.selectionStyle = .none
+            
             view.label_message.text = self.comments[indexPath.row].message
-            view.label_message.numberOfLines = 0
+            
+            view.label_message.numberOfLines = .bitWidth
             return view
             
         }else{
             
             let view = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
+            
+            view.selectionStyle = .none
+
             view.label_name.text = userModel?.userName
             view.label_message.text = self.comments[indexPath.row].message
-            view.label_message.numberOfLines = 0;
+            view.label_message.numberOfLines = .bitWidth
             
             let url = URL(string:(self.userModel?.profileImageUrl)!)
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, err) in
@@ -118,7 +180,10 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                            "message" : textfield_message.text!
                    ]
                    
-                   Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+//                   Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+                Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value, withCompletionBlock: { (err, ref) in
+                self.textfield_message.text = ""
+                })
                }
     }
     
