@@ -31,12 +31,18 @@ class ChattingPeopleViewController: UIViewController, UITableViewDelegate, UITab
                 
                 
                 self.array.removeAll()
-                
+                let myUid = Auth.auth().currentUser?.uid
+
                 for child in snapshot.children{
                     let fchild = child as! DataSnapshot
                     let userModel = UserModel()
                     
                     userModel.setValuesForKeys(fchild.value as! [String : Any])
+                    
+                    if(userModel.uid == myUid){
+                        continue
+                    }
+                    
                     self.array.append(userModel)
                     
                 }
