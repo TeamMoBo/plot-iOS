@@ -47,13 +47,13 @@
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
-		EAC8C3EC23B221BF0061AEEB /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EB23B221BF0061AEEB /* SignInService.swift */; };
 		EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */; };
 		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
 		EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F123B222590061AEEB /* NetworkResults.swift */; };
-		EAC8C3F423B2264D0061AEEB /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F323B2264D0061AEEB /* SignUpService.swift */; };
 		EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */; };
-		EAC8C3F823B228E10061AEEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */; };
+		EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */; };
+		EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */; };
+		EAC8C3FE23B3250E0061AEEB /* SignUpLastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3FD23B3250D0061AEEB /* SignUpLastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,13 +101,13 @@
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		EAC8C3EB23B221BF0061AEEB /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		EAC8C3EF23B222340061AEEB /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		EAC8C3F123B222590061AEEB /* NetworkResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResults.swift; sourceTree = "<group>"; };
-		EAC8C3F323B2264D0061AEEB /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpScreen.storyboard; sourceTree = "<group>"; };
-		EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
+		EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
+		EAC8C3FD23B3250D0061AEEB /* SignUpLastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */,
-				EAC8C3F723B228E10061AEEB /* SignUpViewController.swift */,
+				EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */,
+				EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */,
+				EAC8C3FD23B3250D0061AEEB /* SignUpLastViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -321,11 +323,9 @@
 		EAC8C3EA23B221A80061AEEB /* Sign */ = {
 			isa = PBXGroup;
 			children = (
-				EAC8C3EB23B221BF0061AEEB /* SignInService.swift */,
 				EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */,
 				EAC8C3EF23B222340061AEEB /* APIConstants.swift */,
 				EAC8C3F123B222590061AEEB /* NetworkResults.swift */,
-				EAC8C3F323B2264D0061AEEB /* SignUpService.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -463,8 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC8C3EC23B221BF0061AEEB /* SignInService.swift in Sources */,
 				390BD68723B08AF800FF7E68 /* Movie.swift in Sources */,
+				EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */,
+				EAC8C3FE23B3250E0061AEEB /* SignUpLastViewController.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
@@ -473,8 +474,13 @@
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
+<<<<<<< HEAD
+				EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */,
+=======
 
+>>>>>>> 5d85880858d6104afe3244673574fe852fba1373
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
+				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
@@ -484,7 +490,6 @@
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
-				EAC8C3F423B2264D0061AEEB /* SignUpService.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
