@@ -14,7 +14,8 @@ class ChattingPeopleViewController: UIViewController, UITableViewDelegate, UITab
     var tableview : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+            
         tableview = UITableView()
         tableview.delegate = self
         tableview.dataSource = self
