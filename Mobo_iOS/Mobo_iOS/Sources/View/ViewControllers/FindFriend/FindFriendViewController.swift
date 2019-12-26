@@ -30,7 +30,7 @@ class FindFriendViewController: UIViewController {
         profileView.layer.shadowOffset = CGSize(width: 1, height: 1)
         
         ticketView.layer.cornerRadius = 10
-        ticketView.backgroundColor = .mainOragne
+        ticketView.backgroundColor = .mainOrange
         
     }
         

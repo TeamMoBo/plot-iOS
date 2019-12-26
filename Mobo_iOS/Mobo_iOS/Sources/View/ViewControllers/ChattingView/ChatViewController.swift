@@ -131,7 +131,10 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             view.label_message.text = self.comments[indexPath.row].message
             view.label_message.numberOfLines = 1
             
-            let url = URL(string:(self.userModel?.profileImageUrl)!)
+             let url = URL(string:("https://user-images.githubusercontent.com/46750574/67218949-32564e00-f462-11e9-9852-6c68178f9810.png"))
+            
+           // let url = URL(string:(self.userModel?.profileImageUrl)!)
+            
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, err) in
                 
                 DispatchQueue.main.async {

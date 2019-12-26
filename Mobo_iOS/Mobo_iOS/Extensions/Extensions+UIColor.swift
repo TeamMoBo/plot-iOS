@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
 
-  @nonobjc class var mainOragne: UIColor {
+  @nonobjc class var mainOrange: UIColor {
     return UIColor(red: 249.0/255.0, green: 107.0 / 255.0, blue: 11.0 / 255.0, alpha: 1.0)
   }
 
@@ -21,7 +21,16 @@ extension UIColor {
   @nonobjc class var subWhite: UIColor {
     return UIColor(red: 255.0 / 255.0, green: 126.0 / 255.0, blue: 39.0/255.0, alpha: 1.0)
      }
+    @nonobjc class var groundColor: UIColor {
+    return UIColor(red: 247 / 255.0, green: 247 / 255.0, blue: 247/255.0, alpha: 1.0)
+     }
+    
+    @nonobjc class var subOrange: UIColor {
+       return UIColor(red: 251.0 / 255.0, green: 106.0 / 255.0, blue: 26.0/255.0, alpha: 1.0)
+        }
+    
   
+
 
 }
 

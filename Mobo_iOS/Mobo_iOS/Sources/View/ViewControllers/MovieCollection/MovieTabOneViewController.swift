@@ -42,7 +42,7 @@ class MovieTabOneViewController: UIViewController {
         
         self.title1.text = "예매율TOP 10"
         self.button1.setTitle("다 골랐어~", for: .normal)
-        self.button1.backgroundColor = .mainOragne
+        self.button1.backgroundColor = .mainOrange
         self.button1.tintColor = .white
         
         

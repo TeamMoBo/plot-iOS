@@ -15,7 +15,7 @@ class PopupInventoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MoveBtn.backgroundColor = .mainOragne
+        MoveBtn.backgroundColor = .mainOrange
         
     }
     

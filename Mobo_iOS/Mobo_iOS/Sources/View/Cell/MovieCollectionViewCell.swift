@@ -5,15 +5,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ImageThumbnail: UIImageView!
     @IBOutlet weak var gradeImage: UIImageView!
     
-
-//    var MovieImage: UIImageView = {
-//        let MovieImage = UIImageView()
-//        MovieImage.image = #imageLiteral(resourceName: "img_placeholder").withRenderingMode(.alwaysOriginal)
-//        return MovieImage
-//    }()
-    
-    
-    override func prepareForReuse() {
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        ImageThumbnail.makeRounded(cornerRadius: 10)
     }
+    
 }
