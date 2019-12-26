@@ -489,11 +489,7 @@
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
-<<<<<<< HEAD
-				EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */,
-=======
 
->>>>>>> 5d85880858d6104afe3244673574fe852fba1373
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
