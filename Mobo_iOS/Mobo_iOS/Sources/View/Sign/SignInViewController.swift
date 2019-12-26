@@ -13,7 +13,7 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var SignUpButton: UIButton!
     @IBAction func SignUpButton(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUp") as?SignUpFirstViewController else { return }
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUp") as! SignUpFirstViewController
         
         self.present(nextVC, animated: true)
         
@@ -21,8 +21,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var Userid: UITextField!
     @IBOutlet weak var Userpwd: UITextField!
     @IBAction func SignInButton(_ sender: Any) {
-            
-        }
+        
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
@@ -40,5 +40,5 @@ class SignInViewController: UIViewController {
     
     
     
-
+    
 }
