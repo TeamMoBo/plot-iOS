@@ -13,13 +13,12 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     @IBOutlet weak var tableview: UITableView!
-    
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var textfield_message: UITextField!
     
-    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var bottomTextFieldConstraint: NSLayoutConstraint!
     
     public var destinationUid :String? // 나중에 내가 채팅할 대상의 uid
     
@@ -61,10 +60,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
                
                self.bottomConstraint.constant = keyboardSize.height
-           }
+            self.bottomTextFieldConstraint.constant = keyboardSize.height
+
+        }
            
            UIView.animate(withDuration: 0, animations: {
                self.view.layoutIfNeeded()
+            
            }, completion: {
                (complete) in
                
@@ -78,7 +80,9 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        }
     @objc func keyboardWillHide(notification:Notification){
            
-           self.bottomConstraint.constant = 20
+           self.bottomConstraint.constant = 64
+            self.bottomTextFieldConstraint.constant = 64
+
            self.view.layoutIfNeeded()
            
        }
@@ -87,6 +91,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
            
            self.view.endEditing(true)
        }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        //return 버튼 누르면 키보드 내려갈수있게 설정.
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,7 +118,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             view.label_message.text = self.comments[indexPath.row].message
             
-            view.label_message.numberOfLines = .bitWidth
+            view.label_message.numberOfLines = 1
             return view
             
         }else{
@@ -120,7 +129,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
             view.label_name.text = userModel?.userName
             view.label_message.text = self.comments[indexPath.row].message
-            view.label_message.numberOfLines = .bitWidth
+            view.label_message.numberOfLines = 1
             
             let url = URL(string:(self.userModel?.profileImageUrl)!)
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, err) in
@@ -145,8 +154,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return UITableView.automaticDimension
+        
     }
+    
     
     @objc func createRoom(){
         

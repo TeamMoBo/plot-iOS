@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67923B06ACB00FF7E68 /* MovieTabViewController.swift */; };
 		390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */; };
 		390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */; };
 		390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */; };
@@ -18,6 +17,7 @@
 		390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */; };
 		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
 		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
+		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
 		398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522B723B05F8D009C9AE3 /* AppDelegate.swift */; };
@@ -33,6 +33,8 @@
 		398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D723B064DD009C9AE3 /* Extension+CALayer.swift */; };
 		398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522D823B064DD009C9AE3 /* Extension+UITextField.swift */; };
 		3989599E23B1D30D00340400 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989599D23B1D30D00340400 /* UserModel.swift */; };
+		39B67B8C23B4947000B745B6 /* tmpfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* tmpfile.swift */; };
+		39B67B9123B49AFB00B745B6 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B9023B49AFB00B745B6 /* iCarousel.m */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
 		39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */; };
@@ -50,7 +52,6 @@
 /* Begin PBXFileReference section */
 		0264162D43B295069FF65561 /* Pods-Mobo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		390BD67923B06ACB00FF7E68 /* MovieTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabViewController.swift; sourceTree = "<group>"; };
 		390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieTabScreen.storyboard; sourceTree = "<group>"; };
 		390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabOneViewController.swift; sourceTree = "<group>"; };
 		390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabTwoViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
+		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		398522B423B05F8D009C9AE3 /* Mobo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,11 @@
 		398522D723B064DD009C9AE3 /* Extension+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+CALayer.swift"; sourceTree = "<group>"; };
 		398522D823B064DD009C9AE3 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
 		3989599D23B1D30D00340400 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		39B67B8B23B4947000B745B6 /* tmpfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpfile.swift; sourceTree = "<group>"; };
+		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		39B67B8E23B49AFB00B745B6 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = ../../../../Desktop/iCarousel.h; sourceTree = "<group>"; };
+		39B67B8F23B49AFB00B745B6 /* iCarouselEffectss-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "iCarouselEffectss-Bridging-Header.h"; path = "../../../../Desktop/iCarouselEffectss-Bridging-Header.h"; sourceTree = "<group>"; };
+		39B67B9023B49AFB00B745B6 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = ../../../../Desktop/iCarousel.m; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		39C84F4D23B0C2A4000130B4 /* PopUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpScreen.storyboard; sourceTree = "<group>"; };
@@ -182,8 +189,12 @@
 				398522B923B05F8D009C9AE3 /* SceneDelegate.swift */,
 				398522C823B05F8F009C9AE3 /* Info.plist */,
 				39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */,
+				39B67B8E23B49AFB00B745B6 /* iCarousel.h */,
+				39B67B9023B49AFB00B745B6 /* iCarousel.m */,
+				39B67B8F23B49AFB00B745B6 /* iCarouselEffectss-Bridging-Header.h */,
 				3962D19523B1254D004B11AB /* GoogleService-Info.plist */,
 				398522C023B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld */,
+				39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */,
 			);
 			path = Mobo_iOS;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 		398522D323B06482009C9AE3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */,
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
 				3962D19723B12935004B11AB /* ChattingView */,
 				391CEEBB23B0DD5000E4C71D /* FindFriend */,
@@ -272,9 +284,9 @@
 		39C84F5123B0C43F000130B4 /* MovieCollection */ = {
 			isa = PBXGroup;
 			children = (
-				390BD67923B06ACB00FF7E68 /* MovieTabViewController.swift */,
 				390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */,
 				390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */,
+				39B67B8B23B4947000B745B6 /* tmpfile.swift */,
 			);
 			path = MovieCollection;
 			sourceTree = "<group>";
@@ -330,6 +342,7 @@
 				TargetAttributes = {
 					398522B323B05F8D009C9AE3 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -423,17 +436,19 @@
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
+				39B67B8C23B4947000B745B6 /* tmpfile.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
+				39B67B9123B49AFB00B745B6 /* iCarousel.m in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
 				39FB23D423B20B7D00FFA95A /* ChatModel.swift in Sources */,
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
-				390BD67A23B06ACB00FF7E68 /* MovieTabViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
+				395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
@@ -589,6 +604,7 @@
 			baseConfigurationReference = 0264162D43B295069FF65561 /* Pods-Mobo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
@@ -598,6 +614,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cho.Mobo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobo_iOS/Mobo_iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -608,6 +626,7 @@
 			baseConfigurationReference = 47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
@@ -617,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cho.Mobo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobo_iOS/Mobo_iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
