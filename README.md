@@ -63,7 +63,7 @@
 
 ### [ujcheon](https://github.com/ujcheon)
 
-[chokyungjin](https://github.com/chokyungjin)
+### [chokyungjin](https://github.com/chokyungjin)
 
 ---
 
