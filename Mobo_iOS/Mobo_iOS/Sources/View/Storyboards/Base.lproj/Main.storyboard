@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="316" y="840.88669950738915"/>
         </scene>
-        <!--Data Source-->
+        <!--Main Home View Controller-->
         <scene sceneID="l1b-sj-4BE">
             <objects>
                 <viewController storyboardIdentifier="MainHomeVC" id="TGd-qO-mc1" customClass="MainHomeViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,29 +62,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-Qd-y16">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVL-Dx-N0c" customClass="iCarousel">
-                                <rect key="frame" x="35" y="100" width="306" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이게 가능한가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Z-Y7-TlP">
-                                        <rect key="frame" x="8" y="128" width="93" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmF-IN-upL">
-                                        <rect key="frame" x="226" y="98" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="icPlay"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="TGd-qO-mc1" id="f5g-7x-a0o"/>
-                                    <outlet property="delegate" destination="TGd-qO-mc1" id="dC5-6m-aEf"/>
-                                </connections>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 영화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsJ-2E-EDg">
                                 <rect key="frame" x="20" y="341" width="74" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,7 +243,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="deadlineTitle" destination="KeN-VV-1tV" id="z6r-Y2-Xm6"/>
-                        <outlet property="iCarouselView" destination="bVL-Dx-N0c" id="6HK-m4-iMw"/>
                         <outlet property="movieCollectionView" destination="V8G-z1-jXH" id="elg-uz-Ocd"/>
                         <outlet property="sendButton" destination="O8b-cR-tV2" id="sW5-oi-tat"/>
                     </connections>
@@ -329,7 +305,6 @@
         <image name="btnMypage" width="48" height="48"/>
         <image name="btnPlus2" width="24" height="12"/>
         <image name="icChatingpage" width="48" height="48"/>
-        <image name="icPlay" width="84" height="84"/>
         <image name="mainImgBackground" width="375" height="812"/>
         <image name="xmlid806" width="12" height="11.666666984558105"/>
     </resources>

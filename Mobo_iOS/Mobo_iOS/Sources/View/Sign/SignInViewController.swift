@@ -40,8 +40,8 @@ class SignInViewController: UIViewController {
         Useridview.layer.cornerRadius = 10
         Userpwdview.layer.cornerRadius = 10
         
-        Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero , opacity: 1, radius: 3)
-        Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero, opacity: 1, radius: 3)
+     //   Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero , opacity: 1, radius: 3)
+     //   Useridview.dropShadow(color: <#F2F2F2#>, offSet: .zero, opacity: 1, radius: 3)
         
     }
     

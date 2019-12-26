@@ -13,7 +13,7 @@ import Pageboy
 class MainHomeViewController: UIViewController {
     
     
-    @IBOutlet weak var iCarouselView: iCarousel!
+   // @IBOutlet weak var iCarouselView: iCarousel!
     @IBOutlet weak var movieCollectionView: UICollectionView!
     @IBOutlet weak var deadlineTitle: UILabel!
     @IBOutlet weak var sendButton: UIButton!
@@ -52,9 +52,8 @@ class MainHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iCarouselView.type = .rotary
-        iCarouselView.contentMode = .scaleAspectFit
-        iCarouselView.isPagingEnabled = true
+     
+        
         view.backgroundColor = .groundColor
         
         navigationSetup()
@@ -298,26 +297,4 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     
 }
 
-extension MainHomeViewController: iCarouselDelegate, iCarouselDataSource {
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return imgArr.count
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        
-        var imageView: UIImageView!
-        if view == nil {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 40, height: 300))
-            imageView.contentMode = .scaleAspectFit
-        } else {
-            imageView = view as? UIImageView
-        }
-        
-        imageView.image = imgArr[index]
-        imageView.makeRounded(cornerRadius: 10)
-        return imageView
-    }
-    
-    
-}
 

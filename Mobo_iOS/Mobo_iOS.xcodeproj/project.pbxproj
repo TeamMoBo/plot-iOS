@@ -35,7 +35,6 @@
 		3989599E23B1D30D00340400 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989599D23B1D30D00340400 /* UserModel.swift */; };
 		39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */; };
 		39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */; };
-		39B67B9123B49AFB00B745B6 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B9023B49AFB00B745B6 /* iCarousel.m */; };
 		39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD084623B4B72600CC8D8D /* ChatModel.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
@@ -48,6 +47,7 @@
 		39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */; };
 		39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB23D123B20ADA00FFA95A /* ChatViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
+		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
 		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
@@ -92,9 +92,6 @@
 		39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewController.swift; sourceTree = "<group>"; };
 		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		39B67B8E23B49AFB00B745B6 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = ../../../../Desktop/iCarousel.h; sourceTree = "<group>"; };
-		39B67B8F23B49AFB00B745B6 /* iCarouselEffectss-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "iCarouselEffectss-Bridging-Header.h"; path = "../../../../Desktop/iCarouselEffectss-Bridging-Header.h"; sourceTree = "<group>"; };
-		39B67B9023B49AFB00B745B6 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = ../../../../Desktop/iCarousel.m; sourceTree = "<group>"; };
 		39BD084623B4B72600CC8D8D /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
@@ -107,6 +104,7 @@
 		39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPeopleViewController.swift; sourceTree = "<group>"; };
 		39FB23D123B20ADA00FFA95A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
@@ -209,9 +207,6 @@
 				398522B923B05F8D009C9AE3 /* SceneDelegate.swift */,
 				398522C823B05F8F009C9AE3 /* Info.plist */,
 				39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */,
-				39B67B8E23B49AFB00B745B6 /* iCarousel.h */,
-				39B67B9023B49AFB00B745B6 /* iCarousel.m */,
-				39B67B8F23B49AFB00B745B6 /* iCarouselEffectss-Bridging-Header.h */,
 				3962D19523B1254D004B11AB /* GoogleService-Info.plist */,
 				398522C023B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld */,
 				39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */,
@@ -269,6 +264,7 @@
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
 				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
 				EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */,
+				EA76B5B123B51E36002012CE /* MyPage.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -423,6 +419,7 @@
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
 				EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */,
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
+				EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
 				39C84F4C23B0BD2E000130B4 /* loader.json in Resources */,
 				39C84F4E23B0C2A4000130B4 /* PopUpScreen.storyboard in Resources */,
@@ -487,13 +484,11 @@
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
-				39B67B9123B49AFB00B745B6 /* iCarousel.m in Sources */,
 				39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */,
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
-				EAC8C3EE23B2221A0061AEEB /* ResponseString.swift in Sources */,
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
