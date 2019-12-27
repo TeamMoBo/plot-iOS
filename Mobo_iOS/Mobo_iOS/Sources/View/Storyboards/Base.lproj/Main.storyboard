@@ -8,46 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--마이페이지-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SJ-2L-Y2T" customClass="LottieView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="44" width="375" height="334"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E2-BQ-dZi">
-                                <rect key="frame" x="164" y="561" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ff-cH-dZJ">
-                                <rect key="frame" x="164" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="chattingAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wes-c9-YAi"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" id="6NH-pY-LDy"/>
-                    <connections>
-                        <outlet property="AnimationView" destination="3SJ-2L-Y2T" id="OzP-D8-DzT"/>
-                        <outlet property="PopupBtn" destination="3E2-BQ-dZi" id="d88-zg-tuH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-975" y="773"/>
-        </scene>
         <!--Main Home View Controller-->
         <scene sceneID="l1b-sj-4BE">
             <objects>
@@ -349,8 +309,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="B1s-VC-CRZ">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="btnMypage" id="tZL-Fq-5CX"/>
-                        <barButtonItem key="rightBarButtonItem" image="icChatingpage" id="cjZ-a7-jy2"/>
+                        <barButtonItem key="leftBarButtonItem" image="btnMypage" id="tZL-Fq-5CX">
+                            <connections>
+                                <action selector="myPageBtn:" destination="TGd-qO-mc1" id="y1n-YL-2Sx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icChatingpage" id="cjZ-a7-jy2">
+                            <connections>
+                                <action selector="chatBtn:" destination="TGd-qO-mc1" id="fbR-8m-IBk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="day2Button" destination="cud-4p-EN5" id="Hyo-Zu-5BV"/>
@@ -378,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRk-B0-X2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="173"/>
+            <point key="canvasLocation" x="73" y="786"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="c0Z-3w-SLK">
@@ -667,6 +635,7 @@
                         <viewLayoutGuide key="safeArea" id="DMr-Pi-6Ze"/>
                     </view>
                     <connections>
+                        <outlet property="OkBtn" destination="Oe9-XW-JaM" id="UO6-FO-rC0"/>
                         <outlet property="am1" destination="gUm-B0-Lqc" id="dIv-5c-YSf"/>
                         <outlet property="am12" destination="zbR-aL-J7p" id="y7P-xC-2uJ"/>
                         <outlet property="am2" destination="WJX-8S-Ihh" id="tPP-D8-QcD"/>
@@ -694,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56R-7I-MzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="696.79802955665025"/>
+            <point key="canvasLocation" x="858" y="10"/>
         </scene>
         <!--Time Table Two View Controller-->
         <scene sceneID="kRH-kv-hud">
@@ -709,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wk6-eJ-yry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="173"/>
+            <point key="canvasLocation" x="857" y="786"/>
         </scene>
     </scenes>
     <resources>
