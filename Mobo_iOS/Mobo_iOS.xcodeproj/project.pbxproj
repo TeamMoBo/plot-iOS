@@ -51,7 +51,6 @@
 		39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */; };
 		39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB23D123B20ADA00FFA95A /* ChatViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
-		EA40F5EF23B5EDC400BD88CB /* tmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA40F5EE23B5EDC400BD88CB /* tmpViewController.swift */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
@@ -114,7 +113,6 @@
 		39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabTwoViewCell.swift; sourceTree = "<group>"; };
 		39FB23D123B20ADA00FFA95A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		EA40F5EE23B5EDC400BD88CB /* tmpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpViewController.swift; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
@@ -350,7 +348,6 @@
 				EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */,
 				EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */,
 				EAC8C3FD23B3250D0061AEEB /* SignUpLastViewController.swift */,
-				EA40F5EE23B5EDC400BD88CB /* tmpViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -527,7 +524,6 @@
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
-				EA40F5EF23B5EDC400BD88CB /* tmpViewController.swift in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
