@@ -149,8 +149,14 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func addMoreBtn(_ sender: Any) {
         
-        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
-        self.view.addSubview(view)
+//        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
+//        self.view.addSubview(view)
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
+               
+               self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     

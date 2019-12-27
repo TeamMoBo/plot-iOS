@@ -15,6 +15,8 @@
 		390B835E23B66DAD00E41C24 /* MatchingPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B835D23B66DAD00E41C24 /* MatchingPopUp.swift */; };
 		390B836023B66E4700E41C24 /* InventoryPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390B835F23B66E4700E41C24 /* InventoryPopUp.xib */; };
 		390B836223B66E4D00E41C24 /* InventoryPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B836123B66E4D00E41C24 /* InventoryPopUp.swift */; };
+		390B836423B6746600E41C24 /* TimeTableOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B836323B6746600E41C24 /* TimeTableOneViewController.swift */; };
+		390B836623B6747200E41C24 /* TimeTableTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */; };
 		390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */; };
 		390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */; };
 		390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */; };
@@ -49,7 +51,6 @@
 		39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD084623B4B72600CC8D8D /* ChatModel.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
-		39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */; };
 		39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */; };
 		39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */; };
 		39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */; };
@@ -81,6 +82,8 @@
 		390B835D23B66DAD00E41C24 /* MatchingPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingPopUp.swift; sourceTree = "<group>"; };
 		390B835F23B66E4700E41C24 /* InventoryPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryPopUp.xib; sourceTree = "<group>"; };
 		390B836123B66E4D00E41C24 /* InventoryPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryPopUp.swift; sourceTree = "<group>"; };
+		390B836323B6746600E41C24 /* TimeTableOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableOneViewController.swift; sourceTree = "<group>"; };
+		390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTwoViewController.swift; sourceTree = "<group>"; };
 		390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieTabScreen.storyboard; sourceTree = "<group>"; };
 		390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabOneViewController.swift; sourceTree = "<group>"; };
 		390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabTwoViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		39BD084623B4B72600CC8D8D /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
-		39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInventoryViewController.swift; sourceTree = "<group>"; };
 		39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingScreen.storyboard; sourceTree = "<group>"; };
 		39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingLoginViewController.swift; sourceTree = "<group>"; };
@@ -322,24 +324,17 @@
 				391CEEBB23B0DD5000E4C71D /* FindFriend */,
 				39C84F5123B0C43F000130B4 /* MovieCollection */,
 				39C84F5023B0C422000130B4 /* MovieTimeTable */,
-				39C84F4F23B0C415000130B4 /* PopUp */,
 				39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		39C84F4F23B0C415000130B4 /* PopUp */ = {
-			isa = PBXGroup;
-			children = (
-				39C84F5223B0C49A000130B4 /* PopupInventoryViewController.swift */,
-			);
-			path = PopUp;
 			sourceTree = "<group>";
 		};
 		39C84F5023B0C422000130B4 /* MovieTimeTable */ = {
 			isa = PBXGroup;
 			children = (
 				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
+				390B836323B6746600E41C24 /* TimeTableOneViewController.swift */,
+				390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */,
 			);
 			path = MovieTimeTable;
 			sourceTree = "<group>";
@@ -538,6 +533,7 @@
 				393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
+				390B836623B6747200E41C24 /* TimeTableTwoViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */,
 				39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */,
@@ -568,7 +564,7 @@
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				390B836223B66E4D00E41C24 /* InventoryPopUp.swift in Sources */,
-				39C84F5323B0C49A000130B4 /* PopupInventoryViewController.swift in Sources */,
+				390B836423B6746600E41C24 /* TimeTableOneViewController.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
 				39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */,
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,

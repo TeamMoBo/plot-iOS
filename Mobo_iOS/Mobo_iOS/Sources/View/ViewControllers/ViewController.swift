@@ -32,15 +32,6 @@ class ViewController: UIViewController {
         animationView.play()
     }
     
-    @IBAction func PopUpAct(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PopupVC") as! PopupInventoryViewController
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-        self.present(vc, animated: true, completion: nil)
-        
-    }
     
     @IBAction func chattingAct(_ sender: Any) {
         
