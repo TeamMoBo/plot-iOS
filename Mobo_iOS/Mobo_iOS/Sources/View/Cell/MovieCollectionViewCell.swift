@@ -1,3 +1,6 @@
+
+
+
 import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
@@ -11,3 +14,5 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
 }
+
+

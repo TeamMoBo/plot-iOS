@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - AnimatedCollectionViewLayout (1.0.1)
   - AutoInsetter (1.8.0)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -73,6 +74,7 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FloatRatingView (4.0)
   - GoogleAppMeasurement (6.1.7):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -120,11 +122,13 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - AnimatedCollectionViewLayout
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - FloatRatingView (~> 4)
   - lottie-ios
   - ObjectMapper (~> 3.4)
   - Pageboy (~> 3.2)
@@ -135,6 +139,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AnimatedCollectionViewLayout
     - AutoInsetter
     - Firebase
     - FirebaseABTesting
@@ -149,6 +154,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseRemoteConfig
     - FirebaseStorage
+    - FloatRatingView
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -166,6 +172,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AnimatedCollectionViewLayout: 00f0997fd26f0fd02d8b99765023b95570b5d826
   AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseABTesting: 0d10f3cdc3fa00f3f175b5b56c1003c8e888299f
@@ -180,6 +187,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ce993a3c3670a8f5d47ce371ac5d143c560608c5
   FirebaseRemoteConfig: c11d74d8b1ff8463b587fc8899d92ee089f9a691
   FirebaseStorage: 93fe2f8190a01bfb2b2c4932df7d679744c4ef1d
+  FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
   GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
   GoogleDataTransport: 8e9b210c97d55fbff306cc5468ff91b9cb32dcf5
   GoogleDataTransportCCTSupport: 202d7cdf9c4a7d81a2bb7f7e7e1ba6faa421b1f2
@@ -195,6 +203,6 @@ SPEC CHECKSUMS:
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 32cf7536f90abd59e1d77e4f736e5bef742024a0
+PODFILE CHECKSUM: 32c2eb4d98700c77a9f883dde15b0fa277da30ec
 
 COCOAPODS: 1.8.4
