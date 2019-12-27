@@ -9,14 +9,20 @@
 import UIKit
 import Tabman
 import Pageboy
+import AnimatedCollectionViewLayout
 
 class MainHomeViewController: UIViewController {
     
     
-   // @IBOutlet weak var iCarouselView: iCarousel!
+    // @IBOutlet weak var iCarouselView: iCarousel!
     @IBOutlet weak var movieCollectionView: UICollectionView!
     @IBOutlet weak var deadlineTitle: UILabel!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var mainCollectionView: UICollectionView!
+    
+    @IBOutlet weak var dayButton: UIButton!
+    @IBOutlet weak var day2Button: UIButton!
+    
     
     var imgArr = [  UIImage(named:"10"),
                     UIImage(named:"10")
@@ -30,16 +36,27 @@ class MainHomeViewController: UIViewController {
         //                       UIImage(named:"Scarlett Johansson")
     ]
     
+    
+//    private let animators: [(LayoutAttributesAnimator, Bool, Int, Int)] = [
+//        (ZoomInOutAttributesAnimator(), true, 1, 1)
+//    ]
+    
+    
     let movieListCellID: String = "MovieListCell"
+    let mainListID: String = "animationCollectionViewCell"
     var movies: [Movie] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
+    
     let baseURL: String = {
         return ServerURLs.base.rawValue
     }()
+    
+    var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
+    var direction: UICollectionView.ScrollDirection = .horizontal
     
     struct Storyboard {
         static let photoCell = "PhotoCell"
@@ -48,23 +65,61 @@ class MainHomeViewController: UIViewController {
         static let numberOfItemsPerRow: CGFloat = 3.0
     }
     
+    let layout = AnimatedCollectionViewLayout()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        
         
         view.backgroundColor = .groundColor
-        
         navigationSetup()
         setMovieListCollectionView()
-        
         sendButton.backgroundColor = .mainOrange
+        
+        layout.animator = LinearCardAttributesAnimator()
+        mainCollectionView.collectionViewLayout = layout
+        dayButton.makeRounded(cornerRadius: 10)
+        dayButton.tintColor = .black
+        dayButton.isSelected = false
+        
+        
+        mainCollectionView.backgroundColor = .red
+        mainCollectionView.backgroundColor = .groundColor
+        
+       // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
+        
+        
+        
+        
+    }
+    
+    @objc func dayClick(sender: UIButton) {
+        
+        print(dayButton.isSelected)
+        
+        if (dayButton.isSelected) == false {
+            dayButton.tintColor = .black
+            dayButton.isSelected = true
+            dayButton.backgroundColor = UIColor.init(red: 255/255, green: 126/255, blue: 39/255, alpha: 1)
+            
+            
+        }
+            
+        else if dayButton.isSelected
+        {
+            dayButton.tintColor = .white
+            dayButton.isSelected = false
+            dayButton.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+            
+        }
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        sendButton.makeRounded(cornerRadius: 21)
+        sendButton.makeRounded(cornerRadius: 20)
         deadlineTitle.textColor = .subOrange
         
     }
@@ -109,6 +164,7 @@ class MainHomeViewController: UIViewController {
         //false면 반투명이다.
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //뷰의 배경색 지정
+        
         //        self.navigationController?.navigationBar.topItem?.title = "Home"
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -159,6 +215,7 @@ class MainHomeViewController: UIViewController {
         self.movies = dataManager.getMovieList()
         DispatchQueue.main.async {
             self.movieCollectionView.reloadData()
+            self.mainCollectionView.reloadData()
         }
     }
     
@@ -202,30 +259,61 @@ class MainHomeViewController: UIViewController {
     func setDefaultMovieOrderType() {
         let orderType: String = "0"
         dataManager.setMovieOrderType(orderType: orderType)
-        print(1)
     }
     
     func setMovieListCollectionView() {
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
+        mainCollectionView.delegate = self
+        mainCollectionView.dataSource = self
+        mainCollectionView?.isPagingEnabled = true
+        
+        
+        
+        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+            
+            layout.scrollDirection = direction
+            layout.animator = animator?.0
+            
+            
+        }
+        
     }
-    
     
     
 }
 
 extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        
+        if collectionView == movieCollectionView {
+            
+            return CGSize(width: 101, height: 146)
+        }
+            
+        else if collectionView == mainCollectionView {
+            
+//            guard let animator = animator else { return view.bounds.size }
+//            return CGSize(width: 375 ,  height: 180 )
+            
+            guard let animator = animator else { return view.bounds.size }
+            return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
+            
+        }
+        
+        
         return CGSize(width: 101, height: 146)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 19)
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 17
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -238,34 +326,55 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionViewCell
-        
-        let movie = movies[indexPath.row]
-        
-        cell.backgroundColor = .groundColor
-        
-        //cell.backgroundColor = .red
-        
-        //        cell.titleLabel.text = movie.title
-        //        cell.dateLabel.text = movie.date
-        //
-        //        let rateString = "\(movie.reservationGrade)위 / \(movie.reservationRate)"
-        //        cell.ratingsLabel.text = rateString
-        //
-        
-        //  let gradeIamge = getGradeImage(grade: movie.grade)
-        //  cell.gradeImage.image = gradeIamge
         
         
-        OperationQueue().addOperation {
-            let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-            DispatchQueue.main.async {
-                cell.ImageThumbnail.image = thumnailImage
-                
+        if collectionView == movieCollectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionViewCell
+            
+            let movie = movies[indexPath.row]
+            
+            cell.backgroundColor = .groundColor
+            
+            OperationQueue().addOperation {
+                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
+                DispatchQueue.main.async {
+                    cell.ImageThumbnail.image = thumnailImage
+                    //cell.imageThumbnail.image = thumnailImage
+                    
+                }
             }
+            
+            
+            return cell
+        }
+            
+            
+        else if collectionView == mainCollectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainListID, for: indexPath) as! MainViewCollectionViewCell
+            
+            let movie = movies[indexPath.row]
+            
+            cell.backgroundColor = .groundColor
+            
+           // cell.makeRounded(cornerRadius: 10)
+            
+            OperationQueue().addOperation {
+                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
+                DispatchQueue.main.async {
+                    // cell.ImageThumbnail.image = thumnailImage
+                    cell.imageThumbnail.image = thumnailImage
+                    cell.imageThumbnail.makeRounded(cornerRadius: 10)
+                    
+                }
+            }
+            return cell
+            
         }
         
-        return cell
+        
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -296,5 +405,8 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
 }
+
+
+
 
 

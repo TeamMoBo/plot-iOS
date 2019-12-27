@@ -17,9 +17,12 @@
 		390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */; };
 		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
 		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
+		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
+		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
+		39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39760F6523B5DC8000616419 /* FloatRatingView.swift */; };
 		398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522B723B05F8D009C9AE3 /* AppDelegate.swift */; };
 		398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522B923B05F8D009C9AE3 /* SceneDelegate.swift */; };
 		398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398522BB23B05F8D009C9AE3 /* ViewController.swift */; };
@@ -45,6 +48,7 @@
 		39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */; };
 		39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */; };
 		39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */; };
+		39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */; };
 		39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB23D123B20ADA00FFA95A /* ChatViewController.swift */; };
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 		EA40F5EF23B5EDC400BD88CB /* tmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA40F5EE23B5EDC400BD88CB /* tmpViewController.swift */; };
@@ -73,9 +77,12 @@
 		390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
+		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		39760F6523B5DC8000616419 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		398522B423B05F8D009C9AE3 /* Mobo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		398522B723B05F8D009C9AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		398522B923B05F8D009C9AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingLoginViewController.swift; sourceTree = "<group>"; };
 		39CC509E23B1377700E24F95 /* ChattingSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingSignUpViewController.swift; sourceTree = "<group>"; };
 		39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPeopleViewController.swift; sourceTree = "<group>"; };
+		39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabTwoViewCell.swift; sourceTree = "<group>"; };
 		39FB23D123B20ADA00FFA95A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA40F5EE23B5EDC400BD88CB /* tmpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				390BD68323B08A4700FF7E68 /* MovieCollectionViewCell.swift */,
+				393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */,
+				393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */,
+				39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 				398522D823B064DD009C9AE3 /* Extension+UITextField.swift */,
 				398522D623B064DD009C9AE3 /* Extensions+UIView.swift */,
 				390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */,
+				39760F6523B5DC8000616419 /* FloatRatingView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,13 +505,16 @@
 				EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */,
 				EAC8C3FE23B3250E0061AEEB /* SignUpLastViewController.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
+				393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
+				39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */,
 				39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
 				39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */,
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
+				393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */,
 				39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
@@ -507,6 +522,7 @@
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
+				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
