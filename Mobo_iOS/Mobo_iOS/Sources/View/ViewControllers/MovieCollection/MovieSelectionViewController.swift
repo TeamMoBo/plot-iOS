@@ -36,10 +36,10 @@ class MovieSelectionViewController: TabmanViewController {
         
 //        rgb 255 126 39
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간선택", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        //self.navigationItem.backBarButtonItem?.tintColor = .black
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         //네비게이션바의 백그라운드색 지정. UIImage와 동일

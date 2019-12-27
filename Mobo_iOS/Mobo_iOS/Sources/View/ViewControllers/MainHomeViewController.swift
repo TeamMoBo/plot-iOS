@@ -24,7 +24,6 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var day2Button: UIButton!
     
     
-    @IBOutlet weak var testView: LatePopUp!
     
     var imgArr = [  UIImage(named:"10"),
                     UIImage(named:"10")
@@ -68,7 +67,7 @@ class MainHomeViewController: UIViewController {
     }
     
     let caLayer: CAGradientLayer = CAGradientLayer()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,21 +75,20 @@ class MainHomeViewController: UIViewController {
         
         
         view.backgroundColor = .groundColor
-        navigationSetup()
         setMovieListCollectionView()
         sendButton.backgroundColor = .mainOrange
         
         dayButton.makeRounded(cornerRadius: 10)
         dayButton.tintColor = .black
         dayButton.isSelected = false
-        
+        navigationSetup()
         
         mainCollectionView.backgroundColor = .red
         mainCollectionView.backgroundColor = .clear
         movieCollectionView.backgroundColor = .clear
         
         // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-                
+        
         
         
     }
@@ -138,8 +136,24 @@ class MainHomeViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    @IBAction func myPageBtn(_ sender: Any) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
     @IBAction func reviseButton(_ sender: Any) {
         
+        navigationSetup1()
+
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
         
@@ -149,19 +163,55 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func addMoreBtn(_ sender: Any) {
         
-//        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
-//        self.view.addSubview(view)
+        navigationSetup2()
+
+        //        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
+        //        self.view.addSubview(view)
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
-               
-               self.navigationController?.pushViewController(vc, animated: true)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
-    
+    @IBAction func chatBtn(_ sender: Any) {
+        
+        navigationSetup3()
+        
+       let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+        self.show(vc, sender: nil)
+        
+    }
     
     func navigationSetup() { //네비게이션 투명색만들기
+           
+           self.navigationController?.navigationBar.barTintColor = .mainOrange
+           self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+           self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+           self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+           self.navigationItem.backBarButtonItem?.tintColor = .white
+           //투명하게 만드는 공식처럼 기억하기
+           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+           //네비게이션바의 백그라운드색 지정. UIImage와 동일
+           self.navigationController?.navigationBar.shadowImage = UIImage()
+           //shadowImage는 UIImage와 동일. 구분선 없애줌.
+           self.navigationController?.navigationBar.isTranslucent = true
+           //false면 반투명이다.
+           
+           //뷰의 배경색 지정
+           
+           //        self.navigationController?.navigationBar.topItem?.title = "Home"
+           //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+           //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+           
+       }
+    
+    
+    func navigationSetup1() { //네비게이션 투명색만들기
         
         self.navigationController?.navigationBar.barTintColor = .mainOrange
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
@@ -175,7 +225,7 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         //false면 반투명이다.
-        self.navigationController?.view.backgroundColor = .mainOrange
+        
         //뷰의 배경색 지정
         
         //        self.navigationController?.navigationBar.topItem?.title = "Home"
@@ -183,6 +233,53 @@ class MainHomeViewController: UIViewController {
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
+    
+    func navigationSetup2() { //네비게이션 투명색만들기
+        
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간 선택 수정", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+        //투명하게 만드는 공식처럼 기억하기
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //네비게이션바의 백그라운드색 지정. UIImage와 동일
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //shadowImage는 UIImage와 동일. 구분선 없애줌.
+        self.navigationController?.navigationBar.isTranslucent = true
+        //false면 반투명이다.
+        
+        //뷰의 배경색 지정
+        
+        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+    }
+    
+    func navigationSetup3() { //네비게이션 투명색만들기
+        
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "채팅방 이애오", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+        //투명하게 만드는 공식처럼 기억하기
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //네비게이션바의 백그라운드색 지정. UIImage와 동일
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //shadowImage는 UIImage와 동일. 구분선 없애줌.
+        self.navigationController?.navigationBar.isTranslucent = true
+        //false면 반투명이다.
+        
+        //뷰의 배경색 지정
+        
+        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+    }
+
     
     
     func getMovieList(orderType: String) {
@@ -280,10 +377,10 @@ class MainHomeViewController: UIViewController {
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView?.isPagingEnabled = true
-                
-//        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-//            layout.animator = animator?.0
-//        }
+        
+        //        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+        //            layout.animator = animator?.0
+        //        }
         
     }
     
@@ -325,7 +422,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         if collectionView == mainCollectionView {
-        return UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35)
+            return UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35)
         }
         return UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 19)
     }
@@ -333,7 +430,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         if collectionView == mainCollectionView {
-               return 70               }
+            return 70               }
         
         return 10
         
@@ -382,19 +479,19 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.makeRounded(cornerRadius: 10)
             
             cell.movieName.text = movie.title
-          //  cell.runningtimeLabel.text = 얘는 API에 없음
+            //  cell.runningtimeLabel.text = 얘는 API에 없음
             cell.rating.rating = (movie.userRating) / 2
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             //cell.LinkBtn
-
+            
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
                 DispatchQueue.main.async {
                     // cell.ImageThumbnail.image = thumnailImage
                     cell.imageThumbnail.image = thumnailImage
-
+                    
                 }
             }
             return cell

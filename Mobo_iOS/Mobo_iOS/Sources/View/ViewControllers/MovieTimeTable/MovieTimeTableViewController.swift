@@ -40,10 +40,13 @@ class MovieTimeTableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UIView!
     
+    @IBOutlet weak var OkBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         tableView.makeRounded(cornerRadius: 20)
+        OkBtn.titleEdgeInsets.bottom = 7
         
         day1.isSelected = false
         day1.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
@@ -163,7 +166,7 @@ class MovieTimeTableViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간선택", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .black
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -204,10 +207,9 @@ class MovieTimeTableViewController: UIViewController {
            {
             day1.isSelected = false
             day1.setTitleColor(.white, for: .normal)
-            day1.setBackgroundColor(.mainOrange, for: .normal)
+            day1.setBackgroundColor(.clear, for: .normal)
             day1.makeRounded(cornerRadius: 10)
             day1.clipsToBounds = true
-            //day1.setBorder(borderColor: .borderGray, borderWidth: 1)
 
         
            }
@@ -230,8 +232,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day2.isSelected = false
             day2.setTitleColor(.white, for: .normal)
-            day2.setBackgroundColor(.mainOrange, for: .normal)
-            day2.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day2.setBackgroundColor(.clear, for: .normal)
             day2.makeRounded(cornerRadius: 10)
             day2.clipsToBounds = true
 
@@ -256,8 +257,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day3.isSelected = false
             day3.setTitleColor(.white, for: .normal)
-            day3.setBackgroundColor(.mainOrange, for: .normal)
-            day3.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day3.setBackgroundColor(.clear, for: .normal)
             day3.makeRounded(cornerRadius: 10)
             day3.clipsToBounds = true
 
@@ -281,8 +281,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day4.isSelected = false
             day4.setTitleColor(.white, for: .normal)
-            day4.setBackgroundColor(.mainOrange, for: .normal)
-            day4.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day4.setBackgroundColor(.clear, for: .normal)
             day4.makeRounded(cornerRadius: 10)
             day4.clipsToBounds = true
 
@@ -306,8 +305,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day5.isSelected = false
             day5.setTitleColor(.white, for: .normal)
-            day5.setBackgroundColor(.mainOrange, for: .normal)
-            day5.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day5.setBackgroundColor(.clear, for: .normal)
             day5.makeRounded(cornerRadius: 10)
             day5.clipsToBounds = true
 
@@ -331,8 +329,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day6.isSelected = false
             day6.setTitleColor(.white, for: .normal)
-            day6.setBackgroundColor(.mainOrange, for: .normal)
-            day6.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day6.setBackgroundColor(.clear, for: .normal)
             day6.makeRounded(cornerRadius: 10)
             day6.clipsToBounds = true
 
@@ -356,8 +353,7 @@ class MovieTimeTableViewController: UIViewController {
            {
             day7.isSelected = false
             day7.setTitleColor(.white, for: .normal)
-            day7.setBackgroundColor(.mainOrange, for: .normal)
-            day7.setBorder(borderColor: .borderGray, borderWidth: 1)
+            day7.setBackgroundColor(.clear, for: .normal)
             day7.makeRounded(cornerRadius: 10)
             day7.clipsToBounds = true
 
