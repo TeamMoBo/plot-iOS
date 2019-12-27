@@ -17,7 +17,6 @@ class MainViewCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         imageThumbnail.makeRounded(cornerRadius: 10)
-        imageThumbnail.image = #imageLiteral(resourceName: "10")
     }
 
 }

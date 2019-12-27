@@ -39,13 +39,16 @@ class MovieTabOneViewController: UIViewController {
     //init
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        movieCollectionView.translatesAutoresizingMaskIntoConstraints = false
+                movieCollectionView.translatesAutoresizingMaskIntoConstraints = false
         movieCollectionView.showsHorizontalScrollIndicator = false
         movieCollectionView.decelerationRate = .fast
+        movieCollectionTwoView.translatesAutoresizingMaskIntoConstraints = false
+               movieCollectionTwoView.showsHorizontalScrollIndicator = false
+               movieCollectionTwoView.decelerationRate = .fast
         
         
         self.title1.text = "예매율TOP 10"
+        self.title1.backgroundColor = .groundColor
         self.button1.setTitle("시간 선택", for: .normal)
         self.button1.backgroundColor = .mainOrange
         self.button1.tintColor = .white
@@ -179,6 +182,8 @@ class MovieTabOneViewController: UIViewController {
         movieCollectionView.dataSource = self
         movieCollectionTwoView.delegate = self
         movieCollectionTwoView.dataSource = self
+        movieCollectionTwoView.backgroundColor = .clear
+        movieCollectionView.backgroundColor = .groundColor
     }
     
     
@@ -258,7 +263,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             let movie = movies[indexPath.row]
             
             
-            //cell.backgroundColor = .red
+            cell.backgroundColor = .clear
             
             cell.movieName.text = movie.title
             // cell.dateLabel.text = movie.date
