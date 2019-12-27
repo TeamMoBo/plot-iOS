@@ -20,7 +20,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skd-sk-CfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-3"/>
+            <point key="canvasLocation" x="894" y="264"/>
         </scene>
         <!--Chatting Login View Controller-->
         <scene sceneID="WqZ-eY-di3">
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyf-27-dOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191.2" y="-3.6945812807881775"/>
+            <point key="canvasLocation" x="2089" y="264"/>
         </scene>
         <!--Chatting People View Controller-->
         <scene sceneID="tDA-Kk-olO">
@@ -122,17 +122,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyMessageCell" id="Cs5-IE-gzb" customClass="MyMessageCell" customModule="Mobo_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="27.666666030883789"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="27"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cs5-IE-gzb" id="Rog-V4-Tce">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27.666666030883789"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_blue" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-8o-haq">
-                                                    <rect key="frame" x="303.33333333333331" y="-7" width="61.666666666666686" height="41.333333333333336"/>
+                                                    <rect key="frame" x="303.33333333333331" y="-7" width="61.666666666666686" height="40.666666666666664"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-7q-him">
-                                                    <rect key="frame" x="313.33333333333331" y="3" width="41.666666666666686" height="21.333333333333332"/>
+                                                    <rect key="frame" x="313.33333333333331" y="3" width="41.666666666666686" height="20.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -154,10 +154,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DestinationMessageCell" id="dgp-xo-8sc" customClass="DestinationMessageCell" customModule="Mobo_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.666666030883789" width="375" height="27"/>
+                                        <rect key="frame" x="0.0" y="55" width="375" height="27.333333969116211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dgp-xo-8sc" id="KmL-9d-7Bc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27.333333969116211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIR-UV-Z1x">
@@ -168,10 +168,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_gray" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Qr-drX">
-                                                    <rect key="frame" x="40" y="-7" width="61.666666666666657" height="40.666666666666664"/>
+                                                    <rect key="frame" x="40" y="-7" width="61.666666666666657" height="41"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-fT-X2h">
-                                                    <rect key="frame" x="50" y="3" width="41.666666666666657" height="20.666666666666668"/>
+                                                    <rect key="frame" x="50" y="3" width="41.666666666666657" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abZ-aE-njt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.753623188406" y="698.4375"/>
+            <point key="canvasLocation" x="2089" y="966"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jpg-4g-nhX">
