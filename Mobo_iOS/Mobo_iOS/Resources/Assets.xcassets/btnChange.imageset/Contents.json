@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "scale" : "1x",
       "filename" : "btnChange.png",
-      "scale" : "1x"
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
@@ -12,8 +12,8 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "btnChange@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "btnChange@3x.png"
     }
   ],
   "info" : {
