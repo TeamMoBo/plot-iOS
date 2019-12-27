@@ -34,7 +34,8 @@ class MovieSelectionViewController: TabmanViewController {
     
     func navigationSetup() { //네비게이션 투명색만들기
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+//        rgb 255 126 39
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간선택", style: .done, target: nil, action: nil)
@@ -48,6 +49,7 @@ class MovieSelectionViewController: TabmanViewController {
         //false면 반투명이다.
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //뷰의 배경색 지정
+        
 //        self.navigationController?.navigationBar.topItem?.title = "Home"
 //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
 //        navigationController?.navigationBar.titleTextAttributes = textAttributes

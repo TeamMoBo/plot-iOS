@@ -37,9 +37,9 @@ class MainHomeViewController: UIViewController {
     ]
     
     
-//    private let animators: [(LayoutAttributesAnimator, Bool, Int, Int)] = [
-//        (ZoomInOutAttributesAnimator(), true, 1, 1)
-//    ]
+    //    private let animators: [(LayoutAttributesAnimator, Bool, Int, Int)] = [
+    //        (ZoomInOutAttributesAnimator(), true, 1, 1)
+    //    ]
     
     
     let movieListCellID: String = "MovieListCell"
@@ -78,7 +78,8 @@ class MainHomeViewController: UIViewController {
         setMovieListCollectionView()
         sendButton.backgroundColor = .mainOrange
         
-        layout.animator = LinearCardAttributesAnimator()
+        layout.animator = ZoomInOutAttributesAnimator()
+        layout.scrollDirection = .horizontal
         mainCollectionView.collectionViewLayout = layout
         dayButton.makeRounded(cornerRadius: 10)
         dayButton.tintColor = .black
@@ -86,9 +87,10 @@ class MainHomeViewController: UIViewController {
         
         
         mainCollectionView.backgroundColor = .red
-        mainCollectionView.backgroundColor = .groundColor
+        mainCollectionView.backgroundColor = .clear
+        movieCollectionView.backgroundColor = .clear
         
-       // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
+        // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
         
         
         
@@ -150,11 +152,11 @@ class MainHomeViewController: UIViewController {
     
     func navigationSetup() { //네비게이션 투명색만들기
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간선택", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "어떤 영화 볼래?", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         //네비게이션바의 백그라운드색 지정. UIImage와 동일
@@ -162,7 +164,7 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         //false면 반투명이다.
-        self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        self.navigationController?.view.backgroundColor = .mainOrange
         //뷰의 배경색 지정
         
         //        self.navigationController?.navigationBar.topItem?.title = "Home"
@@ -267,15 +269,10 @@ class MainHomeViewController: UIViewController {
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView?.isPagingEnabled = true
-        
-        
-        
+        mainCollectionView.makeRounded(cornerRadius: 10)
+                
         if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-            
-            layout.scrollDirection = direction
             layout.animator = animator?.0
-            
-            
         }
         
     }
@@ -296,8 +293,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
         else if collectionView == mainCollectionView {
             
-//            guard let animator = animator else { return view.bounds.size }
-//            return CGSize(width: 375 ,  height: 180 )
+            //375 248
             
             guard let animator = animator else { return view.bounds.size }
             return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
@@ -309,11 +305,20 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        if collectionView == mainCollectionView {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        if collectionView == mainCollectionView {
+               return 0
+               }
         return 10
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -334,7 +339,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             let movie = movies[indexPath.row]
             
-            cell.backgroundColor = .groundColor
+            //cell.backgroundColor = .groundColor
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -358,15 +363,15 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             cell.backgroundColor = .groundColor
             
-           // cell.makeRounded(cornerRadius: 10)
-            
+           // cell.imageThumbnail.image = #imageLiteral(resourceName: "10")
+
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
                 DispatchQueue.main.async {
                     // cell.ImageThumbnail.image = thumnailImage
                     cell.imageThumbnail.image = thumnailImage
                     cell.imageThumbnail.makeRounded(cornerRadius: 10)
-                    
+
                 }
             }
             return cell
