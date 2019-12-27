@@ -2,16 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "agebox.png",
+      "filename" : "btnChangeComplete.png",
       "scale" : "1x"
     },
     {
-      "filename" : "agebox@2x.png",
+      "filename" : "btnChangeComplete@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "agebox@3x.png",
+      "filename" : "btnChangeComplete@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

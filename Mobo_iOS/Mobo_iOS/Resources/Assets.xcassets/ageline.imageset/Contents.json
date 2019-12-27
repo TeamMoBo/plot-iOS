@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "agebox.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "ageline.png"
     },
     {
-      "filename" : "agebox@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
+      "filename" : "ageline@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
-      "filename" : "agebox@3x.png",
       "idiom" : "universal",
+      "filename" : "ageline@3x.png",
       "scale" : "3x"
     }
   ],
