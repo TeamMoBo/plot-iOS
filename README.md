@@ -2,11 +2,11 @@
 
 ---
 
-### Movie Matching Service && Workflow
+## Movie Matching Service
 
-영화 같이 볼 친구 찾기 어플리케이션
+> 영화 같이 볼 친구 찾기 어플리케이션
 
-
+<img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
 
 ---
 
@@ -27,10 +27,10 @@
 * MultiInteraction
 * Tabbar for top
 * AnimationView
-* CustomNavigationController
+* CustomNavigationController - [ujcheon](https://github.com/ujcheon)
 * Color, Font, Image Extensions
 * GradientView
-* ProgressBar
+* ProgressBarImage - [ujcheon](https://github.com/ujcheon)
 * 통신
 
 ---
@@ -39,17 +39,18 @@
 
 * Alamofire
 * FloatRatingView
-* SwiftGif
+* Pageboy
 * Lottie
 * Tabman
+* Firebase/Database
+* Firebase/Auth
+* Firebase/Storage
 * Firebase/Analytics
 * Firebase/RemoteConfig
 * SnapKit
 * TextFieldEffects
-* Firebase/Database
-* Firebase/Auth
-* Firebase/Storage
 * ObjectMapper
+* FloatRatingView
 
 ---
 
@@ -59,7 +60,7 @@
 
 ---
 
-### co-workers
+### Co-Workers
 
 ### [ujcheon](https://github.com/ujcheon)
 
@@ -69,7 +70,9 @@
 
 ### references
 
-[iOS 채팅 구현](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
+[iOS 하울 채팅 구현](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
+
+[ColectionView in TableView](https://www.youtube.com/watch?v=6ZxA2pmV3VM)
 
 
 
@@ -77,4 +80,6 @@
 
 ### Issues && Report 
 
-* Merge , Branch, Checkout 
+Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send feedback or report a bug. Thank you !
+
+ 
