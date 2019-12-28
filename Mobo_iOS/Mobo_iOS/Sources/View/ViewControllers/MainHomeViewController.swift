@@ -24,6 +24,8 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var day2Button: UIButton!
     
     
+    @IBOutlet weak var testView: LatePopUp!
+    
     var imgArr = [  UIImage(named:"10"),
                     UIImage(named:"10")
         //                       UIImage(named:"Ane Hathaway") ,
@@ -43,7 +45,7 @@ class MainHomeViewController: UIViewController {
     
     
     let movieListCellID: String = "MovieListCell"
-    let mainListID: String = "animationCollectionViewCell"
+    let mainListID: String = "mainCollectionViewCell"
     var movies: [Movie] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
@@ -65,8 +67,8 @@ class MainHomeViewController: UIViewController {
         static let numberOfItemsPerRow: CGFloat = 3.0
     }
     
-    let layout = AnimatedCollectionViewLayout()
-    
+    let caLayer: CAGradientLayer = CAGradientLayer()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,9 +80,6 @@ class MainHomeViewController: UIViewController {
         setMovieListCollectionView()
         sendButton.backgroundColor = .mainOrange
         
-        layout.animator = ZoomInOutAttributesAnimator()
-        layout.scrollDirection = .horizontal
-        mainCollectionView.collectionViewLayout = layout
         dayButton.makeRounded(cornerRadius: 10)
         dayButton.tintColor = .black
         dayButton.isSelected = false
@@ -91,8 +90,7 @@ class MainHomeViewController: UIViewController {
         movieCollectionView.backgroundColor = .clear
         
         // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        
-        
+                
         
         
     }
@@ -148,6 +146,13 @@ class MainHomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
+    @IBAction func addMoreBtn(_ sender: Any) {
+        
+        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
+        self.view.addSubview(view)
+    }
+    
     
     
     func navigationSetup() { //네비게이션 투명색만들기
@@ -269,13 +274,21 @@ class MainHomeViewController: UIViewController {
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView?.isPagingEnabled = true
-        mainCollectionView.makeRounded(cornerRadius: 10)
                 
-        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-            layout.animator = animator?.0
-        }
+//        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+//            layout.animator = animator?.0
+//        }
         
     }
+    
+    func createGradient() {
+        caLayer.startPoint = CGPoint(x: 0, y: 0)
+        caLayer.endPoint = CGPoint(x: 1, y: 1)
+        caLayer.locations = [0,1]
+        caLayer.colors = [UIColor.clear.cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor]
+        self.view.layer.addSublayer(caLayer)
+    }
+    
     
     
 }
@@ -295,8 +308,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             //375 248
             
-            guard let animator = animator else { return view.bounds.size }
-            return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
+            return CGSize(width: 306, height: 202)
             
         }
         
@@ -307,16 +319,16 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         if collectionView == mainCollectionView {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35)
         }
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 19)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         if collectionView == mainCollectionView {
-               return 0
-               }
+               return 70               }
+        
         return 10
         
     }
@@ -339,7 +351,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             let movie = movies[indexPath.row]
             
-            //cell.backgroundColor = .groundColor
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -362,15 +373,21 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             let movie = movies[indexPath.row]
             
             cell.backgroundColor = .groundColor
+            cell.makeRounded(cornerRadius: 10)
             
-           // cell.imageThumbnail.image = #imageLiteral(resourceName: "10")
+            cell.movieName.text = movie.title
+          //  cell.runningtimeLabel.text = 얘는 API에 없음
+            cell.rating.rating = (movie.userRating) / 2
+            cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
+            
+            //cell.LinkBtn
 
+            
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
                 DispatchQueue.main.async {
                     // cell.ImageThumbnail.image = thumnailImage
                     cell.imageThumbnail.image = thumnailImage
-                    cell.imageThumbnail.makeRounded(cornerRadius: 10)
 
                 }
             }
