@@ -1,6 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework
 ${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework
 ${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework

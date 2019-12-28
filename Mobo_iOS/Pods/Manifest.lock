@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.9.1)
-  - AnimatedCollectionViewLayout (1.0.1)
   - AutoInsetter (1.8.0)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -122,7 +121,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - AnimatedCollectionViewLayout
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
@@ -139,7 +137,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AnimatedCollectionViewLayout
     - AutoInsetter
     - Firebase
     - FirebaseABTesting
@@ -172,7 +169,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AnimatedCollectionViewLayout: 00f0997fd26f0fd02d8b99765023b95570b5d826
   AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseABTesting: 0d10f3cdc3fa00f3f175b5b56c1003c8e888299f
@@ -203,6 +199,6 @@ SPEC CHECKSUMS:
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: cf71857f294cf922a97d6d7138c87e65955f7eac
+PODFILE CHECKSUM: 89f4c45427658dfc4c5d823b4f1c80b5ec2a87b8
 
 COCOAPODS: 1.8.4

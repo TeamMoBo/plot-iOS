@@ -30,9 +30,9 @@ class MainViewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tag3Btn: UIButton!
     
     var currentIndex: Int?
-    
-    let caLayer: CAGradientLayer = CAGradientLayer()
     var delegate : PlayLinkActionDelegate?
+
+    let caLayer: CAGradientLayer = CAGradientLayer()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +47,7 @@ class MainViewCollectionViewCell: UICollectionViewCell {
     
     
     func createGradient() {
-        print(111)
+       // print(111)
         caLayer.startPoint = CGPoint(x: 0.5, y: 0)
         caLayer.endPoint = CGPoint(x: 0.5, y: 1)
         caLayer.locations = [0,1]

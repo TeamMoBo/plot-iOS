@@ -9,7 +9,6 @@
 import UIKit
 import Tabman
 import Pageboy
-import AnimatedCollectionViewLayout
 
 class MainHomeViewController: UIViewController {
     
@@ -56,8 +55,6 @@ class MainHomeViewController: UIViewController {
         return ServerURLs.base.rawValue
     }()
     
-    var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
-    var direction: UICollectionView.ScrollDirection = .horizontal
     
     struct Storyboard {
         static let photoCell = "PhotoCell"
@@ -117,6 +114,7 @@ class MainHomeViewController: UIViewController {
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @objc func dayClick(sender: UIButton) {
@@ -192,7 +190,12 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func addMoreBtn(_ sender: Any) {
         
-        
+        navigationSetup1()
+
+               let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
+               let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieMoreTableViewController") as! MovieMoreTableViewController
+               
+               self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -429,13 +432,7 @@ class MainHomeViewController: UIViewController {
         
     }
     
-    func createGradient() {
-        caLayer.startPoint = CGPoint(x: 0, y: 0)
-        caLayer.endPoint = CGPoint(x: 1, y: 1)
-        caLayer.locations = [0,1]
-        caLayer.colors = [UIColor.clear.cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor]
-        self.view.layer.addSublayer(caLayer)
-    }
+   
     
     
     
