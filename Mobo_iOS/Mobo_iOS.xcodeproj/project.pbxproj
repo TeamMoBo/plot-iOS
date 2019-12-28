@@ -17,6 +17,8 @@
 		390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68823B08B1500FF7E68 /* ServerURLs.swift */; };
 		390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68A23B08B9300FF7E68 /* DataManager.swift */; };
 		390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */; };
+		390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F100823B7816600E81BA2 /* TimeTableViewCell.swift */; };
+		390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */; };
 		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
 		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
@@ -45,6 +47,7 @@
 		3989B16423B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16323B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift */; };
 		3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16523B77002006ABB26 /* MatchingFailPopUpViewController.swift */; };
 		3989B16823B7702D006ABB26 /* MatchingSelectPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */; };
+		3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */; };
 		39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */; };
 		39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */; };
 		39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD084623B4B72600CC8D8D /* ChatModel.swift */; };
@@ -83,6 +86,8 @@
 		390BD68823B08B1500FF7E68 /* ServerURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLs.swift; sourceTree = "<group>"; };
 		390BD68A23B08B9300FF7E68 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		390BD68C23B09D2B00FF7E68 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
+		390F100823B7816600E81BA2 /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
+		390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		3989B16323B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFinishPopUpViewController.swift; sourceTree = "<group>"; };
 		3989B16523B77002006ABB26 /* MatchingFailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFailPopUpViewController.swift; sourceTree = "<group>"; };
 		3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingSelectPopUpViewController.swift; sourceTree = "<group>"; };
+		3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMoreTableViewController.swift; sourceTree = "<group>"; };
 		39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewController.swift; sourceTree = "<group>"; };
 		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 				393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */,
 				393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */,
 				39EB8B8F23B600A900073EB0 /* MovieTabTwoViewCell.swift */,
+				390F100823B7816600E81BA2 /* TimeTableViewCell.swift */,
+				390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
 				390B836323B6746600E41C24 /* TimeTableOneViewController.swift */,
 				390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */,
+				3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */,
 			);
 			path = MovieTimeTable;
 			sourceTree = "<group>";
@@ -538,6 +547,7 @@
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */,
 				393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */,
+				3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */,
 				39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
@@ -547,6 +557,7 @@
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
+				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
@@ -560,6 +571,7 @@
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
+				390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */,
 				390B836423B6746600E41C24 /* TimeTableOneViewController.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
 				39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */,
