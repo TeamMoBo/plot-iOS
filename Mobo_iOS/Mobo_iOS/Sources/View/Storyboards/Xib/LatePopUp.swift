@@ -31,10 +31,10 @@ class LatePopUp: UIView {
     private func commoninit() {
         
         Bundle.main.loadNibNamed("LatePopUp", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth ]
-        
+//        addSubview(contentView)
+//        contentView.frame = self.bounds
+//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth ]
+//        
         
     }
     

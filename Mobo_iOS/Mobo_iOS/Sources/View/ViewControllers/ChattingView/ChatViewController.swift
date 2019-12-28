@@ -60,7 +60,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
                
                self.bottomConstraint.constant = keyboardSize.height
-            self.bottomTextFieldConstraint.constant = keyboardSize.height
+            self.bottomConstraint.constant = keyboardSize.height
 
         }
            
@@ -81,7 +81,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @objc func keyboardWillHide(notification:Notification){
            
            self.bottomConstraint.constant = 64
-            self.bottomTextFieldConstraint.constant = 64
+            //self.bottomTextFieldConstraint.constant = 64
 
            self.view.layoutIfNeeded()
            

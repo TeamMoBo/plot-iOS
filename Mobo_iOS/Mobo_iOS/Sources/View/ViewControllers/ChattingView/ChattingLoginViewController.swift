@@ -29,18 +29,18 @@ class ChattingLoginViewController: UIViewController {
         
         try! Auth.auth().signOut()
         let statusBar = UIView()
-        self.view.addSubview(statusBar)
-        statusBar.snp.makeConstraints { (m) in
-            m.right.top.left.equalTo(self.view)
-            m.height.equalTo(20)
-        }
+//        self.view.addSubview(statusBar)
+//        statusBar.snp.makeConstraints { (m) in
+//            m.right.top.left.equalTo(self.view)
+//            m.height.equalTo(20)
+//        }
         
         
-        color = remoteconfig["splash_background"].stringValue
+       // color = remoteconfig["splash_background"].stringValue
         
-        statusBar.backgroundColor = UIColor(hex: color)
-        loginButton.backgroundColor = UIColor(hex: color)
-        signUp.backgroundColor = UIColor(hex: color)
+        //statusBar.backgroundColor = .mainOrange
+        loginButton.backgroundColor = .mainOrange
+        signUp.backgroundColor = .mainOrange
         
         
         // Do any additional setup after loading the view.
@@ -68,7 +68,8 @@ class ChattingLoginViewController: UIViewController {
                 let alret = UIAlertController(title: "에러", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
                 alret.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
                 
-                self.present(alret, animated: true, completion: nil)
+               // self.present(alret, animated: true, completion: nil)
+                
             }
         }
     }
@@ -78,11 +79,16 @@ class ChattingLoginViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatSignupVC") as! ChattingSignUpViewController
         
         vc.modalPresentationStyle = .fullScreen
+        
         self.present(vc, animated: true, completion: nil)
         
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           self.view.endEditing(true)
+           //return 버튼 누르면 키보드 내려갈수있게 설정.
+       }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
