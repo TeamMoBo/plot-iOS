@@ -7,6 +7,15 @@
 
 import UIKit
 
+
+protocol PlayLinkActionDelegate {
+    
+    func didClickedLink(index: Int)
+    
+}
+
+
+
 class MainViewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageThumbnail: UIImageView!
@@ -20,12 +29,22 @@ class MainViewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tag2Btn: UIButton!
     @IBOutlet weak var tag3Btn: UIButton!
     
+    var currentIndex: Int?
+    
     let caLayer: CAGradientLayer = CAGradientLayer()
-
+    var delegate : PlayLinkActionDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         createGradient()
+    
+        
     }
+    
+    @IBAction func didClick(_ sender: Any) {
+        self.delegate?.didClickedLink(index: currentIndex ?? 0)
+    }
+    
     
     func createGradient() {
         print(111)
