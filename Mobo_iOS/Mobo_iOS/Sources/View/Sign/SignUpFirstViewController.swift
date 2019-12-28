@@ -11,7 +11,7 @@ import UIKit
 class SignUpFirstViewController: UIViewController {
     @IBOutlet weak var background: UIImageView!
     
-    @IBOutlet weak var whiteback: UIView!
+   
     
     
     override func viewDidLoad() {
