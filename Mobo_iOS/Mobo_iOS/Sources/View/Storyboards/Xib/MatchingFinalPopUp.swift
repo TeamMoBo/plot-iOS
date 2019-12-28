@@ -1,4 +1,4 @@
-//
+
 //  LatePopUp.swift
 //  Mobo_iOS
 //
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LatePopUp: UIView {
+class MatchingFinalPopUp: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cancelBtn: UIButton!
@@ -16,8 +16,7 @@ class LatePopUp: UIView {
     @IBOutlet weak var text1: UILabel!
     @IBOutlet weak var text2: UILabel!
     
-    @IBOutlet weak var contentView: UIView!
-    
+    @IBOutlet weak var view: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,17 +29,17 @@ class LatePopUp: UIView {
     
     private func commoninit() {
         
-        Bundle.main.loadNibNamed("LatePopUp", owner: self, options: nil)
-//        addSubview(contentView)
-//        contentView.frame = self.bounds
-//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth ]
-//        
+        Bundle.main.loadNibNamed("MatchingPopUp", owner: self, options: nil)
+        addSubview(view)
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleHeight, .flexibleWidth ]
+        
         
     }
     
     @IBAction func cancel(_ sender: Any) {
         print(1)
-        contentView.removeFromSuperview()
+        view.removeFromSuperview()
     }
     
 }
