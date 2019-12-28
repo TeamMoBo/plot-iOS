@@ -8,16 +8,31 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController {
+class MatchingFinishPopUpViewController: UIViewController {
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationSetup()
+        //navigationSetup()
         
     }
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+    //      self.view.endEditing(true)
+        
+        
+        
+        self.dismiss(animated: true, completion: nil)
 
+    }
+
+
+    
     func navigationSetup() { //네비게이션 투명색만들기
                
                self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
