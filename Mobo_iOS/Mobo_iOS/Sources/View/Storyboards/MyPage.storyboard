@@ -34,17 +34,17 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asset12X" translatesAutoresizingMaskIntoConstraints="NO" id="72J-0V-2OH">
-                                        <rect key="frame" x="14" y="153" width="208" height="208"/>
+                                        <rect key="frame" x="-205" y="153" width="208" height="208"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-ds-Ar4">
                                         <rect key="frame" x="137" y="153" width="104" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="ioMypageImgProfilecircle" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-hM-4RM">
-                                        <rect key="frame" x="-24" y="137" width="284" height="150.33333333333337"/>
+                                        <rect key="frame" x="-462" y="137" width="722" height="150.33333333333337"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="안형민" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-JU-NKv">
-                                        <rect key="frame" x="134" y="289.33333333333331" width="88" height="34"/>
+                                        <rect key="frame" x="-85" y="289.33333333333331" width="88" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="774-DQ-XFG"/>
                                             <constraint firstAttribute="width" constant="88" id="chi-a1-8uM"/>
@@ -75,7 +75,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgMypageMiddleBar" translatesAutoresizingMaskIntoConstraints="NO" id="RoQ-Dt-AFx">
-                                        <rect key="frame" x="-192" y="327.66666666666669" width="620" height="101"/>
+                                        <rect key="frame" x="-411" y="327.66666666666669" width="620" height="101"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="btnHashtagchange" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-l8-SUU">
                                         <rect key="frame" x="297" y="306.66666666666669" width="28" height="14"/>
@@ -84,13 +84,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 보유량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcy-V1-jLZ">
-                                        <rect key="frame" x="90.333333333333329" y="337.66666666666669" width="55.333333333333329" height="14.666666666666686"/>
+                                        <rect key="frame" x="-128.66666666666666" y="337.66666666666669" width="55.333333333333343" height="14.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.2627450980392157" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgPopcorn" translatesAutoresizingMaskIntoConstraints="NO" id="b9x-xR-tCa">
-                                        <rect key="frame" x="155" y="348.66666666666669" width="440" height="59"/>
+                                        <rect key="frame" x="-64" y="348.66666666666669" width="878" height="59"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgTicket" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-rg-xHy">
                                         <rect key="frame" x="52" y="334.66666666666669" width="177" height="87"/>
@@ -620,6 +620,6 @@
         <image name="imgMypageMiddleBar" width="310" height="103"/>
         <image name="imgPopcorn" width="44" height="57"/>
         <image name="imgTicket" width="88.666664123535156" height="87"/>
-        <image name="ioMypageImgProfilecircle" width="142" height="142"/>
+        <image name="ioMypageImgProfilecircle" width="361" height="361"/>
     </resources>
 </document>
