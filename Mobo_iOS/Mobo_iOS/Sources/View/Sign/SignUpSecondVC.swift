@@ -11,7 +11,7 @@ import Hashtags
 
 
 
-class SignUpSecondVC: UIViewController {
+class SignUpSecondVC: UIViewController, UITextFieldDelegate {
     
     
     
@@ -64,6 +64,11 @@ class SignUpSecondVC: UIViewController {
     }
     
     @IBAction func nextbtn(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
+               let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
+                             
+               vc.modalPresentationStyle = .fullScreen
+               self.show(vc, sender: nil)
     }
     
     

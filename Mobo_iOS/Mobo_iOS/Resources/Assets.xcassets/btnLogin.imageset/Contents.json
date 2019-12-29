@@ -11,9 +11,9 @@
       "filename" : "btnLogin@2x.png"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "btnLogin@3x.png"
+      "filename" : "btnLogin@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

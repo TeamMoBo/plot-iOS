@@ -39,6 +39,15 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         kakao.delegate = self;
         
     }
+    @IBAction func nextPage(_ sender: Any) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpSecondVC") as! SignUpSecondVC
+                      
+        vc.modalPresentationStyle = .fullScreen
+        self.show(vc, sender: nil)
+    }
+    
     
     @IBAction func camera(_ sender: Any) {
         let alert =  UIAlertController(title: "너를보여줘!", message: "인생사진 어때?", preferredStyle: .actionSheet)
