@@ -21,6 +21,7 @@
 		390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */; };
 		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
 		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
+		391E7ABD23B880F400F7D33D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7ABC23B880F400F7D33D /* ChatModel.swift */; };
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
@@ -50,7 +51,6 @@
 		3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */; };
 		39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */; };
 		39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */; };
-		39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD084623B4B72600CC8D8D /* ChatModel.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
 		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
 		39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */; };
@@ -91,6 +91,7 @@
 		390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
+		391E7ABC23B880F400F7D33D /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewController.swift; sourceTree = "<group>"; };
 		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		39BD084623B4B72600CC8D8D /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
 		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 				39C84F4B23B0BD2E000130B4 /* loader.json */,
 				390BD68623B08AF800FF7E68 /* Movie.swift */,
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
-				39BD084623B4B72600CC8D8D /* ChatModel.swift */,
 				3989599D23B1D30D00340400 /* UserModel.swift */,
+				391E7ABC23B880F400F7D33D /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,7 +546,7 @@
 				39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */,
 				39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
-				39BD084723B4B72600CC8D8D /* ChatModel.swift in Sources */,
+				391E7ABD23B880F400F7D33D /* ChatModel.swift in Sources */,
 				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */,
 				393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */,

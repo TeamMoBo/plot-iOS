@@ -42,8 +42,8 @@ class MovieMoreTableViewController: UIViewController {
         
         containerView.makeRounded(cornerRadius: 10)
         
-        // tableView.estimatedRowHeight = 120
-        //  tableView.rowHeight = UITableView.automaticDimension
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     
@@ -61,22 +61,17 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        //print(indexPath)
-        
-        if indexPath == [0,0]{
-            return 80
-        }
-        else if indexPath == [0,1] {
-            
-            return 120
-        }
-        else if indexPath == [0,2] {
-            return 160
-        }
-        else if indexPath == [0,3] {
-            return 200
-        }
-        return 80
+       // print("==============")
+        let dataCount = dummyDate3.count
+       // print(dataCount)
+        let lineCount = (dataCount % 4 == 0) ? (dataCount / 4) : (dataCount / 4 + 1)
+      //  print(lineCount)
+        let collectionViewHeight: CGFloat = CGFloat(lineCount * 30 + (lineCount - 1) * 4 + 6 + 6)
+      //  print(collectionViewHeight)
+        let height = collectionViewHeight + 29 + 16
+      //  print(height)
+      //  print("==============")
+        return height
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,10 +94,11 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 
-extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 1
     }
     
@@ -122,7 +118,6 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         cell.makeRounded(cornerRadius: 5)
         cell.setBorder(borderColor: .borderGray, borderWidth: 1)
         // cell.timeButton.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
         
         
         cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
@@ -162,6 +157,30 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = self.view.frame.width - 79 - 20
+        let width: CGFloat = (collectionViewWidth - 4 - 4 - 4 * 3) / 4
+        let height: CGFloat = 30
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 6, left: 4, bottom: 6, right: 4)
+    }
+    
     
     
 }
@@ -173,6 +192,8 @@ extension MovieMoreTableViewController: toggleActionDelegate {
     func didClicked() {
         
         print(1010)
+        
+        
 
     }
     

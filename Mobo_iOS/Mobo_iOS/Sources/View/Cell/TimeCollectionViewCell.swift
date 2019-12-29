@@ -23,7 +23,17 @@ class TimeCollectionViewCell: UICollectionViewCell {
     var currentIndex: Int?
     var delegate : toggleActionDelegate?
     
-    
+    override var isSelected: Bool {
+        
+        didSet {
+
+            print(isSelected)
+            let color: UIColor = isSelected ? .mainOrange : .lightGray
+            let textColor: UIColor = isSelected ? .white : .black
+            self.timeButton.setBackgroundColor(color, for: .normal)
+            self.timeButton.setTitleColor(textColor, for: .normal)
+        }
+    }
     
      @IBAction func didClicked(_ sender: Any) {
         

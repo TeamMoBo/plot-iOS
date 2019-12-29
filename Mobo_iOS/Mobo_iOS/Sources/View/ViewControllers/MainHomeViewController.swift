@@ -21,6 +21,7 @@ class MainHomeViewController: UIViewController {
     
     @IBOutlet weak var dayButton: UIButton!
     @IBOutlet weak var day2Button: UIButton!
+    @IBOutlet weak var bottomview: UIView!
     
     
     
@@ -84,6 +85,9 @@ class MainHomeViewController: UIViewController {
         mainCollectionView.backgroundColor = .clear
         movieCollectionView.backgroundColor = .clear
         
+        
+        bottomview.makeRounded(cornerRadius: 10)
+        bottomview.dropShadow(color: .lightGray, offSet: CGSize(width: 1, height: 1), opacity: 0.7, radius: 5)
         // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
         
         
