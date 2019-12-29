@@ -21,6 +21,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var uni: UITextField!
     @IBOutlet weak var major: UITextField!
     @IBOutlet weak var kakao: UITextField!
+
     
     
     override func viewDidLoad() {
