@@ -39,9 +39,8 @@ class MovieCollectionTabViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         imageThumbnail.makeRounded(cornerRadius: 10)
-        
-        
         self.rating.delegate = self
 
 
