@@ -23,6 +23,8 @@ class SignUpSecondViewController: UIViewController {
     
     @IBOutlet weak var nextbtn: UIImageView!
     
+    
+    
     @objc var womanSelected: Bool = false {
              didSet {
                  let image = womanSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")

@@ -29,6 +29,15 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         selectedimg.layer.cornerRadius = selectedimg.frame.height / 2
         picker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
+        nickname.delegate = self;
+        name.delegate = self;
+        age.delegate = self;
+        id.delegate = self;
+        pwd.delegate = self;
+        uni.delegate = self;
+        major.delegate = self;
+        kakao.delegate = self;
+        
     }
     
     @IBAction func camera(_ sender: Any) {
@@ -63,7 +72,20 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         }
         
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        nickname.resignFirstResponder()
+        name.resignFirstResponder()
+        id.resignFirstResponder()
+        age.resignFirstResponder()
+        pwd.resignFirstResponder()
+        uni.resignFirstResponder()
+        major.resignFirstResponder()
+        kakao.resignFirstResponder()
+        
+        return true
+
+    }
     func navigationSetup() { //네비게이션 투명색만들기
         
         //        rgb 255 126 39
