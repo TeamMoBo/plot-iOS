@@ -10,21 +10,72 @@ import UIKit
 
 class SignUpSecondViewController: UIViewController {
 
+    @IBOutlet weak var womanimg: UIImageView!
+    @IBOutlet weak var manimg: UIImageView!
+    @IBOutlet weak var nomatterimg: UIImageView!
+    
+    @IBOutlet weak var womanbtn: UIButton!
+    @IBOutlet weak var manbtn: UIButton!
+    @IBOutlet weak var nomatterbtn: UIButton!
+    
+    @IBOutlet weak var agemin: UITextField!
+    @IBOutlet weak var agemax: UITextField!
+    
+    @IBOutlet weak var nextbtn: UIImageView!
+    
+    
+    
+    @objc var womanSelected: Bool = false {
+             didSet {
+                 let image = womanSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
+                 womanimg.image = image
+             }
+         }
+         
+    @objc var manSelected: Bool = false {
+             didSet {
+                 let image = manSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
+                 manimg.image = image
+             }
+         }
+    @objc var nomatterSelected: Bool = false {
+             didSet {
+                 let image = nomatterSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
+                 nomatterimg.image = image
+             }
+         }
+
+    @IBAction func next(_ sender: Any) {
+      
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        womanbtn.addTarget(self, action: #selector(getter: womanSelected), for: .touchUpInside)
+              
+        manbtn.addTarget(self, action: #selector(getter: manSelected), for: .touchUpInside)
+              
+        nomatterbtn.addTarget(self, action: #selector(getter: nomatterSelected), for: .touchUpInside)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
+    @objc func womanSelect() {
+           womanSelected = true
+           manSelected = false
+           nomatterSelected = false
+       }
+       
+       @objc func manSelect() {
+           womanSelected = false
+           manSelected = true
+           nomatterSelected = false
+       }
+       
+       @objc func nomatterSelect() {
+           womanSelected = false
+           manSelected = false
+           nomatterSelected = true
+       }
 }

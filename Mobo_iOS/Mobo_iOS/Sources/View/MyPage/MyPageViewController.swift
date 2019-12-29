@@ -61,10 +61,14 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //navigationSetup()
+
+        
+
         picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
-        selectedpic.layer.cornerRadius = 52
+        selectedpic.layer.cornerRadius = selectedpic.frame.height / 2
         agetext.delegate = self;
         nametext.delegate = self;
         kakaoidtext.delegate = self;
@@ -76,9 +80,9 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         
         womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
-         manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
-         nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
+        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
     }
     
     
@@ -143,6 +147,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         manSelected = false
         nomatterSelected = true
     }
+
     
     func navigationSetup() {
     }//네비게이션 투명색만들기
@@ -165,3 +170,22 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
 
 
 //}
+
+
+
+
+extension MyPageViewController : UIImagePickerControllerDelegate
+{
+    func imagePickerController(_ _picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            selectedpic.image = image
+            print(info)
+        }
+        
+        dismiss(animated: true)
+    }
+    
+}
+
+
+

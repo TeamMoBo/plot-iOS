@@ -19,6 +19,8 @@ pod 'Firebase/Storage'
 pod 'ObjectMapper','~>3.4'
 pod 'Alamofire', '~> 4.7'
 pod 'FloatRatingView', '~> 4'
+pod 'Hashtags'
+
 
 
 end

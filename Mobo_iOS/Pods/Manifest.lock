@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlignedCollectionViewFlowLayout (1.1.2)
   - AutoInsetter (1.8.0)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -103,6 +104,8 @@ PODS:
   - GoogleUtilities/UserDefaults (6.4.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.3.0)
+  - Hashtags (0.1.3):
+    - AlignedCollectionViewFlowLayout (~> 1.1.2)
   - leveldb-library (1.22)
   - lottie-ios (3.1.5)
   - nanopb (0.3.9011):
@@ -127,6 +130,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Firebase/Storage
   - FloatRatingView (~> 4)
+  - Hashtags
   - lottie-ios
   - ObjectMapper (~> 3.4)
   - Pageboy (~> 3.2)
@@ -137,6 +141,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlignedCollectionViewFlowLayout
     - AutoInsetter
     - Firebase
     - FirebaseABTesting
@@ -157,6 +162,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - GTMSessionFetcher
+    - Hashtags
     - leveldb-library
     - lottie-ios
     - nanopb
@@ -169,6 +175,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseABTesting: 0d10f3cdc3fa00f3f175b5b56c1003c8e888299f
@@ -189,6 +196,7 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 202d7cdf9c4a7d81a2bb7f7e7e1ba6faa421b1f2
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
+  Hashtags: 6e2fbcb3ec0cae07403aab96985a9497927a5962
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -199,6 +207,6 @@ SPEC CHECKSUMS:
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 89f4c45427658dfc4c5d823b4f1c80b5ec2a87b8
+PODFILE CHECKSUM: cdf35b92b1824c4a0d3e31fd9dfdac50f44bc2a6
 
 COCOAPODS: 1.8.4
