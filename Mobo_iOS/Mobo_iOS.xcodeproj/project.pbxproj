@@ -63,6 +63,7 @@
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
+		EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
 		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
@@ -135,6 +136,7 @@
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondVC.swift; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */,
 				EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */,
 				EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */,
+				EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */,
 				EAC8C3FD23B3250D0061AEEB /* SignUpLastViewController.swift */,
 			);
 			path = Sign;
@@ -555,6 +558,7 @@
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
 				3989B16423B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
+				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
