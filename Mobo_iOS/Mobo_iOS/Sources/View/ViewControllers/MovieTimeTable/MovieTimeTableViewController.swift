@@ -39,8 +39,12 @@ class MovieTimeTableViewController: UIViewController {
     @IBOutlet weak var day7: UIButton!
 
     @IBOutlet weak var tableView: UIView!
-    
     @IBOutlet weak var OkBtn: UIButton!
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
