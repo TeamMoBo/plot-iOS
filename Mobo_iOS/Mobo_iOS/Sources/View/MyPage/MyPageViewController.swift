@@ -61,10 +61,10 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationSetup()
+        
         picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
-        selectedpic.layer.cornerRadius = 52
+        selectedpic.layer.cornerRadius = selectedpic.frame.height / 2
         agetext.delegate = self;
         nametext.delegate = self;
         kakaoidtext.delegate = self;
@@ -76,9 +76,9 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         
         womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
-         manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
-         nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
+        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
     }
     
     
@@ -143,38 +143,21 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         manSelected = false
         nomatterSelected = true
     }
-    
-    func navigationSetup() { //네비게이션 투명색만들기
+}
 
-extension MyPageViewController : UIImagePickerControllerDelegate,
-UINavigationControllerDelegate{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+extension MyPageViewController : UIImagePickerControllerDelegate
+{
+    func imagePickerController(_ _picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectedpic.image = image
+            print(info)
         }
         
         dismiss(animated: true)
     }
-
-               
-               self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-               self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-               self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-               self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "채팅대기", style: .done, target: nil, action: nil)
-               self.navigationItem.backBarButtonItem?.tintColor = .black
-               //투명하게 만드는 공식처럼 기억하기
-               self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-               //네비게이션바의 백그라운드색 지정. UIImage와 동일
-               self.navigationController?.navigationBar.shadowImage = UIImage()
-               //shadowImage는 UIImage와 동일. 구분선 없애줌.
-               self.navigationController?.navigationBar.isTranslucent = true
-               //false면 반투명이다.
-               self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-               //뷰의 배경색 지정
-       //        self.navigationController?.navigationBar.topItem?.title = "Home"
-       //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-       //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-               
-           }
-   
+    
 }
+
+
+
