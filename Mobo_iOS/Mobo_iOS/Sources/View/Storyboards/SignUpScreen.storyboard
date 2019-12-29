@@ -428,6 +428,7 @@
                                             <constraint firstItem="aMU-Wo-UMv" firstAttribute="leading" secondItem="JBl-PT-d0z" secondAttribute="leading" constant="16" id="xKo-UM-QPU"/>
                                             <constraint firstItem="UHo-t2-av7" firstAttribute="leading" secondItem="JBl-PT-d0z" secondAttribute="leading" constant="16" id="xyh-sV-h3v"/>
                                             <constraint firstItem="UHo-t2-av7" firstAttribute="top" secondItem="b8L-FB-L9E" secondAttribute="bottom" constant="31" id="za0-Ou-bea"/>
+
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -437,6 +438,7 @@
                                     <constraint firstAttribute="trailing" secondItem="JBl-PT-d0z" secondAttribute="trailing" id="h6L-B8-odh"/>
                                     <constraint firstItem="JBl-PT-d0z" firstAttribute="leading" secondItem="GwL-W4-ues" secondAttribute="leading" id="hpy-fk-VW6"/>
                                     <constraint firstItem="JBl-PT-d0z" firstAttribute="height" secondItem="GwL-W4-ues" secondAttribute="height" priority="750" id="lG4-p7-9y8"/>
+
                                     <constraint firstAttribute="bottom" secondItem="JBl-PT-d0z" secondAttribute="bottom" id="uUr-uH-iT9"/>
                                 </constraints>
                             </scrollView>
@@ -466,6 +468,7 @@
                         <outlet property="selectedimg" destination="gQN-8c-6up" id="ye0-qV-F2T"/>
                         <outlet property="uni" destination="yOR-mH-fw4" id="ohP-vn-cTu"/>
                     </connections>
+                  
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPZ-zC-fkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1460,6 +1463,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgQ-FC-2tF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
             <point key="canvasLocation" x="416.80000000000001" y="35.467980295566505"/>
         </scene>
     </scenes>
@@ -1478,5 +1482,6 @@
         <image name="icUnselected" width="20" height="20"/>
         <image name="imgBasicprofile" width="128" height="128"/>
         <image name="imgCompletetext" width="124" height="28"/>
+
     </resources>
 </document>
