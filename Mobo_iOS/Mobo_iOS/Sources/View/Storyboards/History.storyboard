@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="rowanChestnutM663ZRzRe40Unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-bP-1c0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="dumyImageGirl" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-bP-1c0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="OYc-Av-WYj"/>
@@ -240,7 +240,7 @@
                                     <constraint firstItem="zKw-0j-NnI" firstAttribute="leading" secondItem="Az4-20-Kne" secondAttribute="leading" id="yg4-x8-eWm"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x54-3M-jLE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x54-3M-jLE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -344,11 +344,11 @@
     <resources>
         <image name="ae9656Be06B91Fd2D661A7091934Cb3E" width="185" height="257"/>
         <image name="btnMatchingcancel" width="57" height="29"/>
+        <image name="dumyImageGirl" width="375" height="301"/>
         <image name="ic_12" width="20" height="20"/>
         <image name="placeLocalizer" width="12.666666984558105" height="19.333333969116211"/>
         <image name="rectangle" width="375" height="300"/>
         <image name="reviewsIcon" width="21.666666030883789" height="18.333333969116211"/>
-        <image name="rowanChestnutM663ZRzRe40Unsplash" width="484.66665649414062" height="727.66668701171875"/>
         <image name="skyline" width="22.333333969116211" height="24.333333969116211"/>
     </resources>
 </document>
