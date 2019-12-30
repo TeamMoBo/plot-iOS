@@ -227,6 +227,7 @@ class MovieTimeTableViewController: UIViewController {
     private var reservationInfo: DataManager.ReservationInfo!
     
     
+    
     func date_select(date: String) {
         
         DataManager.sharedManager.setReservation(info: reservationInfo)
@@ -241,10 +242,9 @@ class MovieTimeTableViewController: UIViewController {
         
     }
     
-    
-    
     func time_select(time: Int) {
-        guard let index = reservationInfo.times.firstIndex(where: {$0 == time}) else{
+        
+        guard let index = reservationInfo.times.firstIndex(where: {$0 == time}) else {
             self.reservationInfo.times.append(time)
             return
         }
@@ -253,6 +253,7 @@ class MovieTimeTableViewController: UIViewController {
     
     
     @objc func dayClick(sender: UIButton) {
+        
         
         
         if day1.isTouchInside {
