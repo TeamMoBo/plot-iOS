@@ -215,12 +215,11 @@
                                     <action selector="addMoreBtn:" destination="TGd-qO-mc1" eventType="touchUpInside" id="SsX-Nr-gRl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-cR-tV2">
-                                <rect key="frame" x="110" y="728" width="156" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-cR-tV2">
+                                <rect key="frame" x="101" y="719" width="174" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="영화 예매하기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="영화 예매하기" backgroundImage="btnMovie-1">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buyBtn:" destination="TGd-qO-mc1" eventType="touchUpInside" id="a1N-PW-hbe"/>
@@ -289,11 +288,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-fB-Ebp">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-fB-Ebp">
                                         <rect key="frame" x="287" y="16" width="42" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="더보기">
+                                        <state key="normal" image="icThreedot">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -688,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56R-7I-MzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="10"/>
+            <point key="canvasLocation" x="856.79999999999995" y="9.6059113300492616"/>
         </scene>
         <!--Time Table Two View Controller-->
         <scene sceneID="kRH-kv-hud">
@@ -710,9 +709,11 @@
         <image name="btnChange" width="54" height="36"/>
         <image name="btnChangetime" width="174" height="54"/>
         <image name="btnMore" width="47" height="29"/>
+        <image name="btnMovie-1" width="174" height="54"/>
         <image name="btnMypage" width="48" height="48"/>
         <image name="icChatingpage" width="48" height="48"/>
         <image name="icPlay" width="84" height="84"/>
+        <image name="icThreedot" width="42" height="24"/>
         <image name="ic_star_large" width="48" height="48"/>
         <image name="ic_star_large_full" width="48" height="48"/>
         <image name="imgBackground-1" width="375" height="812"/>
