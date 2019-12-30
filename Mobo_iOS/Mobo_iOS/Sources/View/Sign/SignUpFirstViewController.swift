@@ -103,12 +103,19 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .black
+//        self.navigationItem.backBarButtonItem?.tintColor = .black
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+//        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
        
 
