@@ -65,6 +65,7 @@
 		EA204A1023B8D34900369BC7 /* ChatWaiting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */; };
 		EA204A1223B91A8900369BC7 /* ChatWaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */; };
 		EA204A1423BA1E1E00369BC7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA204A1323BA1E1E00369BC7 /* History.storyboard */; };
+		EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
 		EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */; };
@@ -142,6 +143,7 @@
 		EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatWaiting.storyboard; sourceTree = "<group>"; };
 		EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWaitingViewController.swift; sourceTree = "<group>"; };
 		EA204A1323BA1E1E00369BC7 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailVC.swift; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondVC.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		390BD68123B08A0100FF7E68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA204A1523BA4F1300369BC7 /* History */,
 				398522D223B0646D009C9AE3 /* Storyboards */,
 				3989B15C23B75085006ABB26 /* PopUp */,
 				EA79170123B542AC00DBC79B /* MyPage */,
@@ -377,6 +380,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA204A1523BA4F1300369BC7 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		EA79170123B542AC00DBC79B /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +564,7 @@
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				3989B15E23B75098006ABB26 /* InventoryPopUpViewController.swift in Sources */,
 				3989B16223B76FB0006ABB26 /* PayFinishPopUpViewController.swift in Sources */,
+				EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
 				390B836623B6747200E41C24 /* TimeTableTwoViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
