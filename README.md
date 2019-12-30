@@ -17,7 +17,7 @@
 ---
 
 
-### Todo 
+### Function 
 
 * SignInView - [ujcheon](https://github.com/ujcheon)
 * SignUp - [ujcheon](https://github.com/ujcheon)
@@ -71,8 +71,9 @@
 
 ### screenshots
 
-<img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572198-564ca480-2b21-11ea-898c-9e28844c6de3.png"><img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572199-564ca480-2b21-11ea-9512-cad017cd53a2.png">
-<img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572201-56e53b00-2b21-11ea-9d95-a0a075be8926.png"><img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572200-56e53b00-2b21-11ea-9eaf-c4beb9077152.png">
+<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572198-564ca480-2b21-11ea-898c-9e28844c6de3.png"><img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572199-564ca480-2b21-11ea-9512-cad017cd53a2.png">
+<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572201-56e53b00-2b21-11ea-9d95-a0a075be8926.png"><img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572200-56e53b00-2b21-11ea-9eaf-c4beb9077152.png">
+<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71587337-9da65580-2b60-11ea-9e49-d62badcd53b9.png">
 
 ---
 
