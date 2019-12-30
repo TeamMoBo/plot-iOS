@@ -64,6 +64,7 @@
 		9FAE6A60C01378860FA901C8 /* Pods_Mobo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */; };
 		EA204A1023B8D34900369BC7 /* ChatWaiting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */; };
 		EA204A1223B91A8900369BC7 /* ChatWaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */; };
+		EA204A1423BA1E1E00369BC7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA204A1323BA1E1E00369BC7 /* History.storyboard */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
 		EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */; };
@@ -140,6 +141,7 @@
 		47EA4ECB84A67FB1A51C107C /* Pods-Mobo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatWaiting.storyboard; sourceTree = "<group>"; };
 		EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWaitingViewController.swift; sourceTree = "<group>"; };
+		EA204A1323BA1E1E00369BC7 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondVC.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */,
 				EA76B5B123B51E36002012CE /* MyPage.storyboard */,
 				EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */,
+				EA204A1323BA1E1E00369BC7 /* History.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
+				EA204A1423BA1E1E00369BC7 /* History.storyboard in Resources */,
 				EA204A1023B8D34900369BC7 /* ChatWaiting.storyboard in Resources */,
 				EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */,
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,

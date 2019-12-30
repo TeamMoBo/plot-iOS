@@ -38,6 +38,7 @@
 
 ### 개발 환경 및 Using Library
 
+<<<<<<< HEAD
 > Swift 5.1
 >
 > Xcode 11.3
@@ -50,14 +51,22 @@
 * Lottie
 * Tabman
 * Firebase/Database
+=======
+* Alamofire 4.7
+* FloatRatingView 4 
+* Pageboy 3.2
+* Lottie 
+* Tabman 2.6
+* Firebase/Database 
+>>>>>>> history
 * Firebase/Auth
 * Firebase/Storage
 * Firebase/Analytics
 * Firebase/RemoteConfig
-* SnapKit
+* SnapKit 5.0.0
 * TextFieldEffects
-* ObjectMapper
-* FloatRatingView
+* ObjectMapper 3.4
+* FloatRatingView 4
 
 ---
 
