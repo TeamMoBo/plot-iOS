@@ -15,87 +15,98 @@ class DataManager {
         return dm
     }()
     
+    struct ReservationInfo {
+        
+        var date: String
+        var times: [Int]
+    }
+    
     private init() {
         
     }
-    private var toggleSwitch: Bool = false
+    //    var dic : [String : [Int]] = [:]
     
-    func getSwitch() -> Bool {
-        return toggleSwitch
-    }
-    func setSwitch(toggleSwitch : Bool){
-        self.toggleSwitch = toggleSwitch
-    }
+    var reservationCache: [ReservationInfo] = []
     
-    
-    private var haveImage: UIImage!
-    
-    func getImage() -> UIImage {
-        return haveImage
-    }
-    func setImage(haveImage : UIImage) {
-        self.haveImage = haveImage
+    func setReservation(info : ReservationInfo) {
+        
+        guard let index = reservationCache.firstIndex(where: { $0.date == info.date}) else {
+            self.reservationCache.append(info)
+            return
+        }
+        reservationCache[index] = info
     }
     
-    private var haveTitle: String!
-    
-    func getTitle() -> String {
-        return haveTitle
-    }
-    func setTitle(haveTitle : String) {
-        self.haveTitle = haveTitle
-    }
-    
-    private var haveDate: String!
-    
-    func getDate() -> String {
-        return haveDate
-    }
-    func setDate(haveDate : String) {
-        self.haveDate = haveDate
-    }
-    
-    private var haveRating: Double!
-    
-    func getRating() -> Double {
-        return haveRating
-    }
-    func setRating(haveRating : Double) {
-        self.haveRating = haveRating
-    }
-    
-    
-    //For Not Do Many Networking Process
-    private var didOrderTypeChangedAndDownloaded: Bool = false
-    
-    func setDidOrderTypeChangedAndDownloaded(_ state: Bool) {
-        didOrderTypeChangedAndDownloaded = state
-    }
-    
-    
-    func getDidOrderTypeChangedAndDownloaded() -> Bool {
-        return didOrderTypeChangedAndDownloaded
-    }
-    
-    //Shared MovieOrderType
-    private var movieOrderType: String = ""
-    
-    func setMovieOrderType(orderType: String) {
-        movieOrderType = orderType
-    }
-    
-    func getMovieOrderType() -> String {
-        return "0"
-    }
-    
-    //Shared MovieLists
-    private var movieList: [Movie] = []
-    
-    func setMovieList(list: [Movie]) {
-        movieList = list
-    }
-    
-    func getMovieList() -> [Movie] {
-        return movieList
-    }
+
+
+private var haveImage: UIImage!
+
+func getImage() -> UIImage {
+    return haveImage
+}
+func setImage(haveImage : UIImage) {
+    self.haveImage = haveImage
+}
+
+private var haveTitle: String!
+
+func getTitle() -> String {
+    return haveTitle
+}
+func setTitle(haveTitle : String) {
+    self.haveTitle = haveTitle
+}
+
+private var haveDate: String!
+
+func getDate() -> String {
+    return haveDate
+}
+func setDate(haveDate : String) {
+    self.haveDate = haveDate
+}
+
+private var haveRating: Double!
+
+func getRating() -> Double {
+    return haveRating
+}
+func setRating(haveRating : Double) {
+    self.haveRating = haveRating
+}
+
+
+//For Not Do Many Networking Process
+private var didOrderTypeChangedAndDownloaded: Bool = false
+
+func setDidOrderTypeChangedAndDownloaded(_ state: Bool) {
+    didOrderTypeChangedAndDownloaded = state
+}
+
+
+func getDidOrderTypeChangedAndDownloaded() -> Bool {
+    return didOrderTypeChangedAndDownloaded
+}
+
+//Shared MovieOrderType
+private var movieOrderType: String = ""
+
+func setMovieOrderType(orderType: String) {
+    movieOrderType = orderType
+}
+
+func getMovieOrderType() -> String {
+    return "0"
+}
+
+//Shared MovieLists
+private var movieList: [Movie] = []
+
+func setMovieList(list: [Movie]) {
+    movieList = list
+}
+
+func getMovieList() -> [Movie] {
+    return movieList
+}
 }

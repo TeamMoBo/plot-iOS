@@ -16,7 +16,7 @@ class MovieTabOneViewController: UIViewController {
     
     
     let movieListCellID: String = "MovieTabViewCell"
-    let movieListTwoCellID: String = "MovieTabTwoViewCell"
+    //let movieListTwoCellID: String = "MovieTabTwoViewCell"
     
     var movies: [Movie] = []
     var selectedImage: UIImage!
@@ -41,17 +41,16 @@ class MovieTabOneViewController: UIViewController {
         movieCollectionView.translatesAutoresizingMaskIntoConstraints = false
         movieCollectionView.showsHorizontalScrollIndicator = false
         movieCollectionView.decelerationRate = .fast
-        
-     //   movieCollectionView.isScrollEnabled = true
-        
+        movieCollectionView.isScrollEnabled = false
         
         
-        self.title1.text = "예매율TOP 10"
+        
+        self.title1.text = "    예매율TOP 10" // 띄어쓰기 4 번
         self.title1.backgroundColor = .groundColor
-        self.button1.setTitle("시간 선택", for: .normal)
-        self.button1.backgroundColor = .mainOrange
-        self.button1.tintColor = .white
-        self.button1.makeRounded(cornerRadius: 18)
+       // self.button1.setTitle("시간 선택", for: .normal)
+       // self.button1.backgroundColor = .mainOrange
+       // self.button1.tintColor = .white
+       // self.button1.makeRounded(cornerRadius: 18)
         
         setMovieListCollectionView()
         
@@ -224,7 +223,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
         if section == 0 {
             return UIEdgeInsets(top: 0, left: 33, bottom: 25, right: 33)
         }
-        return UIEdgeInsets(top: 0, left: 26, bottom: 0, right: 26)
+        return UIEdgeInsets(top: 5, left: 26, bottom: 0, right: 26)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -240,6 +239,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
 
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
         return 0
     }
     
@@ -256,14 +256,13 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 12)
+            
             //cell.dateLabel.text = movie.date
             
             
             cell.rating.rating = (movie.userRating) / 2
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2) + " 점"
-            
-            
-            
+       
             let gradeIamge = getGradeImage(grade: movie.grade)
             cell.gradeImage.image = gradeIamge
             
