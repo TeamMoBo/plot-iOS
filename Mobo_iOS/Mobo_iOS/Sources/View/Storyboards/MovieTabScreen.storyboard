@@ -140,7 +140,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-Jc-PWm">
-                                        <rect key="frame" x="13.666666666666657" y="545" width="348" height="108"/>
+                                        <rect key="frame" x="100.66666666666669" y="545" width="174" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="시간 수정하기" backgroundImage="btnChangetime">
                                             <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,9 +197,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQw-rT-496">
-                                <rect key="frame" x="110" y="742" width="156" height="36"/>
+                                <rect key="frame" x="110" y="743" width="156" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="PickFinishBtn:" destination="U2H-y8-nJb" eventType="touchUpInside" id="DjB-uH-LpG"/>
                                 </connections>
@@ -211,7 +211,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-B0-Cc3">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-B0-Cc3">
                                 <rect key="frame" x="0.0" y="177" width="375" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -271,7 +271,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-yu-HBg">
-                                                    <rect key="frame" x="120" y="8" width="12" height="14"/>
+                                                    <rect key="frame" x="120" y="52" width="12" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="KWJ-yu-HBg" secondAttribute="height" multiplier="6:7" id="RBn-Db-0iI"/>
                                                         <constraint firstAttribute="height" constant="14" id="oZG-L8-HHm"/>
@@ -320,7 +320,7 @@
                     </view>
                     <connections>
                         <outlet property="button1" destination="AQw-rT-496" id="rIM-cN-DvQ"/>
-                        <outlet property="movieCollectionView" destination="gz9-B0-Cc3" id="1of-n6-fXx"/>
+                        <outlet property="movieCollectionView" destination="gz9-B0-Cc3" id="jFn-Aq-uVy"/>
                         <outlet property="title1" destination="gdc-FB-Eth" id="4Kl-Dj-cLU"/>
                     </connections>
                 </viewController>
@@ -340,29 +340,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xj-GE-HC5">
-                                <rect key="frame" x="0.0" y="589" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-KD-ISo">
-                                <rect key="frame" x="0.0" y="439" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예매율TOP 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a45-EM-ppX">
-                                <rect key="frame" x="0.0" y="138" width="375" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5E-5z-YM8">
-                                <rect key="frame" x="110" y="742" width="156" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ke7-tj-iUu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ke7-tj-iUu">
                                 <rect key="frame" x="0.0" y="177" width="375" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -435,22 +413,44 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="140" height="231"/>
                                         <connections>
-                                            <outlet property="gradeImage" destination="5OD-AR-Gfx" id="dUb-Ut-l8h"/>
-                                            <outlet property="imageThumbnail" destination="1aC-wA-uUS" id="CCc-6F-b58"/>
-                                            <outlet property="movieName" destination="Ktb-7V-pBy" id="1D1-mN-MJS"/>
-                                            <outlet property="rating" destination="Jv1-LV-HJH" id="pYH-94-boK"/>
-                                            <outlet property="ratingLabel" destination="NZ0-Ye-AGl" id="wJ2-oW-mZE"/>
+                                            <outlet property="gradeImage" destination="5OD-AR-Gfx" id="fdd-Eu-HbE"/>
+                                            <outlet property="imageThumbnail" destination="1aC-wA-uUS" id="N4r-BS-OZN"/>
+                                            <outlet property="movieName" destination="Ktb-7V-pBy" id="kpb-tW-0uU"/>
+                                            <outlet property="rating" destination="Jv1-LV-HJH" id="mTf-zt-ozp"/>
+                                            <outlet property="ratingLabel" destination="NZ0-Ye-AGl" id="mGn-ry-HXH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xj-GE-HC5">
+                                <rect key="frame" x="0.0" y="589" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-KD-ISo">
+                                <rect key="frame" x="0.0" y="439" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예매율TOP 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a45-EM-ppX">
+                                <rect key="frame" x="0.0" y="138" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5E-5z-YM8">
+                                <rect key="frame" x="110" y="742" width="156" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aDs-WH-oo2"/>
                     </view>
                     <connections>
                         <outlet property="Button1" destination="n5E-5z-YM8" id="BRa-5c-Dja"/>
-                        <outlet property="MovieCollectionView" destination="ke7-tj-iUu" id="4qZ-eR-BIR"/>
+                        <outlet property="MovieCollectionView" destination="ke7-tj-iUu" id="WHL-yK-etT"/>
                         <outlet property="Title1" destination="a45-EM-ppX" id="Dzx-Hl-QP1"/>
                     </connections>
                 </viewController>
