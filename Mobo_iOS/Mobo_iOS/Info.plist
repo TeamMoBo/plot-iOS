@@ -44,7 +44,10 @@
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> history
 =======
 >>>>>>> history
 					<string>Main</string>
@@ -56,7 +59,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> history
 =======
 >>>>>>> history
 	<string>Main</string>
