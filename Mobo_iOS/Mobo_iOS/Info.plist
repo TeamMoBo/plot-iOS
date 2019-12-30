@@ -43,6 +43,13 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> history
+=======
+>>>>>>> history
 					<string>Main</string>
 				</dict>
 			</array>
@@ -51,6 +58,13 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> history
+=======
+>>>>>>> history
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

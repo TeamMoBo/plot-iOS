@@ -38,15 +38,35 @@
 
 ### 개발 환경 및 Using Library
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> history
 > Swift 5.1
 > Xcode 11.3
 
+<<<<<<< HEAD
+
+
+* Alamofire
+* FloatRatingView
+* Pageboy
+* Lottie
+* Tabman
+* Firebase/Database
+=======
+=======
+>>>>>>> history
 * Alamofire 4.7
 * FloatRatingView 4 
 * Pageboy 3.2
 * Lottie 
 * Tabman 2.6
 * Firebase/Database 
+<<<<<<< HEAD
+>>>>>>> history
+=======
+>>>>>>> history
 * Firebase/Auth
 * Firebase/Storage
 * Firebase/Analytics
