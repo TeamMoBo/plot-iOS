@@ -29,6 +29,7 @@ class MovieMoreTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         print(date)
         
         dummyDay = [17,18,19,20,21,22,23,24,25]
@@ -61,16 +62,16 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-       // print("==============")
+        // print("==============")
         let dataCount = dummyDate3.count
-       // print(dataCount)
+        // print(dataCount)
         let lineCount = (dataCount % 4 == 0) ? (dataCount / 4) : (dataCount / 4 + 1)
-      //  print(lineCount)
+        //  print(lineCount)
         let collectionViewHeight: CGFloat = CGFloat(lineCount * 30 + (lineCount - 1) * 4 + 6 + 6)
-      //  print(collectionViewHeight)
+        //  print(collectionViewHeight)
         let height = collectionViewHeight + 29 + 16
-      //  print(height)
-      //  print("==============")
+        //  print(height)
+        //  print("==============")
         return height
     }
     
@@ -81,8 +82,6 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         
         cell.dayLabel.textColor = .mainOrange
         cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
-        cell.selectionStyle = .none
-        
         
         
         return cell
@@ -194,7 +193,7 @@ extension MovieMoreTableViewController: toggleActionDelegate {
         print(1010)
         
         
-
+        
     }
     
     

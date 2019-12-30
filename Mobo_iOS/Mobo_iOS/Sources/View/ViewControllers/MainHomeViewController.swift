@@ -90,28 +90,15 @@ class MainHomeViewController: UIViewController {
         // dayButton.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
         
         
+        sendButton.titleEdgeInsets.bottom = 10
+        
         
     }
-    
-    @IBAction func tmp(_ sender: Any) {
-        
-
-        let storyboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "InventoryPopUpViewController") as! InventoryPopUpViewController
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        
-        self.present(vc, animated: true, completion: nil)
-    
-        
-    }
+ 
     
     @IBAction func buyBtn(_ sender: Any) {
         
         navigationSetup2()
-
-        //        let view = LatePopUp(frame: CGRect(x: 0, y: 150, width: 375, height: 0))
-        //        self.view.addSubview(view)
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
@@ -267,7 +254,7 @@ class MainHomeViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = .mainOrange
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "어떤 영화 볼래?", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "선택한 날짜", style: .done, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .white
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

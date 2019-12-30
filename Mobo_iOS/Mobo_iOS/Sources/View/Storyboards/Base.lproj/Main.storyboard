@@ -16,20 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-Qd-y16">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-Qd-y16">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 영화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsJ-2E-EDg">
-                                <rect key="frame" x="20" y="341" width="74" height="20"/>
+                                <rect key="frame" x="20" y="348" width="74" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hox-6H-Xga">
-                                <rect key="frame" x="309" y="338" width="54" height="36"/>
+                                <rect key="frame" x="309" y="342" width="54" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="btnChange"/>
+                                <state key="normal" image="btnChange-1"/>
                                 <connections>
                                     <action selector="reviseButton:" destination="TGd-qO-mc1" eventType="touchUpInside" id="NSG-hM-WvC"/>
                                 </connections>
@@ -55,7 +55,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="63g-Tx-ddo">
                                                     <rect key="frame" x="0.0" y="-0.66666666666666785" width="306" height="202"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BB-uE-jiE">
                                                     <rect key="frame" x="8" y="94.333333333333329" width="200" height="44"/>
@@ -178,15 +178,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0v-53-A3h">
-                                <rect key="frame" x="0.0" y="335" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-ln-YpB">
                                 <rect key="frame" x="0.0" y="555" width="375" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-cj-neh">
                                 <rect key="frame" x="20" y="561" width="77" height="24"/>
@@ -233,9 +228,9 @@
                                         <rect key="frame" x="15" y="16" width="42" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Thu 14">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                        <state key="normal" title="14">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" title="Thu 14"/>
                                     </button>
@@ -243,9 +238,10 @@
                                         <rect key="frame" x="15" y="79" width="42" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Fri 15">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                        <state key="normal" title="15">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBY-j8-kv8">
@@ -305,7 +301,7 @@
                                         </state>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhI-SX-CDa">
-                                        <rect key="frame" x="75" y="0.0" width="1" height="112"/>
+                                        <rect key="frame" x="72" y="0.0" width="2" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -332,12 +328,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="B1s-VC-CRZ">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="btnMypage" id="tZL-Fq-5CX">
+                        <barButtonItem key="leftBarButtonItem" image="btnMypage-1" id="tZL-Fq-5CX">
                             <connections>
                                 <action selector="myPageBtn:" destination="TGd-qO-mc1" id="y1n-YL-2Sx"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icChatingpage" id="cjZ-a7-jy2">
+                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Wf-aE-40v">
+                            <rect key="frame" x="129" y="0.0" width="117" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="plotLogo"/>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" image="icChatingpage-1" id="cjZ-a7-jy2">
                             <connections>
                                 <action selector="chatBtn:" destination="TGd-qO-mc1" id="fbR-8m-IBk"/>
                             </connections>
@@ -356,21 +357,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wz-xs-9XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32.799999999999997" y="10.344827586206897"/>
-        </scene>
-        <!--Time Table One View Controller-->
-        <scene sceneID="UO2-s9-Dod">
-            <objects>
-                <viewController storyboardIdentifier="TimeTableOneViewController" id="k0l-9f-QUU" customClass="TimeTableOneViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hf3-1Y-4Bs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="4Qh-og-Hfy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DRk-B0-X2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="73" y="786"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="c0Z-3w-SLK">
@@ -659,65 +645,51 @@
                         <viewLayoutGuide key="safeArea" id="DMr-Pi-6Ze"/>
                     </view>
                     <connections>
-                        <outlet property="OkBtn" destination="Oe9-XW-JaM" id="UO6-FO-rC0"/>
-                        <outlet property="am1" destination="gUm-B0-Lqc" id="dIv-5c-YSf"/>
-                        <outlet property="am12" destination="zbR-aL-J7p" id="y7P-xC-2uJ"/>
-                        <outlet property="am2" destination="WJX-8S-Ihh" id="tPP-D8-QcD"/>
-                        <outlet property="day1" destination="fB1-5V-hLG" id="OH4-ZM-5hW"/>
-                        <outlet property="day2" destination="x3z-C6-RxA" id="gpq-Dp-CwG"/>
-                        <outlet property="day3" destination="rvJ-S9-67f" id="05z-wY-swT"/>
-                        <outlet property="day4" destination="RUe-n2-xSw" id="wzm-jF-Xjk"/>
-                        <outlet property="day5" destination="OqB-Qa-ULk" id="uCb-Yh-v9W"/>
-                        <outlet property="day6" destination="ucz-Oq-Vmr" id="3vL-MS-JP4"/>
-                        <outlet property="day7" destination="Jog-u6-eFh" id="PRa-N0-8jc"/>
-                        <outlet property="pm1" destination="3D9-GJ-sCV" id="SJc-qg-BmF"/>
-                        <outlet property="pm10" destination="dcQ-vL-CfZ" id="MQR-vY-iUK"/>
-                        <outlet property="pm11" destination="Nkn-2h-U9W" id="6I6-Rs-h0n"/>
-                        <outlet property="pm12" destination="xMn-xm-v4K" id="qjS-U7-e96"/>
-                        <outlet property="pm2" destination="xse-Zw-ekL" id="dbf-Yq-212"/>
-                        <outlet property="pm3" destination="d8C-80-Qet" id="qUh-7W-gHk"/>
-                        <outlet property="pm4" destination="3UH-na-FN9" id="oEB-Ln-rHW"/>
-                        <outlet property="pm5" destination="uUb-3P-skB" id="eZ7-YW-ok8"/>
-                        <outlet property="pm6" destination="Ekr-tl-YXo" id="16v-Tj-OjI"/>
-                        <outlet property="pm7" destination="ZSx-6Q-sgy" id="V95-5l-JzR"/>
-                        <outlet property="pm8" destination="yUU-1r-EOM" id="5gB-z0-J0X"/>
-                        <outlet property="pm9" destination="573-Oa-c3J" id="2Hh-6h-YMN"/>
-                        <outlet property="tableView" destination="c77-Ag-x5Y" id="T1G-dB-kL1"/>
+                        <outlet property="OKButton" destination="Oe9-XW-JaM" id="YOY-kk-ulc"/>
+                        <outlet property="TableView" destination="c77-Ag-x5Y" id="Eq3-4m-Ubn"/>
+                        <outletCollection property="dayButtons" destination="fB1-5V-hLG" collectionClass="NSMutableArray" id="kAx-cN-gIo"/>
+                        <outletCollection property="dayButtons" destination="x3z-C6-RxA" collectionClass="NSMutableArray" id="wNh-fA-Pi4"/>
+                        <outletCollection property="dayButtons" destination="rvJ-S9-67f" collectionClass="NSMutableArray" id="CIN-M4-mAz"/>
+                        <outletCollection property="dayButtons" destination="RUe-n2-xSw" collectionClass="NSMutableArray" id="Ctc-wB-Ojl"/>
+                        <outletCollection property="dayButtons" destination="OqB-Qa-ULk" collectionClass="NSMutableArray" id="9tx-YS-KoV"/>
+                        <outletCollection property="dayButtons" destination="ucz-Oq-Vmr" collectionClass="NSMutableArray" id="SY6-Hd-nQs"/>
+                        <outletCollection property="dayButtons" destination="Jog-u6-eFh" collectionClass="NSMutableArray" id="GEJ-Ry-AWf"/>
+                        <outletCollection property="TimeButtons" destination="xMn-xm-v4K" collectionClass="NSMutableArray" id="ZED-ao-GzG"/>
+                        <outletCollection property="TimeButtons" destination="3D9-GJ-sCV" collectionClass="NSMutableArray" id="MiY-Q5-o8f"/>
+                        <outletCollection property="TimeButtons" destination="xse-Zw-ekL" collectionClass="NSMutableArray" id="R6Y-Se-3fU"/>
+                        <outletCollection property="TimeButtons" destination="d8C-80-Qet" collectionClass="NSMutableArray" id="g1l-Ww-IQY"/>
+                        <outletCollection property="TimeButtons" destination="3UH-na-FN9" collectionClass="NSMutableArray" id="ZtK-NX-Q7W"/>
+                        <outletCollection property="TimeButtons" destination="uUb-3P-skB" collectionClass="NSMutableArray" id="J8y-Bn-pDk"/>
+                        <outletCollection property="TimeButtons" destination="Ekr-tl-YXo" collectionClass="NSMutableArray" id="oHW-5u-03Z"/>
+                        <outletCollection property="TimeButtons" destination="ZSx-6Q-sgy" collectionClass="NSMutableArray" id="OPA-DG-YMu"/>
+                        <outletCollection property="TimeButtons" destination="yUU-1r-EOM" collectionClass="NSMutableArray" id="yyr-hj-5fB"/>
+                        <outletCollection property="TimeButtons" destination="573-Oa-c3J" collectionClass="NSMutableArray" id="qgx-gI-oJQ"/>
+                        <outletCollection property="TimeButtons" destination="dcQ-vL-CfZ" collectionClass="NSMutableArray" id="Caf-fl-EeO"/>
+                        <outletCollection property="TimeButtons" destination="Nkn-2h-U9W" collectionClass="NSMutableArray" id="oiC-ri-4Sg"/>
+                        <outletCollection property="TimeButtons" destination="zbR-aL-J7p" collectionClass="NSMutableArray" id="wWV-id-PHl"/>
+                        <outletCollection property="TimeButtons" destination="gUm-B0-Lqc" collectionClass="NSMutableArray" id="VDM-Nu-LSY"/>
+                        <outletCollection property="TimeButtons" destination="WJX-8S-Ihh" collectionClass="NSMutableArray" id="XAd-C3-Ved"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56R-7I-MzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="9.6059113300492616"/>
         </scene>
-        <!--Time Table Two View Controller-->
-        <scene sceneID="kRH-kv-hud">
-            <objects>
-                <viewController storyboardIdentifier="TimeTableTwoViewController" id="85G-Mp-n1s" customClass="TimeTableTwoViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gwb-cn-Nnm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="eWH-9A-ZTw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wk6-eJ-yry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="857" y="786"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="btnChange" width="54" height="36"/>
+        <image name="btnChange-1" width="54" height="36"/>
         <image name="btnChangetime" width="174" height="54"/>
         <image name="btnMore" width="47" height="29"/>
         <image name="btnMovie-1" width="174" height="54"/>
-        <image name="btnMypage" width="48" height="48"/>
-        <image name="icChatingpage" width="48" height="48"/>
+        <image name="btnMypage-1" width="48" height="48"/>
+        <image name="icChatingpage-1" width="48" height="48"/>
         <image name="icPlay" width="84" height="84"/>
         <image name="icThreedot" width="42" height="24"/>
         <image name="ic_star_large" width="48" height="48"/>
         <image name="ic_star_large_full" width="48" height="48"/>
         <image name="imgBackground-1" width="375" height="812"/>
-        <image name="mainImgBackground" width="375" height="812"/>
+        <image name="mainBackground" width="375" height="812"/>
+        <image name="plotLogo" width="102" height="29"/>
         <image name="xmlid806" width="12" height="11.666666984558105"/>
     </resources>
 </document>

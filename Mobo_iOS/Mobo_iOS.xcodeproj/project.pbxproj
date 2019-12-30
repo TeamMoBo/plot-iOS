@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		390B836423B6746600E41C24 /* TimeTableOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B836323B6746600E41C24 /* TimeTableOneViewController.swift */; };
-		390B836623B6747200E41C24 /* TimeTableTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */; };
 		390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */; };
 		390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */; };
 		390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */; };
@@ -82,8 +80,6 @@
 /* Begin PBXFileReference section */
 		0264162D43B295069FF65561 /* Pods-Mobo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobo_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Mobo_iOS/Pods-Mobo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		02DE58E89F1AFEA60CB7A16B /* Pods_Mobo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		390B836323B6746600E41C24 /* TimeTableOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableOneViewController.swift; sourceTree = "<group>"; };
-		390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTwoViewController.swift; sourceTree = "<group>"; };
 		390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieTabScreen.storyboard; sourceTree = "<group>"; };
 		390BD67D23B06B3300FF7E68 /* MovieTabOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabOneViewController.swift; sourceTree = "<group>"; };
 		390BD67F23B070FC00FF7E68 /* MovieTabTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabTwoViewController.swift; sourceTree = "<group>"; };
@@ -355,8 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */,
-				390B836323B6746600E41C24 /* TimeTableOneViewController.swift */,
-				390B836523B6747200E41C24 /* TimeTableTwoViewController.swift */,
 				3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */,
 			);
 			path = MovieTimeTable;
@@ -566,7 +560,6 @@
 				3989B16223B76FB0006ABB26 /* PayFinishPopUpViewController.swift in Sources */,
 				EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */,
 				39CC509F23B1377700E24F95 /* ChattingSignUpViewController.swift in Sources */,
-				390B836623B6747200E41C24 /* TimeTableTwoViewController.swift in Sources */,
 				398522DB23B064DD009C9AE3 /* Extensions+UIView.swift in Sources */,
 				3989B16823B7702D006ABB26 /* MatchingSelectPopUpViewController.swift in Sources */,
 				39EB8B9023B600A900073EB0 /* MovieTabTwoViewCell.swift in Sources */,
@@ -604,7 +597,6 @@
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */,
-				390B836423B6746600E41C24 /* TimeTableOneViewController.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
 				39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */,
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
