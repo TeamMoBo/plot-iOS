@@ -205,7 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-TE-x2B">
                                 <rect key="frame" x="313" y="563" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="btnMore"/>
+                                <state key="normal" image="btnMore-1"/>
                                 <connections>
                                     <action selector="addMoreBtn:" destination="TGd-qO-mc1" eventType="touchUpInside" id="SsX-Nr-gRl"/>
                                 </connections>
@@ -333,7 +333,7 @@
                                 <action selector="myPageBtn:" destination="TGd-qO-mc1" id="y1n-YL-2Sx"/>
                             </connections>
                         </barButtonItem>
-                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Wf-aE-40v">
+                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Wf-aE-40v">
                             <rect key="frame" x="129" y="0.0" width="117" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="plotLogo"/>
@@ -679,7 +679,7 @@
     <resources>
         <image name="btnChange-1" width="54" height="36"/>
         <image name="btnChangetime" width="174" height="54"/>
-        <image name="btnMore" width="47" height="29"/>
+        <image name="btnMore-1" width="47" height="29"/>
         <image name="btnMovie-1" width="174" height="54"/>
         <image name="btnMypage-1" width="48" height="48"/>
         <image name="icChatingpage-1" width="48" height="48"/>
