@@ -68,7 +68,10 @@
 		EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
+		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
+		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */; };
+		EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC724D423BA5AA3005957DE /* Purchase.storyboard */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
 		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
@@ -146,7 +149,10 @@
 		EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailVC.swift; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
+		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondVC.swift; sourceTree = "<group>"; };
+		EAC724D423BA5AA3005957DE /* Purchase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 		390BD68123B08A0100FF7E68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAA368EA23BA83AA00781C94 /* Purchase */,
 				EA204A1523BA4F1300369BC7 /* History */,
 				398522D223B0646D009C9AE3 /* Storyboards */,
 				3989B15C23B75085006ABB26 /* PopUp */,
@@ -313,6 +320,7 @@
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
 				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
 				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
+				EAC724D423BA5AA3005957DE /* Purchase.storyboard */,
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
 				3989B15A23B75025006ABB26 /* PopUpScreen.storyboard */,
 				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
@@ -384,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */,
+				EAA368ED23BA932000781C94 /* HistoryVC.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -394,6 +403,14 @@
 				EA79170223B542E100DBC79B /* MyPageViewController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		EAA368EA23BA83AA00781C94 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				EAA368EB23BA83C100781C94 /* PurchaseVC.swift */,
+			);
+			path = Purchase;
 			sourceTree = "<group>";
 		};
 		EAC8C3E723B220400061AEEB /* Sign */ = {
@@ -494,6 +511,7 @@
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
+				EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
 				398522BF23B05F8D009C9AE3 /* Main.storyboard in Resources */,
@@ -577,6 +595,7 @@
 				3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */,
 				393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */,
 				3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */,
+				EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */,
 				39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */,
 				391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */,
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
@@ -601,6 +620,7 @@
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,
+				EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */,
