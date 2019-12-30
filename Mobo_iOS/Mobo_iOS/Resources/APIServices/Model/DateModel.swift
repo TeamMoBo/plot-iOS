@@ -17,7 +17,6 @@ class DateModel: NSObject {
         var date: String
         var times: [Int]
     }
-
     
 }
 

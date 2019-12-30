@@ -15,8 +15,16 @@ struct AnchoredConstraints {
 // Reference Video: https://youtu.be/iqpAP7s3b-8
 extension UIView {
     
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+           let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+           let mask = CAShapeLayer()
+           mask.path = path.cgPath
+           layer.mask = mask
+       }
+    
+    
     func setRoundedCorner() {
-      let roundedPath = UIBezierPath.init(roundedRect: UIView().bounds, byRoundingCorners: [.topRight], cornerRadii: CGSize(width: 30, height: 30))
+        let roundedPath = UIBezierPath.init(roundedRect: UIView().bounds, byRoundingCorners: [.topRight , .bottomLeft , .bottomRight], cornerRadii: CGSize(width: 15, height: 15))
       let roundedLayer = CAShapeLayer()
       roundedLayer.path = roundedPath.cgPath
       layer.masksToBounds = true
