@@ -74,7 +74,6 @@ class MainHomeViewController: UIViewController {
         
         view.backgroundColor = .groundColor
         setMovieListCollectionView()
-        sendButton.backgroundColor = .mainOrange
         
         dayButton.makeRounded(cornerRadius: 10)
         dayButton.tintColor = .black
@@ -145,7 +144,7 @@ class MainHomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        sendButton.makeRounded(cornerRadius: 20)
+        //sendButton.makeRounded(cornerRadius: 20)
         deadlineTitle.textColor = .subOrange
         
     }

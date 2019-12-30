@@ -168,7 +168,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if(self.comments[indexPath.row].uid == uid){
+        if(self.comments[indexPath.row].uid == uid) {
             let view = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell", for: indexPath) as! MyMessageCell
             
             view.selectionStyle = .none
@@ -202,11 +202,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return view
             
         }
-        
-        
-        
-        
-        
+                
         return UITableViewCell()
     }
     

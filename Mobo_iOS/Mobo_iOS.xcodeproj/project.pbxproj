@@ -49,6 +49,7 @@
 		3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16523B77002006ABB26 /* MatchingFailPopUpViewController.swift */; };
 		3989B16823B7702D006ABB26 /* MatchingSelectPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */; };
 		3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */; };
+		39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A95EEF23B9D8D4003B2019 /* DateModel.swift */; };
 		39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */; };
 		39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
@@ -122,6 +123,7 @@
 		3989B16523B77002006ABB26 /* MatchingFailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFailPopUpViewController.swift; sourceTree = "<group>"; };
 		3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingSelectPopUpViewController.swift; sourceTree = "<group>"; };
 		3989B16923B77A27006ABB26 /* MovieMoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMoreTableViewController.swift; sourceTree = "<group>"; };
+		39A95EEF23B9D8D4003B2019 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewController.swift; sourceTree = "<group>"; };
 		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
 				3989599D23B1D30D00340400 /* UserModel.swift */,
 				391E7ABC23B880F400F7D33D /* ChatModel.swift */,
+				39A95EEF23B9D8D4003B2019 /* DateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
+				39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
