@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="U1K-xg-ECf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2360"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 소울메이트 찾아요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFm-dM-MbG">
                                         <rect key="frame" x="74.333333333333329" y="97.333333333333329" width="216.66666666666669" height="27.666666666666671"/>
@@ -28,23 +28,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgBackgroundwhite" translatesAutoresizingMaskIntoConstraints="NO" id="S5C-W1-JKr">
-                                        <rect key="frame" x="-97" y="335" width="559.00000000000011" height="862"/>
+                                        <rect key="frame" x="-97" y="335" width="559" height="862"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="862" id="eRv-xK-aWV"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asset12X" translatesAutoresizingMaskIntoConstraints="NO" id="72J-0V-2OH">
-                                        <rect key="frame" x="27.666666666666686" y="153" width="104.00000000000001" height="104"/>
+                                        <rect key="frame" x="14" y="153" width="208" height="208"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-ds-Ar4">
                                         <rect key="frame" x="137" y="153" width="104" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="ioMypageImgProfilecircle" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-hM-4RM">
-                                        <rect key="frame" x="-82" y="137" width="361" height="142"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="ioMypageImgProfilecircleo2" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-hM-4RM">
+                                        <rect key="frame" x="-24" y="137" width="284" height="150.33333333333337"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="안형민" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-JU-NKv">
-                                        <rect key="frame" x="43.666666666666657" y="281" width="88" height="34"/>
+                                        <rect key="frame" x="134" y="289.33333333333331" width="88" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="774-DQ-XFG"/>
                                             <constraint firstAttribute="width" constant="88" id="chi-a1-8uM"/>
@@ -54,58 +54,58 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1H-ZN-Kaw">
-                                        <rect key="frame" x="221" y="233" width="24" height="24"/>
+                                        <rect key="frame" x="221" y="313" width="48" height="48"/>
                                         <state key="normal" image="btnCamera"/>
                                         <connections>
                                             <action selector="camerabtn:" destination="s3h-o4-Zh6" eventType="touchUpInside" id="Gv8-JB-yQN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-Co-Nvh">
-                                        <rect key="frame" x="291" y="96" width="24" height="24"/>
+                                        <rect key="frame" x="267" y="96" width="48" height="48"/>
                                         <state key="normal" image="btnSentencechange"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-Sf-xuu">
-                                        <rect key="frame" x="224" y="287" width="20" height="22"/>
+                                        <rect key="frame" x="224" y="287" width="40" height="38.666666666666686"/>
                                         <state key="normal" image="btnNamechange"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="#겁많은 #낯가리는 #성실한 #귀여운 #착한" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="457-7x-pc0">
-                                        <rect key="frame" x="50" y="313" width="265" height="16.666666666666686"/>
+                                        <rect key="frame" x="50" y="329.66666666666669" width="265" height="0.0"/>
                                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgMypageMiddleBar" translatesAutoresizingMaskIntoConstraints="NO" id="RoQ-Dt-AFx">
-                                        <rect key="frame" x="-75.666666666666686" y="327.66666666666669" width="310.33333333333331" height="101.00000000000003"/>
+                                        <rect key="frame" x="-192" y="327.66666666666669" width="620" height="101"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="btnHashtagchange" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-l8-SUU">
-                                        <rect key="frame" x="311" y="306.66666666666669" width="14" height="14"/>
+                                        <rect key="frame" x="297" y="306.66666666666669" width="28" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="nQ8-Qv-ZlE"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 보유량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcy-V1-jLZ">
-                                        <rect key="frame" x="52" y="337.66666666666669" width="55.333333333333343" height="14.666666666666686"/>
+                                        <rect key="frame" x="90.333333333333329" y="337.66666666666669" width="55.333333333333329" height="14.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.2627450980392157" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgPopcorn" translatesAutoresizingMaskIntoConstraints="NO" id="b9x-xR-tCa">
-                                        <rect key="frame" x="116.66666666666669" y="348.66666666666669" width="265" height="59"/>
+                                        <rect key="frame" x="155" y="348.66666666666669" width="440" height="59"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgTicket" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-rg-xHy">
-                                        <rect key="frame" x="52.000000000000007" y="334.66666666666669" width="88.666666666666686" height="87"/>
+                                        <rect key="frame" x="52" y="334.66666666666669" width="177" height="87"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icMultiple" translatesAutoresizingMaskIntoConstraints="NO" id="es6-fS-6o0">
-                                        <rect key="frame" x="138.33333333333334" y="369" width="13.666666666666657" height="13.666666666666686"/>
+                                        <rect key="frame" x="213.33333333333334" y="369" width="27" height="13.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13.666666666666686" id="adg-qj-zBR"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icMultiple" translatesAutoresizingMaskIntoConstraints="NO" id="n3T-8Q-U0S">
-                                        <rect key="frame" x="268.33333333333331" y="369" width="13.666666666666686" height="13.666666666666686"/>
+                                        <rect key="frame" x="255" y="369" width="27" height="13.666666666666686"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynu-72-V0D">
-                                        <rect key="frame" x="158.66666666666666" y="364" width="12" height="23.666666666666686"/>
+                                        <rect key="frame" x="247" y="364" width="12" height="23.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="0.3529411764705882" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -360,25 +360,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="agebox" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-Ll-sr3">
-                                        <rect key="frame" x="80" y="1087.6666666666667" width="84" height="22"/>
+                                        <rect key="frame" x="80" y="1087.6666666666667" width="168" height="44"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="agebox" translatesAutoresizingMaskIntoConstraints="NO" id="YoF-qH-TSc">
-                                        <rect key="frame" x="207" y="1087.6666666666667" width="84" height="22"/>
+                                        <rect key="frame" x="291" y="1087.6666666666667" width="168" height="44"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ageline" translatesAutoresizingMaskIntoConstraints="NO" id="2Qq-BQ-FZf">
-                                        <rect key="frame" x="179" y="1082.6666666666667" width="14" height="32"/>
+                                        <rect key="frame" x="179" y="1082.6666666666667" width="14" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="14" id="Ykl-Nf-D5g"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTX-K1-QgT">
-                                        <rect key="frame" x="240.33333333333334" y="1070.6666666666667" width="17.333333333333343" height="12"/>
+                                        <rect key="frame" x="366.33333333333331" y="1070.6666666666667" width="17.333333333333314" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                         <color key="textColor" red="0.35294117650000001" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="btnChating" translatesAutoresizingMaskIntoConstraints="NO" id="mUr-X6-UHT">
-                                        <rect key="frame" x="100.66666666666669" y="1118.6666666666667" width="174" height="43"/>
+                                        <rect key="frame" x="13.666666666666657" y="1140.6666666666667" width="348" height="21"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="icUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-cO-irx">
                                         <rect key="frame" x="81" y="1023" width="20" height="20"/>
@@ -620,6 +620,6 @@
         <image name="imgMypageMiddleBar" width="310" height="103"/>
         <image name="imgPopcorn" width="44" height="57"/>
         <image name="imgTicket" width="88.666664123535156" height="87"/>
-        <image name="ioMypageImgProfilecircle" width="361" height="361"/>
+        <image name="ioMypageImgProfilecircleo2" width="142" height="142"/>
     </resources>
 </document>
