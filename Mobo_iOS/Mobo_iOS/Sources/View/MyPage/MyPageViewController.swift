@@ -68,7 +68,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
 
         picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
-        selectedpic.layer.cornerRadius = selectedpic.frame.height / 2
+        
         agetext.delegate = self;
         nametext.delegate = self;
         kakaoidtext.delegate = self;

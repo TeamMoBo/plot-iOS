@@ -6,14 +6,14 @@
       "filename" : "imgMatchhistoryBelow.png"
     },
     {
+      "scale" : "2x",
       "filename" : "imgMatchhistoryBelow@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
+      "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "imgMatchhistoryBelow@3x.png"
+      "filename" : "imgMatchhistoryBelow@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

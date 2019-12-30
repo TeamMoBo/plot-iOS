@@ -316,7 +316,6 @@
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
 				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
 				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
-				EAC724D423BA5AA3005957DE /* Purchase.storyboard */,
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
 				3989B15A23B75025006ABB26 /* PopUpScreen.storyboard */,
 				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
@@ -324,6 +323,7 @@
 				EA76B5B123B51E36002012CE /* MyPage.storyboard */,
 				EA204A0F23B8D34900369BC7 /* ChatWaiting.storyboard */,
 				EA204A1323BA1E1E00369BC7 /* History.storyboard */,
+				EAC724D423BA5AA3005957DE /* Purchase.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
