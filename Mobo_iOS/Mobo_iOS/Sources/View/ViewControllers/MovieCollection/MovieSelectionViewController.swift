@@ -22,10 +22,10 @@ class MovieSelectionViewController: TabmanViewController {
         setViewControllers()
         topBarUISet()
         
-//        let navigationHeight = UIApplication.shared.statusBarFrame.height
-//            + self.navigationController!.navigationBar.frame.height
+        //        let navigationHeight = UIApplication.shared.statusBarFrame.height
+        //            + self.navigationController!.navigationBar.frame.height
         
-    
+        
         
         navigationSetup()
         
@@ -34,7 +34,7 @@ class MovieSelectionViewController: TabmanViewController {
     
     func navigationSetup() { //네비게이션 투명색만들기
         
-//        rgb 255 126 39
+        //        rgb 255 126 39
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
@@ -50,9 +50,9 @@ class MovieSelectionViewController: TabmanViewController {
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //뷰의 배경색 지정
         
-//        self.navigationController?.navigationBar.topItem?.title = "Home"
-//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-//        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
     
@@ -60,7 +60,7 @@ class MovieSelectionViewController: TabmanViewController {
     func setViewControllers(){
         
         let storyboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
-
+        
         let firstVC = storyboard.instantiateViewController(withIdentifier: "first")
         
         let secondVC = storyboard.instantiateViewController(withIdentifier: "second")
@@ -75,10 +75,7 @@ class MovieSelectionViewController: TabmanViewController {
     //MARK: - TopBar생성
     func topBarUISet(){
         
-        
-        
         let bar = TMBar.ButtonBar()
-        
         
         bar.backgroundView.style = .clear
         bar.layout.contentMode = .fit
@@ -91,11 +88,17 @@ class MovieSelectionViewController: TabmanViewController {
         bar.indicator.backgroundColor = .orange
         bar.scrollMode = .interactive
         
-        //        bar.fadesContentEdges
+        
         self.dataSource = self
         addBar(bar, dataSource: self, at: .top)
         
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//            ChatView1.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
+//       }
+    
+    
     
 }
 

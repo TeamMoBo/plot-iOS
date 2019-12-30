@@ -20,6 +20,7 @@ struct ListResponse: Codable {
 
 
 struct Movie: Codable {
+    
     let grade: Int
     let thumnailImageURL: String
     let reservationGrade: Int
@@ -28,6 +29,7 @@ struct Movie: Codable {
     let userRating: Double
     let date: String
     let id: String
+    
     
     enum CodingKeys: String, CodingKey {
         case grade, title, date, id

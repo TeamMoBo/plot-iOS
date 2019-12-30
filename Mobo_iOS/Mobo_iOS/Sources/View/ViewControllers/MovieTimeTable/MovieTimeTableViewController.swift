@@ -12,34 +12,15 @@ import Pageboy
 
 class MovieTimeTableViewController: UIViewController {
     
-    
-    @IBOutlet weak var pm12: UIButton!
-    @IBOutlet weak var pm1: UIButton!
-    @IBOutlet weak var pm2: UIButton!
-    @IBOutlet weak var pm3: UIButton!
-    @IBOutlet weak var pm4: UIButton!
-    @IBOutlet weak var pm5: UIButton!
-    @IBOutlet weak var pm6: UIButton!
-    @IBOutlet weak var pm7: UIButton!
-    @IBOutlet weak var pm8: UIButton!
-    @IBOutlet weak var pm9: UIButton!
-    @IBOutlet weak var pm10: UIButton!
-    @IBOutlet weak var pm11: UIButton!
-    @IBOutlet weak var am12: UIButton!
-    @IBOutlet weak var am1: UIButton!
-    @IBOutlet weak var am2: UIButton!
+    @IBOutlet var dayButtons: [UIButton]!
+    @IBOutlet var TimeButtons: [UIButton]!
     
     
-    @IBOutlet weak var day1: UIButton!
-    @IBOutlet weak var day2: UIButton!
-    @IBOutlet weak var day3: UIButton!
-    @IBOutlet weak var day4: UIButton!
-    @IBOutlet weak var day5: UIButton!
-    @IBOutlet weak var day6: UIButton!
-    @IBOutlet weak var day7: UIButton!
+    @IBOutlet weak var TableView: UIView!
+    @IBOutlet weak var OKButton: UIButton!
     
-    @IBOutlet weak var tableView: UIView!
-    @IBOutlet weak var OkBtn: UIButton!
+    //    @IBOutlet weak var tableView: UIView!
+    //    @IBOutlet weak var OkBtn: UIButton!
     
     //    "reserveDate": [
     //        {
@@ -52,1202 +33,181 @@ class MovieTimeTableViewController: UIViewController {
     //        }
     //    ]
     
-    
-    var dic : [String : [Int]] = [:]
-    
-    // var dayDic: [String : [Int]] = [:]
-    //        dayDic["2019-12-25"] = [12,13,15]
-    //        dayDic["2019-12-26"] = [11,23,15]
-    //        dayDic["2019-12-27"] = [21,13,17]
-    //        dayDic["2019-12-28"] = [11,23,21]
-    //        dayDic["2019-12-29"] = [10,13,15]
-    //        dayDic["2019-12-30"] = [11,13,15]
-    //        dayDic["2019-12-31"] = [17,19,20]
-    
-    var array = [String]()
-    var array2 = [Int]()
-    
-  
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   // MARK: - properties
+        private var reservationInfo: DataManager.ReservationInfo! // 현재 선택한 날짜에 대한 예약 정보
         
-        day1.isSelected = true
-        // array.append(day1.title(for: .normal)!)
-        // dic[day1.title(for: .normal)!] = []
+        private var selectedIndex: Int = 0
+        private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
         
-        day1.setTitleColor(.mainOrange, for: .normal)
-        day1.setBackgroundColor(.white, for: .normal)
+        //    "reserveDate": [
+        //        {
+        //            "reservationDate": “2019-12-30“,
+        //            "reservationTime": [11, 13, 15]
+        //        },
+        //        {
+        //            "reservationDate": “2019-12-31”,
+        //            "reservationTime": [17, 19, 20]
+        //        }
+        //    ]
         
-        day1.makeRounded(cornerRadius: 10)
-        day1.clipsToBounds = true
-        
-        tableView.makeRounded(cornerRadius: 20)
-        OkBtn.titleEdgeInsets.bottom = 7
-        
-        
-        day1.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day2.isSelected = false
-        day2.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day3.isSelected = false
-        day3.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day4.isSelected = false
-        day4.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day5.isSelected = false
-        day5.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day6.isSelected = false
-        day6.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        day7.isSelected = false
-        day7.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
-        
-        
-        pm12.isSelected = false
-        pm12.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm1.isSelected = false
-        pm1.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm2.isSelected = false
-        pm2.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm3.isSelected = false
-        pm3.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm4.isSelected = false
-        pm4.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm5.isSelected = false
-        pm5.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm6.isSelected = false
-        pm6.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm7.isSelected = false
-        pm7.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm8.isSelected = false
-        pm8.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm9.isSelected = false
-        pm9.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm10.isSelected = false
-        pm10.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        pm11.isSelected = false
-        pm11.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        am12.isSelected = false
-        am12.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        am1.isSelected = false
-        am1.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        am2.isSelected = false
-        am2.addTarget(self, action: #selector(ClockClick), for: .touchUpInside)
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        pm12.makeRounded(cornerRadius: 5)
-        pm12.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm12.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm1.makeRounded(cornerRadius: 5)
-        pm1.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm1.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm2.makeRounded(cornerRadius: 5)
-        pm2.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm2.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm3.makeRounded(cornerRadius: 5)
-        pm3.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm3.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm4.makeRounded(cornerRadius: 5)
-        pm4.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm4.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm5.makeRounded(cornerRadius: 5)
-        pm5.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm5.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm6.makeRounded(cornerRadius: 5)
-        pm6.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm6.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm7.makeRounded(cornerRadius: 5)
-        pm7.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm7.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm8.makeRounded(cornerRadius: 5)
-        pm8.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm8.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm9.makeRounded(cornerRadius: 5)
-        pm9.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm9.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm10.makeRounded(cornerRadius: 5)
-        pm10.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm10.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        pm11.makeRounded(cornerRadius: 5)
-        pm11.setBorder(borderColor: .borderGray, borderWidth: 1)
-        pm11.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        am12.makeRounded(cornerRadius: 5)
-        am12.setBorder(borderColor: .borderGray, borderWidth: 1)
-        am12.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        am1.makeRounded(cornerRadius: 5)
-        am1.setBorder(borderColor: .borderGray, borderWidth: 1)
-        am1.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-        am2.makeRounded(cornerRadius: 5)
-        am2.setBorder(borderColor: .borderGray, borderWidth: 1)
-        am2.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
-        
-    }
-    
-    
-    func navigationSetup() { //네비게이션 투명색만들기
-        
-        //        rgb 255 126 39
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .black
-        //투명하게 만드는 공식처럼 기억하기
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        //네비게이션바의 백그라운드색 지정. UIImage와 동일
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        //shadowImage는 UIImage와 동일. 구분선 없애줌.
-        self.navigationController?.navigationBar.isTranslucent = true
-        //false면 반투명이다.
-        self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-        //뷰의 배경색 지정
-        
-        //        self.navigationController?.navigationBar.topItem?.title = "Home"
-        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
-    }
-    
-    private var reservationInfo: DataManager.ReservationInfo!
-    
-    
-    
-    func date_select(date: String) {
-        
-        DataManager.sharedManager.setReservation(info: reservationInfo)
-        
-        guard let info = DataManager.sharedManager.reservationCache.first(where: { $0.date == date}) else {
-            
-            self.reservationInfo = DataManager.ReservationInfo(date: "새로운 날짜" , times: [])
-            return
-        }
-        reservationInfo = info
-        
-        
-    }
-    
-    func time_select(time: Int) {
-        
-        guard let index = reservationInfo.times.firstIndex(where: {$0 == time}) else {
-            self.reservationInfo.times.append(time)
-            return
-        }
-        self.reservationInfo.times.remove(at: index)
-    }
-    
-    
-    @objc func dayClick(sender: UIButton) {
-        
-        
-        
-        if day1.isTouchInside {
-            
-            if (day1.isSelected) == false {
-                
-                day1.isSelected = true
-                day1.setTitleColor(.mainOrange, for: .normal)
-                day1.setBackgroundColor(.white, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-                
-                array.append(day1.title(for: .normal)!)
-                
-                
-                date_select(date: day1.title(for: .normal)!)
-                    
-            }
-            
-            else if day1.isSelected
-            {
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                if let index = array.index(of: day1.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-                
-            }
-        }
-        
-        if day2.isTouchInside {
-            
-            if (day2.isSelected) == false {
-                
-                array.append(day2.title(for: .normal)!)
-                date_select(date: day2.title(for: .normal)!)
-                
-                day2.isSelected = true
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.white, for: .normal)
-                day2.setBorder(borderColor: .clear, borderWidth: 1)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-                
-                
-            }
-                
-            else if day2.isSelected
-            {
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                if let index = array.index(of: day2.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-            }
-        }
-        
-        if day3.isTouchInside {
-            
-            if (day3.isSelected) == false {
-                
-                
-                
-                array.append(day3.title(for: .normal)!)
-                date_select(date: day3.title(for: .normal)!)
-                
-                day3.isSelected = true
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.white, for: .normal)
-                day3.setBorder(borderColor: .clear, borderWidth: 1)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-            }
-                
-            else if day3.isSelected
-            {
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                
-                if let index = array.index(of: day3.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-            }
-        }
-        if day4.isTouchInside {
-            
-            if (day4.isSelected) == false {
-                
-                array.append(day4.title(for: .normal)!)
-                date_select(date: day4.title(for: .normal)!)
-                
-                day4.isSelected = true
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.white, for: .normal)
-                day4.setBorder(borderColor: .clear, borderWidth: 1)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-            }
-                
-            else if day4.isSelected
-            {
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                if let index = array.index(of: day4.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-            }
-        }
-        if day5.isTouchInside {
-            
-            if (day5.isSelected) == false {
-                
-                array.append(day5.title(for: .normal)!)
-                date_select(date: day5.title(for: .normal)!)
-                
-                day5.isSelected = true
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.white, for: .normal)
-                day5.setBorder(borderColor: .clear, borderWidth: 1)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-            }
-                
-            else if day5.isSelected
-            {
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                
-                if let index = array.index(of: day5.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-            }
-        }
-        if day6.isTouchInside {
-            
-            if (day6.isSelected) == false {
-                
-                array.append(day6.title(for: .normal)!)
-                date_select(date: day6.title(for: .normal)!)
-                
-                day6.isSelected = true
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.white, for: .normal)
-                day6.setBorder(borderColor: .clear, borderWidth: 1)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-                
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-            }
-                
-            else if day6.isSelected
-            {
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                
-                if let index = array.index(of: day6.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-            }
-        }
-        if day7.isTouchInside {
-            
-            if (day7.isSelected) == false {
-                
-                array.append(day7.title(for: .normal)!)
-                date_select(date: day7.title(for: .normal)!)
-                
-                
-                day7.isSelected = true
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.white, for: .normal)
-                day7.setBorder(borderColor: .clear, borderWidth: 1)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-                day2.isSelected = false
-                day2.setTitleColor(.white, for: .normal)
-                day2.setBackgroundColor(.clear, for: .normal)
-                day2.makeRounded(cornerRadius: 10)
-                day2.clipsToBounds = true
-                
-                day3.isSelected = false
-                day3.setTitleColor(.white, for: .normal)
-                day3.setBackgroundColor(.clear, for: .normal)
-                day3.makeRounded(cornerRadius: 10)
-                day3.clipsToBounds = true
-                
-                day4.isSelected = false
-                day4.setTitleColor(.white, for: .normal)
-                day4.setBackgroundColor(.clear, for: .normal)
-                day4.makeRounded(cornerRadius: 10)
-                day4.clipsToBounds = true
-                
-                day5.isSelected = false
-                day5.setTitleColor(.white, for: .normal)
-                day5.setBackgroundColor(.clear, for: .normal)
-                day5.makeRounded(cornerRadius: 10)
-                day5.clipsToBounds = true
-                
-                day6.isSelected = false
-                day6.setTitleColor(.white, for: .normal)
-                day6.setBackgroundColor(.clear, for: .normal)
-                day6.makeRounded(cornerRadius: 10)
-                day6.clipsToBounds = true
-                
-                day1.isSelected = false
-                day1.setTitleColor(.white, for: .normal)
-                day1.setBackgroundColor(.clear, for: .normal)
-                day1.makeRounded(cornerRadius: 10)
-                day1.clipsToBounds = true
-            }
-                
-            else if day7.isSelected
-            {
-                day7.isSelected = false
-                day7.setTitleColor(.white, for: .normal)
-                day7.setBackgroundColor(.clear, for: .normal)
-                day7.makeRounded(cornerRadius: 10)
-                day7.clipsToBounds = true
-                
-                
-                if let index = array.index(of: day7.title(for: .normal)!) {
-                    array.remove(at: index)
-                }
-                
-            }
-        }
-        
-        
-    }
-    
-    @objc func ClockClick(sender: UIButton) {
-        
-        //  print(array2)
-        
-        if sender.isSelected {
-            
-            if day1.isSelected {
-                dic[day1.title(for: .normal)!] = array2
-            }
-            else if day2.isSelected {
-                dic[day2.title(for: .normal)!] = array2
-            }
-            else if day3.isSelected {
-                dic[day3.title(for: .normal)!] = array2
-            }
-            else if day4.isSelected {
-                dic[day4.title(for: .normal)!] = array2
-            }
-            else if day5.isSelected {
-                dic[day5.title(for: .normal)!] = array2
-            }
-            else if day6.isSelected {
-                dic[day6.title(for: .normal)!] = array2
-            }
-            else {
-                dic[day7.title(for: .normal)!] = array2
-            }
-        }
-        
-        print(dic)
-        
-        if pm12.isTouchInside {
-            
-            if (pm12.isSelected) == false {
-                
-                //array2.append(12)
-                time_select(time: 12)
-                
-                
-                pm12.isSelected = true
-                pm12.setTitleColor(.white, for: .normal)
-                pm12.backgroundColor = .mainOrange
-                pm12.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm12.isSelected
-            {
-                pm12.isSelected = false
-                pm12.setTitleColor(.black, for: .normal)
-                pm12.backgroundColor = .white
-                pm12.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 12) {
-                //    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        
-        if pm1.isTouchInside {
-            
-            if (pm1.isSelected) == false {
-                
-                //array2.append(13)
-                time_select(time: 13)
-                pm1.isSelected = true
-                pm1.setTitleColor(.white, for: .normal)
-                pm1.backgroundColor = .mainOrange
-                pm1.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm1.isSelected
-            {
-                pm1.isSelected = false
-                pm1.setTitleColor(.black, for: .normal)
-                pm1.backgroundColor = .white
-                pm1.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 13) {
-                   // array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        
-        if pm2.isTouchInside {
-            
-            if (pm2.isSelected) == false {
-                
-                array2.append(14)
-                time_select(time: 14)
-                
-                
-                pm2.isSelected = true
-                pm2.setTitleColor(.white, for: .normal)
-                pm2.backgroundColor = .mainOrange
-                pm2.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm2.isSelected
-            {
-                pm2.isSelected = false
-                pm2.setTitleColor(.black, for: .normal)
-                pm2.backgroundColor = .white
-                pm2.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 14) {
-                  //  array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm3.isTouchInside {
-            
-            if (pm3.isSelected) == false {
-                
-                array2.append(15)
-                time_select(time: 15)
-                
-                pm3.isSelected = true
-                pm3.setTitleColor(.white, for: .normal)
-                pm3.backgroundColor = .mainOrange
-                pm3.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm3.isSelected
-            {
-                pm3.isSelected = false
-                pm3.setTitleColor(.black, for: .normal)
-                pm3.backgroundColor = .white
-                pm3.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 15) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm4.isTouchInside {
-            
-            if (pm4.isSelected) == false {
-                
-                array2.append(16)
-                time_select(time: 16)
-                
-                
-                pm4.isSelected = true
-                pm4.setTitleColor(.white, for: .normal)
-                pm4.backgroundColor = .mainOrange
-                pm4.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm4.isSelected
-            {
-                pm4.isSelected = false
-                pm4.setTitleColor(.black, for: .normal)
-                pm4.backgroundColor = .white
-                pm4.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 16) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm5.isTouchInside {
-            
-            if (pm5.isSelected) == false {
-                
-                array2.append(17)
-                time_select(time: 17)
-                
-                
-                pm5.isSelected = true
-                pm5.setTitleColor(.white, for: .normal)
-                pm5.backgroundColor = .mainOrange
-                pm5.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm5.isSelected
-            {
-                pm5.isSelected = false
-                pm5.setTitleColor(.black, for: .normal)
-                pm5.backgroundColor = .white
-                pm5.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 17) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm6.isTouchInside {
-            
-            if (pm6.isSelected) == false {
-                
-                array2.append(18)
-                time_select(time: 18)
-                
-                
-                
-                pm6.isSelected = true
-                pm6.setTitleColor(.white, for: .normal)
-                pm6.backgroundColor = .mainOrange
-                pm6.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm6.isSelected
-            {
-                pm6.isSelected = false
-                pm6.setTitleColor(.black, for: .normal)
-                pm6.backgroundColor = .white
-                pm6.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 18) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm7.isTouchInside {
-            
-            if (pm7.isSelected) == false {
-                
-                array2.append(19)
-                time_select(time: 19)
-                
-                
-                pm7.isSelected = true
-                pm7.setTitleColor(.white, for: .normal)
-                pm7.backgroundColor = .mainOrange
-                pm7.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm7.isSelected
-            {
-                pm7.isSelected = false
-                pm7.setTitleColor(.black, for: .normal)
-                pm7.backgroundColor = .white
-                pm7.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 19) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm8.isTouchInside {
-            
-            if (pm8.isSelected) == false {
-                
-                array2.append(20)
-                time_select(time: 20)
-                
-                
-                pm8.isSelected = true
-                pm8.setTitleColor(.white, for: .normal)
-                pm8.backgroundColor = .mainOrange
-                pm8.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm8.isSelected
-            {
-                pm8.isSelected = false
-                pm8.setTitleColor(.black, for: .normal)
-                pm8.backgroundColor = .white
-                pm8.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of:20) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-            }
-        }
-        if pm9.isTouchInside {
-            
-            if (pm9.isSelected) == false {
-                
-                array2.append(21)
-                time_select(time: 21)
-                
-                
-                pm9.isSelected = true
-                pm9.setTitleColor(.white, for: .normal)
-                pm9.backgroundColor = .mainOrange
-                pm9.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm9.isSelected
-            {
-                pm9.isSelected = false
-                pm9.setTitleColor(.black, for: .normal)
-                pm9.backgroundColor = .white
-                pm9.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-                if let index = array2.index(of: 21) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-            }
-        }
-        if pm10.isTouchInside {
-            
-            if (pm10.isSelected) == false {
-                
-                array2.append(22)
-                time_select(time: 22)
-                
-                
-                pm10.isSelected = true
-                pm10.setTitleColor(.white, for: .normal)
-                pm10.backgroundColor = .mainOrange
-                pm10.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm10.isSelected
-            {
-                
-                
-                if let index = array2.index(of: 22) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-                pm10.isSelected = false
-                pm10.setTitleColor(.black, for: .normal)
-                pm10.backgroundColor = .white
-                pm10.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-            }
-        }
-        if pm11.isTouchInside {
-            
-            if (pm11.isSelected) == false {
-                
-                
-                array2.append(23)
-                time_select(time: 23)
-                
-                
-                
-                pm11.isSelected = true
-                pm11.setTitleColor(.white, for: .normal)
-                pm11.backgroundColor = .mainOrange
-                pm11.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if pm11.isSelected
-            {
-                
-                
-                if let index = array2.index(of: 23) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                pm11.isSelected = false
-                pm11.setTitleColor(.black, for: .normal)
-                pm11.backgroundColor = .white
-                pm11.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-            }
-        }
-        if am12.isTouchInside {
-            
-            if (am12.isSelected) == false {
-                
-                
-                array2.append(24)
-                time_select(time: 24)
-                
-                
-                am12.isSelected = true
-                am12.setTitleColor(.white, for: .normal)
-                am12.backgroundColor = .mainOrange
-                am12.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if am12.isSelected
-            {
-                
-                if let index = array2.index(of: 24) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                am12.isSelected = false
-                am12.setTitleColor(.black, for: .normal)
-                am12.backgroundColor = .white
-                am12.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-            }
-        }
-        if am1.isTouchInside {
-            
-            if (am1.isSelected) == false {
-                
-                array2.append(1)
-                time_select(time: 1)
-                
-                
-                
-                am1.isSelected = true
-                am1.setTitleColor(.white, for: .normal)
-                am1.backgroundColor = .mainOrange
-                am1.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if am1.isSelected
-            {
-                
-                if let index = array2.index(of: 1) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                am1.isSelected = false
-                am1.setTitleColor(.black, for: .normal)
-                am1.backgroundColor = .white
-                am1.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-            }
-        }
-        if am2.isTouchInside {
-            
-            if (am2.isSelected) == false {
-                
-                array2.append(2)
-                time_select(time: 2)
-                
-                am2.isSelected = true
-                am2.setTitleColor(.white, for: .normal)
-                am2.backgroundColor = .mainOrange
-                am2.setBorder(borderColor: .clear, borderWidth: 1)
-                
-                
-            }
-                
-            else if am2.isSelected
-            {
-                if let index = array2.index(of: 2) {
-                    array2.remove(at: index)
-                    time_select(time: index)
-                }
-                
-                am2.isSelected = false
-                am2.setTitleColor(.black, for: .normal)
-                am2.backgroundColor = .white
-                am2.setBorder(borderColor: .borderGray, borderWidth: 1)
-                
-                
-            }
-        }
-    }
-    
-}
+        // var dayDic: [String : [Int]] = [:]
+        //        dayDic["2019-12-25"] = [12,13,15]
+        //        dayDic["2019-12-26"] = [11,23,15]
+        //        dayDic["2019-12-27"] = [21,13,17]
+        //        dayDic["2019-12-28"] = [11,23,21]
+        //        dayDic["2019-12-29"] = [10,13,15]
+        //        dayDic["2019-12-30"] = [11,13,15]
+        //        dayDic["2019-12-31"] = [17,19,20]
 
-extension UIButton {
-    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
-        UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        context.setFillColor(color.cgColor)
-        context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            dayButtons.forEach {
+                // 날짜 버튼 뷰 속성 설정
+                $0.makeRounded(cornerRadius: 10)
+                
+                $0.setTitleColor(.white, for: .normal)
+                $0.setBackgroundColor(.clear, for: .normal)
+                
+                $0.setTitleColor(.mainOrange, for: .selected)
+                $0.setBackgroundColor(.white, for: .selected)
+                // 날짜 버튼 클릭 이벤트 설정
+                $0.addTarget(self, action: #selector(dayClick), for: .touchUpInside)
+            }
+            
+            TimeButtons.forEach {
+                // 날짜 버튼 뷰 속성 설정
+                $0.makeRounded(cornerRadius: 5)
+                $0.setBorder(borderColor: .borderGray, borderWidth: 1)
+                $0.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
+                
+                $0.setTitleColor(.black, for: .normal)
+                $0.setTitleColor(.white, for: .selected)
+                // 날짜 버튼 클릭 이벤트 설정
+                $0.addTarget(self, action: #selector(timeClick), for: .touchUpInside)
+            }
+            
+            TableView.makeRounded(cornerRadius: 20)
+            OKButton.titleEdgeInsets.bottom = 7
+            
+            // 초기 날짜 및 시간 선택
+            selectDate("30") // 임시
+            selectDayButton(at: selectedIndex)
+            selectTimeButtons(times: reservationInfo.times)
+        }
         
-        let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        func navigationSetup() { //네비게이션 투명색만들기
+            
+            //        rgb 255 126 39
+            self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
+            self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
+            self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem?.tintColor = .black
+            //투명하게 만드는 공식처럼 기억하기
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            //네비게이션바의 백그라운드색 지정. UIImage와 동일
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+            //shadowImage는 UIImage와 동일. 구분선 없애줌.
+            self.navigationController?.navigationBar.isTranslucent = true
+            //false면 반투명이다.
+            self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+            //뷰의 배경색 지정
+            
+            //        self.navigationController?.navigationBar.topItem?.title = "Home"
+            //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+            //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+            
+        }
         
-        self.setBackgroundImage(backgroundImage, for: state)
+        /// 날짜 선택
+        private func selectDate(_ date: String) {
+            // 이전 날짜의 예약 정보 저장
+            DataManager.sharedManager.setReservation(info: reservationInfo)
+            
+            if let info = DataManager.sharedManager.reservationCache.first(where: { $0.date == date}) {
+                // 캐시에 저장된 예약정보가 있다면 불러옴
+                reservationInfo = info
+            } else {
+                // 캐시에 저장된 정보가 없다면 새로운 예약 정보를 생성
+                reservationInfo = DataManager.ReservationInfo(date: date , times: [])
+            }
+        }
+        
+        /// 시간 선택
+        private func selectTime(_ time: Int) {
+            if let index = reservationInfo.times.firstIndex(of: time) {
+                /// 선택한 시간이 존재한다면 삭제
+                reservationInfo.times.remove(at: index)
+            } else {
+                /// 선택한 시간이 없다면 추가
+                reservationInfo.times.append(time)
+            }
+        }
+        
+        /// 시간 정보를 통해 시간 버튼 활성화
+        private func selectTimeButtons(times: [Int]) {
+            // 모든 시간 버튼 선택 해제
+            TimeButtons.forEach { setTimeButtonSelect($0, false) }
+            
+            times.compactMap { self.times.firstIndex(of: $0) }
+                .map { TimeButtons[$0] }
+                .forEach { setTimeButtonSelect($0, true) }
+        }
+        
+        /// 시간 버튼 상태 설정
+        private func setTimeButtonSelect(_ button: UIButton, _ isSelected: Bool) {
+            button.isSelected = isSelected
+            button.backgroundColor = isSelected ? .mainOrange : .white
+            button.setBorder(borderColor: isSelected ? .clear : .borderGray, borderWidth: 1)
+        }
+        
+        /// 날짜 버튼 선택
+        private func selectDayButton(at index: Int) {
+            guard (0 ..< dayButtons.count).contains(index) else { return }
+            
+            dayButtons[selectedIndex].isSelected = false // 이전 날짜 선택 취소
+            dayButtons[index].isSelected = true // 새로운 날짜 선택
+            
+            selectedIndex = index
+        }
+        
+        /// 시간 버튼 선택
+        private func selectTimeButton(at index: Int) {
+            guard (0 ..< TimeButtons.count).contains(index) else { return }
+            
+            // 시간 버튼 토글
+            let button = TimeButtons[index]
+            setTimeButtonSelect(button, !button.isSelected)
+        }
+        
+        // MARK: - selector
+        @objc func dayClick(sender: UIButton) {
+            guard let day = sender.titleLabel?.text else { return }
+            selectDate(day)
+            
+            selectDayButton(at: sender.tag - 1)
+            selectTimeButtons(times: reservationInfo.times)
+        }
+        
+        @objc func timeClick(sender: UIButton) {
+            guard let index = TimeButtons.firstIndex(of: sender) else { return }
+            selectTime(times[index])
+            
+            selectTimeButton(at: sender.tag - 1)
+        }
     }
-}
+
+    extension UIButton {
+        func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+            UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            context.setFillColor(color.cgColor)
+            context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
+            
+            let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            self.setBackgroundImage(backgroundImage, for: state)
+        }
+    }

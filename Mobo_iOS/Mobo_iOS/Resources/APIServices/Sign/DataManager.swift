@@ -26,6 +26,15 @@ class DataManager {
     }
     //    var dic : [String : [Int]] = [:]
     
+
+//    var reservationCache: [ReservationInfo] = []
+//
+//       struct ReservationInfo {
+//
+//           var date: String
+//           var times: [Int]
+//       }
+    
     var reservationCache: [ReservationInfo] = []
     
     func setReservation(info : ReservationInfo) {
