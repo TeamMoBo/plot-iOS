@@ -115,13 +115,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         navigationSetup()
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
         
         vc.modalPresentationStyle = .fullScreen
         self.show(vc, sender: nil)
-        //   self.navigationController?.pushViewController(vc, animated: true)
-        //(vc, animated: true, completion: nil)
+        
+       
     }
+    
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

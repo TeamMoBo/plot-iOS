@@ -34,7 +34,7 @@ class MovieTimeTableViewController: UIViewController {
     //    ]
     
    // MARK: - properties
-        private var reservationInfo: DataManager.ReservationInfo! // 현재 선택한 날짜에 대한 예약 정보
+    private var reservationInfo: DataManager.ReservationInfo? // 현재 선택한 날짜에 대한 예약 정보
         
         private var selectedIndex: Int = 0
         private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
@@ -61,7 +61,7 @@ class MovieTimeTableViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+                        
             dayButtons.forEach {
                 // 날짜 버튼 뷰 속성 설정
                 $0.makeRounded(cornerRadius: 10)
@@ -91,9 +91,13 @@ class MovieTimeTableViewController: UIViewController {
             OKButton.titleEdgeInsets.bottom = 7
             
             // 초기 날짜 및 시간 선택
+            if let reservationInfo = self.reservationInfo {
+                                      DataManager.sharedManager.setReservation(info: reservationInfo)
+                                  }
+            
             selectDate("30") // 임시
             selectDayButton(at: selectedIndex)
-            selectTimeButtons(times: reservationInfo.times)
+            selectTimeButtons(times: reservationInfo!.times)
         }
         
         func navigationSetup() { //네비게이션 투명색만들기
@@ -123,7 +127,12 @@ class MovieTimeTableViewController: UIViewController {
         /// 날짜 선택
         private func selectDate(_ date: String) {
             // 이전 날짜의 예약 정보 저장
-            DataManager.sharedManager.setReservation(info: reservationInfo)
+            
+            if let reservationInfo = self.reservationInfo {
+                DataManager.sharedManager.setReservation(info: reservationInfo)
+            }
+         
+       //     DataManager.sharedManager.setReservation(info: reservationInfo)
             
             if let info = DataManager.sharedManager.reservationCache.first(where: { $0.date == date}) {
                 // 캐시에 저장된 예약정보가 있다면 불러옴
@@ -136,17 +145,22 @@ class MovieTimeTableViewController: UIViewController {
         
         /// 시간 선택
         private func selectTime(_ time: Int) {
-            if let index = reservationInfo.times.firstIndex(of: time) {
+            if let reservationInfo = self.reservationInfo {
+                           DataManager.sharedManager.setReservation(info: reservationInfo)
+                       }
+                    
+            if let index = reservationInfo!.times.firstIndex(of: time) {
                 /// 선택한 시간이 존재한다면 삭제
-                reservationInfo.times.remove(at: index)
+                reservationInfo!.times.remove(at: index)
             } else {
                 /// 선택한 시간이 없다면 추가
-                reservationInfo.times.append(time)
+                reservationInfo!.times.append(time)
             }
         }
         
         /// 시간 정보를 통해 시간 버튼 활성화
         private func selectTimeButtons(times: [Int]) {
+            
             // 모든 시간 버튼 선택 해제
             TimeButtons.forEach { setTimeButtonSelect($0, false) }
             
@@ -166,6 +180,8 @@ class MovieTimeTableViewController: UIViewController {
         private func selectDayButton(at index: Int) {
             guard (0 ..< dayButtons.count).contains(index) else { return }
             
+            print(selectedIndex,index)
+            
             dayButtons[selectedIndex].isSelected = false // 이전 날짜 선택 취소
             dayButtons[index].isSelected = true // 새로운 날짜 선택
             
@@ -184,16 +200,21 @@ class MovieTimeTableViewController: UIViewController {
         // MARK: - selector
         @objc func dayClick(sender: UIButton) {
             guard let day = sender.titleLabel?.text else { return }
+            if let reservationInfo = self.reservationInfo {
+                           DataManager.sharedManager.setReservation(info: reservationInfo)
+                       }
+                    
             selectDate(day)
+            //print(day)
             
             selectDayButton(at: sender.tag - 1)
-            selectTimeButtons(times: reservationInfo.times)
+            selectTimeButtons(times: reservationInfo!.times)
         }
         
         @objc func timeClick(sender: UIButton) {
             guard let index = TimeButtons.firstIndex(of: sender) else { return }
-            selectTime(times[index])
             
+            selectTime(times[index])
             selectTimeButton(at: sender.tag - 1)
         }
     }
