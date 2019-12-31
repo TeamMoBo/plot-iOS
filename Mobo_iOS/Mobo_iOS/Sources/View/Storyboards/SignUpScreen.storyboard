@@ -1017,13 +1017,6 @@
                                     <constraint firstAttribute="height" constant="677" id="K6u-k9-Oe9"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="btnNext" translatesAutoresizingMaskIntoConstraints="NO" id="iKE-dV-Y0i">
-                                <rect key="frame" x="141" y="664" width="78" height="78"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="C3Q-7v-kha"/>
-                                    <constraint firstAttribute="width" constant="78" id="mJh-C7-5zP"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icProgressbarComplete" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-ct-PpY">
                                 <rect key="frame" x="60" y="75" width="240" height="14"/>
                                 <constraints>
@@ -1038,6 +1031,13 @@
                                     <constraint firstAttribute="height" constant="28" id="bhE-m1-uM6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66U-pR-sqK">
+                                <rect key="frame" x="143" y="673" width="78" height="78"/>
+                                <state key="normal" image="btnNext"/>
+                                <connections>
+                                    <action selector="nextbtn:" destination="vcL-pd-412" eventType="touchUpInside" id="GrZ-kU-IrX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1050,16 +1050,16 @@
                             <constraint firstItem="O1p-SH-tN1" firstAttribute="trailing" secondItem="xpY-ob-S3M" secondAttribute="trailing" constant="12" id="Saa-TB-OVE"/>
                             <constraint firstItem="D29-Bl-o9A" firstAttribute="leading" secondItem="O1p-SH-tN1" secondAttribute="leading" constant="120" id="T7N-Fb-dgG"/>
                             <constraint firstItem="21s-jd-NjZ" firstAttribute="leading" secondItem="O1p-SH-tN1" secondAttribute="leading" id="Wua-iq-TUt"/>
-                            <constraint firstAttribute="bottom" secondItem="iKE-dV-Y0i" secondAttribute="bottom" constant="18" id="YhQ-mJ-ZIE"/>
-                            <constraint firstItem="iKE-dV-Y0i" firstAttribute="leading" secondItem="O1p-SH-tN1" secondAttribute="leading" constant="141" id="adu-3N-BY1"/>
-                            <constraint firstItem="iKE-dV-Y0i" firstAttribute="top" secondItem="D29-Bl-o9A" secondAttribute="bottom" constant="296" id="ajQ-WM-U36"/>
                             <constraint firstItem="xpY-ob-S3M" firstAttribute="top" secondItem="lUQ-ct-PpY" secondAttribute="bottom" constant="16" id="bEm-P3-ylS"/>
                             <constraint firstItem="21s-jd-NjZ" firstAttribute="trailing" secondItem="O1p-SH-tN1" secondAttribute="trailing" id="c9h-4B-yR1"/>
                             <constraint firstItem="xpY-ob-S3M" firstAttribute="leading" secondItem="HoJ-Un-WF8" secondAttribute="leading" constant="-17" id="cnN-6f-nK8"/>
+                            <constraint firstItem="66U-pR-sqK" firstAttribute="top" secondItem="D29-Bl-o9A" secondAttribute="bottom" constant="305" id="dpd-Tq-kSa"/>
+                            <constraint firstItem="66U-pR-sqK" firstAttribute="leading" secondItem="O1p-SH-tN1" secondAttribute="leading" constant="143" id="g3q-Xu-dwb"/>
+                            <constraint firstItem="O1p-SH-tN1" firstAttribute="trailing" secondItem="66U-pR-sqK" secondAttribute="trailing" constant="154" id="gbS-NP-gL2"/>
+                            <constraint firstItem="O1p-SH-tN1" firstAttribute="bottom" secondItem="66U-pR-sqK" secondAttribute="bottom" constant="27" id="pNR-aJ-gNI"/>
                             <constraint firstAttribute="bottom" secondItem="21s-jd-NjZ" secondAttribute="bottom" id="qfg-H4-aOD"/>
                             <constraint firstItem="D29-Bl-o9A" firstAttribute="top" secondItem="lUQ-ct-PpY" secondAttribute="bottom" constant="251" id="snn-Tb-77V"/>
                             <constraint firstItem="O1p-SH-tN1" firstAttribute="trailing" secondItem="D29-Bl-o9A" secondAttribute="trailing" constant="131" id="u4V-zw-L6O"/>
-                            <constraint firstItem="O1p-SH-tN1" firstAttribute="trailing" secondItem="iKE-dV-Y0i" secondAttribute="trailing" constant="156" id="xFn-Px-4XJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1p-SH-tN1"/>
                     </view>
