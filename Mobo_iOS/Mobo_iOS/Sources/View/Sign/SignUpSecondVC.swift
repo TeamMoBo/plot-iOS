@@ -11,7 +11,7 @@ import Hashtags
 
 
 
-class SignUpSecondVC: UIViewController, UITextFieldDelegate {
+class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelegate , UIPickerViewDataSource {
     
     
     
@@ -26,6 +26,59 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var letter: UITextField!
     
     @IBOutlet weak var shortletter: UITextField!
+    @IBOutlet weak var minAgeField: UITextField!
+    @IBOutlet weak var maxAgeField: UITextField!
+    
+    lazy var pickerView: UIPickerView = { // Generate UIPickerView.
+        let picker = UIPickerView() // Specify the size.
+        //   picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
+        picker.backgroundColor = .lightGray
+        picker.delegate = self
+        picker.dataSource = self
+        return picker }()
+    
+    let values: [String] = ["20","21","22","23","24","25",
+    "26","27","28","29","30","31",
+    "32"]
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        shortletter.delegate = self as? UITextFieldDelegate
+        
+        womanbtn.addTarget(self, action: #selector( getter: womanSelected ), for: .touchUpInside)
+        
+        manbtn.addTarget(self, action: #selector( getter: manSelected ), for: .touchUpInside)
+        
+        nomatterbtn.addTarget(self, action: #selector( getter: nomatterSelected ), for: .touchUpInside)
+        
+        minAgeField.inputView = pickerView
+        
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return values.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return values[row]
+        
+    } // A method called when the picker is selected.
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("row: \(row)")
+        print("value: \(values[row])")
+        minAgeField.text! = values[row]
+    }
+    
     
     @objc var womanSelected: Bool = false {
         didSet {
@@ -49,28 +102,6 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
             nomatterimg.image = image
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        shortletter.delegate = self as? UITextFieldDelegate;
-        
-        womanbtn.addTarget(self, action: #selector( getter: womanSelected ), for: .touchUpInside)
-        
-        manbtn.addTarget(self, action: #selector( getter: manSelected ), for: .touchUpInside)
-        
-        nomatterbtn.addTarget(self, action: #selector( getter: nomatterSelected ), for: .touchUpInside)
-        
-    }
-    
-    @IBAction func nextbtn(_ sender: Any) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
-               let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
-                             
-               vc.modalPresentationStyle = .fullScreen
-               self.show(vc, sender: nil)
-    }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -97,4 +128,31 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
         manSelected = false
         nomatterSelected = true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        //return 버튼 누르면 키보드 내려갈수있게 설정.
+    }
+    
+    
+    
+    @IBAction func nextbtn(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.show(vc, sender: nil)
+    }
+    
+    
+    
 }
+
+
+
+
+    
+    
+    
+    
+
