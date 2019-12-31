@@ -21,7 +21,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var uni: UITextField!
     @IBOutlet weak var major: UITextField!
     @IBOutlet weak var kakao: UITextField!
-
+    
     
     
     override func viewDidLoad() {
@@ -40,11 +40,17 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         kakao.delegate = self;
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        //return 버튼 누르면 키보드 내려갈수있게 설정.
+    }
+    
     @IBAction func nextPage(_ sender: Any) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpSecondVC") as! SignUpSecondVC
-                      
+        
         vc.modalPresentationStyle = .fullScreen
         self.show(vc, sender: nil)
     }
@@ -83,19 +89,36 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-        nickname.resignFirstResponder()
-        name.resignFirstResponder()
-        id.resignFirstResponder()
-        age.resignFirstResponder()
-        pwd.resignFirstResponder()
-        uni.resignFirstResponder()
-        major.resignFirstResponder()
-        kakao.resignFirstResponder()
+        
+        if textField == nickname {
+            name.becomeFirstResponder()
+        }
+            
+        else if textField == name {
+            id.becomeFirstResponder()
+        }
+        else if textField == id{
+            age.becomeFirstResponder()
+        }
+        else if textField == age{
+            pwd.becomeFirstResponder()
+        }
+        else if textField == pwd {
+            uni.resignFirstResponder()
+        }
+        else if textField == uni {
+            major.resignFirstResponder()
+        }
+        else if textField == major {
+            kakao.resignFirstResponder()
+        }
+        else if textField == kakao {
+            kakao.resignFirstResponder()
+        }
         
         return true
-
     }
+    
     func navigationSetup() { //네비게이션 투명색만들기
         
         //        rgb 255 126 39
@@ -103,7 +126,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-//        self.navigationItem.backBarButtonItem?.tintColor = .black
+        //        self.navigationItem.backBarButtonItem?.tintColor = .black
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -114,11 +137,11 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         
-//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
-//        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
-       
-
+        
+        
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //        self.navigationController?.navigationBar.topItem?.title = "Home"
@@ -134,7 +157,7 @@ UINavigationControllerDelegate{
     func imagePickerController(_ _picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectedimg.image = image
-        
+            
         }
         
         dismiss(animated: true)

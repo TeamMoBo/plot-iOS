@@ -733,23 +733,33 @@
                                                     <constraint firstAttribute="width" constant="14" id="vaA-Zn-hce"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-YO-19b">
-                                                <rect key="frame" x="159" y="690" width="30" height="28"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-YO-19b">
+                                                <rect key="frame" x="159" y="687" width="30" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="43u-MG-tzG"/>
                                                     <constraint firstAttribute="width" constant="21" id="q2r-pv-t8G"/>
                                                 </constraints>
+                                                <state key="selected" image="icSelected"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-nI-f0B">
-                                                <rect key="frame" x="70" y="690" width="28" height="28"/>
+                                                <rect key="frame" x="69" y="689" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="21" id="PXu-HC-fqf"/>
                                                     <constraint firstAttribute="height" constant="20" id="Rh2-oP-VVZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal">
+                                                <state key="normal" image="icUnselected">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <state key="selected" image="icSelected"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-0K-mY1">
+                                                <rect key="frame" x="248" y="686" width="30" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="21" id="ZID-BV-wGu"/>
+                                                </constraints>
+                                                <state key="normal" image="icUnselected"/>
+                                                <state key="selected" image="icSelected"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oux-7E-15w">
                                                 <rect key="frame" x="69" y="789" width="84" height="22"/>
@@ -803,12 +813,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-0K-mY1">
-                                                <rect key="frame" x="247" y="689" width="32" height="28"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="21" id="ZID-BV-wGu"/>
-                                                </constraints>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -982,6 +986,8 @@
                         <outlet property="letter" destination="jPa-2X-N9y" id="h1m-T3-rGI"/>
                         <outlet property="manbtn" destination="Bip-YO-19b" id="bCj-85-lQ1"/>
                         <outlet property="manimg" destination="x5M-pQ-4Fs" id="auo-Vv-cDF"/>
+                        <outlet property="maxAgeField" destination="uw7-G4-66C" id="oSD-Ol-0m4"/>
+                        <outlet property="minAgeField" destination="Oux-7E-15w" id="mlq-01-2ho"/>
                         <outlet property="nomatterbtn" destination="pKd-0K-mY1" id="qES-si-hWl"/>
                         <outlet property="nomatterimg" destination="zaF-Gj-ItP" id="TbJ-f6-1lh"/>
                         <outlet property="shortletter" destination="jPa-2X-N9y" id="2qb-mi-ftR"/>
@@ -1094,6 +1100,7 @@
         <image name="btnNext" width="78" height="78"/>
         <image name="icProgressbarComplete" width="240" height="14"/>
         <image name="icProgressbarSecond" width="240" height="14"/>
+        <image name="icSelected" width="20" height="20"/>
         <image name="icUnselected" width="20" height="20"/>
         <image name="imgBasicprofile" width="128" height="128"/>
         <image name="imgCompletetext" width="124" height="28"/>

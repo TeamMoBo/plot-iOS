@@ -19,14 +19,15 @@ class ChatWaitingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        age.delegate = self ;
-         uni.delegate = self ;
-         major.delegate = self ;
-         place.delegate = self ;
+        age.delegate = self
+         uni.delegate = self
+         major.delegate = self
+         place.delegate = self
         
     }
     
     @IBAction func chatbtn(_ sender: Any) {
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

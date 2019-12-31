@@ -160,7 +160,8 @@ class MainHomeViewController: UIViewController {
 
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "마이 페이지", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -191,8 +192,20 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func chatBtn(_ sender: Any) {
         
-        navigationSetup3()
+
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
+              self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+              self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+              self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
+              //투명하게 만드는 공식처럼 기억하기
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+              //네비게이션바의 백그라운드색 지정. UIImage와 동일
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+              //shadowImage는 UIImage와 동일. 구분선 없애줌.
+            self.navigationController?.navigationBar.isTranslucent = true
         
+          self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
        let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
@@ -295,31 +308,7 @@ class MainHomeViewController: UIViewController {
         
     }
     
-    func navigationSetup3() { //네비게이션 투명색만들기
-        
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
-        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "채팅방 이애오", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .black
-        //투명하게 만드는 공식처럼 기억하기
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        //네비게이션바의 백그라운드색 지정. UIImage와 동일
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        //shadowImage는 UIImage와 동일. 구분선 없애줌.
-        self.navigationController?.navigationBar.isTranslucent = true
-        //false면 반투명이다.
-        
-        //뷰의 배경색 지정
-        
-        //        self.navigationController?.navigationBar.topItem?.title = "Home"
-        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
-    }
-
-    
-    
+ 
     func getMovieList(orderType: String) {
         
         let url: String = baseURL + ServerURLs.movieList.rawValue + orderType

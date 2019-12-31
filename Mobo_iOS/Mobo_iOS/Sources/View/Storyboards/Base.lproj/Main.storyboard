@@ -375,7 +375,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epw-sC-SrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-975.20000000000005" y="10.344827586206897"/>
+            <point key="canvasLocation" x="-1118" y="10"/>
         </scene>
         <!--Movie Time Table View Controller-->
         <scene sceneID="DP9-m4-7Yo">
