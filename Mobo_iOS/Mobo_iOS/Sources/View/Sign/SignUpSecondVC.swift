@@ -28,6 +28,10 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     @IBOutlet weak var minAgeField: UITextField!
     @IBOutlet weak var maxAgeField: UITextField!
     
+    @IBOutlet weak var genreHashTagTextField: HashTagTextField!
+    @IBOutlet weak var charmHashTagTextField: HashTagTextField!
+    @IBOutlet weak var interestHashTagTextField: HashTagTextField!
+    
     lazy var pickerView: UIPickerView = { // Generate UIPickerView.
         let picker = UIPickerView() // Specify the size.
         picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
@@ -65,6 +69,9 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         minAgeField.inputView = pickerView
         maxAgeField.inputView = pickerView2
         
+        genreHashTagTextField.delegate = self
+        charmHashTagTextField.delegate = self
+        interestHashTagTextField.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -168,7 +175,23 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     
     
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField is HashTagTextField {
+            if checkHashTagCount(text: textField.text ?? "") {
+                textField.deleteBackward()
+            }
+        }
+    }
     
+    func checkHashTagCount(text: String) -> Bool {
+        var count: Int = 0
+        for v in text {
+            if v == "#" {
+                count += 1
+            }
+        }
+        return count > 3 ? true : false
+    }
 }
 
 
