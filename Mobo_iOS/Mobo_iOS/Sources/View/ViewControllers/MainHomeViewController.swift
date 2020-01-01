@@ -160,7 +160,7 @@ class MainHomeViewController: UIViewController {
                     print(self.dataManager.setMovieList(list: [movieLists.results]))
                     
                     //                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                                    self.reloadMovieLists()
+                    self.reloadMovieLists()
                     completion(movieLists)
                 }
                 catch let error {
@@ -179,22 +179,26 @@ class MainHomeViewController: UIViewController {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
+   override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-    
+        
+        if dataManager.getDidOrderTypeChangedAndDownloaded() {
             reloadMovieLists()
-         //   let orderType: String = dataManager.getMovieOrderType()
+        }
+        else {
+            reloadMovieLists()
+            let orderType: String = dataManager.getMovieOrderType()
             //            getMovieList(orderType: orderType)
             getMovieList() { (listResponse) in
                 guard let response = listResponse else {
                     return
                 }
                 
-     //           print(response)
+                print(response)
                 
             }
-        
+        }
     }
     
     
@@ -359,10 +363,11 @@ class MainHomeViewController: UIViewController {
         
     }
     
-func getMovieList(orderType: String) {
+func getMovieList() {
         
-        let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-        
+       // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
+        let url: String = "http://13.125.48.35:7935/main"
+
         guard let finalURL = URL(string: url) else {
             return
         }
@@ -385,7 +390,7 @@ func getMovieList(orderType: String) {
                 print("Success")
                 let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
                 
-                self.dataManager.setMovieList(list: movieLists.results)
+                self.dataManager.setMovieList(list: [movieLists.results])
                 self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
                 self.reloadMovieLists()
             }
@@ -399,45 +404,8 @@ func getMovieList(orderType: String) {
     }
        
         
-        let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-        
-        guard let finalURL = URL(string: url) else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let request = URLRequest(url: finalURL)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let resultData = data else {
-                return
-            }
-            
-            do {
-                print("Success")
-                let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-                
-                self.dataManager.setMovieList(list: movieLists.results)
-                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                self.reloadMovieLists()
-            }
-            catch let error {
-                print(error.localizedDescription)
-            }
-            
-        }
-        
-        task.resume()
-    }
-       
      func reloadMovieLists() {
-        self.movies = dataManager.getMovieList()[0].randMovie
+       // self.movies = dataManager.getMovieList()[0].randMovie
         
            DispatchQueue.main.async {
                self.movieCollectionView.reloadData()
