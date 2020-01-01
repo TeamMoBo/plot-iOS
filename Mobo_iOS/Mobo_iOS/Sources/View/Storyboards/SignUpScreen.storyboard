@@ -832,8 +832,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-<<<<<<< HEAD
-=======
+
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-0K-mY1">
                                                 <rect key="frame" x="247" y="689" width="32" height="28"/>
                                                 <constraints>
@@ -850,7 +849,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
->>>>>>> chatwaiting
+
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1044,8 +1043,7 @@
                                     <constraint firstAttribute="height" constant="677" id="K6u-k9-Oe9"/>
                                 </constraints>
                             </imageView>
-<<<<<<< HEAD
-=======
+
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="btnNext" translatesAutoresizingMaskIntoConstraints="NO" id="iKE-dV-Y0i">
                                 <rect key="frame" x="141" y="716" width="78" height="78"/>
                                 <constraints>
@@ -1053,7 +1051,7 @@
                                     <constraint firstAttribute="width" constant="78" id="mJh-C7-5zP"/>
                                 </constraints>
                             </imageView>
->>>>>>> chatwaiting
+
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icProgressbarComplete" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-ct-PpY">
                                 <rect key="frame" x="60" y="75" width="240" height="14"/>
                                 <constraints>

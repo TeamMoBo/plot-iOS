@@ -54,7 +54,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shortletter.delegate = self as? UITextFieldDelegate
+        shortletter.delegate = self;
         
         womanbtn.addTarget(self, action: #selector( getter: womanSelected ), for: .touchUpInside)
         
@@ -128,20 +128,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         }
     }
     
-<<<<<<< HEAD
-=======
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        shortletter.delegate = self;
-        
-        womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
-        
-        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
-        
-        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
-        
-    }
+
     
     @IBAction func nextbtn(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
@@ -150,8 +137,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
                vc.modalPresentationStyle = .fullScreen
                self.show(vc, sender: nil)
     }
-    
->>>>>>> chatwaiting
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -180,13 +166,6 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     }
     
     
-    @IBAction func nextbtn(_ sender: Any) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
-        
-        vc.modalPresentationStyle = .fullScreen
-        self.show(vc, sender: nil)
-    }
     
     
     
