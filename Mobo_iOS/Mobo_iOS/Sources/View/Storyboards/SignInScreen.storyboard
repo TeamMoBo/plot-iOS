@@ -87,6 +87,7 @@
                         <outlet property="Useridview" destination="n3q-7B-imC" id="Zfh-CS-kju"/>
                         <outlet property="Userpwd" destination="Bb9-2l-Zy2" id="PiU-qX-mRP"/>
                         <outlet property="Userpwdview" destination="GWT-cV-iuC" id="dit-cO-5gj"/>
+                        <outlet property="loginBtn" destination="rhn-V1-iZv" id="Mva-tk-15V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6di-fM-DJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

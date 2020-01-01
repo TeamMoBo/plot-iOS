@@ -28,6 +28,12 @@ class ChatWaitingViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func chatbtn(_ sender: Any) {
         
+        let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+        self.show(vc, sender: nil)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

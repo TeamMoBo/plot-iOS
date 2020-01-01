@@ -131,9 +131,27 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
         cell.delegate = self
+        cell.delegate?.didClicked()
+        
 
         cell.currentIndex = indexPath.item
         
+        
+        
+        
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+      
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
+
+        
+        cell.currentIndex = indexPath.item
+        //cell.timeButton.backgroundColor  = .red
         
         if cell.timeButton.isTouchInside {
             
@@ -160,20 +178,6 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
                 
             }
         }
-        
-        
-        return cell
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
-      
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
-
-        
-        cell.currentIndex = indexPath.item
-        cell.timeButton.backgroundColor  = .red
         
         
 
@@ -210,8 +214,7 @@ extension MovieMoreTableViewController: toggleActionDelegate {
     
     func didClicked() {
         
-        print(1010)
-                
+        view.backgroundColor = .red
 
     }
     
