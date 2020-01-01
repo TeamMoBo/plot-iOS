@@ -38,6 +38,10 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var womanimg: UIImageView!
     @IBOutlet weak var manimg: UIImageView!
     @IBOutlet weak var nomatterimg: UIImageView!
+    @IBOutlet weak var minAgeField: UITextField!
+    @IBOutlet weak var maxAgeField: UITextField!
+    
+    
     
     var womanSelected: Bool = false {
         didSet {

@@ -31,11 +31,19 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     
     lazy var pickerView: UIPickerView = { // Generate UIPickerView.
         let picker = UIPickerView() // Specify the size.
-        //   picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
+        picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
         picker.backgroundColor = .lightGray
         picker.delegate = self
         picker.dataSource = self
         return picker }()
+    
+    lazy var pickerView2: UIPickerView = { // Generate UIPickerView.
+    let picker = UIPickerView() // Specify the size.
+    picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
+    picker.backgroundColor = .lightGray
+    picker.delegate = self
+    picker.dataSource = self
+    return picker }()
     
     let values: [String] = ["20","21","22","23","24","25",
     "26","27","28","29","30","31",
@@ -56,8 +64,15 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         nomatterbtn.addTarget(self, action: #selector( getter: nomatterSelected ), for: .touchUpInside)
         
         minAgeField.inputView = pickerView
+        maxAgeField.inputView = pickerView2
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.minAgeField.endEditing(true)
+        self.maxAgeField.endEditing(true)
+           //return 버튼 누르면 키보드 내려갈수있게 설정.
+       }
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -74,9 +89,20 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     } // A method called when the picker is selected.
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if  minAgeField.isEditing {
         print("row: \(row)")
         print("value: \(values[row])")
-        minAgeField.text! = values[row]
+            minAgeField.text! = values[row]
+        }
+        
+        if maxAgeField.isEditing {
+            print("row: \(row)")
+            print("value: \(values[row])")
+            maxAgeField.text! = values[row]
+        }
+        
+        
     }
     
     
@@ -103,6 +129,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         }
     }
     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         shortletter.resignFirstResponder()
@@ -128,12 +155,6 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         manSelected = false
         nomatterSelected = true
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-        //return 버튼 누르면 키보드 내려갈수있게 설정.
-    }
-    
     
     
     @IBAction func nextbtn(_ sender: Any) {

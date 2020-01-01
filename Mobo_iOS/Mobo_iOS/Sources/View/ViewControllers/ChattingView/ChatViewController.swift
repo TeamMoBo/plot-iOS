@@ -341,37 +341,23 @@ class MyMessageCell :UITableViewCell{
     @IBOutlet weak var ChatView1: UIView!
     
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       
+    }
     
-    
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "MyMessageCell")
-        //ChatView1.frame = CGRect(x: 39, y: 8, width: 57.67, height: 118)
-    
-       // ChatView1.backgroundColor = .blue
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //label_message.backgroundColor = .red
+        //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
+               
+        ChatView1.roundCorners(cornerRadius: 10 , corners: [.layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
 
-      //  ChatView1.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-        
-        ChatView1.layer.cornerRadius = 30
-        ChatView1.layer.maskedCorners = [.layerMaxXMinYCorner , .layerMinXMinYCorner , .layerMinXMaxYCorner]
-        
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-  
-    }
-    
+
    
-    
-    
-    
-    
 }
-
-
-// exView.layer.cornerRadius = 30
- //  exView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
 
 class DestinationMessageCell : UITableViewCell{
     
@@ -381,24 +367,28 @@ class DestinationMessageCell : UITableViewCell{
     @IBOutlet weak var label_name: UILabel!
     @IBOutlet weak var ChatView2: UIView!
     
-    
-  
-    
-        override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-            super.init(style: .default, reuseIdentifier: "DestinationMessageCell")
-            
-            
-            
-            ChatView2.layer.cornerRadius = 30
-            ChatView2.layer.maskedCorners = [.layerMinXMinYCorner , .layerMinXMaxYCorner ,.layerMinXMaxYCorner]
-            
-         //   ChatView2.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-            
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //label_message.backgroundColor = .red
+        //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
         
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
+        ChatView2.roundCorners(cornerRadius: 10 , corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
 
-        }
+        
+        
+    }
     
+    
+}
+
+
+extension UIView {
+    
+    func roundCorners(cornerRadius: Double , corners: CACornerMask) {
+        self.layer.cornerRadius = CGFloat(cornerRadius)
+        self.clipsToBounds = true
+        self.layer.maskedCorners = corners
+    }
+    
+
 }
