@@ -63,7 +63,7 @@ class MovieTimeTableViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-                        
+                       
             dayButtons.forEach {
                 // 날짜 버튼 뷰 속성 설정
                 $0.makeRounded(cornerRadius: 10)
@@ -105,41 +105,16 @@ class MovieTimeTableViewController: UIViewController {
     
     @IBAction func findFriendBtn(_ sender: Any) {
         
-      //  ChatWaitingViewController
-        
-      // navigationSetup()
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "ChatWaitingViewController") as! ChatWaitingViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+      let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
+             let vc = storyboard.instantiateViewController(withIdentifier: "BeforeChat") as! BeforeChattingViewController
+             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+             
+             self.show(vc, sender: nil)
+             
     }
     
     
-        func navigationSetup() { //네비게이션 투명색만들기
-            
-            //        rgb 255 126 39
-        //    self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
-            self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-            self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "얘는 어때?", style: .done, target: nil, action: nil)
-            self.navigationItem.backBarButtonItem?.tintColor = .white
-           // self.navigationController?.navigationBar.topItem?.title = "얘는 어때?"
-
         
-            //투명하게 만드는 공식처럼 기억하기
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            //네비게이션바의 백그라운드색 지정. UIImage와 동일
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-            //shadowImage는 UIImage와 동일. 구분선 없애줌.
-            self.navigationController?.navigationBar.isTranslucent = true
-            //false면 반투명이다.
-            self.navigationController?.view.backgroundColor = UIColor.clear.withAlphaComponent(0.0)
-            //뷰의 배경색 지정
-            
-            //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-            //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-            
-        }
         
         /// 날짜 선택
         private func selectDate(_ date: String) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpSecondViewController: UIViewController {
+class SignUpSecondViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var womanimg: UIImageView!
     @IBOutlet weak var manimg: UIImageView!
@@ -83,4 +83,5 @@ class SignUpSecondViewController: UIViewController {
            manSelected = false
            nomatterSelected = true
        }
+    
 }

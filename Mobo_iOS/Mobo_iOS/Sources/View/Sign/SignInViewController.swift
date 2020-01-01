@@ -56,43 +56,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
+   
     
-    @objc func chatBtn(_ sender: Any) {
-        
-
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
-              self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
-              //투명하게 만드는 공식처럼 기억하기
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-              //네비게이션바의 백그라운드색 지정. UIImage와 동일
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-              //shadowImage는 UIImage와 동일. 구분선 없애줌.
-            self.navigationController?.navigationBar.isTranslucent = true
-        
-          self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
-       let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-        self.show(vc, sender: nil)
-        
-    }
-    
-    @objc func myPageBtn(_ sender: Any) {
-            
-    //        navigationSetup0()
-
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
-            let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }
+   
     
         
     
