@@ -48,6 +48,16 @@ class MovieMoreTableViewController: UIViewController {
     }
     
     
+    @IBAction func timeRevise(_ sender: Any) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
+             
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     
 }
 
@@ -120,10 +130,28 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         
         cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
-        
         cell.delegate = self
+        cell.delegate?.didClicked()
+        
+
         cell.currentIndex = indexPath.item
         
+        
+        
+        
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+      
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
+
+        
+        cell.currentIndex = indexPath.item
+        //cell.timeButton.backgroundColor  = .red
         
         if cell.timeButton.isTouchInside {
             
@@ -152,12 +180,7 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         }
         
         
-        return cell
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -166,6 +189,7 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         let width: CGFloat = (collectionViewWidth - 4 - 4 - 4 * 3) / 4
         let height: CGFloat = 30
         return CGSize(width: width, height: height)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -190,12 +214,9 @@ extension MovieMoreTableViewController: toggleActionDelegate {
     
     func didClicked() {
         
-        print(1010)
-        
-        
-        
+        view.backgroundColor = .red
+
     }
-    
     
 }
 

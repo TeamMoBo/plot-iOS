@@ -11,14 +11,11 @@
         <!--Chat Waiting View Controller-->
         <scene sceneID="pr1-oO-pHM">
             <objects>
-                <viewController id="aHq-em-xvX" customClass="ChatWaitingViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatWaitingViewController" id="aHq-em-xvX" customClass="ChatWaitingViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5XT-Fr-5UD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgWaitchatingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wnF-rq-AJs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1312"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-cn-N1n">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
@@ -26,11 +23,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1290"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="imgWaitchatingDumy" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-TN-x7z">
-                                                <rect key="frame" x="0.0" y="-89" width="375" height="600"/>
+                                                <rect key="frame" x="0.0" y="-177" width="375" height="600"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="waitchatingBlackbackground" translatesAutoresizingMaskIntoConstraints="NO" id="ve5-ls-RCt">
-                                                <rect key="frame" x="0.0" y="-89" width="375" height="600"/>
+                                                <rect key="frame" x="0.0" y="-177" width="375" height="600"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="imgMatchhistoryBelow" translatesAutoresizingMaskIntoConstraints="NO" id="Rtz-SZ-gcw">
@@ -371,11 +368,7 @@
                         <constraints>
                             <constraint firstItem="7L1-cn-N1n" firstAttribute="top" secondItem="VwR-wA-ZjM" secondAttribute="top" id="GRf-Sz-Yqg"/>
                             <constraint firstAttribute="bottom" secondItem="7L1-cn-N1n" secondAttribute="bottom" id="QFY-mx-rpc"/>
-                            <constraint firstAttribute="bottom" secondItem="wnF-rq-AJs" secondAttribute="bottom" constant="-500" id="RQY-Fs-nlC"/>
                             <constraint firstItem="7L1-cn-N1n" firstAttribute="leading" secondItem="VwR-wA-ZjM" secondAttribute="leading" id="UJg-WU-MWG"/>
-                            <constraint firstItem="wnF-rq-AJs" firstAttribute="leading" secondItem="VwR-wA-ZjM" secondAttribute="leading" id="XRU-Uy-i8d"/>
-                            <constraint firstItem="wnF-rq-AJs" firstAttribute="top" secondItem="5XT-Fr-5UD" secondAttribute="top" id="kYT-8A-taw"/>
-                            <constraint firstItem="wnF-rq-AJs" firstAttribute="trailing" secondItem="VwR-wA-ZjM" secondAttribute="trailing" id="qLB-CH-VAp"/>
                             <constraint firstItem="7L1-cn-N1n" firstAttribute="trailing" secondItem="VwR-wA-ZjM" secondAttribute="trailing" id="zUs-Vn-wCd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VwR-wA-ZjM"/>
@@ -1249,32 +1242,6 @@
             </objects>
             <point key="canvasLocation" x="5056.8000000000002" y="-78.325123152709367"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0fS-Wv-aVR">
-            <objects>
-                <viewController id="V8M-eW-Q6f" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aIH-xM-BsE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjL-iC-Zky">
-                                <rect key="frame" x="164" y="411" width="46" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="aHq-em-xvX" kind="show" id="psF-SS-VdP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="YGg-cY-zrh"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="YU4-rM-akR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MvT-au-QTp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="158.86699507389164"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m3S-Iy-UDm">
             <objects>
@@ -1286,12 +1253,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="V8M-eW-Q6f" kind="relationship" relationship="rootViewController" id="lzf-k2-Vfc"/>
+                        <segue destination="aHq-em-xvX" kind="relationship" relationship="rootViewController" id="gRI-G0-zCY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-rl-vqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1078" y="159"/>
+            <point key="canvasLocation" x="-12" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6G-Hg-LJO">

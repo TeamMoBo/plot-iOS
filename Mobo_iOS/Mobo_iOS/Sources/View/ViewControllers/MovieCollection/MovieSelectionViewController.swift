@@ -16,6 +16,8 @@ class MovieSelectionViewController: TabmanViewController {
     
     private var viewControllers : [UIViewController] = []
     private var titleSet = ["현재 상영작", "개봉 예정작"]
+    var isRevise: Bool = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +28,8 @@ class MovieSelectionViewController: TabmanViewController {
         //            + self.navigationController!.navigationBar.frame.height
         
         
-        
         navigationSetup()
+        
         
         
     }
@@ -50,7 +52,7 @@ class MovieSelectionViewController: TabmanViewController {
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         //뷰의 배경색 지정
         
-        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+                self.navigationController?.navigationBar.topItem?.title = "시간 선택하기"
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
@@ -93,11 +95,6 @@ class MovieSelectionViewController: TabmanViewController {
         addBar(bar, dataSource: self, at: .top)
         
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//            ChatView1.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-//       }
-    
     
     
 }

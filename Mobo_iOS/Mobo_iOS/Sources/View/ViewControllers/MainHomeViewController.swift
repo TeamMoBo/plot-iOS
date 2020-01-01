@@ -51,6 +51,7 @@ class MainHomeViewController: UIViewController {
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
+//    var isRevise: Bool = false
     
     let baseURL: String = {
         return ServerURLs.base.rawValue
@@ -100,8 +101,10 @@ class MainHomeViewController: UIViewController {
         
         navigationSetup2()
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
+        vc.isRevise = false
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -171,11 +174,14 @@ class MainHomeViewController: UIViewController {
     @IBAction func reviseButton(_ sender: Any) {
         
         navigationSetup1()
-
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "선택한 날짜", style: .done, target: nil, action: nil)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
         
+        vc.isRevise = true
+        
         self.navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     
@@ -186,7 +192,8 @@ class MainHomeViewController: UIViewController {
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
                let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieMoreTableViewController") as! MovieMoreTableViewController
                
-               self.navigationController?.pushViewController(vc, animated: true)
+              
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -287,10 +294,10 @@ class MainHomeViewController: UIViewController {
     
     func navigationSetup2() { //네비게이션 투명색만들기
         
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간 선택 수정", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "영화 선택하기", style: .done, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .white
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -299,10 +306,10 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         //false면 반투명이다.
+       // self.navigationController?.navigationBar.topItem?.title = "영화 선택하기"
+       // self.navigationController?.navigationBar.tintColor = .white
         
-        //뷰의 배경색 지정
         
-        //        self.navigationController?.navigationBar.topItem?.title = "Home"
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         

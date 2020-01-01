@@ -22,6 +22,7 @@
 		391E7ABD23B880F400F7D33D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7ABC23B880F400F7D33D /* ChatModel.swift */; };
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
+		39463CCC23BCA6100042D2D0 /* splah_io_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 39463CCB23BCA6100042D2D0 /* splah_io_data.json */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
@@ -51,7 +52,6 @@
 		39B3BC7D23B4EC4C00A90FFF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */; };
 		39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */; };
 		39C84F4823B0A244000130B4 /* MovieTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */; };
-		39C84F4C23B0BD2E000130B4 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 39C84F4B23B0BD2E000130B4 /* loader.json */; };
 		39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */; };
 		39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */; };
 		39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */; };
@@ -101,6 +101,7 @@
 		391E7ABC23B880F400F7D33D /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
+		39463CCB23BCA6100042D2D0 /* splah_io_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splah_io_data.json; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		39B67B8B23B4947000B745B6 /* MovieSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewController.swift; sourceTree = "<group>"; };
 		39B67B8D23B49AFA00B745B6 /* Mobo_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobo_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		39C84F4723B0A244000130B4 /* MovieTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTableViewController.swift; sourceTree = "<group>"; };
-		39C84F4B23B0BD2E000130B4 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingScreen.storyboard; sourceTree = "<group>"; };
 		39CC509C23B1350A00E24F95 /* ChattingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingLoginViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +209,6 @@
 		390BD68523B08AEF00FF7E68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				39C84F4B23B0BD2E000130B4 /* loader.json */,
 				390BD68623B08AF800FF7E68 /* Movie.swift */,
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
 				3989599D23B1D30D00340400 /* UserModel.swift */,
@@ -300,6 +299,7 @@
 		398522D023B0645E009C9AE3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				39463CCB23BCA6100042D2D0 /* splah_io_data.json */,
 				398522C323B05F8F009C9AE3 /* Assets.xcassets */,
 				398522D123B06467009C9AE3 /* APIServices */,
 			);
@@ -511,6 +511,7 @@
 			files = (
 				EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */,
 				3989B15B23B75025006ABB26 /* PopUpScreen.storyboard in Resources */,
+				39463CCC23BCA6100042D2D0 /* splah_io_data.json in Resources */,
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
@@ -524,7 +525,6 @@
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
-				39C84F4C23B0BD2E000130B4 /* loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

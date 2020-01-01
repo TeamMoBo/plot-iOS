@@ -58,6 +58,8 @@ class MovieTimeTableViewController: UIViewController {
         //        dayDic["2019-12-29"] = [10,13,15]
         //        dayDic["2019-12-30"] = [11,13,15]
         //        dayDic["2019-12-31"] = [17,19,20]
+    
+    var isRevise: Bool = false
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -100,14 +102,30 @@ class MovieTimeTableViewController: UIViewController {
             selectTimeButtons(times: reservationInfo!.times)
         }
         
+    
+    @IBAction func findFriendBtn(_ sender: Any) {
+        
+      //  ChatWaitingViewController
+        
+      // navigationSetup()
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "ChatWaitingViewController") as! ChatWaitingViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
         func navigationSetup() { //네비게이션 투명색만들기
             
             //        rgb 255 126 39
-            self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
-            self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "iconsDarkBack")
-            self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "iconsDarkBack")
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-            self.navigationItem.backBarButtonItem?.tintColor = .black
+        //    self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255.0, green: 126.0/255.0, blue: 39.0/255.0, alpha: 1.0)
+            self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+            self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "얘는 어때?", style: .done, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem?.tintColor = .white
+           // self.navigationController?.navigationBar.topItem?.title = "얘는 어때?"
+
+        
             //투명하게 만드는 공식처럼 기억하기
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             //네비게이션바의 백그라운드색 지정. UIImage와 동일
@@ -115,10 +133,9 @@ class MovieTimeTableViewController: UIViewController {
             //shadowImage는 UIImage와 동일. 구분선 없애줌.
             self.navigationController?.navigationBar.isTranslucent = true
             //false면 반투명이다.
-            self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+            self.navigationController?.view.backgroundColor = UIColor.clear.withAlphaComponent(0.0)
             //뷰의 배경색 지정
             
-            //        self.navigationController?.navigationBar.topItem?.title = "Home"
             //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
             //        navigationController?.navigationBar.titleTextAttributes = textAttributes
             
@@ -178,10 +195,10 @@ class MovieTimeTableViewController: UIViewController {
         
         /// 날짜 버튼 선택
         private func selectDayButton(at index: Int) {
+           
+    
             guard (0 ..< dayButtons.count).contains(index) else { return }
-            
-            print(selectedIndex,index)
-            
+                        
             dayButtons[selectedIndex].isSelected = false // 이전 날짜 선택 취소
             dayButtons[index].isSelected = true // 새로운 날짜 선택
             
@@ -200,13 +217,12 @@ class MovieTimeTableViewController: UIViewController {
         // MARK: - selector
         @objc func dayClick(sender: UIButton) {
             guard let day = sender.titleLabel?.text else { return }
+            
             if let reservationInfo = self.reservationInfo {
                            DataManager.sharedManager.setReservation(info: reservationInfo)
                        }
                     
             selectDate(day)
-            //print(day)
-            
             selectDayButton(at: sender.tag - 1)
             selectTimeButtons(times: reservationInfo!.times)
         }

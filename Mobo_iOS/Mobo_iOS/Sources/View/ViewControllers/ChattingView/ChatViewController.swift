@@ -352,6 +352,7 @@ class MyMessageCell :UITableViewCell{
         //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
                
         ChatView1.roundCorners(cornerRadius: 10 , corners: [.layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
+        ChatView1.dropShadow(color: .lightGray, offSet: CGSize(width: 1, height: 1), opacity: 0.7, radius: 5)
 
     }
     
@@ -373,6 +374,7 @@ class DestinationMessageCell : UITableViewCell{
         //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
         
         ChatView2.roundCorners(cornerRadius: 10 , corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
+        ChatView2.dropShadow(color: .lightGray, offSet: CGSize(width: 0.7, height: 0.7), opacity: 0.5, radius: 5)
 
         
         

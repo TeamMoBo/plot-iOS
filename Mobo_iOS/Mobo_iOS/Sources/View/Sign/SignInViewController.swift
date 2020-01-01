@@ -15,6 +15,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Useridview: UIView!
     @IBOutlet weak var Userpwdview: UIView!
     
+    @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         Userid.delegate = self ;
         Userpwd.delegate = self ;
-        
-        
+        loginBtn.dropShadow(color: .lightGray, offSet: CGSize(width: 0.7, height: 0.7), opacity: 0.5, radius: 5)
+
         
     }
     
@@ -36,14 +37,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         //           self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         //           self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
         
-        
-      //  let barButton = UIBarButtonItem()
-        let leftButton: UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "btnMypage-1"), style: UIBarButtonItem.Style.plain, target: self, action: "myPageBtn")
-        let rightButton: UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icChatingpage-1"), style: UIBarButtonItem.Style.plain, target: self, action: "chatBtn")
-
-        self.navigationItem.leftBarButtonItem = leftButton
-        self.navigationItem.rightBarButtonItem = rightButton
-    
         
        // self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         //           self.navigationItem.backBarButtonItem?.tintColor = .white
@@ -99,6 +92,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
             
         }
+    
         
     
     @IBAction func SignUpButton(_ sender: Any) {
