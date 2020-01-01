@@ -20,4 +20,5 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var profileimg: UIImageView!
     
+    
 }

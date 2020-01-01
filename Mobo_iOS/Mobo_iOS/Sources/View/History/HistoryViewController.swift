@@ -13,6 +13,9 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     var numberOfCell: Int = 4
     let cellIdentifier: String = "cell"
     
+    
+    @IBOutlet weak var collectionview: UICollectionView!
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.numberOfCell
     }
@@ -31,19 +34,31 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            navigationSetup()
+        
 
-        // Do any additional setup after loading the view.
+        let flowLayout: UICollectionViewFlowLayout
+            flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets.zero
+        flowLayout.minimumInteritemSpacing = 16
+        flowLayout.minimumLineSpacing = 16
+        flowLayout.estimatedItemSize = CGSize(width: 334, height: 166 )
+        self.collectionview.collectionViewLayout = flowLayout
+        
+   
+
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    func navigationSetup() {
+           self.navigationController?.navigationBar.shadowImage = UIImage()
+           
+           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+           
+           self.navigationController?.navigationBar.isTranslucent = true
+           
+           self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+       }
+ 
 
 }

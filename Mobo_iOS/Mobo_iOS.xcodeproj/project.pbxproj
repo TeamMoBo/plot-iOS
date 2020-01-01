@@ -66,6 +66,7 @@
 		EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
+		EAA2A95123BC8C96000C4354 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95023BC8C96000C4354 /* APIServices.swift */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -147,6 +148,7 @@
 		EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailVC.swift; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		EAA2A95023BC8C96000C4354 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				EAC8C3EF23B222340061AEEB /* APIConstants.swift */,
 				390BD68A23B08B9300FF7E68 /* DataManager.swift */,
 				EAC8C3F123B222590061AEEB /* NetworkResults.swift */,
+				EAA2A95023BC8C96000C4354 /* APIServices.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
+				EAA2A95123BC8C96000C4354 /* APIServices.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
 				EA204A1223B91A8900369BC7 /* ChatWaitingViewController.swift in Sources */,

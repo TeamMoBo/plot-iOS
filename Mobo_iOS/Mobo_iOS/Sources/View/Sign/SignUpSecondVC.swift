@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hashtags
 
 
 
@@ -53,13 +52,13 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shortletter.delegate = self as? UITextFieldDelegate;
+        shortletter.delegate = self;
         
-        womanbtn.addTarget(self, action: #selector( getter: womanSelected ), for: .touchUpInside)
+        womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
-        manbtn.addTarget(self, action: #selector( getter: manSelected ), for: .touchUpInside)
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
-        nomatterbtn.addTarget(self, action: #selector( getter: nomatterSelected ), for: .touchUpInside)
+        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
         
     }
     
