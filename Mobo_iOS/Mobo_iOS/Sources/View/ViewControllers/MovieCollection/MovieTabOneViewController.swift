@@ -381,8 +381,6 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        
         //        let movie = movies[indexPath.row]
         //        let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
         //        self.selectedImage = thumnailImage
@@ -406,8 +404,16 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             
             let movie = movies[indexPath.row]
+            let caLayer: CAGradientLayer = CAGradientLayer()
+
+            caLayer.startPoint = CGPoint(x: 0, y: 0)
+            caLayer.endPoint = CGPoint(x: 1, y: 1)
+            caLayer.locations = [0,1]
+            caLayer.frame = cell.imageThumbnail.frame
+//            caLayer.colors = [UIColor.clear.cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor]
+//            imageThumbnail.layer.addSublayer(caLayer)
             
-            cell.imageThumbnail.isHighlighted = true
+            cell.imageThumbnail.layer.addSublayer(caLayer)
             
             //            //cell.backgroundColor = .red
             //

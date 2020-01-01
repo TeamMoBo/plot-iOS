@@ -8,6 +8,15 @@
 import UIKit
 
 
+protocol MovieTabDelegate {
+    
+    func didMovieClicked(index: Int)
+    
+}
+
+
+
+
 class MovieCollectionTabViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageThumbnail: UIImageView!
@@ -36,12 +45,16 @@ class MovieCollectionTabViewCell: UICollectionViewCell {
 //        return label
 //    }()
     
+    var currentIndex : Int?
+    var delegate: MovieTabDelegate?
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         imageThumbnail.makeRounded(cornerRadius: 10)
         self.rating.delegate = self
+        self.delegate = self
 
 
     }
@@ -63,3 +76,10 @@ extension MovieCollectionTabViewCell: FloatRatingViewDelegate {
 
 }
 
+extension MovieCollectionTabViewCell: MovieTabDelegate {
+    
+    func didMovieClicked(index: Int) {
+        self.delegate?.didMovieClicked(index: currentIndex ?? 0)
+        self.backgroundColor = .red
+    }
+}

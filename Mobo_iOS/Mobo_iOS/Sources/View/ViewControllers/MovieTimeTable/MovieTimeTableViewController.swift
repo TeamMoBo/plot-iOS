@@ -178,10 +178,10 @@ class MovieTimeTableViewController: UIViewController {
         
         /// 날짜 버튼 선택
         private func selectDayButton(at index: Int) {
+           
+    
             guard (0 ..< dayButtons.count).contains(index) else { return }
-            
-            print(selectedIndex,index)
-            
+                        
             dayButtons[selectedIndex].isSelected = false // 이전 날짜 선택 취소
             dayButtons[index].isSelected = true // 새로운 날짜 선택
             
@@ -200,13 +200,12 @@ class MovieTimeTableViewController: UIViewController {
         // MARK: - selector
         @objc func dayClick(sender: UIButton) {
             guard let day = sender.titleLabel?.text else { return }
+            
             if let reservationInfo = self.reservationInfo {
                            DataManager.sharedManager.setReservation(info: reservationInfo)
                        }
                     
             selectDate(day)
-            //print(day)
-            
             selectDayButton(at: sender.tag - 1)
             selectTimeButtons(times: reservationInfo!.times)
         }
