@@ -13,7 +13,6 @@ import Pageboy
 class MainHomeViewController: UIViewController {
     
     
-    // @IBOutlet weak var iCarouselView: iCarousel!
     @IBOutlet weak var movieCollectionView: UICollectionView!
     @IBOutlet weak var deadlineTitle: UILabel!
     @IBOutlet weak var sendButton: UIButton!
@@ -26,32 +25,23 @@ class MainHomeViewController: UIViewController {
     
     
     var imgArr = [  UIImage(named:"10"),
-                    UIImage(named:"10")
-        //                       UIImage(named:"Ane Hathaway") ,
-        //                       UIImage(named:"Dakota Johnson") ,
-        //                       UIImage(named:"Emma Stone") ,
-        //                       UIImage(named:"Emma Watson") ,
-        //                       UIImage(named:"Halle Berry") ,
-        //                       UIImage(named:"Jennifer Lawrence") ,
-        //                       UIImage(named:"Jessica Alba") ,
-        //                       UIImage(named:"Scarlett Johansson")
-    ]
+                    UIImage(named:"10")]
     
     
-    //    private let animators: [(LayoutAttributesAnimator, Bool, Int, Int)] = [
-    //        (ZoomInOutAttributesAnimator(), true, 1, 1)
-    //    ]
+    
+    var movies: [movieInfo] = []
+    var reservemovies: [reserveMovieInfo] = []
+    var reserveDate: [reserveDateInfo] = []
+
     
     
     let movieListCellID: String = "MovieListCell"
     let mainListID: String = "mainCollectionViewCell"
-    var movies: [Movie] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
-//    var isRevise: Bool = false
     
     let baseURL: String = {
         return ServerURLs.base.rawValue
@@ -95,7 +85,7 @@ class MainHomeViewController: UIViewController {
         
         
     }
- 
+    
     
     @IBAction func buyBtn(_ sender: Any) {
         
@@ -133,6 +123,55 @@ class MainHomeViewController: UIViewController {
         
     }
     
+    func getMovieList(completion: @escaping (ListResponse?) -> Void) {
+            
+           // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
+            let appUrl: String = "http://13.125.48.35:7935/main"
+            
+            guard let finalURL = URL(string: appUrl) else {
+                return
+            }
+            
+            let session = URLSession(configuration: .default)
+            
+            var request = URLRequest(url: finalURL)
+            
+        
+            request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
+            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "authorization")
+            request.httpMethod = "GET"
+            let task = session.dataTask(with: request) { (data, response, error) in
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                guard let resultData = data else {
+                    return
+                }
+                
+                do {
+    //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
+                //    print(String(data: data!, encoding: .utf8))
+                    let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
+                    
+                    self.dataManager.setMovieList(list: [movieLists.results])
+                    print(self.dataManager.setMovieList(list: [movieLists.results]))
+                    
+                    //                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+                                    self.reloadMovieLists()
+                    completion(movieLists)
+                }
+                catch let error {
+                    print(error.localizedDescription)
+                }
+                
+            }
+            
+            task.resume()
+        }
+    
     override func viewWillAppear(_ animated: Bool) {
         //sendButton.makeRounded(cornerRadius: 20)
         deadlineTitle.textColor = .subOrange
@@ -143,14 +182,19 @@ class MainHomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        
-        if dataManager.getDidOrderTypeChangedAndDownloaded() {
+    
             reloadMovieLists()
-        }
-        else {reloadMovieLists()
-            let orderType: String = dataManager.getMovieOrderType()
-            getMovieList(orderType: orderType)
-        }
+         //   let orderType: String = dataManager.getMovieOrderType()
+            //            getMovieList(orderType: orderType)
+            getMovieList() { (listResponse) in
+                guard let response = listResponse else {
+                    return
+                }
+                
+     //           print(response)
+                
+            }
+        
     }
     
     
@@ -159,12 +203,12 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func myPageBtn(_ sender: Any) {
         
-//        navigationSetup0()
-
+        //        navigationSetup0()
+        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-
+        
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -188,32 +232,32 @@ class MainHomeViewController: UIViewController {
     @IBAction func addMoreBtn(_ sender: Any) {
         
         navigationSetup1()
-
-               let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
-               let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieMoreTableViewController") as! MovieMoreTableViewController
-               
-              
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieMoreTableViewController") as! MovieMoreTableViewController
+        
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     @IBAction func chatBtn(_ sender: Any) {
         
-
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
-              self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
-              //투명하게 만드는 공식처럼 기억하기
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-              //네비게이션바의 백그라운드색 지정. UIImage와 동일
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-              //shadowImage는 UIImage와 동일. 구분선 없애줌.
-            self.navigationController?.navigationBar.isTranslucent = true
         
-          self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
-       let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
+        //투명하게 만드는 공식처럼 기억하기
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //네비게이션바의 백그라운드색 지정. UIImage와 동일
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //shadowImage는 UIImage와 동일. 구분선 없애줌.
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
+        let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
@@ -222,28 +266,28 @@ class MainHomeViewController: UIViewController {
     }
     
     func navigationSetup() { //네비게이션 투명색만들기
-           
-           self.navigationController?.navigationBar.barTintColor = .mainOrange
+        
+        self.navigationController?.navigationBar.barTintColor = .mainOrange
         self.navigationController?.navigationBar.tintColor = .white
-           self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-           self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-           self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-//           self.navigationItem.backBarButtonItem?.tintColor = .white
-           //투명하게 만드는 공식처럼 기억하기
-           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-           //네비게이션바의 백그라운드색 지정. UIImage와 동일
-           self.navigationController?.navigationBar.shadowImage = UIImage()
-           //shadowImage는 UIImage와 동일. 구분선 없애줌.
-           self.navigationController?.navigationBar.isTranslucent = true
-           //false면 반투명이다.
-           
-           //뷰의 배경색 지정
-           
-           //        self.navigationController?.navigationBar.topItem?.title = "Home"
-           //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-           //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-           
-       }
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        //           self.navigationItem.backBarButtonItem?.tintColor = .white
+        //투명하게 만드는 공식처럼 기억하기
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //네비게이션바의 백그라운드색 지정. UIImage와 동일
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //shadowImage는 UIImage와 동일. 구분선 없애줌.
+        self.navigationController?.navigationBar.isTranslucent = true
+        //false면 반투명이다.
+        
+        //뷰의 배경색 지정
+        
+        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+    }
     
     func navigationSetup0() { //네비게이션 투명색만들기
         
@@ -306,8 +350,8 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         //false면 반투명이다.
-       // self.navigationController?.navigationBar.topItem?.title = "영화 선택하기"
-       // self.navigationController?.navigationBar.tintColor = .white
+        // self.navigationController?.navigationBar.topItem?.title = "영화 선택하기"
+        // self.navigationController?.navigationBar.tintColor = .white
         
         
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
@@ -315,53 +359,17 @@ class MainHomeViewController: UIViewController {
         
     }
     
- 
-    func getMovieList(orderType: String) {
-        
-        let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-        
-        guard let finalURL = URL(string: url) else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let request = URLRequest(url: finalURL)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let resultData = data else {
-                return
-            }
-            
-            do {
-                print("Success")
-                let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-                
-                self.dataManager.setMovieList(list: movieLists.results)
-                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                self.reloadMovieLists()
-            }
-            catch let error {
-                print(error.localizedDescription)
-            }
-            
-        }
-        
-        task.resume()
-    }
     
-    func reloadMovieLists() {
-        self.movies = dataManager.getMovieList()
-        DispatchQueue.main.async {
-            self.movieCollectionView.reloadData()
-            self.mainCollectionView.reloadData()
-        }
-    }
+       
+
+     func reloadMovieLists() {
+        self.movies = dataManager.getMovieList()[0].randMovie
+        
+           DispatchQueue.main.async {
+               self.movieCollectionView.reloadData()
+               self.mainCollectionView.reloadData()
+           }
+       }
     
     func getTitle(title: String) -> String? {
         return title
@@ -400,10 +408,10 @@ class MainHomeViewController: UIViewController {
         }
     }
     
-    func setDefaultMovieOrderType() {
-        let orderType: String = "0"
-        dataManager.setMovieOrderType(orderType: orderType)
-    }
+//    func setDefaultMovieOrderType() {
+//        let orderType: String = "0"
+//        dataManager.setMovieOrderType(orderType: orderType)
+//    }
     
     func setMovieListCollectionView() {
         movieCollectionView.delegate = self
@@ -418,7 +426,7 @@ class MainHomeViewController: UIViewController {
         
     }
     
-   
+    
     
     
     
@@ -482,6 +490,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             let movie = movies[indexPath.item]
             
+        
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -512,7 +521,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.movieName.text = movie.title
             //  cell.runningtimeLabel.text = 얘는 API에 없음
             
-            cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.currentIndex = indexPath.item
             //cell.LinkBtn
@@ -570,8 +579,8 @@ extension MainHomeViewController: PlayLinkActionDelegate {
     func didClickedLink(index: Int) {
         
         guard let url = URL(string: "https://www.youtube.com/watch?v=28hYUZMufDg&list=RD28hYUZMufDg&start_radio=1"), UIApplication.shared.canOpenURL(url) else { return }
-         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
     }
     
 }
