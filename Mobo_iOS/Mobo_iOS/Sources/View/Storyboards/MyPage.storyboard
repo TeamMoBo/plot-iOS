@@ -595,6 +595,8 @@
                         <outlet property="majortext" destination="WDM-5o-2NC" id="Krd-fO-oK2"/>
                         <outlet property="manbtn" destination="PXN-y8-EXW" id="st5-l3-X4s"/>
                         <outlet property="manimg" destination="pRs-TT-jDY" id="Rrg-g9-EzW"/>
+                        <outlet property="maxAgeField" destination="Rhf-qV-hLR" id="GYu-4e-T5S"/>
+                        <outlet property="minAgeField" destination="8da-4B-wTd" id="WBc-wH-ipo"/>
                         <outlet property="nametext" destination="f2h-Fb-aXE" id="Nzv-N9-Nvb"/>
                         <outlet property="nomatterbtn" destination="xph-Yv-3J9" id="Pxq-NZ-Qfs"/>
                         <outlet property="nomatterimg" destination="nTJ-zw-qZL" id="exy-Zo-rYF"/>
