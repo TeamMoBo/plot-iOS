@@ -1081,8 +1081,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="imgMatchhistoryBelow" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-wy-gS0">
                                 <rect key="frame" x="-9" y="117" width="786" height="1590"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rjx-Oz-V37">
-                                <rect key="frame" x="0.0" y="147" width="375" height="174"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rjx-Oz-V37">
+                                <rect key="frame" x="0.0" y="147" width="375" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="Ax0-Yk-Sep"/>
@@ -1106,19 +1106,19 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-7n-psV">
-                                                    <rect key="frame" x="140.99999999999986" y="109" width="12" height="12"/>
+                                                    <rect key="frame" x="141" y="109" width="12" height="12"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019/12/27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGj-Kj-fff">
-                                                    <rect key="frame" x="259.99999999999983" y="25" width="54" height="12.333333333333329"/>
+                                                    <rect key="frame" x="260" y="25" width="54" height="12.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김수연" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-9p-rZW">
-                                                    <rect key="frame" x="140.99999999999986" y="85" width="26" height="12"/>
+                                                    <rect key="frame" x="141" y="85" width="26" height="12"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1130,13 +1130,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xar-Qu-s1h">
-                                                    <rect key="frame" x="108.33333333333331" y="109" width="24" height="12"/>
+                                                    <rect key="frame" x="108.33333333333333" y="109" width="23.999999999999986" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-IE-7Ah">
-                                                    <rect key="frame" x="108.33333333333331" y="85" width="24" height="12"/>
+                                                    <rect key="frame" x="108.33333333333333" y="85" width="23.999999999999986" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1146,7 +1146,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="완료됨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycw-v3-bwP">
-                                                    <rect key="frame" x="24.999999999999844" y="20" width="32" height="16"/>
+                                                    <rect key="frame" x="25" y="20" width="32" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="Iij-SC-mYh"/>
                                                         <constraint firstAttribute="width" constant="32" id="vfA-Ls-gk7"/>
@@ -1234,7 +1234,9 @@
                             <constraint firstItem="WN3-cv-Evr" firstAttribute="leading" secondItem="oj6-9s-hmm" secondAttribute="leading" constant="-9" id="Fpk-p7-V6H"/>
                             <constraint firstItem="oW4-wy-gS0" firstAttribute="top" secondItem="lln-Hc-ayV" secondAttribute="top" constant="29" id="LOo-pV-oMg"/>
                             <constraint firstAttribute="trailing" secondItem="WN3-cv-Evr" secondAttribute="trailing" constant="-9" id="UXY-6N-62U"/>
+                            <constraint firstItem="Rjx-Oz-V37" firstAttribute="bottom" secondItem="lln-Hc-ayV" secondAttribute="bottom" constant="34" id="bec-VO-GFd"/>
                             <constraint firstItem="oW4-wy-gS0" firstAttribute="leading" secondItem="WN3-cv-Evr" secondAttribute="leading" id="mRU-rq-BMc"/>
+                            <constraint firstItem="Rjx-Oz-V37" firstAttribute="top" secondItem="lln-Hc-ayV" secondAttribute="top" constant="59" id="pdz-wV-PkE"/>
                             <constraint firstItem="WN3-cv-Evr" firstAttribute="top" secondItem="oj6-9s-hmm" secondAttribute="topMargin" constant="-88" id="qWn-2x-lXc"/>
                             <constraint firstItem="Rjx-Oz-V37" firstAttribute="leading" secondItem="lln-Hc-ayV" secondAttribute="leading" id="yIP-CM-WaF"/>
                         </constraints>
