@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
+class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
     
     let picker = UIImagePickerController()
     
@@ -21,8 +21,27 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var uni: UITextField!
     @IBOutlet weak var major: UITextField!
     @IBOutlet weak var kakao: UITextField!
+
     
+    @IBOutlet weak var womanimg: UIImageView!
+    @IBOutlet weak var manimg: UIImageView!
     
+    @IBOutlet weak var womanbtn: UIButton!
+    @IBOutlet weak var manbtn: UIButton!
+    
+    var womanSelected: Bool = false {
+        didSet {
+            let image = womanSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
+            womanimg.image = image
+        }
+    }
+    
+    var manSelected: Bool = false {
+        didSet {
+            let image = manSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
+            manimg.image = image
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +57,10 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         uni.delegate = self;
         major.delegate = self;
         kakao.delegate = self;
+        
+        womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
+        
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
     }
     
@@ -74,6 +97,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         present(alert, animated: true, completion: nil)
         
     }
+    
     func openLibrary(){
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
@@ -90,6 +114,24 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+
+        nickname.resignFirstResponder()
+        name.resignFirstResponder()
+        id.resignFirstResponder()
+        age.resignFirstResponder()
+        pwd.resignFirstResponder()
+        uni.resignFirstResponder()
+        major.resignFirstResponder()
+        kakao.resignFirstResponder()
+        
+        return true
+        
+    }
+    
+    
+    
+    func navigationSetup() {
+
         if textField == nickname {
             name.becomeFirstResponder()
         }
@@ -128,6 +170,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         //        self.navigationItem.backBarButtonItem?.tintColor = .black
         //투명하게 만드는 공식처럼 기억하기
+
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -135,6 +178,14 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         self.navigationController?.navigationBar.isTranslucent = true
         
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+
+    }
+    
+    
+   @objc func womanSelect() {
+        womanSelected = true
+        manSelected = false
+
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
@@ -147,10 +198,48 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate{
         //        self.navigationController?.navigationBar.topItem?.title = "Home"
         //  let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+
         
     }
     
+    @objc func manSelect() {
+        womanSelected = false
+        manSelected = true
+        
+    }
 }
+
+
+//func navigationSetup() { //네비게이션 투명색만들기
+//
+//    //        rgb 255 126 39
+//
+//    //        self.navigationItem.backBarButtonItem?.tintColor = .black
+//    //투명하게 만드는 공식처럼 기억하기
+//
+//
+//
+//    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//
+//    self.navigationController?.navigationBar.isTranslucent = true
+//
+//    self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+//    //shadowImage는 UIImage와 동일. 구분선 없애줌.
+//
+//    //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+//    //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//
+//
+//
+//    //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//
+//    //        self.navigationController?.navigationBar.topItem?.title = "Home"
+//    //  let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+//    //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//
+//}
+
+
 
 extension SignUpFirstViewController : UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{

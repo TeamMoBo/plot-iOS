@@ -66,8 +66,11 @@
 		EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */; };
 		EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA76B5B123B51E36002012CE /* MyPage.storyboard */; };
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
+		EAA2A95123BC8C96000C4354 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95023BC8C96000C4354 /* APIServices.swift */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
+		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
+		EAA368F423BB45F200781C94 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368F323BB45F200781C94 /* HistoryCollectionViewCell.swift */; };
 		EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */; };
 		EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC724D423BA5AA3005957DE /* Purchase.storyboard */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
@@ -145,8 +148,11 @@
 		EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailVC.swift; sourceTree = "<group>"; };
 		EA76B5B123B51E36002012CE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		EAA2A95023BC8C96000C4354 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		EAA368F323BB45F200781C94 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAB79B7323B7F1F3008ECC72 /* SignUpSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondVC.swift; sourceTree = "<group>"; };
 		EAC724D423BA5AA3005957DE /* Purchase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
@@ -387,6 +393,8 @@
 			children = (
 				EA204A1623BA4F3300369BC7 /* HistoryDetailVC.swift */,
 				EAA368ED23BA932000781C94 /* HistoryVC.swift */,
+				EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */,
+				EAA368F323BB45F200781C94 /* HistoryCollectionViewCell.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -426,6 +434,7 @@
 				EAC8C3EF23B222340061AEEB /* APIConstants.swift */,
 				390BD68A23B08B9300FF7E68 /* DataManager.swift */,
 				EAC8C3F123B222590061AEEB /* NetworkResults.swift */,
+				EAA2A95023BC8C96000C4354 /* APIServices.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -600,12 +609,14 @@
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */,
 				EAC8C3F223B222590061AEEB /* NetworkResults.swift in Sources */,
+				EAA2A95123BC8C96000C4354 /* APIServices.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
 				EA204A1223B91A8900369BC7 /* ChatWaitingViewController.swift in Sources */,
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
+				EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */,
@@ -618,6 +629,7 @@
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */,
 				390BD68923B08B1500FF7E68 /* ServerURLs.swift in Sources */,
+				EAA368F423BB45F200781C94 /* HistoryCollectionViewCell.swift in Sources */,
 				39FB23D223B20ADA00FFA95A /* ChatViewController.swift in Sources */,
 				398522B823B05F8D009C9AE3 /* AppDelegate.swift in Sources */,
 				398522BA23B05F8D009C9AE3 /* SceneDelegate.swift in Sources */,

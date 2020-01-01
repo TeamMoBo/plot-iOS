@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hashtags
 
 
 
@@ -129,6 +128,29 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         }
     }
     
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        shortletter.delegate = self;
+        
+        womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
+        
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
+        
+        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
+        
+    }
+    
+    @IBAction func nextbtn(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
+               let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
+                             
+               vc.modalPresentationStyle = .fullScreen
+               self.show(vc, sender: nil)
+    }
+    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
