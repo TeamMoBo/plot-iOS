@@ -45,8 +45,6 @@ class TimeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         timeButton.isSelected = false
-        
-        // ImageThumbnail.makeRounded(cornerRadius: 10)
     }
     
 }

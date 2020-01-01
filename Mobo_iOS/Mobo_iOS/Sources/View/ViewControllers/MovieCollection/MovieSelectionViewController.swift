@@ -94,11 +94,6 @@ class MovieSelectionViewController: TabmanViewController {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//            ChatView1.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-//       }
-    
-    
     
 }
 

@@ -48,6 +48,16 @@ class MovieMoreTableViewController: UIViewController {
     }
     
     
+    @IBAction func timeRevise(_ sender: Any) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
+             
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     
 }
 
@@ -120,8 +130,8 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         
         cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
-        
         cell.delegate = self
+
         cell.currentIndex = indexPath.item
         
         
@@ -158,6 +168,15 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+      
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
+
+        
+        cell.currentIndex = indexPath.item
+        cell.timeButton.backgroundColor  = .red
+        
+        
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -166,6 +185,7 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         let width: CGFloat = (collectionViewWidth - 4 - 4 - 4 * 3) / 4
         let height: CGFloat = 30
         return CGSize(width: width, height: height)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -191,11 +211,9 @@ extension MovieMoreTableViewController: toggleActionDelegate {
     func didClicked() {
         
         print(1010)
-        
-        
-        
+                
+
     }
-    
     
 }
 
