@@ -341,19 +341,22 @@ class MyMessageCell :UITableViewCell{
     @IBOutlet weak var ChatView1: UIView!
     
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        ChatView1.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //label_message.backgroundColor = .red
+        //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
+               
+        ChatView1.roundCorners(cornerRadius: 10 , corners: [.layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
+
     }
     
-    
-    
+
+   
 }
 
 class DestinationMessageCell : UITableViewCell{
@@ -364,18 +367,28 @@ class DestinationMessageCell : UITableViewCell{
     @IBOutlet weak var label_name: UILabel!
     @IBOutlet weak var ChatView2: UIView!
     
-    
-    
-        override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-            super.init(style: .default, reuseIdentifier: "DestinationMessageCell")
-            
-         //   ChatView2.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
-            
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //label_message.backgroundColor = .red
+        //label_message.roundCorners(corners: [.topRight , .bottomRight, .bottomLeft], radius: 15)
         
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
+        ChatView2.roundCorners(cornerRadius: 10 , corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner])
 
-        }
+        
+        
+    }
     
+    
+}
+
+
+extension UIView {
+    
+    func roundCorners(cornerRadius: Double , corners: CACornerMask) {
+        self.layer.cornerRadius = CGFloat(cornerRadius)
+        self.clipsToBounds = true
+        self.layer.maskedCorners = corners
+    }
+    
+
 }

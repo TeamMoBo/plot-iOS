@@ -1,10 +1,10 @@
-# MoboiOS
+# PlotiOS
 
 ---
 
 ## Movie Matching Service
 
-> 영화 같이 볼 친구 찾기 어플리케이션
+> 영화 볼 친구 찾기 어플리케이션
 
 <img width="300" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
 
@@ -12,7 +12,7 @@
 
 ### Application Workflow 
 
-![스크린샷 2019-12-30 오후 10 29 17](https://user-images.githubusercontent.com/46750574/71584006-1652e500-2b54-11ea-83b5-04192570b6c0.png)
+![스크린샷 2019-12-31 오전 9 27 55](https://user-images.githubusercontent.com/46750574/71605917-1a145500-2bb0-11ea-996b-73efdf4c0301.png)
 
 ---
 
@@ -22,17 +22,17 @@
 * SignInView - [ujcheon](https://github.com/ujcheon)
 * SignUp - [ujcheon](https://github.com/ujcheon)
 * CustomPopupView - [ujcheon](https://github.com/ujcheon)
-* Chatting View
-* Horizontal CollectionView
-* Rating, Star
-* MultiInteraction
-* Tabbar for top
-* AnimationView
+* Chatting View - [Chokyungjin](https://github.com/chokyungjin)
+* Horizontal CollectionView - [Chokyungjin](https://github.com/chokyungjin)
+* Rating, Star - [Chokyungjin](https://github.com/chokyungjin)
+* MultiInteraction - [Chokyungjin](https://github.com/chokyungjin)
+* Tabbar On top - [Chokyungjin](https://github.com/chokyungjin)
+* AnimationView - [Chokyungjin](https://github.com/chokyungjin)
 * CustomNavigationController - [ujcheon](https://github.com/ujcheon)
-* Color, Font, Image Extensions
-* GradientView
+* Color, Font, Image Extensions - [Chokyungjin](https://github.com/chokyungjin)
+* GradientView - [Chokyungjin](https://github.com/chokyungjin)
 * ProgressBarImage - [ujcheon](https://github.com/ujcheon)
-* 통신
+* 통신 
 
 ---
 
@@ -43,13 +43,6 @@
 > Xcode 11.3
 
 
-
-* Alamofire
-* FloatRatingView
-* Pageboy
-* Lottie
-* Tabman
-* Firebase/Database
 * Alamofire 4.7
 * FloatRatingView 4 
 * Pageboy 3.2
@@ -63,7 +56,6 @@
 * SnapKit 5.0.0
 * TextFieldEffects
 * ObjectMapper 3.4
-* FloatRatingView 4
 
 ---
 
@@ -103,6 +95,6 @@
 
 ### Issues && Report 
 
-Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send feedback or report a bug. Thank you !
+Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send feedback or report a bug. Thank you ! ![btnSend@3x](https://user-images.githubusercontent.com/46750574/71605885-dd485e00-2baf-11ea-8301-0066a608c26e.png)
 
  

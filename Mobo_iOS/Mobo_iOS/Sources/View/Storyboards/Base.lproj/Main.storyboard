@@ -104,21 +104,21 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vt-ZD-Ak2">
                                                     <rect key="frame" x="13" y="169.99999999999997" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Tag1">
+                                                    <state key="normal" title="액션">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-VX-hPw">
                                                     <rect key="frame" x="130" y="169.99999999999997" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Tag3">
+                                                    <state key="normal" title="국내">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbw-De-t0g">
                                                     <rect key="frame" x="76" y="171" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Tag2">
+                                                    <state key="normal" title="갬동">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
@@ -205,7 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-TE-x2B">
                                 <rect key="frame" x="313" y="563" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="btnMore"/>
+                                <state key="normal" image="btnMore-1"/>
                                 <connections>
                                     <action selector="addMoreBtn:" destination="TGd-qO-mc1" eventType="touchUpInside" id="SsX-Nr-gRl"/>
                                 </connections>
@@ -333,7 +333,7 @@
                                 <action selector="myPageBtn:" destination="TGd-qO-mc1" id="y1n-YL-2Sx"/>
                             </connections>
                         </barButtonItem>
-                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Wf-aE-40v">
+                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Wf-aE-40v">
                             <rect key="frame" x="129" y="0.0" width="117" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="plotLogo"/>
@@ -361,7 +361,7 @@
         <!--회원가입-->
         <scene sceneID="c0Z-3w-SLK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="68H-ev-sMK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNaviVC" automaticallyAdjustsScrollViewInsets="NO" id="68H-ev-sMK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="회원가입" id="MBf-Tk-hkJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dnj-WM-mOx">
@@ -375,7 +375,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epw-sC-SrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-975.20000000000005" y="10.344827586206897"/>
+            <point key="canvasLocation" x="-1118" y="10"/>
         </scene>
         <!--Movie Time Table View Controller-->
         <scene sceneID="DP9-m4-7Yo">
@@ -679,7 +679,7 @@
     <resources>
         <image name="btnChange-1" width="54" height="36"/>
         <image name="btnChangetime" width="174" height="54"/>
-        <image name="btnMore" width="47" height="29"/>
+        <image name="btnMore-1" width="47" height="29"/>
         <image name="btnMovie-1" width="174" height="54"/>
         <image name="btnMypage-1" width="48" height="48"/>
         <image name="icChatingpage-1" width="48" height="48"/>

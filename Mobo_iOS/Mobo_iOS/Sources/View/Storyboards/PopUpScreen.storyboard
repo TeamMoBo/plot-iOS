@@ -601,8 +601,8 @@
         <image name="imgMatchingfailPopup" width="295" height="348"/>
         <image name="imgPaymentBackground" width="287" height="166.66667175292969"/>
         <image name="imgPopupSuccess" width="217" height="284"/>
-        <image name="ioPopupPopcornImg" width="41.333332061767578" height="50.333332061767578"/>
-        <image name="ioPopupTicketImg" width="64.333335876464844" height="58"/>
+        <image name="ioPopupPopcornImg" width="49" height="61"/>
+        <image name="ioPopupTicketImg" width="76" height="68"/>
         <image name="popupBg" width="262" height="358"/>
     </resources>
 </document>
