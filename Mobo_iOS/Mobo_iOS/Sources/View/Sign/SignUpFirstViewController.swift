@@ -155,21 +155,10 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
         
     }
     
-    
-    
-  
-    
    @objc func womanSelect() {
         womanSelected = true
         manSelected = false
-
-
-
     }
-    
-    
-
-    
     @objc func manSelect() {
         womanSelected = false
         manSelected = true

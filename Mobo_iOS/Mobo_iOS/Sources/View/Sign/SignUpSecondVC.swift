@@ -60,11 +60,11 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         
         shortletter.delegate = self;
         
-        womanbtn.addTarget(self, action: #selector( getter: womanSelected ), for: .touchUpInside)
+        womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
-        manbtn.addTarget(self, action: #selector( getter: manSelected ), for: .touchUpInside)
+        manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
-        nomatterbtn.addTarget(self, action: #selector( getter: nomatterSelected ), for: .touchUpInside)
+        nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
         
         minAgeField.inputView = pickerView
         maxAgeField.inputView = pickerView2
@@ -72,13 +72,19 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         genreHashTagTextField.delegate = self
         charmHashTagTextField.delegate = self
         interestHashTagTextField.delegate = self
+    
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.minAgeField.endEditing(true)
         self.maxAgeField.endEditing(true)
+        view.endEditing(true)
            //return 버튼 누르면 키보드 내려갈수있게 설정.
        }
+    
+  
+    
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -149,7 +155,11 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         shortletter.resignFirstResponder()
-        
+        genreHashTagTextField.resignFirstResponder()
+        charmHashTagTextField.resignFirstResponder()
+        interestHashTagTextField.resignFirstResponder()
+        minAgeField.resignFirstResponder()
+        maxAgeField.resignFirstResponder()
         return true
         
     }
@@ -192,6 +202,9 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         }
         return count > 3 ? true : false
     }
+    
+
+
 }
 
 
