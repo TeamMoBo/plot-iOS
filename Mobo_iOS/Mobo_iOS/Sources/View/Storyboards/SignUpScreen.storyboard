@@ -796,24 +796,6 @@
                                                     <constraint firstAttribute="height" constant="60" id="csc-fv-Dr8"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7V-54-luM">
-                                                <rect key="frame" x="16" y="387" width="226" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="226" id="08r-yw-DKe"/>
-                                                    <constraint firstAttribute="height" constant="34" id="CYM-43-6wY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1G-9Y-rBd">
-                                                <rect key="frame" x="16" y="535" width="226" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="226" id="972-59-6RL"/>
-                                                    <constraint firstAttribute="height" constant="34" id="jUq-13-sYs"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="선호 영화 장르" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-0C-4Za">
                                                 <rect key="frame" x="246" y="176" width="69.333333333333343" height="17"/>
                                                 <constraints>
