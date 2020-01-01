@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func startAnimation() {
-        let animationView = Lottie.AnimationView(name:"splah_io_data")
+        let animationView = Lottie.AnimationView(name:"splah_io_change")
         
         animationView.frame = CGRect(x:0, y:0, width:375, height:812)
         animationView.center = self.view.center
