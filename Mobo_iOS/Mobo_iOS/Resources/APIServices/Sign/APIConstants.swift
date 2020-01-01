@@ -10,8 +10,8 @@ import Foundation
 
 struct APIConstants {
     
-
     // 전역 변수로 사용할 수 있게 APIConstants 선언하여 사용
+
     static let BaseURL = "http://13.125.48.35:7935/"
     
     /* 유저(User) */
@@ -40,6 +40,6 @@ struct APIConstants {
     static let BuySearchURL = BaseURL + "/movie/:movieReleaseStatus"
     
     
-    
+
 }
 

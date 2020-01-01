@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - ResponseString // 성공했을 때 response body
 struct ResponseString: Codable {
-    let success: Bool
+    let status: Int
     let message: String
     let data: DataClass?
 
     
-    enum CodingKeys: String, CodingKey {
+    enum CodinKeys: String, CodingKey {
         case status
         case message
         case data
@@ -30,6 +30,5 @@ struct ResponseString: Codable {
 }
 // MARK: - DataClass
 struct DataClass: Codable {
-    let userIdx: Int
-    let id, password, name, phone: String
+    let token : String
 }
