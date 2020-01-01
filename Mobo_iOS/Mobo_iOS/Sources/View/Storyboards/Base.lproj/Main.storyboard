@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="68H-ev-sMK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4t0-Ud-GUr">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -213,7 +213,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-cR-tV2">
                                 <rect key="frame" x="101" y="719" width="174" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="영화 예매하기" backgroundImage="btnMovie-1">
+                                <state key="normal" image="btnStart">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -357,6 +357,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wz-xs-9XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32.799999999999997" y="10.344827586206897"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rFI-OD-T4r">
+            <objects>
+                <viewController id="4t0-Ud-GUr" customClass="ViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emh-aB-CFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-lL-8Iz" customClass="LottieView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jhC-HQ-zw7"/>
+                    </view>
+                    <connections>
+                        <outlet property="AnimationView" destination="L5Z-lL-8Iz" id="rb4-FC-6KK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sx-I1-cI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2391.1999999999998" y="14.77832512315271"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="c0Z-3w-SLK">
@@ -533,12 +558,20 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe9-XW-JaM">
-                                        <rect key="frame" x="100" y="450" width="174" height="54"/>
+                                        <rect key="frame" x="148" y="438" width="78" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="수정 완료" backgroundImage="btnChangetime">
-                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" backgroundImage="btnNext"/>
+                                        <connections>
+                                            <action selector="findFriendBtn:" destination="R5D-B3-vXF" eventType="touchUpInside" id="6DM-Hk-t30"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="친구 찾으러 가기!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaD-It-QBN">
+                                        <rect key="frame" x="130" y="409" width="117" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -678,10 +711,10 @@
     </scenes>
     <resources>
         <image name="btnChange-1" width="54" height="36"/>
-        <image name="btnChangetime" width="174" height="54"/>
         <image name="btnMore-1" width="47" height="29"/>
-        <image name="btnMovie-1" width="174" height="54"/>
         <image name="btnMypage-1" width="48" height="48"/>
+        <image name="btnNext" width="78" height="78"/>
+        <image name="btnStart" width="174" height="54"/>
         <image name="icChatingpage-1" width="48" height="48"/>
         <image name="icPlay" width="84" height="84"/>
         <image name="icThreedot" width="42" height="24"/>

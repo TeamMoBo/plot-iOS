@@ -35,6 +35,8 @@ class MovieTabOneViewController: UIViewController {
         static let numberOfItemsPerRow: CGFloat = 3.0
     }
     
+    var isRevise = false
+    
     //init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,16 @@ class MovieTabOneViewController: UIViewController {
       
         setMovieListCollectionView()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if isRevise {
+            button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
+        }
+        else {
+            button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +81,7 @@ class MovieTabOneViewController: UIViewController {
     
     @IBAction func PickFinishBtn(_ sender: Any) {
         
+        navigationSetup()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
@@ -78,7 +91,32 @@ class MovieTabOneViewController: UIViewController {
         
         //self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
         
+        
     }
+    
+    func navigationSetup() { //네비게이션 투명색만들기
+               
+               //self.navigationController?.navigationBar.barTintColor = .mainOrange
+            self.navigationController?.navigationBar.tintColor = .white
+               self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+               self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+               self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간 선택하기", style: .done, target: nil, action: nil)
+    //           self.navigationItem.backBarButtonItem?.tintColor = .white
+               //투명하게 만드는 공식처럼 기억하기
+               self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+               //네비게이션바의 백그라운드색 지정. UIImage와 동일
+               self.navigationController?.navigationBar.shadowImage = UIImage()
+               //shadowImage는 UIImage와 동일. 구분선 없애줌.
+               self.navigationController?.navigationBar.isTranslucent = true
+               //false면 반투명이다.
+               
+               //뷰의 배경색 지정
+               
+                       //self.navigationController?.navigationBar.topItem?.title = "
+               //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+               //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+               
+           }
     
     
     func getMovieList(orderType: String) {
