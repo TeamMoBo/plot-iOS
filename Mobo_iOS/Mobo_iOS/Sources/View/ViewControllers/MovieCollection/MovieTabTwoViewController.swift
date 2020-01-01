@@ -19,7 +19,7 @@ class MovieTabTwoViewController: UIViewController {
     
     
     
-    var movies: [Movie] = []
+    var movies: [movieInfo] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
@@ -71,13 +71,9 @@ class MovieTabTwoViewController: UIViewController {
         super.viewDidAppear(true)
         
         
-        if dataManager.getDidOrderTypeChangedAndDownloaded() {
             reloadMovieLists()
-        }
-        else {reloadMovieLists()
-            let orderType: String = dataManager.getMovieOrderType()
-            getMovieList(orderType: orderType)
-        }
+            //getMovieList()
+        
     }
     
     func navigationSetup() { //네비게이션 투명색만들기
@@ -118,47 +114,55 @@ class MovieTabTwoViewController: UIViewController {
     }
     
     
-    func getMovieList(orderType: String) {
-        
-        let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-        
-        guard let finalURL = URL(string: url) else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let request = URLRequest(url: finalURL)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let resultData = data else {
-                return
-            }
-            
-            do {
-                print("Success")
-                let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-                
-                self.dataManager.setMovieList(list: movieLists.results)
-                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                self.reloadMovieLists()
-            }
-            catch let error {
-                print(error.localizedDescription)
-            }
-            
-        }
-        
-        task.resume()
-    }
+//    func getMovieList(completion: @escaping (ListResponse?) -> Void) {
+//
+//           // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
+//            let appUrl: String = "http://13.125.48.35:7935/main"
+//
+//            guard let finalURL = URL(string: appUrl) else {
+//                return
+//            }
+//
+//            let session = URLSession(configuration: .default)
+//
+//            var request = URLRequest(url: finalURL)
+//
+//
+//    //        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "Authorization")
+//            request.httpMethod = "GET"
+//            let task = session.dataTask(with: request) { (data, response, error) in
+//
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                    return
+//                }
+//
+//                guard let resultData = data else {
+//                    return
+//                }
+//
+//                do {
+//    //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
+//                    print(String(data: data!, encoding: .utf8))
+//                    let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
+//
+//                    //                self.dataManager.setMovieList(list: movieLists.results)
+//                    //                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+//                    //                self.reloadMovieLists()
+//                    completion(movieLists)
+//                }
+//                catch let error {
+//                    print(error.localizedDescription)
+//                }
+//
+//            }
+//
+//            task.resume()
+//        }
     
     func reloadMovieLists() {
-        self.movies = dataManager.getMovieList()
+        //self.movies = dataManager.getMovieList()
         DispatchQueue.main.async {
             self.MovieCollectionView.reloadData()
         }
@@ -201,10 +205,10 @@ class MovieTabTwoViewController: UIViewController {
         }
     }
     
-    func setDefaultMovieOrderType() {
-        let orderType: String = "0"
-        dataManager.setMovieOrderType(orderType: orderType)
-    }
+//    func setDefaultMovieOrderType() {
+//        let orderType: String = "0"
+//        dataManager.setMovieOrderType(orderType: orderType)
+//    }
     
     func setMovieListCollectionView() {
         MovieCollectionView.delegate = self
@@ -292,11 +296,11 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
                      //cell.dateLabel.text = movie.date
                      
                      
-                     cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
                      cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
                 
-                     let gradeIamge = getGradeImage(grade: movie.grade)
-                     cell.gradeImage.image = gradeIamge
+//                     let gradeIamge = getGradeImage(grade: movie.grade)
+//                     cell.gradeImage.image = gradeIamge
                      
                      OperationQueue().addOperation {
                          let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -324,13 +328,13 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             //cell.dateLabel.text = movie.date
             
             
-            cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             
             
-            let gradeIamge = getGradeImage(grade: movie.grade)
-            cell.gradeImage.image = gradeIamge
+//            let gradeIamge = getGradeImage(grade: movie.grade)
+//            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -390,13 +394,13 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             //cell.dateLabel.text = movie.date
             
             
-            cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             
             
-            let gradeIamge = getGradeImage(grade: movie.grade)
-            cell.gradeImage.image = gradeIamge
+//            let gradeIamge = getGradeImage(grade: movie.grade)
+//            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)

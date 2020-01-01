@@ -13,6 +13,7 @@ struct ResponseString: Codable {
     let status: Int
     let message: String
     let data: DataClass?
+
     
     enum CodinKeys: String, CodingKey {
         case status

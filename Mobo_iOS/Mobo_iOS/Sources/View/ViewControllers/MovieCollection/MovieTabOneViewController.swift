@@ -18,7 +18,7 @@ class MovieTabOneViewController: UIViewController {
     let movieListCellID: String = "MovieTabViewCell"
     //let movieListTwoCellID: String = "MovieTabTwoViewCell"
     
-    var movies: [Movie] = []
+    var movies: [movieInfo] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
@@ -64,19 +64,27 @@ class MovieTabOneViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        
-        if dataManager.getDidOrderTypeChangedAndDownloaded() {
-            reloadMovieLists()
-        }
-        else {reloadMovieLists()
-            let orderType: String = dataManager.getMovieOrderType()
-            getMovieList(orderType: orderType)
-        }
-    }
-    
+   override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(true)
+           
+           
+           if dataManager.getDidOrderTypeChangedAndDownloaded() {
+               reloadMovieLists()
+           }
+           else {
+               reloadMovieLists()
+               let orderType: String = dataManager.getMovieOrderType()
+               //            getMovieList(orderType: orderType)
+               getMovieList() { (listResponse) in
+                   guard let response = listResponse else {
+                       return
+                   }
+                   
+                   print(response)
+                   
+               }
+           }
+       }
    
     
     @IBAction func PickFinishBtn(_ sender: Any) {
@@ -119,52 +127,60 @@ class MovieTabOneViewController: UIViewController {
            }
     
     
-    func getMovieList(orderType: String) {
-        
-        let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-        
-        guard let finalURL = URL(string: url) else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let request = URLRequest(url: finalURL)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
+    func getMovieList(completion: @escaping (ListResponse?) -> Void) {
             
-            if let error = error {
-                print(error.localizedDescription)
+           // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
+            let appUrl: String = "http://13.125.48.35:7935/main"
+            
+            guard let finalURL = URL(string: appUrl) else {
                 return
             }
             
-            guard let resultData = data else {
-                return
-            }
+            let session = URLSession(configuration: .default)
             
-            do {
-                print("Success")
-                let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
+            var request = URLRequest(url: finalURL)
+            
+        
+    //        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "Authorization")
+            request.httpMethod = "GET"
+            let task = session.dataTask(with: request) { (data, response, error) in
                 
-                self.dataManager.setMovieList(list: movieLists.results)
-                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                self.reloadMovieLists()
-            }
-            catch let error {
-                print(error.localizedDescription)
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                guard let resultData = data else {
+                    return
+                }
+                
+                do {
+    //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
+                    print(String(data: data!, encoding: .utf8))
+                    let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
+                    
+                    //                self.dataManager.setMovieList(list: movieLists.results)
+                    //                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+                    //                self.reloadMovieLists()
+                    completion(movieLists)
+                }
+                catch let error {
+                    print(error.localizedDescription)
+                }
+                
             }
             
+            task.resume()
         }
-        
-        task.resume()
-    }
     
-    func reloadMovieLists() {
-        self.movies = dataManager.getMovieList()
-        DispatchQueue.main.async {
-            self.movieCollectionView.reloadData()
-        }
-    }
-    
+     func reloadMovieLists() {
+           //        self.movies = dataManager.getMovieList()[0].randMovie
+           DispatchQueue.main.async {
+               self.movieCollectionView.reloadData()
+       //        self.mainCollectionView.reloadData()
+           }
+       }
     func getTitle(title: String) -> String? {
         return title
     }
@@ -202,11 +218,11 @@ class MovieTabOneViewController: UIViewController {
         }
     }
     
-    func setDefaultMovieOrderType() {
-        let orderType: String = "0"
-        dataManager.setMovieOrderType(orderType: orderType)
-        
-    }
+//    func setDefaultMovieOrderType() {
+//        let orderType: String = "0"
+//        dataManager.setMovieOrderType(orderType: orderType)
+//        
+//    }
     
     func setMovieListCollectionView() {
         movieCollectionView.delegate = self
@@ -299,11 +315,11 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
                      //cell.dateLabel.text = movie.date
                      
                      
-                     cell.rating.rating = (movie.userRating) / 2
-                     cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
+            cell.rating.rating = Double((movie.userRating) / 2)
+            cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
                 
-                     let gradeIamge = getGradeImage(grade: movie.grade)
-                     cell.gradeImage.image = gradeIamge
+//            let gradeIamge = getGradeImage(grade: movie.)
+//                     cell.gradeImage.image = gradeIamge
                      
                      OperationQueue().addOperation {
                          let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -330,13 +346,13 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             //cell.dateLabel.text = movie.date
             
             
-            cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             
             
-            let gradeIamge = getGradeImage(grade: movie.grade)
-            cell.gradeImage.image = gradeIamge
+//            let gradeIamge = getGradeImage(grade: movie.grade)
+//            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -395,13 +411,13 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             //cell.dateLabel.text = movie.date
             
             
-            cell.rating.rating = (movie.userRating) / 2
+            cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             
             
-            let gradeIamge = getGradeImage(grade: movie.grade)
-            cell.gradeImage.image = gradeIamge
+//            let gradeIamge = getGradeImage(grade: movie.grade)
+//            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
