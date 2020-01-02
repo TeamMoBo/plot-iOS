@@ -59,17 +59,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func presentSignup() {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatSignupVC") as! ChattingSignUpViewController
-        
-        vc.modalPresentationStyle = .fullScreen
-        
-        self.present(vc, animated: true, completion: nil)
-        
-        
-    }
-    
     func navigationSetup() { //네비게이션 투명색만들기
         
         self.navigationController?.navigationBar.barTintColor = .mainOrange
@@ -99,7 +88,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func SignUpButton(_ sender: Any) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpFirst") as! SignUpFirstViewController
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpNavi")
         
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
@@ -109,11 +98,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func SignInButton(_ sender: Any) {
         
         navigationSetup()
+        
         var name = Userid.text!
         var password = Userpwd.text!
         var email = name + "@naver.com"
         
-        Auth.auth().signIn(withEmail: email, password: Userpwd.text!) { (user, err) in
+        // 사실 이거 더미라 이거 고치긴 해야됨....
+        Auth.auth().signIn(withEmail: "p2@naver.com", password: "123123" ) { (user, err) in
             
             if(err != nil){
                 let alret = UIAlertController(title: "로그인 실패", message: "올바르지 않은 아이디 혹은 비밀번호 입니다!", preferredStyle: UIAlertController.Style.alert)

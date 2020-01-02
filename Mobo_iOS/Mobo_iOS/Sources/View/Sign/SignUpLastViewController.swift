@@ -32,9 +32,11 @@ class SignUpLastViewController: UIViewController {
         //         DataManager.sharedManager.setId(id: name)
         //         DataManager.sharedManager.setPwd(pwd: password)
         
+        
         var email = DataManager.sharedManager.getId() + "@naver.com"
         var password = DataManager.sharedManager.getPwd()
         var name = DataManager.sharedManager.getName()
+        
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, err) in
             let uid = user?.user.uid
@@ -52,7 +54,7 @@ class SignUpLastViewController: UIViewController {
             // let imageUrl = data?.downloadURL()?.absoluteString
             let values = ["userName":name,"profileImageUrl": "https://user-images.githubusercontent.com/46750574/71647918-4d85e980-2d40-11ea-88b7-48763303297c.png", "uid":Auth.auth().currentUser?.uid]
             
-            Database.database().reference().child("users").child(uid!).setValue(values, withCompletionBlock: { (err, ref) in
+             Database.database().reference().child("users").child(uid!).setValue(values, withCompletionBlock: { (err, ref) in
                 
                 if(err == nil){
                     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

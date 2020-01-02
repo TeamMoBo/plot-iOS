@@ -10,11 +10,9 @@ import UIKit
 
 protocol MovieTabDelegate {
     
-    func didMovieClicked(index: Int)
+    func didMovieClicked(index: IndexPath)
     
 }
-
-
 
 
 class MovieCollectionTabViewCell: UICollectionViewCell {
@@ -24,6 +22,8 @@ class MovieCollectionTabViewCell: UICollectionViewCell {
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var rating: FloatRatingView!
+    @IBOutlet weak var imageSelect: UIImageView!
+    
     
 //    var myRatingView: FloatRatingView = {
 //        let label = FloatRatingView()
@@ -45,20 +45,26 @@ class MovieCollectionTabViewCell: UICollectionViewCell {
 //        return label
 //    }()
     
-    var currentIndex : Int?
+    var currentIndex: IndexPath?
     var delegate: MovieTabDelegate?
-
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         imageThumbnail.makeRounded(cornerRadius: 10)
         self.rating.delegate = self
-        self.delegate = self
 
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapped(_:)))
+        self.addGestureRecognizer(tap)
+        imageSelect.isHidden = true
     }
-
+    
+    @objc func handleTapped(_ tap: UITapGestureRecognizer) {
+        //이미지 뷰의 isHidden 속성을 바꿔주기
+        imageSelect.isHidden.toggle()
+        self.delegate?.didMovieClicked(index: currentIndex ?? IndexPath())
+    }
 }
 
 
@@ -74,12 +80,4 @@ extension MovieCollectionTabViewCell: FloatRatingViewDelegate {
         ratingLabel.text = String(format: "%.2f", ratingView.rating)
     }
 
-}
-
-extension MovieCollectionTabViewCell: MovieTabDelegate {
-    
-    func didMovieClicked(index: Int) {
-        self.delegate?.didMovieClicked(index: currentIndex ?? 0)
-        self.backgroundColor = .red
-    }
 }

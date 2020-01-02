@@ -183,6 +183,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-jW-rgR">
+                                <rect key="frame" x="0.0" y="370" width="375" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-cj-neh">
                                 <rect key="frame" x="20" y="561" width="77" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -345,20 +352,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomDay1" destination="fIV-UD-QEA" id="i0X-5Y-Nhm"/>
+                        <outlet property="bottomDay2" destination="cud-4p-EN5" id="2W9-4e-N70"/>
+                        <outlet property="bottomTime1" destination="hW7-uc-p7W" id="GoL-fd-WeA"/>
+                        <outlet property="bottomTime2" destination="gIL-PJ-Lfd" id="9oq-xF-uJI"/>
+                        <outlet property="bottomTime3" destination="WdA-Iv-xtx" id="c40-8a-lJ3"/>
+                        <outlet property="bottomTime4" destination="ZqS-hb-brP" id="xC9-g9-o5F"/>
+                        <outlet property="bottomTime5" destination="oBY-j8-kv8" id="X9q-ie-I9N"/>
+                        <outlet property="bottomTime6" destination="R3h-1c-LND" id="b5s-9W-CpA"/>
+                        <outlet property="bottomTime7" destination="3Jo-to-ztB" id="5fW-Qf-oxS"/>
                         <outlet property="bottomview" destination="qes-7U-nIB" id="VP2-Ve-X93"/>
                         <outlet property="deadlineTitle" destination="KeN-VV-1tV" id="z6r-Y2-Xm6"/>
                         <outlet property="mainCollectionView" destination="Ca2-cV-bV4" id="0X7-zL-Fsi"/>
                         <outlet property="movieCollectionView" destination="V8G-z1-jXH" id="elg-uz-Ocd"/>
+                        <outlet property="noImageLabel" destination="fkh-jW-rgR" id="0Dd-70-8Xj"/>
                         <outlet property="sendButton" destination="O8b-cR-tV2" id="sW5-oi-tat"/>
-                        <outletCollection property="bottomDayButtons" destination="fIV-UD-QEA" collectionClass="NSMutableArray" id="rIx-XU-ZnR"/>
-                        <outletCollection property="bottomDayButtons" destination="cud-4p-EN5" collectionClass="NSMutableArray" id="qcC-lM-LXd"/>
-                        <outletCollection property="bottomTimeButtons" destination="hW7-uc-p7W" collectionClass="NSMutableArray" id="LWb-45-wpN"/>
-                        <outletCollection property="bottomTimeButtons" destination="WdA-Iv-xtx" collectionClass="NSMutableArray" id="AJY-DZ-I2A"/>
-                        <outletCollection property="bottomTimeButtons" destination="oBY-j8-kv8" collectionClass="NSMutableArray" id="3Pz-mj-xDt"/>
-                        <outletCollection property="bottomTimeButtons" destination="gIL-PJ-Lfd" collectionClass="NSMutableArray" id="fAr-uv-UfK"/>
-                        <outletCollection property="bottomTimeButtons" destination="ZqS-hb-brP" collectionClass="NSMutableArray" id="ZjB-Ga-J6J"/>
-                        <outletCollection property="bottomTimeButtons" destination="R3h-1c-LND" collectionClass="NSMutableArray" id="h2y-yX-g3t"/>
-                        <outletCollection property="bottomTimeButtons" destination="3Jo-to-ztB" collectionClass="NSMutableArray" id="dJJ-09-yli"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wz-xs-9XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -713,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56R-7I-MzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="9.6059113300492616"/>
+            <point key="canvasLocation" x="1135" y="10"/>
         </scene>
     </scenes>
     <resources>

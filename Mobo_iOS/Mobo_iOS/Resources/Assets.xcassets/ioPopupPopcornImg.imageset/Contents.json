@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "ioPopupPopcornImg.png",
+      "idiom" : "universal",
       "scale" : "1x",
-      "idiom" : "universal"
+      "filename" : "ioPopupPopcornImg.png"
     },
     {
-      "idiom" : "universal",
       "filename" : "ioPopupPopcornImg@2x.png",
+      "idiom" : "universal",
       "scale" : "2x"
     },
     {

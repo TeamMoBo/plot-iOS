@@ -19,12 +19,18 @@ class MovieTabOneViewController: UIViewController {
     //let movieListTwoCellID: String = "MovieTabTwoViewCell"
     
     var movies: [movieInfo] = []
+    var reserveMovie : [reserveMovieInfo] = []
     var movieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    var transitMovieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
+    
+    var selectedIndex: [IndexPath] = []
+    var GotoHome: Bool = false
+    
     
     struct Storyboard {
         static let photoCell = "PhotoCell"
@@ -38,12 +44,13 @@ class MovieTabOneViewController: UIViewController {
     //init
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         movieCollectionView.translatesAutoresizingMaskIntoConstraints = false
         movieCollectionView.showsHorizontalScrollIndicator = false
         movieCollectionView.decelerationRate = .fast
         movieCollectionView.isScrollEnabled = false
         
-        
+        GotoHome = false
         
         self.title1.text = "    예매율TOP 10" // 띄어쓰기 4 번
         self.title1.backgroundColor = .groundColor
@@ -55,14 +62,18 @@ class MovieTabOneViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         if isRevise {
+            
             button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
         }
         else {
+            
             button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(true)
         
         reloadMovieLists()
@@ -73,7 +84,7 @@ class MovieTabOneViewController: UIViewController {
                 return
             }
             
-         //   print(response)
+            //   print(response)
             
         }
         
@@ -86,6 +97,8 @@ class MovieTabOneViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+
         
         
         self.show(vc, sender: nil)
@@ -143,22 +156,23 @@ class MovieTabOneViewController: UIViewController {
             }
             
             guard let resultData = data else {
-               // print(data)
+                // print(data)
                 return
             }
             
             do {
-                print("!!!!!!!!!!!")
-                print(String(data: data!, encoding: .utf8))
-                print("!!!!!!!!!!!")
+                //                print("!!!!!!!!!!!")
+                //                print(String(data: data!, encoding: .utf8))
+                //                print("!!!!!!!!!!!")
                 
                 let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
                 
                 self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
-           //     print(self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData))
+                
+                //       print(self.dataManager.getTicketingMoiveList())
                 
                 
-              //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+                //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
                 self.reloadMovieLists()
                 completion(movieTicketLists)
             }
@@ -264,6 +278,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
         
         if section == 0 {
             return min(movieData.count, 2)
+            
         } else if section == 1{
             return min(max(movieData.count - 2, 0), 4)
         }
@@ -308,17 +323,22 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             let movie = movieData[indexPath.row]
             
-            print(movie)
-        
+            //            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
+            
+            
+            // print(movie)
+            
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 12)
             
+            // print(dataManager.setTicketingMoiveList(list: [movie]))
             
+            cell.delegate = self
             
             //cell.dateLabel.text = movie.date
             
-            
+            cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
@@ -348,8 +368,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             
             //cell.dateLabel.text = movie.date
-            
-            
+            cell.delegate = self
+            cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
@@ -369,39 +389,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             return cell
             
         }
-            //        else if collectionView == movieCollectionTwoView {
-            //
-            //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListTwoCellID, for: indexPath) as! MovieTabTwoViewCell
-            //
-            //
-            //            let movie = movies[indexPath.row]
-            //
-            //
-            //            cell.backgroundColor = .clear
-            //
-            //            cell.movieName.text = movie.title
-            //            // cell.dateLabel.text = movie.date
-            //
-            //
-            //            cell.rating.rating = (movie.userRating) / 2
-            //            cell.ratingLabel.text = String(describing: (movie.userRating) / 2) + " 점"
-            //
-            //
-            //
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
-            //            cell.gradeImage.image = gradeIamge
-            //
-            //            OperationQueue().addOperation {
-            //                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-            //                DispatchQueue.main.async {
-            //                    cell.imageThumbnail.image = thumnailImage
-            //
-            //                }
-            //            }
-            //
-            //            return cell
-            //
-            //        }
+            
             
         else if indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionTabViewCell
@@ -413,8 +401,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             
             //cell.dateLabel.text = movie.date
-            
-            
+            cell.delegate = self
+            cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
@@ -437,71 +425,77 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
         return UICollectionViewCell()
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //        let movie = movies[indexPath.row]
-        //        let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-        //        self.selectedImage = thumnailImage
-        //        dataManager.setImage(haveImage: self.selectedImage)
-        //
-        //        let movietitle = self.getTitle(title: movie.title)
-        //        self.selectedTitle = movietitle
-        //        dataManager.setTitle(haveTitle: self.selectedTitle)
-        //
-        //        let movieRating = self.getRating(rating: movie.userRating)
-        //        self.selectedRating = movieRating
-        //        dataManager.setRating(haveRating: self.selectedRating)
-        //
-        //        let movieDate = self.getDate(date: movie.date)
-        //        self.selectedDate = movieDate
-        //        dataManager.setDate(haveDate: self.selectedDate)
         
-        if collectionView == movieCollectionView {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionTabViewCell
-            
-            
-            let movie = movieData[indexPath.row]
-            let caLayer: CAGradientLayer = CAGradientLayer()
-            
-            caLayer.startPoint = CGPoint(x: 0, y: 0)
-            caLayer.endPoint = CGPoint(x: 1, y: 1)
-            caLayer.locations = [0,1]
-            caLayer.frame = cell.imageThumbnail.frame
-            //            caLayer.colors = [UIColor.clear.cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor]
-            //            imageThumbnail.layer.addSublayer(caLayer)
-            
-            cell.imageThumbnail.layer.addSublayer(caLayer)
-            
-            //            //cell.backgroundColor = .red
-            //
-            //            cell.movieName.text = movie.title
-            //            // cell.dateLabel.text = movie.date
-            //
-            //
-            //            cell.rating.rating = (movie.userRating) / 2
-            //            cell.ratingLabel.text = String(describing: (movie.userRating) / 2) + " 점"
-            //
-            //
-            //
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
-            //            cell.gradeImage.image = gradeIamge
-            //
-            //            OperationQueue().addOperation {
-            //                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-            //                DispatchQueue.main.async {
-            //                    cell.imageThumbnail.image = thumnailImage
-            //
-            //                }
-            //            }
-            
-            
-        }
+        //   let cell = collectionView.cellForItem(at: indexPath) as! MovieCollectionTabViewCell
+        
+        //        if selectedIndex.contains(indexPath) {
+        //
+        //            cell.imageSelect.isHidden = true
+        //            for (index , item) in selectedIndex.enumerated() {
+        //                if item == indexPath {
+        //                    selectedIndex.remove(at: index)
+        //                }
+        //            }
+        //        } else {
+        //            cell.imageSelect.isHidden = false
+        //            selectedIndex.append(indexPath)
+        //        }
+        //        print(selectedIndex)
         
         
     }
     
 }
 
+extension MovieTabOneViewController: MovieTabDelegate {
+    
+    func didMovieClicked(index: IndexPath) {
+        
+        if selectedIndex.contains(index) {
+            
+            for (i, v) in selectedIndex.enumerated() {
+                if v == index {
+                    selectedIndex.remove(at: i)
+                }
+            }
+        } else {
+            selectedIndex.append(index)
+            selectedIndex.sort()
+        }
+        
+        print(selectedIndex)
+        // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
+        
+        for indexPath in selectedIndex {
+            if indexPath.section == 0 {
+                
+                transitMovieData.append(movieData[indexPath.item])
+                
+            }
+            if indexPath.section == 1 {
+                transitMovieData.append(movieData[indexPath.item + 2])
+                
+            }
+            if indexPath.section == 2 {
+                transitMovieData.append(movieData[indexPath.item + 6])
+                
+            }
+        }
+        
+        //let arr1 = array1.filter{!array2.contains($0)}
+        
+        
+        
+        dataManager.setMovingMovieList(list: transitMovieData)
+        
+        print(dataManager.getMovingMovieList())
+        
+    }
+    
+}
 
 
+//var movieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []

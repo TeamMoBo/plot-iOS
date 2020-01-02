@@ -84,8 +84,9 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpSecondVC") as! SignUpSecondVC
         
-        vc.modalPresentationStyle = .fullScreen
-        self.show(vc, sender: nil)
+//        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
