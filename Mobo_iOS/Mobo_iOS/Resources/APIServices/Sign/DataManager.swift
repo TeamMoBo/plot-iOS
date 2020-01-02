@@ -24,16 +24,6 @@ class DataManager {
     private init() {
         
     }
-    //    var dic : [String : [Int]] = [:]
-    
-    
-    //    var reservationCache: [ReservationInfo] = []
-    //
-    //       struct ReservationInfo {
-    //
-    //           var date: String
-    //           var times: [Int]
-    //       }
     
     var reservationCache: [ReservationInfo] = []
     
@@ -45,6 +35,21 @@ class DataManager {
         }
         reservationCache[index] = info
     }
+    
+    private var ticTimer: Timer? = nil
+    private var ticNumber : Double = 0.0
+    
+    
+    func getTimer() -> Timer {
+        return ticTimer!
+    }
+    
+    func setTimer(ticTimer : Timer) {
+        self.ticTimer = ticTimer
+    }
+    
+   
+    
     
     private var id : String!
     private var pwd : String!
@@ -139,6 +144,8 @@ class DataManager {
     private var reserveMovieList: [reserveMovieInfo] = []
     private var reserveDateList: [reserveDateInfo] = []
     private var movieTicketInfo: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    
+    
     
     
     

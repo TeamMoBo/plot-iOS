@@ -17,6 +17,7 @@ struct ListResponse: Codable {
         case status, message
         case results = "data"
     }
+    
 }
 
 struct Movie: Codable {

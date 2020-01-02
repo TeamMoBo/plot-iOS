@@ -83,7 +83,7 @@ class MainHomeViewController: UIViewController {
                                   DataManager.sharedManager.setReservation(info: reservationInfo)
                               }
         
-        print(reservationInfo)
+//            print(reservationInfo)
         
         bottomDayButtons.forEach {
             
@@ -434,6 +434,7 @@ class MainHomeViewController: UIViewController {
         }
         
         return UIImage(data: imageData)
+        
     }
     
     func getGradeImage(grade: Int) -> UIImage? {
@@ -560,6 +561,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
                 DispatchQueue.main.async {
+                    cell.imageThumbnail.contentMode = .scaleAspectFill
                     // cell.ImageThumbnail.image = thumnailImage
                     cell.imageThumbnail.image = thumnailImage
                     
@@ -578,7 +580,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         
             let movie = reservemovies[indexPath.item]
         
-       //     print(movie)
+            print(movie)
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
