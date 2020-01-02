@@ -16,6 +16,10 @@ protocol matchingLinkDelegate {
 
 class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
+   
+    
+ 
+    
     var numberOfCell: Int = 4
     let cellIdentifier: String = "cell"
     
@@ -36,7 +40,7 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
         flowLayout.sectionInset = UIEdgeInsets.zero
         flowLayout.minimumInteritemSpacing = 16
         flowLayout.minimumLineSpacing = 16
-        flowLayout.estimatedItemSize = CGSize(width: 334, height: 166 )
+        flowLayout.estimatedItemSize = CGSize( width: 334, height: 166 )
         self.collectionview.collectionViewLayout = flowLayout
         
         

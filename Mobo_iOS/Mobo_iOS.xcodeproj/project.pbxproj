@@ -76,6 +76,9 @@
 		EAA2A97D23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */; };
 		EAA2A97F23BE0AE8000C4354 /* AfterChatMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */; };
 		EAA2A98123BE0B5A000C4354 /* CreditPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */; };
+		EAA2A98523BE3D68000C4354 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */; };
+		EAA2A98623BE3D68000C4354 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */; };
+		EAA2A98723BE3D68000C4354 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -166,6 +169,9 @@
 		EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingFailViewController.swift; sourceTree = "<group>"; };
 		EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingViewController.swift; sourceTree = "<group>"; };
 		EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditPopUpViewController.swift; sourceTree = "<group>"; };
+		EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Regular.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Bold.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Medium.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +289,9 @@
 				398522CE23B0644A009C9AE3 /* Sources */,
 				398522B723B05F8D009C9AE3 /* AppDelegate.swift */,
 				398522B923B05F8D009C9AE3 /* SceneDelegate.swift */,
+				EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */,
+				EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */,
+				EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */,
 				398522C823B05F8F009C9AE3 /* Info.plist */,
 				39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */,
 				3962D19523B1254D004B11AB /* GoogleService-Info.plist */,
@@ -534,11 +543,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				39463CCE23BCC4880042D2D0 /* splah_io_change.json in Resources */,
+				EAA2A98723BE3D68000C4354 /* NotoSansCJKkr-Medium.otf in Resources */,
 				EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */,
 				3989B15B23B75025006ABB26 /* PopUpScreen.storyboard in Resources */,
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
+				EAA2A98523BE3D68000C4354 /* NotoSansCJKkr-Regular.otf in Resources */,
 				EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
@@ -549,6 +560,7 @@
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
+				EAA2A98623BE3D68000C4354 /* NotoSansCJKkr-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

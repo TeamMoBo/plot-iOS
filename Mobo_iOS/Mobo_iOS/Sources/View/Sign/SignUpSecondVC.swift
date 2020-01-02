@@ -8,17 +8,18 @@
 import Foundation
 import UIKit
 
+
 protocol ToolbarPickerViewDelegate: class {
     func didTapDone()
     func didTapCancel()
     
     
-    }
+}
 protocol ToolbarPickerViewDelegate2: class {
-
-func didTapDone2()
-func didTapCancel2()
-
+    
+    func didTapDone2()
+    func didTapCancel2()
+    
 }
 
 class ToolbarPickerView: UIPickerView {
@@ -40,7 +41,7 @@ class ToolbarPickerView: UIPickerView {
         self.commonInit()
         self.commonInit2()
     }
-   
+    
     
     private func commonInit() {
         let toolBar = UIToolbar()
@@ -84,12 +85,12 @@ class ToolbarPickerView: UIPickerView {
         self.toolbarDelegate?.didTapCancel()
     }
     @objc func doneTapped2() {
-           self.toolbarDelegate2?.didTapDone2()
-       }
-       
-       @objc func cancelTapped2() {
-           self.toolbarDelegate2?.didTapCancel2()
-       }
+        self.toolbarDelegate2?.didTapDone2()
+    }
+    
+    @objc func cancelTapped2() {
+        self.toolbarDelegate2?.didTapCancel2()
+    }
 }
 
 class SignUpSecondVC: UIViewController, UITextFieldDelegate {
@@ -263,7 +264,7 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.titles.count
     }
-
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -272,8 +273,8 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
         return self.titles[row]
         
     }
-
-
+    
+    
 }
 
 extension SignUpSecondVC: ToolbarPickerViewDelegate, ToolbarPickerViewDelegate2 {
