@@ -35,7 +35,8 @@ class BeforeChattingViewController: UIViewController {
         self.show(vc, sender: nil)
     }
     
-
+    @IBOutlet weak var movietitle: UILabel!
+    
     func navigationSetup() { //네비게이션 투명색만들기
         
         self.navigationController?.navigationBar.barTintColor = .lightGray

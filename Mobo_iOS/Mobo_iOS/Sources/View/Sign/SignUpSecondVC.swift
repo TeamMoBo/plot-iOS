@@ -212,9 +212,22 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
         charmHashTagTextField.resignFirstResponder()
         interestHashTagTextField.resignFirstResponder()
         
+        if textField == genreHashTagTextField {
+                      charmHashTagTextField.becomeFirstResponder()
+                  }
+                  else if textField == charmHashTagTextField {
+                      interestHashTagTextField.becomeFirstResponder()
+                  }
+                  else if textField == interestHashTagTextField {
+                      shortletter.becomeFirstResponder()
+                  }
+                  
         return true
         
     }
+    
+    
+       
     
     @objc func womanSelect() {
         womanSelected = true
