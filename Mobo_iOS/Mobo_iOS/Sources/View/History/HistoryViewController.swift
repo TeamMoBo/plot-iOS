@@ -97,13 +97,7 @@ extension HistoryViewController: matchingLinkDelegate {
     //BeforeChat
     
     func didClicked() {
-        
-        let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "BeforeChat") as! BeforeChattingViewController
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-        self.show(vc, sender: nil)
-        
+    
         
     }
 }

@@ -20,22 +20,36 @@ class MainHomeViewController: UIViewController {
     
     @IBOutlet weak var bottomview: UIView!
     
-    @IBOutlet var bottomDayButtons: [UIButton]!
-    @IBOutlet var bottomTimeButtons: [UIButton]!
-
+    //@IBOutlet var bottomDayButtons: [UIButton]!
+    //@IBOutlet var bottomTimeButtons: [UIButton]!
     
-    private var reservationInfo: DataManager.ReservationInfo? // 현재 선택한 날짜에 대한 예약 정보
-
+    @IBOutlet weak var bottomDay1 : UIButton!
+    @IBOutlet weak var bottomDay2: UIButton!
+    @IBOutlet weak var bottomTime1: UIButton!
+    @IBOutlet weak var bottomTime2: UIButton!
+    @IBOutlet weak var bottomTime3: UIButton!
+    @IBOutlet weak var bottomTime4: UIButton!
+    @IBOutlet weak var bottomTime5: UIButton!
+    @IBOutlet weak var bottomTime6: UIButton!
+    @IBOutlet weak var bottomTime7: UIButton!
+    @IBOutlet weak var noImageLabel: UILabel!
+    
+    
+    private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
+    
     var imgArr = [  UIImage(named:"10"),
                     UIImage(named:"10")]
     
     
+    var mTimer:  Timer? = nil
+    var number: Double = 0.0
     
-//    var movies: [Movie] = []
+    //    var movies: [Movie] = []
     var movieInfo : [movieInfo] = []
     var reservemovies: [reserveMovieInfo] = []
     var reserveDate: [reserveDateInfo] = []
-
+    var movingMovie: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    
     
     
     let movieListCellID: String = "MovieListCell"
@@ -46,7 +60,7 @@ class MainHomeViewController: UIViewController {
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
     let caLayer: CAGradientLayer = CAGradientLayer()
-
+    
     private var selectedIndex: Int = 0
     private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
     
@@ -60,86 +74,29 @@ class MainHomeViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-    
+        noImageLabel.isHidden = false
         view.backgroundColor = .groundColor
         setMovieListCollectionView()
         
         navigationSetup()
         
-//        mainCollectionView.backgroundColor = .red
-//        mainCollectionView.backgroundColor = .clear
-//        movieCollectionView.backgroundColor = .clear
-        
         
         bottomview.makeRounded(cornerRadius: 10)
         bottomview.dropShadow(color: .lightGray, offSet: CGSize(width: 1, height: 1), opacity: 0.7, radius: 5)
-                
+        
         sendButton.titleEdgeInsets.bottom = 10
         
+        bottomDay1.tintColor = .mainOrange
+        bottomDay2.tintColor = .mainOrange
         
-        if let reservationInfo = self.reservationInfo {
-                                  DataManager.sharedManager.setReservation(info: reservationInfo)
-                              }
         
-//            print(reservationInfo)
-        
-        bottomDayButtons.forEach {
-            
-            
-            
-            $0.setTitle(reservationInfo?.date, for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.setBackgroundColor(.clear, for: .normal)
-                           
-            $0.setTitleColor(.mainOrange, for: .selected)
-            $0.setBackgroundColor(.white, for: .selected)
-            
-            
-        }
-        
-        bottomTimeButtons.forEach {
-            
-            $0.setTitle(String(describing: reservationInfo?.times), for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.setBackgroundColor(.clear, for: .normal)
-                                      
-            $0.setTitleColor(.mainOrange, for: .selected)
-            $0.setBackgroundColor(.white, for: .selected)
-        }
-        
-        selectDate("30") // 임시
-       
-
         
     }
     
     
-    private func selectDate(_ date: String) {
-         // 이전 날짜의 예약 정보 저장
-         
-         if let reservationInfo = self.reservationInfo {
-             DataManager.sharedManager.setReservation(info: reservationInfo)
-         }
-      
-    //     DataManager.sharedManager.setReservation(info: reservationInfo)
-         
-         if let info = DataManager.sharedManager.reservationCache.first(where: { $0.date == date}) {
-             // 캐시에 저장된 예약정보가 있다면 불러옴
-             reservationInfo = info
-         } else {
-             // 캐시에 저장된 정보가 없다면 새로운 예약 정보를 생성
-             reservationInfo = DataManager.ReservationInfo(date: date , times: [])
-         }
-     }
-    
-  
-    private func setTimeButtonSelect(_ button: UIButton, _ isSelected: Bool) {
-               button.isSelected = isSelected
-               button.backgroundColor = isSelected ? .mainOrange : .white
-               button.setBorder(borderColor: isSelected ? .clear : .borderGray, borderWidth: 1)
-           }
     
     
     @IBAction func buyBtn(_ sender: Any) {
@@ -155,66 +112,151 @@ class MainHomeViewController: UIViewController {
         
     }
     
+    func tictok(){
+        if let timer = mTimer {
+            //timer 객체가 nil 이 아닌경우에는 invalid 상태에만 시작한다
+            if !timer.isValid {
+                /** 1초마다 timerCallback함수를 호출하는 타이머 */
+                mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+            }
+        }else{
+            //timer 객체가 nil 인 경우에 객체를 생성하고 타이머를 시작한다
+            /** 1초마다 timerCallback함수를 호출하는 타이머 */
+            mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+        }
+    }
+    
+    @objc func timerCallback(){
+        number += 1
+       // print(number)
+        if number == 30 {
+            
+            //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
+            
+            self.navigationController?.popViewController(animated: true)
+            //   self.dismiss(animated: true, completion: nil)
+            
+            //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            //        vc.modalPresentationStyle = .fullScreen
+            //        self.present(vc, animated: true, completion: nil)
+            
+        }
+    }
+    
     
     func getMovieList(completion: @escaping (ListResponse?) -> Void) {
+        
+        // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
+        let appUrl: String = "http://13.125.48.35:7935/main"
+        
+        guard let finalURL = URL(string: appUrl) else {
+            return
+        }
+        
+        let session = URLSession(configuration: .default)
+        
+        var request = URLRequest(url: finalURL)
+        
+        
+        request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjQwLCJpYXQiOjE1Nzc5NDkzNDYsImV4cCI6MTU3ODU1NDE0NiwiaXNzIjoibW9ib21hc3RlciJ9.dwKFFXHdDhkb8WW25BSMyig5DFzUlKPQ-WE1lzO4JBc", forHTTPHeaderField: "authorization")
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
             
-           // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-            let appUrl: String = "http://13.125.48.35:7935/main"
-            
-            guard let finalURL = URL(string: appUrl) else {
+            if let error = error {
+                print(error.localizedDescription)
                 return
             }
             
-            let session = URLSession(configuration: .default)
-            
-            var request = URLRequest(url: finalURL)
-            
-        
-            request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "authorization")
-            request.httpMethod = "GET"
-        
-            let task = session.dataTask(with: request) { (data, response, error) in
-                
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                }
-                
-                guard let resultData = data else {
-                    return
-                }
-                
-                do {
-    //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
-                //    print(String(data: data!, encoding: .utf8))
-                    let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-                    
-                    self.dataManager.setMovieList(list: movieLists.results.randMovie)
-                    self.dataManager.setReserveMovieList(list: movieLists.results.reserveMovie)
-                    self.dataManager.setReserveDateList(list: movieLists.results.reserveDate)
-
-                    self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-                    self.reloadMovieLists()
-                    completion(movieLists)
-                }
-                catch let error {
-                    print(error.localizedDescription)
-                }
-                
+            guard let resultData = data else {
+                return
             }
             
-            task.resume()
+            do {
+                //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
+                //    print(String(data: data!, encoding: .utf8))
+                let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
+                
+                self.dataManager.setMovieList(list: movieLists.results.randMovie)
+                
+                self.dataManager.setReserveMovieList(list: movieLists.results.reserveMovie)
+                
+                self.dataManager.setReserveDateList(list: movieLists.results.reserveDate)
+                
+                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+                self.reloadMovieLists()
+                completion(movieLists)
+            }
+            catch let error {
+                print(error.localizedDescription)
+            }
+            
         }
+        
+        task.resume()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        //sendButton.makeRounded(cornerRadius: 20)
+        
+        
+        reservationInfo = DataManager.sharedManager.getReservation()
+        
+        
+        print(reservationInfo)
+        
+        if !reservationInfo.isEmpty {
+            bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
+            bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
+            
+            bottomDay1.tintColor = .mainOrange
+            bottomDay2.tintColor = .mainOrange
+            
+            bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00" , for: .normal)
+            bottomTime3.setTitle(String(describing: reservationInfo[0].times[1]) + ":00", for: .normal)
+            bottomTime5.setTitle(String(describing: reservationInfo[0].times[2]) + ":00", for: .normal)
+            
+            bottomTime2.setTitle(String(describing: reservationInfo[1].times[0]) + ":00", for: .normal)
+            bottomTime4.setTitle(String(describing: reservationInfo[1].times[1]) + ":00", for: .normal)
+            bottomTime6.setTitle(String(describing: reservationInfo[1].times[2]) + ":00", for: .normal)
+            bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
+            
+        }
+        
         deadlineTitle.textColor = .subOrange
+        print("!!!!!!!!!!!")
+        print(DataManager.sharedManager.getReservation())
+        print("!!!!!!!!!!!")
+        
+        print("???????")
+        print(DataManager.sharedManager.getReservation())
+        print("???????")
+        
+        //MatchingFinalViewController
+        
+        // MatchingCompleteViewController
+        print(DataManager.sharedManager.getMatching())
+        
+        
+        if DataManager.sharedManager.getMatching() {
+        //    tictok()
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
+            
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true, completion: nil)
+
+            //            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         
     }
     
     
-   override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         
@@ -225,14 +267,14 @@ class MainHomeViewController: UIViewController {
         else {
             print(3)
             reloadMovieLists()
-//            let orderType: String = dataManager.getMovieOrderType()
+            //            let orderType: String = dataManager.getMovieOrderType()
             //            getMovieList(orderType: orderType)
             getMovieList() { (listResponse) in
                 guard let response = listResponse else {
                     return
                 }
                 
-           //     print(response)
+                //     print(response)
                 
             }
         }
@@ -244,7 +286,6 @@ class MainHomeViewController: UIViewController {
     
     @IBAction func myPageBtn(_ sender: Any) {
         
-        //        navigationSetup0()
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
@@ -324,7 +365,7 @@ class MainHomeViewController: UIViewController {
         
         //뷰의 배경색 지정
         
-                self.navigationController?.navigationBar.topItem?.title = "매칭이력"
+        self.navigationController?.navigationBar.topItem?.title = "매칭이력"
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
@@ -400,19 +441,23 @@ class MainHomeViewController: UIViewController {
         
     }
     
-
-        
-     func reloadMovieLists() {
+    
+    
+    func reloadMovieLists() {
         
         self.movieInfo = dataManager.getMovieList()
         self.reservemovies = dataManager.getReserveMovieList()
         self.reserveDate = dataManager.getReserveDateList()
+        self.movingMovie = dataManager.getMovingMovieList()
         
-           DispatchQueue.main.async {
-               self.movieCollectionView.reloadData()
-               self.mainCollectionView.reloadData()
-           }
-       }
+        
+        //print(reserveDate)
+        
+        DispatchQueue.main.async {
+            self.movieCollectionView.reloadData()
+            self.mainCollectionView.reloadData()
+        }
+    }
     
     func getTitle(title: String) -> String? {
         return title
@@ -452,10 +497,10 @@ class MainHomeViewController: UIViewController {
         }
     }
     
-//    func setDefaultMovieOrderType() {
-//        let orderType: String = "0"
-//        dataManager.setMovieOrderType(orderType: orderType)
-//    }
+    //    func setDefaultMovieOrderType() {
+    //        let orderType: String = "0"
+    //        dataManager.setMovieOrderType(orderType: orderType)
+    //    }
     
     func setMovieListCollectionView() {
         movieCollectionView.delegate = self
@@ -523,11 +568,22 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-         if collectionView == mainCollectionView {
-        return movieInfo.count
+        if collectionView == mainCollectionView {
+            return movieInfo.count
         }
         else if collectionView == movieCollectionView {
-            return reservemovies.count
+            
+            print(dataManager.getMovingMovieList())
+            
+            if dataManager.getMovingMovieList() == nil{
+                
+                return reservemovies.count
+                
+            }
+            else {
+                return movingMovie.count
+                
+            }
         }
         return movieInfo.count
     }
@@ -538,11 +594,12 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainListID, for: indexPath) as! MainViewCollectionViewCell
             
-         //   movieInfo = self.dataManager.getMovieList()
+            
+            //   movieInfo = self.dataManager.getMovieList()
             
             let movie = movieInfo[indexPath.row]
             
-           // print(movie)
+            // print(movie)
             
             cell.delegate = self
             
@@ -570,39 +627,65 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             return cell
             
         }
-
+            
             
         else if collectionView == movieCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionViewCell
             
-           // let movie = movies[indexPath.item]
-        
-            let movie = reservemovies[indexPath.item]
-        
-            print(movie)
             
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.ImageThumbnail.image = thumnailImage
-                    cell.ImageThumbnail.contentMode = .scaleToFill
-
-                    //cell.imageThumbnail.image = thumnailImage
-                    
+            
+            //   movieInfo = self.dataManager.getMovieList()
+            
+            if dataManager.getMovingMovieList() == nil {
+                
+                let movie = movieInfo[indexPath.row]
+                
+                // print(movie)
+                
+                cell.backgroundColor = .groundColor
+                cell.makeRounded(cornerRadius: 10)
+                
+                OperationQueue().addOperation {
+                    let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
+                    DispatchQueue.main.async {
+                        cell.ImageThumbnail.contentMode = .scaleAspectFill
+                        cell.ImageThumbnail.image = thumnailImage
+                        //                        cell.imageThumbnail.image = thumnailImage
+                        
+                    }
                 }
+                return cell
+            }
+                
+            else
+            {
+                movingMovie = dataManager.getMovingMovieList()
+                let movie = movingMovie[indexPath.row]
+                
+                cell.backgroundColor = .groundColor
+                cell.makeRounded(cornerRadius: 10)
+                
+                
+                
+                
+                OperationQueue().addOperation {
+                    let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
+                    DispatchQueue.main.async {
+                        cell.ImageThumbnail.contentMode = .scaleAspectFill
+                        cell.ImageThumbnail.image = thumnailImage
+                        //                        cell.imageThumbnail.image = thumnailImage
+                        
+                    }
+                }
+                return cell
             }
             
             
-            return cell
         }
-            
-            
-                 
-        
         return UICollectionViewCell()
+        
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //            let movie = movies[indexPath.row]
@@ -631,6 +714,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
 }
+
 
 
 extension MainHomeViewController: PlayLinkActionDelegate {

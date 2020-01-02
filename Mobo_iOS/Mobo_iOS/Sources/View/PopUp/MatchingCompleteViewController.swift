@@ -19,11 +19,27 @@ class MatchingCompleteViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        
+        Thread.sleep(forTimeInterval: 3) //1초만 재우기
+
         
     }
     
-    @IBOutlet weak var checkingbtn: UIImageView!
+    
+    
+    @IBAction func goChatBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BeforeChat") as! BeforeChattingViewController
+       // vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+
+        
+//        self.navigationController?.pushViewController(vc, animated: true)
+        self.show(vc, sender: nil)
+        
+    }
+    
     
     /*
     // MARK: - Navigation

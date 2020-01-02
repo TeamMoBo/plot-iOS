@@ -447,10 +447,6 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="btnOkay" translatesAutoresizingMaskIntoConstraints="NO" id="8TT-bb-cZd">
-                                        <rect key="frame" x="33" y="186" width="114" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1월 5일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRr-ii-zpc">
                                         <rect key="frame" x="33" y="119" width="38" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -458,6 +454,14 @@
                                         <color key="textColor" red="0.20784313730000001" green="0.70588235290000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4k-Ia-cvU">
+                                        <rect key="frame" x="33" y="179" width="114" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btnOkay"/>
+                                        <connections>
+                                            <action selector="goChatBtn:" destination="GNE-qM-abG" eventType="touchUpInside" id="2K7-hc-IWT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -466,13 +470,12 @@
                         <viewLayoutGuide key="safeArea" id="8Dh-hQ-9cb"/>
                     </view>
                     <connections>
-                        <outlet property="checkingbtn" destination="8TT-bb-cZd" id="jed-No-493"/>
                         <outlet property="date" destination="vRr-ii-zpc" id="Pkl-XV-wRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OI3-e2-rBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6399" y="593"/>
+            <point key="canvasLocation" x="6397.6000000000004" y="592.61083743842369"/>
         </scene>
         <!--Matching Failure View Controller-->
         <scene sceneID="L5L-aL-GlQ">

@@ -29,6 +29,7 @@ class MovieTabOneViewController: UIViewController {
     let dataManager = DataManager.sharedManager
     
     var selectedIndex: [IndexPath] = []
+    var GotoHome: Bool = false
     
     
     struct Storyboard {
@@ -49,7 +50,7 @@ class MovieTabOneViewController: UIViewController {
         movieCollectionView.decelerationRate = .fast
         movieCollectionView.isScrollEnabled = false
         
-        
+        GotoHome = false
         
         self.title1.text = "    예매율TOP 10" // 띄어쓰기 4 번
         self.title1.backgroundColor = .groundColor
@@ -97,7 +98,8 @@ class MovieTabOneViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
-        //여기서 데이터를 전달해주자 // 이전뷰든 전달해줄 싱글톤이든!
+
+        
         
         self.show(vc, sender: nil)
         
@@ -159,15 +161,15 @@ class MovieTabOneViewController: UIViewController {
             }
             
             do {
-//                print("!!!!!!!!!!!")
-//                print(String(data: data!, encoding: .utf8))
-//                print("!!!!!!!!!!!")
+                //                print("!!!!!!!!!!!")
+                //                print(String(data: data!, encoding: .utf8))
+                //                print("!!!!!!!!!!!")
                 
                 let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
                 
                 self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
                 
-         //       print(self.dataManager.getTicketingMoiveList())
+                //       print(self.dataManager.getTicketingMoiveList())
                 
                 
                 //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
@@ -321,8 +323,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             let movie = movieData[indexPath.row]
             
-//            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
-
+            //            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
+            
             
             // print(movie)
             
@@ -451,7 +453,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
 extension MovieTabOneViewController: MovieTabDelegate {
     
     func didMovieClicked(index: IndexPath) {
-                
+        
         if selectedIndex.contains(index) {
             
             for (i, v) in selectedIndex.enumerated() {
@@ -465,34 +467,35 @@ extension MovieTabOneViewController: MovieTabDelegate {
         }
         
         print(selectedIndex)
-        
         // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
         
-        for path in selectedIndex {
-            for y in path {
-                transitMovieData = [movieData[y]]
+        for indexPath in selectedIndex {
+            if indexPath.section == 0 {
+                
+                transitMovieData.append(movieData[indexPath.item])
+                
+            }
+            if indexPath.section == 1 {
+                transitMovieData.append(movieData[indexPath.item + 2])
+                
+            }
+            if indexPath.section == 2 {
+                transitMovieData.append(movieData[indexPath.item + 6])
+                
             }
         }
-        print(transitMovieData)
-
-   //     transitMovieData = movieData[selectedIndex]
-//        transitMovieData
-        // 이 transitMovieData 라는 데이터를 통해서 인덱스를 받아서 전달하고 싶다!
         
-//        section == 0
-//        let movie = movieData[indexPath.row ]
-//
-//        section == 1
-//        let movie = movieData[indexPath.row + 2]
-//
-//        section == 2
-//        let movie = movieData[indexPath.row + 6]
-        // 섹션 별로는 이렇게 저장되어있다...!
+        //let arr1 = array1.filter{!array2.contains($0)}
         
-
-
+        
+        
+        dataManager.setMovingMovieList(list: transitMovieData)
+        
+        print(dataManager.getMovingMovieList())
+        
     }
     
 }
+
 
 //var movieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
