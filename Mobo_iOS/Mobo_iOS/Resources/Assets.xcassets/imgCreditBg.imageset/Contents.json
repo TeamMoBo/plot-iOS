@@ -1,18 +1,18 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "icMultiple.png",
-      "scale" : "1x"
+      "filename" : "imgCreditBg.png"
     },
     {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "icMultiple@2x.png"
+      "filename" : "imgCreditBg@2x.png",
+      "idiom" : "universal"
     },
     {
+      "filename" : "imgCreditBg@3x.png",
       "idiom" : "universal",
-      "filename" : "icMultiple@3x.png",
       "scale" : "3x"
     }
   ],

@@ -2,18 +2,18 @@
   "images" : [
     {
       "scale" : "1x",
-      "filename" : "btnTicketbox.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "btnCreditOkay.png"
     },
     {
+      "filename" : "btnCreditOkay@2x.png",
       "scale" : "2x",
-      "filename" : "btnTicketbox@2x.png",
       "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "btnTicketbox@3x.png"
+      "filename" : "btnCreditOkay@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
