@@ -491,7 +491,7 @@
                         <outlet property="major" destination="MPP-uw-kch" id="5LJ-79-ZRF"/>
                         <outlet property="manbtn" destination="MEI-wM-WBH" id="Q0N-sq-4dk"/>
                         <outlet property="manimg" destination="UyV-9E-xVx" id="I5w-d1-Zxn"/>
-                        <outlet property="name" destination="aPD-4U-1fW" id="GIL-9x-VOV"/>
+                        <outlet property="name" destination="aPD-4U-1fW" id="GEh-9C-era"/>
                         <outlet property="nickname" destination="da8-lI-gd3" id="DxT-K9-tZP"/>
                         <outlet property="pwd" destination="8zE-Ad-Sa0" id="hPe-zM-5k1"/>
                         <outlet property="selectedimg" destination="gQN-8c-6up" id="ye0-qV-F2T"/>
@@ -935,14 +935,14 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgCompletetext" translatesAutoresizingMaskIntoConstraints="NO" id="D29-Bl-o9A">
-                                <rect key="frame" x="120" y="262" width="124" height="28"/>
+                                <rect key="frame" x="120" y="340" width="124" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="Wh1-k0-N6e"/>
                                     <constraint firstAttribute="height" constant="28" id="bhE-m1-uM6"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66U-pR-sqK">
-                                <rect key="frame" x="143" y="595" width="78" height="156"/>
+                                <rect key="frame" x="143" y="673" width="78" height="78"/>
                                 <state key="normal" image="btnNext"/>
                                 <connections>
                                     <action selector="nextbtn:" destination="vcL-pd-412" eventType="touchUpInside" id="GrZ-kU-IrX"/>

@@ -23,6 +23,7 @@
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
 		39463CCE23BCC4880042D2D0 /* splah_io_change.json in Resources */ = {isa = PBXBuildFile; fileRef = 39463CCD23BCC4880042D2D0 /* splah_io_change.json */; };
+		39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39463CD423BD3F280042D2D0 /* TicketMovie.swift */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
@@ -68,6 +69,7 @@
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
 		EAA2A95123BC8C96000C4354 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95023BC8C96000C4354 /* NetworkResult.swift */; };
 		EAA2A95323BCA867000C4354 /* HashTagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95223BCA867000C4354 /* HashTagTextField.swift */; };
+		EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -102,6 +104,7 @@
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
 		39463CCD23BCC4880042D2D0 /* splah_io_change.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splah_io_change.json; sourceTree = "<group>"; };
+		39463CD423BD3F280042D2D0 /* TicketMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMovie.swift; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		EAA2A95023BC8C96000C4354 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		EAA2A95223BCA867000C4354 /* HashTagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagTextField.swift; sourceTree = "<group>"; };
+		EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeChattingViewController.swift; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		390BD68523B08AEF00FF7E68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39463CD423BD3F280042D2D0 /* TicketMovie.swift */,
 				390BD68623B08AF800FF7E68 /* Movie.swift */,
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
 				3989599D23B1D30D00340400 /* UserModel.swift */,
@@ -235,6 +240,7 @@
 				39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */,
 				39FB23D123B20ADA00FFA95A /* ChatViewController.swift */,
 				EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */,
+				EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */,
 			);
 			path = ChattingView;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */,
 				EAC8C3FE23B3250E0061AEEB /* SignUpLastViewController.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
+				39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */,
 				393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				3989B15E23B75098006ABB26 /* InventoryPopUpViewController.swift in Sources */,
@@ -608,6 +615,7 @@
 				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */,
+				EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */,
 				EAA2A95123BC8C96000C4354 /* NetworkResult.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
@@ -782,6 +790,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,6 +813,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

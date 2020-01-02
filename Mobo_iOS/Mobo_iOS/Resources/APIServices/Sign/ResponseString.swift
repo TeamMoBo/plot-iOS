@@ -15,7 +15,7 @@ struct ResponseString: Codable {
     let data: DataClass?
 
     
-    enum CodinKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case status
         case message
         case data
@@ -24,7 +24,7 @@ struct ResponseString: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = (try? values.decode(String.self, forKey: .status)) ?? ""
-        message = (try? values.decode(String.self, fotKey: .message)) ?? ""
+        message = (try? values.decode(String.self, forKey: .message)) ?? ""
         data = (try? values.decode(String.self, forKey: .data))
     }
 }

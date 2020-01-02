@@ -26,14 +26,14 @@ class DataManager {
     }
     //    var dic : [String : [Int]] = [:]
     
-
-//    var reservationCache: [ReservationInfo] = []
-//
-//       struct ReservationInfo {
-//
-//           var date: String
-//           var times: [Int]
-//       }
+    
+    //    var reservationCache: [ReservationInfo] = []
+    //
+    //       struct ReservationInfo {
+    //
+    //           var date: String
+    //           var times: [Int]
+    //       }
     
     var reservationCache: [ReservationInfo] = []
     
@@ -46,76 +46,103 @@ class DataManager {
         reservationCache[index] = info
     }
     
-
-
-private var haveImage: UIImage!
-
-func getImage() -> UIImage {
-    return haveImage
-}
-func setImage(haveImage : UIImage) {
-    self.haveImage = haveImage
-}
-
-private var haveTitle: String!
-
-func getTitle() -> String {
-    return haveTitle
-}
-func setTitle(haveTitle : String) {
-    self.haveTitle = haveTitle
-}
-
-private var haveDate: String!
-
-func getDate() -> String {
-    return haveDate
-}
-func setDate(haveDate : String) {
-    self.haveDate = haveDate
-}
-
-private var haveRating: Double!
-
-func getRating() -> Double {
-    return haveRating
-}
-func setRating(haveRating : Double) {
-    self.haveRating = haveRating
-}
-
-
-//For Not Do Many Networking Process
-private var didOrderTypeChangedAndDownloaded: Bool = false
-
-func setDidOrderTypeChangedAndDownloaded(_ state: Bool) {
-    didOrderTypeChangedAndDownloaded = state
-}
-
-
-func getDidOrderTypeChangedAndDownloaded() -> Bool {
-    return didOrderTypeChangedAndDownloaded
-}
-
-//Shared MovieOrderType
-private var movieOrderType: String = ""
-
-func setMovieOrderType(orderType: String) {
-    movieOrderType = orderType
-}
-
-func getMovieOrderType() -> String {
-    return "0"
-}
-
-//Shared MovieLists
-private var movieList: [Movie] = []
-
-func setMovieList(list: [Movie]) {
-    movieList = list
-}
-
-func getMovieList() -> [Movie] {
-    return movieList
-}
+    
+    
+    private var haveImage: UIImage!
+    
+    func getImage() -> UIImage {
+        return haveImage
+    }
+    func setImage(haveImage : UIImage) {
+        self.haveImage = haveImage
+    }
+    
+    private var haveTitle: String!
+    
+    func getTitle() -> String {
+        return haveTitle
+    }
+    func setTitle(haveTitle : String) {
+        self.haveTitle = haveTitle
+    }
+    
+    private var haveDate: String!
+    
+    func getDate() -> String {
+        return haveDate
+    }
+    func setDate(haveDate : String) {
+        self.haveDate = haveDate
+    }
+    
+    private var haveRating: Double!
+    
+    func getRating() -> Double {
+        return haveRating
+    }
+    func setRating(haveRating : Double) {
+        self.haveRating = haveRating
+    }
+    
+    
+    //For Not Do Many Networking Process
+    private var didOrderTypeChangedAndDownloaded: Bool = false
+    
+    func setDidOrderTypeChangedAndDownloaded(_ state: Bool) {
+        didOrderTypeChangedAndDownloaded = state
+    }
+    
+    
+    func getDidOrderTypeChangedAndDownloaded() -> Bool {
+        return didOrderTypeChangedAndDownloaded
+    }
+    
+    //Shared MovieOrderType
+    private var movieOrderType: String = ""
+    
+    func setMovieOrderType(orderType: String) {
+        movieOrderType = orderType
+    }
+    
+    func getMovieOrderType() -> String {
+        return "0"
+    }
+    
+    //Shared MovieLists
+    private var movieList: [movieInfo] = []
+    private var reserveMovieList: [reserveMovieInfo] = []
+    private var reserveDateList: [reserveDateInfo] = []
+    private var movieTicketInfo: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    
+    
+    
+    func setMovieList(list: [movieInfo]) {
+        movieList = list
+    }
+    
+    func setReserveMovieList(list: [reserveMovieInfo]) {
+        reserveMovieList = list
+    }
+    func setReserveDateList(list: [reserveDateInfo]) {
+        reserveDateList = list
+    }
+    
+    func setTicketingMoiveList(list: [TicketResponseString.TicketMovie.movieTicketInfo] ) {
+        movieTicketInfo = list
+    }
+    
+    
+    func getMovieList() -> [movieInfo] {
+        return movieList
+    }
+    func getReserveMovieList() -> [reserveMovieInfo] {
+        return reserveMovieList
+    }
+    func getReserveDateList() -> [reserveDateInfo] {
+        return reserveDateList
+    }
+    
+    func getTicketingMoiveList() -> [TicketResponseString.TicketMovie.movieTicketInfo] {
+        return movieTicketInfo
+    }
 }

@@ -376,14 +376,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="85E-ms-R7q"/>
                     </view>
-                    <connections>
-                        <outlet property="cancel" destination="Kgg-Yj-cKw" id="c8v-DF-Uht"/>
-                        <outlet property="email" destination="oGR-Qa-V0b" id="CCm-EO-2M7"/>
-                        <outlet property="imageView" destination="lKg-A9-oF3" id="A3T-w7-Ash"/>
-                        <outlet property="name" destination="dFX-eO-Oif" id="wk7-lq-elf"/>
-                        <outlet property="password" destination="LNk-b7-6PQ" id="tEx-s4-b4s"/>
-                        <outlet property="signup" destination="rJ3-r2-NZs" id="EEA-jE-WRG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abZ-aE-njt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

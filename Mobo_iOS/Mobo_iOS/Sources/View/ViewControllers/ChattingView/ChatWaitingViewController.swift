@@ -19,10 +19,13 @@ class ChatWaitingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationSetup()
+        
         age.delegate = self
          uni.delegate = self
          major.delegate = self
          place.delegate = self
+        
         
     }
     
@@ -48,5 +51,21 @@ class ChatWaitingViewController: UIViewController, UITextFieldDelegate {
     }
 
    
+  
+    func navigationSetup() { //네비게이션 투명색만들기
+        
+       
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+             
+             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+             
+             self.navigationController?.navigationBar.isTranslucent = true
+             
+             self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+
+       
+       
+        
+    }
 
 }
