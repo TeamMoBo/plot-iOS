@@ -142,15 +142,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
              
              self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
 
-        nickname.resignFirstResponder()
-        name.resignFirstResponder()
-        id.resignFirstResponder()
-        age.resignFirstResponder()
-        pwd.resignFirstResponder()
-        uni.resignFirstResponder()
-        major.resignFirstResponder()
-        kakao.resignFirstResponder()
-        
+      
        
         
     }

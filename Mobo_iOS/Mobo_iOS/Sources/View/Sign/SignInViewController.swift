@@ -95,8 +95,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
-    
-  
+   
     @IBAction func SignUpButton(_ sender: Any) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)

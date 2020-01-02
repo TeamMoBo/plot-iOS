@@ -5,12 +5,94 @@
 //  Created by 천유정 on 29/12/2019.
 //  Copyright © 2019 조경진. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
+protocol ToolbarPickerViewDelegate: class {
+    func didTapDone()
+    func didTapCancel()
+    
+    
+    }
+protocol ToolbarPickerViewDelegate2: class {
 
+func didTapDone2()
+func didTapCancel2()
 
-class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelegate , UIPickerViewDataSource {
+}
+
+class ToolbarPickerView: UIPickerView {
+    
+    public private(set) var toolbar: UIToolbar?
+    public weak var toolbarDelegate: ToolbarPickerViewDelegate?
+    
+    public private(set) var toolbar2: UIToolbar?
+    public weak var toolbarDelegate2: ToolbarPickerViewDelegate2?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.commonInit()
+        self.commonInit2()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.commonInit()
+        self.commonInit2()
+    }
+   
+    
+    private func commonInit() {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = .black
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneTapped))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelTapped))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        self.toolbar = toolBar
+    }
+    
+    private func commonInit2() {
+        let toolBar2 = UIToolbar()
+        toolBar2.barStyle = UIBarStyle.default
+        toolBar2.isTranslucent = true
+        toolBar2.tintColor = .black
+        toolBar2.sizeToFit()
+        
+        let doneButton2 = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneTapped2))
+        let spaceButton2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton2 = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelTapped2))
+        
+        toolBar2.setItems([cancelButton2, spaceButton2, doneButton2], animated: false)
+        toolBar2.isUserInteractionEnabled = true
+        
+        self.toolbar2 = toolBar2
+    }
+    
+    @objc func doneTapped() {
+        self.toolbarDelegate?.didTapDone()
+    }
+    
+    @objc func cancelTapped() {
+        self.toolbarDelegate?.didTapCancel()
+    }
+    @objc func doneTapped2() {
+           self.toolbarDelegate2?.didTapDone2()
+       }
+       
+       @objc func cancelTapped2() {
+           self.toolbarDelegate2?.didTapCancel2()
+       }
+}
+
+class SignUpSecondVC: UIViewController, UITextFieldDelegate {
     
     
     
@@ -32,26 +114,15 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
     @IBOutlet weak var charmHashTagTextField: HashTagTextField!
     @IBOutlet weak var interestHashTagTextField: HashTagTextField!
     
-    lazy var pickerView: UIPickerView = { // Generate UIPickerView.
-        let picker = UIPickerView() // Specify the size.
-        picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
-        picker.backgroundColor = .lightGray
-        picker.delegate = self
-        picker.dataSource = self
-        return picker }()
     
-    lazy var pickerView2: UIPickerView = { // Generate UIPickerView.
-    let picker = UIPickerView() // Specify the size.
-    picker.frame = CGRect(x: 0, y: 150, width: self.view.bounds.width, height: 180.0)
-    picker.backgroundColor = .lightGray
-    picker.delegate = self
-    picker.dataSource = self
-    return picker }()
-    
-    let values: [String] = ["20","21","22","23","24","25",
-    "26","27","28","29","30","31",
-    "32"]
-    
+    fileprivate let pickerView = ToolbarPickerView()
+    fileprivate let pickerView2 = ToolbarPickerView()
+    fileprivate let titles = ["20","21","22","23","24","25",
+                              "26","27","28","29","30","31",
+                              "32"]
+    fileprivate let values = ["20","21","22","23","24","25",
+                              "26","27","28","29","30","31",
+                              "32"]
     
     
     
@@ -66,56 +137,41 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         
         nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
         
-        minAgeField.inputView = pickerView
-        maxAgeField.inputView = pickerView2
+        
         
         genreHashTagTextField.delegate = self
         charmHashTagTextField.delegate = self
         interestHashTagTextField.delegate = self
-    
         
+        self.minAgeField.inputView = self.pickerView
+        self.minAgeField.inputAccessoryView = self.pickerView.toolbar
+        
+        self.maxAgeField.inputView = self.pickerView
+        self.maxAgeField.inputAccessoryView = self.pickerView.toolbar
+        self.pickerView.dataSource = self
+        self.pickerView.delegate = self
+        self.pickerView.toolbarDelegate = self
+        
+        self.pickerView.reloadAllComponents()
+        
+        self.pickerView2.dataSource = self
+        self.pickerView2.delegate = self
+        self.pickerView2.toolbarDelegate = self
+        self.pickerView2.reloadAllComponents()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.minAgeField.endEditing(true)
         self.maxAgeField.endEditing(true)
         view.endEditing(true)
-           //return 버튼 누르면 키보드 내려갈수있게 설정.
-       }
-    
-  
-    
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return values.count
-    }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return values[row]
-        
-    } // A method called when the picker is selected.
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if  minAgeField.isEditing {
-        print("row: \(row)")
-        print("value: \(values[row])")
-            minAgeField.text! = values[row]
-        }
-        
-        if maxAgeField.isEditing {
-            print("row: \(row)")
-            print("value: \(values[row])")
-            maxAgeField.text! = values[row]
-        }
-        
-        
-    }
+    
+    
+    
+    
     
     
     @objc var womanSelected: Bool = false {
@@ -141,16 +197,16 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         }
     }
     
-
+    
     
     @IBAction func nextbtn(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
-               let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
-                             
-               vc.modalPresentationStyle = .fullScreen
-               self.show(vc, sender: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpLastViewController") as! SignUpLastViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.show(vc, sender: nil)
     }
-
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -158,8 +214,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         genreHashTagTextField.resignFirstResponder()
         charmHashTagTextField.resignFirstResponder()
         interestHashTagTextField.resignFirstResponder()
-        minAgeField.resignFirstResponder()
-        maxAgeField.resignFirstResponder()
+        
         return true
         
     }
@@ -203,15 +258,74 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate , UIPickerViewDelega
         return count > 3 ? true : false
     }
     
+    
+    
+}
 
+extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.titles.count
+    }
+    func pickerView2(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+           return self.values.count
+       }
+       
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.titles[row]
+        
+    }
+    func pickerView2(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return self.values[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.minAgeField.text = self.titles[row]
+        
+    }
+    func pickerView2(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.maxAgeField.text = self.values[row]
+        
+    }
+}
 
+extension SignUpSecondVC: ToolbarPickerViewDelegate {
+    
+    func didTapDone() {
+        let row = self.pickerView.selectedRow(inComponent: 0)
+        self.pickerView.selectRow(row, inComponent: 0, animated: false)
+        self.minAgeField.text = self.titles[row]
+        self.minAgeField.resignFirstResponder()
+        
+        
+        
+        
+    }
+    func didTapDone2() {
+           let row = self.pickerView2.selectedRow(inComponent: 0)
+           self.pickerView2.selectRow(row, inComponent: 0, animated: false)
+           self.maxAgeField.text = self.values[row]
+           self.maxAgeField.resignFirstResponder()
+       }
+    
+    func didTapCancel() {
+        self.minAgeField.text = nil
+        self.minAgeField.resignFirstResponder()
+        
+    }
+    func didTapCancel2() {
+        self.maxAgeField.text = nil
+        self.maxAgeField.resignFirstResponder()
+    }
 }
 
 
 
 
-    
-    
-    
-    
+
+
 

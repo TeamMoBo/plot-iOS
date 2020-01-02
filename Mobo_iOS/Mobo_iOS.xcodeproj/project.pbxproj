@@ -69,6 +69,7 @@
 		EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79170223B542E100DBC79B /* MyPageViewController.swift */; };
 		EAA2A95123BC8C96000C4354 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95023BC8C96000C4354 /* NetworkResult.swift */; };
 		EAA2A95323BCA867000C4354 /* HashTagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95223BCA867000C4354 /* HashTagTextField.swift */; };
+		EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -152,6 +153,7 @@
 		EA79170223B542E100DBC79B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		EAA2A95023BC8C96000C4354 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		EAA2A95223BCA867000C4354 /* HashTagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagTextField.swift; sourceTree = "<group>"; };
+		EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeChattingViewController.swift; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				39CC50A023B14BE100E24F95 /* ChattingPeopleViewController.swift */,
 				39FB23D123B20ADA00FFA95A /* ChatViewController.swift */,
 				EA204A1123B91A8900369BC7 /* ChatWaitingViewController.swift */,
+				EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */,
 			);
 			path = ChattingView;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
 				398522D923B064DD009C9AE3 /* Extension+Font.swift in Sources */,
 				39A95EF023B9D8D4003B2019 /* DateModel.swift in Sources */,
+				EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */,
 				EAA2A95123BC8C96000C4354 /* NetworkResult.swift in Sources */,
 				390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */,
 				39760F6623B5DC8000616419 /* FloatRatingView.swift in Sources */,
