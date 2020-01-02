@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKit
+import Firebase
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
@@ -17,8 +19,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginBtn: UIButton!
     
+    let remoteconfig = RemoteConfig.remoteConfig()
+    var color : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        try! Auth.auth().signOut()
+//        let statusBar = UIView()
         
         Useridview.layer.cornerRadius = 10
         Userpwdview.layer.cornerRadius = 10
@@ -27,7 +35,38 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         Userpwd.delegate = self ;
         loginBtn.dropShadow(color: .lightGray, offSet: CGSize(width: 0.7, height: 0.7), opacity: 0.5, radius: 5)
 
+        
+       // signUp.addTarget(self, action: #selector(presentSignup), for: .touchUpInside)
+        
+      //  loginButton.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if(user != nil){
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+            }
+        }
      
+        
+    }
+    
+    
+    @objc func loginEvent(){
+        
+        
+    }
+    
+    @objc func presentSignup() {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatSignupVC") as! ChattingSignUpViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true, completion: nil)
+        
         
     }
     
@@ -57,46 +96,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func chatBtn(_ sender: Any) {
-        
-
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
-              self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-              self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
-              //투명하게 만드는 공식처럼 기억하기
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-              //네비게이션바의 백그라운드색 지정. UIImage와 동일
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-              //shadowImage는 UIImage와 동일. 구분선 없애줌.
-            self.navigationController?.navigationBar.isTranslucent = true
-        
-          self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
-       let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-        self.show(vc, sender: nil)
-        
-    }
-    
-    @objc func myPageBtn(_ sender: Any) {
-            
-    //        navigationSetup0()
-
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
-            let vc = mainStoryboard.instantiateViewController(withIdentifier: "MyPageVC") as! MyPageViewController
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }
-    
-        
-    
+  
     @IBAction func SignUpButton(_ sender: Any) {
+        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpFirst") as! SignUpFirstViewController
         
@@ -108,12 +110,26 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func SignInButton(_ sender: Any) {
         
         navigationSetup()
+        var name = ""
+        var password = Userpwd.text!
+        var email = name + "@naver.com"
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
+        Auth.auth().signIn(withEmail: email, password: Userpwd.text!) { (user, err) in
+            
+            if(err != nil){
+                let alret = UIAlertController(title: "에러", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                alret.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+                
+                self.present(alret, animated: true, completion: nil)
+                
+            }
+        }
         
-        vc.modalPresentationStyle = .fullScreen
-        self.show(vc, sender: nil)
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
+//
+//        vc.modalPresentationStyle = .fullScreen
+//        self.show(vc, sender: nil)
         
        
     }

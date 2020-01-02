@@ -76,6 +76,7 @@ class ChattingSignUpViewController: UIViewController,UINavigationControllerDeleg
     }
     
     @objc func signupEvent(){
+        
     Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, err) in
         let uid = user?.user.uid
         

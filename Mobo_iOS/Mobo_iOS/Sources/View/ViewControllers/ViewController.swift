@@ -39,7 +39,6 @@ class ViewController: UIViewController {
     
     func ticktok(){
         
-        print(11111)
         if let timer = mTimer {
             //timer 객체가 nil 이 아닌경우에는 invalid 상태에만 시작한다
             if !timer.isValid {

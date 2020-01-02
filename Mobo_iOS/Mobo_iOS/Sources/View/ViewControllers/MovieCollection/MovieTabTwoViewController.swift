@@ -20,15 +20,13 @@ class MovieTabTwoViewController: UIViewController {
     
     
     var movies: [movieInfo] = []
+    var movieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
     var selectedImage: UIImage!
     var selectedTitle: String!
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
-    let baseURL: String = {
-        return ServerURLs.base.rawValue
-    }()
-    
+        
     struct Storyboard {
         static let photoCell = "PhotoCell"
         static let showDetailVC = "ShowMovieDetail"
@@ -70,11 +68,20 @@ class MovieTabTwoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        
-            reloadMovieLists()
-            //getMovieList()
+        reloadMovieLists()
+        //et orderType: String = dataManager.getMovieOrderType()
+        //            getMovieList(orderType: orderType)
+        getTicketingMoiveList() { (listResponse) in
+            guard let response = listResponse else {
+                return
+            }
+            
+         //   print(response)
+            
+        }
         
     }
+    
     
     func navigationSetup() { //네비게이션 투명색만들기
                
@@ -114,57 +121,65 @@ class MovieTabTwoViewController: UIViewController {
     }
     
     
-//    func getMovieList(completion: @escaping (ListResponse?) -> Void) {
-//
-//           // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
-//            let appUrl: String = "http://13.125.48.35:7935/main"
-//
-//            guard let finalURL = URL(string: appUrl) else {
-//                return
-//            }
-//
-//            let session = URLSession(configuration: .default)
-//
-//            var request = URLRequest(url: finalURL)
-//
-//
-//    //        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "Authorization")
-//            request.httpMethod = "GET"
-//            let task = session.dataTask(with: request) { (data, response, error) in
-//
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                    return
-//                }
-//
-//                guard let resultData = data else {
-//                    return
-//                }
-//
-//                do {
-//    //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
-//                    print(String(data: data!, encoding: .utf8))
-//                    let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-//
-//                    //                self.dataManager.setMovieList(list: movieLists.results)
-//                    //                self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-//                    //                self.reloadMovieLists()
-//                    completion(movieLists)
-//                }
-//                catch let error {
-//                    print(error.localizedDescription)
-//                }
-//
-//            }
-//
-//            task.resume()
-//        }
+func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void) {
+    
+    let appUrl: String = "http://13.125.48.35:7935/movie/1"
+    
+    guard let finalURL = URL(string: appUrl) else {
+        return
+    }
+    
+    let session = URLSession(configuration: .default)
+    var request = URLRequest(url: finalURL)
+    
+    request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
+    //    request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "authorization")
+    
+    request.httpMethod = "GET"
+    let task = session.dataTask(with: request) { (data, response, error) in
+        
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        guard let resultData = data else {
+           // print(data)
+            return
+        }
+        
+        do {
+            print("!!!!!!!!!!!")
+            print(String(data: data!, encoding: .utf8))
+            print("!!!!!!!!!!!")
+            
+            let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
+            
+            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
+       //     print(self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData))
+            
+            
+          //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+            self.reloadMovieLists()
+            completion(movieTicketLists)
+        }
+        catch let error {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    task.resume()
+}
     
     func reloadMovieLists() {
-        //self.movies = dataManager.getMovieList()
+        
+        self.movieData = dataManager.getTicketingMoiveList()
+        
+        //        self.movies = dataManager.getMovieList()[0].randMovie
         DispatchQueue.main.async {
             self.MovieCollectionView.reloadData()
+            //        self.mainCollectionView.reloadData()
         }
     }
     
@@ -244,13 +259,13 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-       if section == 0 {
-            return min(movies.count, 2)
+        if section == 0 {
+            return min(movieData.count, 2)
         } else if section == 1{
-            return min(max(movies.count - 2, 0), 4)
+            return min(max(movieData.count - 2, 0), 4)
         }
         else {
-            return min(max(movies.count - 6, 0), 4)
+            return min(max(movieData.count - 6, 0), 4)
         }
     }
     
@@ -285,7 +300,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
                      
                      
-                     let movie = movies[indexPath.row]
+                     let movie = movieData[indexPath.row]
                      
                      cell.movieName.text = movie.title
                      cell.movieName.font = .boldSystemFont(ofSize: 12)
@@ -319,7 +334,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
             
             
-            let movie = movies[indexPath.row + 2]
+            let movie = movieData[indexPath.row + 2]
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
@@ -385,7 +400,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
             
             
-            let movie = movies[indexPath.row + 6]
+            let movie = movieData[indexPath.row + 6]
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
@@ -442,7 +457,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
             
             
-            let movie = movies[indexPath.row]
+            let movie = movieData[indexPath.row]
             
             cell.imageThumbnail.isHighlighted = true
             

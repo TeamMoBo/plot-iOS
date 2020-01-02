@@ -26,7 +26,7 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
         return cell
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.numberOfCell += 1
         collectionView.reloadData()
@@ -34,31 +34,31 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            navigationSetup()
+        navigationSetup()
         
-
+        
         let flowLayout: UICollectionViewFlowLayout
-            flowLayout = UICollectionViewFlowLayout()
+        flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets.zero
         flowLayout.minimumInteritemSpacing = 16
         flowLayout.minimumLineSpacing = 16
         flowLayout.estimatedItemSize = CGSize(width: 334, height: 166 )
         self.collectionview.collectionViewLayout = flowLayout
         
-   
-
-     
+        
+        
+        
     }
     
     func navigationSetup() {
-           self.navigationController?.navigationBar.shadowImage = UIImage()
-           
-           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-           
-           self.navigationController?.navigationBar.isTranslucent = true
-           
-           self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-       }
- 
-
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+    }
+    
+    
 }

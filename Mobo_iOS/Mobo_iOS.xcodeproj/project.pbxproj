@@ -23,6 +23,7 @@
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
 		39463CCE23BCC4880042D2D0 /* splah_io_change.json in Resources */ = {isa = PBXBuildFile; fileRef = 39463CCD23BCC4880042D2D0 /* splah_io_change.json */; };
+		39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39463CD423BD3F280042D2D0 /* TicketMovie.swift */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
@@ -102,6 +103,7 @@
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
 		39463CCD23BCC4880042D2D0 /* splah_io_change.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splah_io_change.json; sourceTree = "<group>"; };
+		39463CD423BD3F280042D2D0 /* TicketMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMovie.swift; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		390BD68523B08AEF00FF7E68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39463CD423BD3F280042D2D0 /* TicketMovie.swift */,
 				390BD68623B08AF800FF7E68 /* Movie.swift */,
 				390BD68823B08B1500FF7E68 /* ServerURLs.swift */,
 				3989599D23B1D30D00340400 /* UserModel.swift */,
@@ -581,6 +584,7 @@
 				EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */,
 				EAC8C3FE23B3250E0061AEEB /* SignUpLastViewController.swift in Sources */,
 				390BD68D23B09D2B00FF7E68 /* Extensions+UIColor.swift in Sources */,
+				39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */,
 				393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
 				3989B15E23B75098006ABB26 /* InventoryPopUpViewController.swift in Sources */,
@@ -782,6 +786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,6 +809,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
