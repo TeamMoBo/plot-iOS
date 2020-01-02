@@ -10,13 +10,21 @@ import UIKit
 
 class MatchingCompleteViewController: UIViewController {
 
+    
+    @IBOutlet weak var date: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
+        
     }
     
-
+    @IBOutlet weak var checkingbtn: UIImageView!
+    
     /*
     // MARK: - Navigation
 

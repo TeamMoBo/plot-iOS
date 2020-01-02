@@ -1,5 +1,5 @@
 //
-//  MatchingFinalViewController.swift
+//  CreditPopUpViewController.swift
 //  Mobo_iOS
 //
 //  Created by 천유정 on 02/01/2020.
@@ -8,18 +8,22 @@
 
 import UIKit
 
-class MatchingFinalViewController: UIViewController {
+class CreditPopUpViewController: UIViewController {
 
+    
+    @IBOutlet weak var ticketCount: UILabel!
+    @IBOutlet weak var popcornCount: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func yesbtn(_ sender: Any) {
+    @IBAction func ticketboxbtn(_ sender: Any) {
     }
     
-    @IBAction func nobtn(_ sender: Any) {
+    @IBAction func checkingbtn(_ sender: Any) {
     }
     /*
     // MARK: - Navigation

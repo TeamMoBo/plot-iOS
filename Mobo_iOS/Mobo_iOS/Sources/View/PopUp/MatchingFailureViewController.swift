@@ -1,5 +1,6 @@
+
 //
-//  MatchingFinalViewController.swift
+//  MatchingFailureViewController.swift
 //  Mobo_iOS
 //
 //  Created by 천유정 on 02/01/2020.
@@ -8,19 +9,20 @@
 
 import UIKit
 
-class MatchingFinalViewController: UIViewController {
+class MatchingFailureViewController: UIViewController {
 
+    
+    @IBOutlet weak var date: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func yesbtn(_ sender: Any) {
+    @IBAction func goMainbtn(_ sender: Any) {
     }
     
-    @IBAction func nobtn(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 

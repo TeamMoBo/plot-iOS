@@ -373,11 +373,17 @@
                                         <rect key="frame" x="66" y="216" width="54" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnYes"/>
+                                        <connections>
+                                            <action selector="yesbtn:" destination="COe-ua-UAl" eventType="touchUpInside" id="he5-ev-mfT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77O-7m-hQq">
                                         <rect key="frame" x="125" y="216" width="54" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnNo"/>
+                                        <connections>
+                                            <action selector="nobtn:" destination="COe-ua-UAl" eventType="touchUpInside" id="beA-Le-dYg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -401,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fze-vP-O8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5042.3999999999996" y="916.99507389162568"/>
+            <point key="canvasLocation" x="5711" y="596"/>
         </scene>
         <!--Matching Complete View Controller-->
         <scene sceneID="xff-ta-IFU">
@@ -426,8 +432,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12월 25일 매칭을 성공했어!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ql-Ls-j5d">
-                                        <rect key="frame" x="23" y="117" width="136" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매칭을 성공했어!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ql-Ls-j5d">
+                                        <rect key="frame" x="75" y="119" width="80" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" red="0.20784313725490194" green="0.70588235294117641" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
@@ -445,6 +451,13 @@
                                         <rect key="frame" x="33" y="186" width="114" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1월 5일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRr-ii-zpc">
+                                        <rect key="frame" x="33" y="119" width="38" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" red="0.20784313730000001" green="0.70588235290000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -452,15 +465,19 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="8Dh-hQ-9cb"/>
                     </view>
+                    <connections>
+                        <outlet property="checkingbtn" destination="8TT-bb-cZd" id="jed-No-493"/>
+                        <outlet property="date" destination="vRr-ii-zpc" id="Pkl-XV-wRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OI3-e2-rBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6332" y="593.3497536945813"/>
+            <point key="canvasLocation" x="6399" y="593"/>
         </scene>
-        <!--View Controller-->
+        <!--Matching Failure View Controller-->
         <scene sceneID="L5L-aL-GlQ">
             <objects>
-                <viewController id="QBs-QR-dU8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchingFailureViewController" id="QBs-QR-dU8" customClass="MatchingFailureViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fuz-Qq-vDJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -480,8 +497,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12월 25일 매칭을 실패했어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu7-ID-paT">
-                                        <rect key="frame" x="28" y="117" width="132" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매칭을 실패했어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu7-ID-paT">
+                                        <rect key="frame" x="80" y="117" width="76" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" red="0.85098039215686272" green="0.33725490196078434" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,7 +518,17 @@
                                         <rect key="frame" x="35" y="195" width="114" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnMain"/>
+                                        <connections>
+                                            <action selector="goMainbtn:" destination="QBs-QR-dU8" eventType="touchUpInside" id="kKw-ej-6MR"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1월 5일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9G-ed-SMO">
+                                        <rect key="frame" x="40" y="117" width="38" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" red="0.85098039219999999" green="0.33725490200000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -509,15 +536,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="4cF-Oc-hK8"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="J9G-ed-SMO" id="vFd-f1-jBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clc-3P-ofc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7151.1999999999998" y="596.30541871921184"/>
         </scene>
-        <!--View Controller-->
+        <!--After Chat Matching Fail View Controller-->
         <scene sceneID="lsE-fs-yX9">
             <objects>
-                <viewController id="5aX-pk-Kiz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AfterChatMatchingFailViewController" id="5aX-pk-Kiz" customClass="AfterChatMatchingFailViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cX0-if-o7f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,6 +595,9 @@
                                         <rect key="frame" x="54" y="213" width="114" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnMain"/>
+                                        <connections>
+                                            <action selector="gotoMainbtn:" destination="5aX-pk-Kiz" eventType="touchUpInside" id="PRu-8H-vq1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="정현강" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q07-oO-RSl">
                                         <rect key="frame" x="73" y="125" width="37" height="17"/>
@@ -580,15 +613,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="bci-cN-WXG"/>
                     </view>
+                    <connections>
+                        <outlet property="name" destination="q07-oO-RSl" id="ACX-Z2-Gax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1F-cL-aZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7989.6000000000004" y="592.61083743842369"/>
         </scene>
-        <!--View Controller-->
+        <!--After Chat Matching View Controller-->
         <scene sceneID="tW9-Gd-WCQ">
             <objects>
-                <viewController id="Co9-Mc-TgZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AfterChatMatchingViewController" id="Co9-Mc-TgZ" customClass="AfterChatMatchingViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKJ-Ow-T0M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -633,6 +669,9 @@
                                         <rect key="frame" x="54" y="217" width="114" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnOkay"/>
+                                        <connections>
+                                            <action selector="checkingbtn:" destination="Co9-Mc-TgZ" eventType="touchUpInside" id="jlb-fC-77p"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dtf-MF-rUg">
                                         <rect key="frame" x="40" y="168" width="143" height="49"/>
@@ -650,15 +689,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="xMi-lv-QAk"/>
                     </view>
+                    <connections>
+                        <outlet property="name" destination="5Pe-uU-hsD" id="5Gh-sS-bKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfz-EM-MVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8788" y="595"/>
         </scene>
-        <!--View Controller-->
+        <!--Credit Pop Up View Controller-->
         <scene sceneID="swH-Ki-QtY">
             <objects>
-                <viewController id="2YK-uc-xJ1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreditPopUpViewController" id="2YK-uc-xJ1" customClass="CreditPopUpViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3OP-x3-MP0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,11 +764,17 @@
                                         <rect key="frame" x="21" y="191" width="69" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnTicketbox"/>
+                                        <connections>
+                                            <action selector="ticketboxbtn:" destination="2YK-uc-xJ1" eventType="touchUpInside" id="n4p-cJ-F4x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-yF-Vv9">
                                         <rect key="frame" x="96" y="191" width="69" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnCreditOkay"/>
+                                        <connections>
+                                            <action selector="checkingbtn:" destination="2YK-uc-xJ1" eventType="touchUpInside" id="cdx-ZE-09d"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -735,6 +783,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ena-nn-Ozd"/>
                     </view>
+                    <connections>
+                        <outlet property="popcornCount" destination="TCR-Lu-oN5" id="lUV-DO-09j"/>
+                        <outlet property="ticketCount" destination="DTR-Ev-Gq1" id="ZEU-1E-TeD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueT-sP-5yY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

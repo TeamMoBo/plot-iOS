@@ -96,6 +96,8 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     
     @IBAction func camerabtn(_ sender: Any) {
+       print(11111)
+        
         let alert =  UIAlertController(title: "너를보여줘!", message: "인생사진 어때?", preferredStyle: .actionSheet)
         
         let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary()

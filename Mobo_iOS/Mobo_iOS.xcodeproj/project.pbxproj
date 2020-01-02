@@ -72,6 +72,10 @@
 		EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */; };
 		EAA2A97723BDFAAF000C4354 /* MatchingFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */; };
 		EAA2A97923BDFB19000C4354 /* MatchingCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */; };
+		EAA2A97B23BE0A54000C4354 /* MatchingFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */; };
+		EAA2A97D23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */; };
+		EAA2A97F23BE0AE8000C4354 /* AfterChatMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */; };
+		EAA2A98123BE0B5A000C4354 /* CreditPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -158,6 +162,10 @@
 		EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeChattingViewController.swift; sourceTree = "<group>"; };
 		EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFinalViewController.swift; sourceTree = "<group>"; };
 		EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCompleteViewController.swift; sourceTree = "<group>"; };
+		EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFailureViewController.swift; sourceTree = "<group>"; };
+		EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingFailViewController.swift; sourceTree = "<group>"; };
+		EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingViewController.swift; sourceTree = "<group>"; };
+		EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditPopUpViewController.swift; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +377,10 @@
 				3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */,
 				EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */,
 				EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */,
+				EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */,
+				EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */,
+				EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */,
+				EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -617,6 +629,7 @@
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
 				3989B16023B76F80006ABB26 /* LatePopUpViewController.swift in Sources */,
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
+				EAA2A97F23BE0AE8000C4354 /* AfterChatMatchingViewController.swift in Sources */,
 				3989B16423B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
@@ -631,12 +644,15 @@
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
 				EAA2A97723BDFAAF000C4354 /* MatchingFinalViewController.swift in Sources */,
+				EAA2A97B23BE0A54000C4354 /* MatchingFailureViewController.swift in Sources */,
 				EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */,
 				EAA2A95323BCA867000C4354 /* HashTagTextField.swift in Sources */,
+				EAA2A98123BE0B5A000C4354 /* CreditPopUpViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
+				EAA2A97D23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,

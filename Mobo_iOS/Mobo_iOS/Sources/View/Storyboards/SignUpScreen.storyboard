@@ -7,32 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="9SE-ev-ulC">
-            <objects>
-                <viewController id="mhh-GV-vPk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="clx-Sg-9Zf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luv-dP-4nU">
-                                <rect key="frame" x="195" y="391" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="leg-JB-PGU" kind="show" id="OWt-MW-zfy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="mLp-lZ-u7z"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BEO-Ug-7Ub"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sUb-8L-EiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1199" y="35"/>
-        </scene>
         <!--회원가입-->
         <scene sceneID="Xrg-A9-OTf">
             <objects>
@@ -683,7 +657,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="agebox" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-tt-Wyv">
                                                 <rect key="frame" x="191" y="629" width="84" height="22"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="ageline" translatesAutoresizingMaskIntoConstraints="NO" id="EAu-FM-19J">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ageline" translatesAutoresizingMaskIntoConstraints="NO" id="EAu-FM-19J">
                                                 <rect key="frame" x="165" y="639" width="14" height="2"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-YO-19b">
@@ -785,6 +759,7 @@
                                             <constraint firstAttribute="trailing" secondItem="0JG-HN-hKH" secondAttribute="trailing" constant="12" id="KLl-yw-d6k"/>
                                             <constraint firstItem="E5i-um-6lk" firstAttribute="top" secondItem="Sra-1t-gon" secondAttribute="bottom" constant="46" id="KRP-aC-Iw9"/>
                                             <constraint firstItem="pKd-0K-mY1" firstAttribute="top" secondItem="Os7-Cp-MJC" secondAttribute="bottom" constant="19" id="KVe-E8-ckg"/>
+                                            <constraint firstItem="EAu-FM-19J" firstAttribute="top" secondItem="sgm-58-BZV" secondAttribute="bottom" constant="73" id="KWz-Lz-dnY"/>
                                             <constraint firstItem="iyV-5a-FgQ" firstAttribute="top" secondItem="Lek-bF-469" secondAttribute="bottom" constant="59.670000000000002" id="KuV-RB-2Is"/>
                                             <constraint firstAttribute="trailing" secondItem="E5i-um-6lk" secondAttribute="trailing" constant="246" id="Ltj-1b-VWg"/>
                                             <constraint firstAttribute="bottom" secondItem="0JG-HN-hKH" secondAttribute="bottom" constant="10" id="Mh3-aG-POU"/>
@@ -847,6 +822,7 @@
                                             <constraint firstItem="iyV-5a-FgQ" firstAttribute="leading" secondItem="yxN-HT-q0h" secondAttribute="leading" id="nGj-If-TkL"/>
                                             <constraint firstAttribute="trailing" secondItem="H4D-Ii-x8a" secondAttribute="trailing" constant="133" id="og6-V4-ffc"/>
                                             <constraint firstItem="nty-QL-FwB" firstAttribute="top" secondItem="62F-OY-5IC" secondAttribute="bottom" constant="59.670000000000002" id="ohu-ly-HKZ"/>
+                                            <constraint firstItem="LlV-tB-Enm" firstAttribute="top" secondItem="EAu-FM-19J" secondAttribute="bottom" constant="33" id="or0-9E-iwy"/>
                                             <constraint firstItem="EAu-FM-19J" firstAttribute="leading" secondItem="yxN-HT-q0h" secondAttribute="leading" constant="165" id="qC8-IW-6TH"/>
                                             <constraint firstItem="FHh-tt-Wyv" firstAttribute="leading" secondItem="Oux-7E-15w" secondAttribute="trailing" constant="38" id="qbo-ce-A2t"/>
                                             <constraint firstItem="jsY-Iv-aNd" firstAttribute="leading" secondItem="yxN-HT-q0h" secondAttribute="leading" constant="73" id="qd8-vB-ao1"/>
@@ -980,7 +956,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3bP-GY-CfL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFn-hR-R4Y" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignUpNavi" automaticallyAdjustsScrollViewInsets="NO" id="PFn-hR-R4Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mct-An-9PA">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -988,12 +964,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mhh-GV-vPk" kind="relationship" relationship="rootViewController" id="JHg-OW-Gp0"/>
+                        <segue destination="leg-JB-PGU" kind="relationship" relationship="rootViewController" id="F7C-rE-Dz9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgQ-FC-2tF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="35.467980295566505"/>
+            <point key="canvasLocation" x="1289" y="38"/>
         </scene>
     </scenes>
     <resources>
