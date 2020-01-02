@@ -457,6 +457,106 @@
             </objects>
             <point key="canvasLocation" x="6332" y="593.3497536945813"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="L5L-aL-GlQ">
+            <objects>
+                <viewController id="QBs-QR-dU8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fuz-Qq-vDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wg1-G5-7Z9">
+                                <rect key="frame" x="96" y="255" width="184" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="imgFailPopupFirst" translatesAutoresizingMaskIntoConstraints="NO" id="zA2-Fl-Czw">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="252"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매칭실패" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kby-q7-KKo">
+                                        <rect key="frame" x="55" y="64" width="74" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12월 25일 매칭을 실패했어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu7-ID-paT">
+                                        <rect key="frame" x="28" y="117" width="132" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" red="0.85098039215686272" green="0.33725490196078434" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PuW-vi-3Cn">
+                                        <rect key="frame" x="36" y="140" width="113" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">그날은 모두 바쁜가봐
+다음 기회를 노려봐!</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-hF-FjH">
+                                        <rect key="frame" x="35" y="195" width="114" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btnMain"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4cF-Oc-hK8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clc-3P-ofc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7151.1999999999998" y="596.30541871921184"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lsE-fs-yX9">
+            <objects>
+                <viewController id="5aX-pk-Kiz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cX0-if-o7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-xw-pu5">
+                                <rect key="frame" x="76" y="212" width="223" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="imgFailPopupFinalBg" translatesAutoresizingMaskIntoConstraints="NO" id="Cnz-cS-F4Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="287"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매칭실패" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfO-7B-IE7">
+                                        <rect key="frame" x="75" y="56" width="74" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QBu-jg-6ox">
+                                        <rect key="frame" x="51" y="128" width="121" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bci-cN-WXG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1F-cL-aZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7989.6000000000004" y="592.61083743842369"/>
+        </scene>
         <!--Late Pop Up View Controller-->
         <scene sceneID="ih6-8F-q8v">
             <objects>
@@ -713,7 +813,7 @@
         <image name="asset42X" width="272" height="312"/>
         <image name="btnBacktomain" width="152" height="44"/>
         <image name="btnConfirmText" width="32" height="32"/>
-        <image name="btnMain" width="141" height="54"/>
+        <image name="btnMain" width="114" height="46"/>
         <image name="btnMatchingcheck" width="170" height="62"/>
         <image name="btnNo" width="54" height="54"/>
         <image name="btnNo-1" width="35" height="34"/>
@@ -724,6 +824,8 @@
         <image name="icMultiple-1" width="10" height="24"/>
         <image name="imgChatstart" width="281.33334350585938" height="126.66666412353516"/>
         <image name="imgFailPopup" width="235" height="308"/>
+        <image name="imgFailPopupFinalBg" width="223" height="287"/>
+        <image name="imgFailPopupFirst" width="184" height="252"/>
         <image name="imgFinalchooseBg" width="207" height="275"/>
         <image name="imgMatchingfailPopup" width="295" height="348"/>
         <image name="imgPaymentBackground" width="287" height="166.66667175292969"/>
