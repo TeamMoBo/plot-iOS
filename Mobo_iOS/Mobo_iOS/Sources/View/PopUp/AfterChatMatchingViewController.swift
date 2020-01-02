@@ -20,6 +20,8 @@ class AfterChatMatchingViewController: UIViewController {
     }
     
     @IBAction func checkingbtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

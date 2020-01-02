@@ -21,6 +21,9 @@ class AfterChatMatchingFailViewController: UIViewController {
     }
     
     @IBAction func gotoMainbtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+
     }
     
     /*

@@ -33,6 +33,7 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var bottomTime6: UIButton!
     @IBOutlet weak var bottomTime7: UIButton!
     @IBOutlet weak var noImageLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     
     
     private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
@@ -91,7 +92,7 @@ class MainHomeViewController: UIViewController {
         
         bottomDay1.tintColor = .mainOrange
         bottomDay2.tintColor = .mainOrange
-        
+        moreBtn.isHidden = true
         
         
     }
@@ -128,7 +129,7 @@ class MainHomeViewController: UIViewController {
     
     @objc func timerCallback(){
         number += 1
-       // print(number)
+        // print(number)
         if number == 30 {
             
             //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
@@ -204,7 +205,7 @@ class MainHomeViewController: UIViewController {
         reservationInfo = DataManager.sharedManager.getReservation()
         
         
-        print(reservationInfo)
+        //   print(reservationInfo)
         
         if !reservationInfo.isEmpty {
             bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
@@ -222,25 +223,14 @@ class MainHomeViewController: UIViewController {
             bottomTime6.setTitle(String(describing: reservationInfo[1].times[2]) + ":00", for: .normal)
             bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
             
+            moreBtn.isHidden = false
+            
         }
         
         deadlineTitle.textColor = .subOrange
-        print("!!!!!!!!!!!")
-        print(DataManager.sharedManager.getReservation())
-        print("!!!!!!!!!!!")
-        
-        print("???????")
-        print(DataManager.sharedManager.getReservation())
-        print("???????")
-        
-        //MatchingFinalViewController
-        
-        // MatchingCompleteViewController
-        print(DataManager.sharedManager.getMatching())
-        
         
         if DataManager.sharedManager.getMatching() {
-        //    tictok()
+            //    tictok()
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
@@ -248,7 +238,7 @@ class MainHomeViewController: UIViewController {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true, completion: nil)
-
+            
             //            self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -304,7 +294,6 @@ class MainHomeViewController: UIViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
         
-        vc.isRevise = true
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -573,7 +562,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         }
         else if collectionView == movieCollectionView {
             
-            print(dataManager.getMovingMovieList())
+            //      print(dataManager.getMovingMovieList())
             
             if dataManager.getMovingMovieList() == nil{
                 
@@ -632,8 +621,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         else if collectionView == movieCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionViewCell
-            
-            
             
             //   movieInfo = self.dataManager.getMovieList()
             
