@@ -85,7 +85,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         placetext.delegate = self;
         idtext.delegate = self;
         majortext.delegate = self;
-        pwdtext.delegate = self;
+       
         
         womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
@@ -99,7 +99,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        agetext.text = "23"
+    
         
     }
     
