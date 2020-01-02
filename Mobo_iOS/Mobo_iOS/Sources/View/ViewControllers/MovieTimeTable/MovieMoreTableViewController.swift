@@ -24,7 +24,8 @@ class MovieMoreTableViewController: UIViewController {
     var date = Date()
     var cal = Calendar.current
     var currentIndex: Int?
-    
+    var reserveDate: [reserveDateInfo] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,7 +132,6 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
         cell.delegate = self
-        cell.delegate?.didClicked()
         
 
         cell.currentIndex = indexPath.item
@@ -214,8 +214,7 @@ extension MovieMoreTableViewController: toggleActionDelegate {
     
     func didClicked() {
         
-        view.backgroundColor = .red
-
+        print(1010)
     }
     
 }

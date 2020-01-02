@@ -14,8 +14,6 @@ class MovieTimeTableViewController: UIViewController {
     
     @IBOutlet var dayButtons: [UIButton]!
     @IBOutlet var TimeButtons: [UIButton]!
-    
-    
     @IBOutlet weak var TableView: UIView!
     @IBOutlet weak var OKButton: UIButton!
     
@@ -38,27 +36,7 @@ class MovieTimeTableViewController: UIViewController {
         
         private var selectedIndex: Int = 0
         private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
-        
-        //    "reserveDate": [
-        //        {
-        //            "reservationDate": “2019-12-30“,
-        //            "reservationTime": [11, 13, 15]
-        //        },
-        //        {
-        //            "reservationDate": “2019-12-31”,
-        //            "reservationTime": [17, 19, 20]
-        //        }
-        //    ]
-        
-        // var dayDic: [String : [Int]] = [:]
-        //        dayDic["2019-12-25"] = [12,13,15]
-        //        dayDic["2019-12-26"] = [11,23,15]
-        //        dayDic["2019-12-27"] = [21,13,17]
-        //        dayDic["2019-12-28"] = [11,23,21]
-        //        dayDic["2019-12-29"] = [10,13,15]
-        //        dayDic["2019-12-30"] = [11,13,15]
-        //        dayDic["2019-12-31"] = [17,19,20]
-    
+       
     var isRevise: Bool = false
 
         override func viewDidLoad() {
@@ -105,17 +83,16 @@ class MovieTimeTableViewController: UIViewController {
     
     @IBAction func findFriendBtn(_ sender: Any) {
         
-      let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
-             let vc = storyboard.instantiateViewController(withIdentifier: "BeforeChat") as! BeforeChattingViewController
-             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-             
-             self.show(vc, sender: nil)
-             
+        
+//        print("!!!!!!!!!!!")
+//        print(DataManager.sharedManager.getReservation())
+//        print("!!!!!!!!!!!")
+        DataManager.sharedManager.setMatching(toggle: true)
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    
     }
     
-    
-        
-        
         /// 날짜 선택
         private func selectDate(_ date: String) {
             // 이전 날짜의 예약 정보 저장
@@ -123,9 +100,7 @@ class MovieTimeTableViewController: UIViewController {
             if let reservationInfo = self.reservationInfo {
                 DataManager.sharedManager.setReservation(info: reservationInfo)
             }
-         
-       //     DataManager.sharedManager.setReservation(info: reservationInfo)
-            
+  
             if let info = DataManager.sharedManager.reservationCache.first(where: { $0.date == date}) {
                 // 캐시에 저장된 예약정보가 있다면 불러옴
                 reservationInfo = info

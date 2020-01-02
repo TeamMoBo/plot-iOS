@@ -24,16 +24,6 @@ class DataManager {
     private init() {
         
     }
-    //    var dic : [String : [Int]] = [:]
-    
-    
-    //    var reservationCache: [ReservationInfo] = []
-    //
-    //       struct ReservationInfo {
-    //
-    //           var date: String
-    //           var times: [Int]
-    //       }
     
     var reservationCache: [ReservationInfo] = []
     
@@ -45,6 +35,25 @@ class DataManager {
         }
         reservationCache[index] = info
     }
+    
+    func getReservation() -> [ReservationInfo] {
+        return reservationCache
+    }
+    
+    private var ticTimer: Timer? = nil
+    private var ticNumber : Double = 0.0
+    
+    
+    func getTimer() -> Timer {
+        return ticTimer!
+    }
+    
+    func setTimer(ticTimer : Timer) {
+        self.ticTimer = ticTimer
+    }
+    
+   
+    
     
     private var id : String!
     private var pwd : String!
@@ -123,15 +132,15 @@ class DataManager {
         return didOrderTypeChangedAndDownloaded
     }
     
-    //Shared MovieOrderType
-    private var movieOrderType: String = ""
     
-    func setMovieOrderType(orderType: String) {
-        movieOrderType = orderType
+    private var toggle: Bool = false
+    
+    func setMatching(toggle: Bool) {
+        self.toggle = toggle
     }
     
-    func getMovieOrderType() -> String {
-        return "0"
+    func getMatching() -> Bool {
+        return toggle
     }
     
     //Shared MovieLists
@@ -139,6 +148,10 @@ class DataManager {
     private var reserveMovieList: [reserveMovieInfo] = []
     private var reserveDateList: [reserveDateInfo] = []
     private var movieTicketInfo: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    private var MovingTicketInfo: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    
+    
+    
     
     
     
@@ -153,9 +166,22 @@ class DataManager {
         reserveDateList = list
     }
     
+//    private var MovingTicketInfo: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+
+    
+    func setMovingMovieList(list: [TicketResponseString.TicketMovie.movieTicketInfo] ) {
+        MovingTicketInfo = list
+    }
+    
+    func getMovingMovieList() -> [TicketResponseString.TicketMovie.movieTicketInfo] {
+        return MovingTicketInfo
+    }
+    
+    
     func setTicketingMoiveList(list: [TicketResponseString.TicketMovie.movieTicketInfo] ) {
         movieTicketInfo = list
     }
+    
     
     
     func getMovieList() -> [movieInfo] {

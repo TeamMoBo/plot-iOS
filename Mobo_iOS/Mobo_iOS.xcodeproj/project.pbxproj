@@ -70,6 +70,15 @@
 		EAA2A95123BC8C96000C4354 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95023BC8C96000C4354 /* NetworkResult.swift */; };
 		EAA2A95323BCA867000C4354 /* HashTagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A95223BCA867000C4354 /* HashTagTextField.swift */; };
 		EAA2A97523BD1CCF000C4354 /* BeforeChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */; };
+		EAA2A97723BDFAAF000C4354 /* MatchingFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */; };
+		EAA2A97923BDFB19000C4354 /* MatchingCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */; };
+		EAA2A97B23BE0A54000C4354 /* MatchingFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */; };
+		EAA2A97D23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */; };
+		EAA2A97F23BE0AE8000C4354 /* AfterChatMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */; };
+		EAA2A98123BE0B5A000C4354 /* CreditPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */; };
+		EAA2A98523BE3D68000C4354 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */; };
+		EAA2A98623BE3D68000C4354 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */; };
+		EAA2A98723BE3D68000C4354 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */; };
 		EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EB23BA83C100781C94 /* PurchaseVC.swift */; };
 		EAA368EE23BA932000781C94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368ED23BA932000781C94 /* HistoryVC.swift */; };
 		EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */; };
@@ -154,6 +163,15 @@
 		EAA2A95023BC8C96000C4354 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		EAA2A95223BCA867000C4354 /* HashTagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagTextField.swift; sourceTree = "<group>"; };
 		EAA2A97423BD1CCF000C4354 /* BeforeChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeChattingViewController.swift; sourceTree = "<group>"; };
+		EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFinalViewController.swift; sourceTree = "<group>"; };
+		EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCompleteViewController.swift; sourceTree = "<group>"; };
+		EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingFailureViewController.swift; sourceTree = "<group>"; };
+		EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingFailViewController.swift; sourceTree = "<group>"; };
+		EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatMatchingViewController.swift; sourceTree = "<group>"; };
+		EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditPopUpViewController.swift; sourceTree = "<group>"; };
+		EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Regular.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Bold.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Medium.otf"; path = "../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		EAA368EB23BA83C100781C94 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		EAA368ED23BA932000781C94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		EAA368EF23BB3CD700781C94 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +289,9 @@
 				398522CE23B0644A009C9AE3 /* Sources */,
 				398522B723B05F8D009C9AE3 /* AppDelegate.swift */,
 				398522B923B05F8D009C9AE3 /* SceneDelegate.swift */,
+				EAA2A98323BE3D68000C4354 /* NotoSansCJKkr-Bold.otf */,
+				EAA2A98423BE3D68000C4354 /* NotoSansCJKkr-Medium.otf */,
+				EAA2A98223BE3D67000C4354 /* NotoSansCJKkr-Regular.otf */,
 				398522C823B05F8F009C9AE3 /* Info.plist */,
 				39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */,
 				3962D19523B1254D004B11AB /* GoogleService-Info.plist */,
@@ -363,6 +384,12 @@
 				3989B16323B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift */,
 				3989B16523B77002006ABB26 /* MatchingFailPopUpViewController.swift */,
 				3989B16723B7702D006ABB26 /* MatchingSelectPopUpViewController.swift */,
+				EAA2A97623BDFAAF000C4354 /* MatchingFinalViewController.swift */,
+				EAA2A97823BDFB19000C4354 /* MatchingCompleteViewController.swift */,
+				EAA2A97A23BE0A54000C4354 /* MatchingFailureViewController.swift */,
+				EAA2A97C23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift */,
+				EAA2A97E23BE0AE8000C4354 /* AfterChatMatchingViewController.swift */,
+				EAA2A98023BE0B5A000C4354 /* CreditPopUpViewController.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -516,11 +543,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				39463CCE23BCC4880042D2D0 /* splah_io_change.json in Resources */,
+				EAA2A98723BE3D68000C4354 /* NotoSansCJKkr-Medium.otf in Resources */,
 				EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */,
 				3989B15B23B75025006ABB26 /* PopUpScreen.storyboard in Resources */,
 				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
+				EAA2A98523BE3D68000C4354 /* NotoSansCJKkr-Regular.otf in Resources */,
 				EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */,
 				398522C723B05F8F009C9AE3 /* LaunchScreen.storyboard in Resources */,
 				398522C423B05F8F009C9AE3 /* Assets.xcassets in Resources */,
@@ -531,6 +560,7 @@
 				390BD67C23B06AEB00FF7E68 /* MovieTabScreen.storyboard in Resources */,
 				EA76B5B223B51E36002012CE /* MyPage.storyboard in Resources */,
 				39CC509923B12B6400E24F95 /* RemoteConfigDefaults.plist in Resources */,
+				EAA2A98623BE3D68000C4354 /* NotoSansCJKkr-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +620,7 @@
 				39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */,
 				393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */,
 				390BD68B23B08B9300FF7E68 /* DataManager.swift in Sources */,
+				EAA2A97923BDFB19000C4354 /* MatchingCompleteViewController.swift in Sources */,
 				3989B15E23B75098006ABB26 /* InventoryPopUpViewController.swift in Sources */,
 				3989B16223B76FB0006ABB26 /* PayFinishPopUpViewController.swift in Sources */,
 				EA204A1723BA4F3300369BC7 /* HistoryDetailVC.swift in Sources */,
@@ -610,6 +641,7 @@
 				398522DD23B064DD009C9AE3 /* Extension+UITextField.swift in Sources */,
 				3989B16023B76F80006ABB26 /* LatePopUpViewController.swift in Sources */,
 				3989599E23B1D30D00340400 /* UserModel.swift in Sources */,
+				EAA2A97F23BE0AE8000C4354 /* AfterChatMatchingViewController.swift in Sources */,
 				3989B16423B76FD2006ABB26 /* MatchingFinishPopUpViewController.swift in Sources */,
 				EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */,
 				EAB79B7423B7F1F3008ECC72 /* SignUpSecondVC.swift in Sources */,
@@ -623,12 +655,16 @@
 				39CC50A123B14BE100E24F95 /* ChattingPeopleViewController.swift in Sources */,
 				EA79170323B542E100DBC79B /* MyPageViewController.swift in Sources */,
 				390BD67E23B06B3300FF7E68 /* MovieTabOneViewController.swift in Sources */,
+				EAA2A97723BDFAAF000C4354 /* MatchingFinalViewController.swift in Sources */,
+				EAA2A97B23BE0A54000C4354 /* MatchingFailureViewController.swift in Sources */,
 				EAA368F023BB3CD700781C94 /* HistoryViewController.swift in Sources */,
 				398522C223B05F8D009C9AE3 /* Mobo_iOS.xcdatamodeld in Sources */,
 				390BD68023B070FC00FF7E68 /* MovieTabTwoViewController.swift in Sources */,
 				395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */,
 				EAA2A95323BCA867000C4354 /* HashTagTextField.swift in Sources */,
+				EAA2A98123BE0B5A000C4354 /* CreditPopUpViewController.swift in Sources */,
 				39CC509D23B1350A00E24F95 /* ChattingLoginViewController.swift in Sources */,
+				EAA2A97D23BE0AC2000C4354 /* AfterChatMatchingFailViewController.swift in Sources */,
 				398522DC23B064DD009C9AE3 /* Extension+CALayer.swift in Sources */,
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,

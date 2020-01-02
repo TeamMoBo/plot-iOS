@@ -5,8 +5,11 @@
 //  Created by 천유정 on 27/12/2019.
 //  Copyright © 2019 조경진. All rights reserved.
 //
-
+import Foundation
 import UIKit
+
+
+
 
 class MyPageViewController: UIViewController , UITextFieldDelegate {
     
@@ -43,6 +46,8 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     
     
+    
+    
     var womanSelected: Bool = false {
         didSet {
             let image = womanSelected ? UIImage(imageLiteralResourceName: "icSelected") : UIImage(imageLiteralResourceName: "icUnselected")
@@ -65,11 +70,11 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //navigationSetup()
-
         
-
+        //navigationSetup()
+        
+        
+        
         picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
         
@@ -87,15 +92,23 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         manbtn.addTarget(self, action: #selector(manSelect), for: .touchUpInside)
         
         nomatterbtn.addTarget(self, action: #selector(nomatterSelect), for: .touchUpInside)
+        
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        agetext.text = "23"
+        
     }
     
     
     
     
-    
-    
-    
     @IBAction func camerabtn(_ sender: Any) {
+        print(11111)
+        
         let alert =  UIAlertController(title: "너를보여줘!", message: "인생사진 어때?", preferredStyle: .actionSheet)
         
         let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary()
@@ -151,12 +164,12 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
         manSelected = false
         nomatterSelected = true
     }
-
+    
     
     func navigationSetup() {
     }//네비게이션 투명색만들기
-
-
+    
+    
 }
 
 //extension MyPageViewController : UIImagePickerControllerDelegate,
