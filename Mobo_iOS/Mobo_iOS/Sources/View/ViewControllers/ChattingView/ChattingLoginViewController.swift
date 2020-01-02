@@ -28,15 +28,7 @@ class ChattingLoginViewController: UIViewController {
         super.viewDidLoad()
         
         try! Auth.auth().signOut()
-        let statusBar = UIView()
-//        self.view.addSubview(statusBar)
-//        statusBar.snp.makeConstraints { (m) in
-//            m.right.top.left.equalTo(self.view)
-//            m.height.equalTo(20)
-//        }
         
-        
-       // color = remoteconfig["splash_background"].stringValue
         
         //statusBar.backgroundColor = .mainOrange
         loginButton.backgroundColor = .mainOrange

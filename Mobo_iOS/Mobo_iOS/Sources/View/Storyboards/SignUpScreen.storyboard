@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUb-8L-EiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359.2" y="35.467980295566505"/>
+            <point key="canvasLocation" x="1199" y="35"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="Xrg-A9-OTf">
@@ -907,7 +907,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpF-e6-i8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847" y="-24"/>
+            <point key="canvasLocation" x="2871" y="40"/>
         </scene>
         <!--Sign Up Last View Controller-->
         <scene sceneID="Oov-aH-dbJ">

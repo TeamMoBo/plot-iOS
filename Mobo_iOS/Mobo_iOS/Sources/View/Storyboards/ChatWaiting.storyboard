@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZP-ku-m11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="-509"/>
+            <point key="canvasLocation" x="3046" y="-903"/>
         </scene>
         <!--Before Chatting View Controller-->
         <scene sceneID="Onm-wh-IoT">
@@ -718,38 +718,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWu-EP-1lW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="128.57142857142858"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9tB-Zu-cJG">
-            <objects>
-                <viewController id="LX1-IT-FeK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dfN-Sh-GsI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps5-aQ-fr7">
-                                <rect key="frame" x="164" y="378" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="UeH-Do-BIS" kind="show" id="4H2-yw-P2e"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="yMN-po-5kQ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="uor-Qd-mXF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kUv-V4-7U0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4148" y="-78.325123152709367"/>
+            <point key="canvasLocation" x="3047" y="-78"/>
         </scene>
         <!--HistoryVC-->
         <scene sceneID="ewN-VB-Mpt">
             <objects>
-                <viewController id="YYd-EN-o69" customClass="HistoryVC" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryVC" id="YYd-EN-o69" customClass="HistoryVC" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vCd-YO-O9g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1069,24 +1043,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jr-3P-LGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4745" y="-942"/>
+            <point key="canvasLocation" x="5687.1999999999998" y="-942.11822660098528"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="GCc-El-SoB">
             <objects>
-                <viewController id="UeH-Do-BIS" customClass="HistoryViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="UeH-Do-BIS" customClass="HistoryViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oj6-9s-hmm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgMatchhistoryUpper" translatesAutoresizingMaskIntoConstraints="NO" id="WN3-cv-Evr">
-                                <rect key="frame" x="-9" y="0.0" width="393" height="242"/>
+                                <rect key="frame" x="-9" y="-54" width="393" height="242"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="imgMatchhistoryBelow" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-wy-gS0">
-                                <rect key="frame" x="-9" y="117" width="786" height="1590"/>
+                                <rect key="frame" x="-9" y="73" width="786" height="1590"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rjx-Oz-V37">
-                                <rect key="frame" x="0.0" y="147" width="375" height="665"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="Ax0-Yk-Sep"/>
@@ -1178,6 +1152,9 @@
                                                         <constraint firstAttribute="height" constant="42" id="xqn-p4-4eH"/>
                                                     </constraints>
                                                     <state key="normal" image="btnMore"/>
+                                                    <connections>
+                                                        <action selector="matchingHistoryBtn:" destination="UeH-Do-BIS" eventType="touchUpInside" id="wbx-gz-YUX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1240,8 +1217,8 @@
                             <constraint firstAttribute="trailing" secondItem="WN3-cv-Evr" secondAttribute="trailing" constant="-9" id="UXY-6N-62U"/>
                             <constraint firstItem="Rjx-Oz-V37" firstAttribute="bottom" secondItem="lln-Hc-ayV" secondAttribute="bottom" constant="34" id="bec-VO-GFd"/>
                             <constraint firstItem="oW4-wy-gS0" firstAttribute="leading" secondItem="WN3-cv-Evr" secondAttribute="leading" id="mRU-rq-BMc"/>
-                            <constraint firstItem="Rjx-Oz-V37" firstAttribute="top" secondItem="lln-Hc-ayV" secondAttribute="top" constant="59" id="pdz-wV-PkE"/>
-                            <constraint firstItem="WN3-cv-Evr" firstAttribute="top" secondItem="oj6-9s-hmm" secondAttribute="topMargin" constant="-88" id="qWn-2x-lXc"/>
+                            <constraint firstItem="Rjx-Oz-V37" firstAttribute="top" secondItem="lln-Hc-ayV" secondAttribute="top" constant="50" id="pdz-wV-PkE"/>
+                            <constraint firstItem="WN3-cv-Evr" firstAttribute="top" secondItem="oj6-9s-hmm" secondAttribute="topMargin" constant="-98" id="qWn-2x-lXc"/>
                             <constraint firstItem="Rjx-Oz-V37" firstAttribute="leading" secondItem="lln-Hc-ayV" secondAttribute="leading" id="yIP-CM-WaF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lln-Hc-ayV"/>
@@ -1271,7 +1248,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-rl-vqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="129"/>
+            <point key="canvasLocation" x="2206" y="-903"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6G-Hg-LJO">
@@ -1283,13 +1260,28 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LX1-IT-FeK" kind="relationship" relationship="rootViewController" id="GLa-2g-zRN"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9YE-0b-v1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3205.5999999999999" y="-78.325123152709367"/>
+            <point key="canvasLocation" x="4066" y="-78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nev-hw-agf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W4O-8W-S0d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P3A-Ae-40u">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YYd-EN-o69" kind="relationship" relationship="rootViewController" id="08j-P3-NKo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuA-jA-Jsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4744.8000000000002" y="-942.11822660098528"/>
         </scene>
     </scenes>
     <resources>

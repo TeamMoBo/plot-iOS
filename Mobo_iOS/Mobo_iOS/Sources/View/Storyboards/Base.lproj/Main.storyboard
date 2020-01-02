@@ -340,7 +340,7 @@
                         </button>
                         <barButtonItem key="rightBarButtonItem" image="icChatingpage-1" id="cjZ-a7-jy2">
                             <connections>
-                                <action selector="chatBtn:" destination="TGd-qO-mc1" id="fbR-8m-IBk"/>
+                                <action selector="HistoryBtn:" destination="TGd-qO-mc1" id="SSi-FU-bpF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

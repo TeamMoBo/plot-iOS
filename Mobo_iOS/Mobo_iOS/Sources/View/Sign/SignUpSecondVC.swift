@@ -146,8 +146,8 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
         self.minAgeField.inputView = self.pickerView
         self.minAgeField.inputAccessoryView = self.pickerView.toolbar
         
-        self.maxAgeField.inputView = self.pickerView
-        self.maxAgeField.inputAccessoryView = self.pickerView.toolbar
+        self.maxAgeField.inputView = self.pickerView2
+        self.maxAgeField.inputAccessoryView = self.pickerView2.toolbar
         self.pickerView.dataSource = self
         self.pickerView.delegate = self
         self.pickerView.toolbarDelegate = self

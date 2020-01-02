@@ -300,6 +300,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func getMessageList(){
+        
         //        Database.database().reference().child("chatrooms").child(self.chatRoomUid!).child("comments").observe(DataEventType.value, with: { (datasnapshot) in
         //            self.comments.removeAll()
         //
@@ -314,13 +315,19 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //        })
         Database.database().reference().child("chatrooms").child(self.chatRoomUid!).child("comments").observe(DataEventType.value, with: { (datasnapshot) in
             self.comments.removeAll()
+            print(self.chatRoomUid!)
+
+            
             
             for item in datasnapshot.children.allObjects as! [DataSnapshot]{
                 let comment = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
                 self.comments.append(comment!)
+                print(self.comments)
             }
+            
             self.tableview.reloadData()
             self.tableview.scrollToRow(at: IndexPath(item: self.comments.count - 1, section: 0), at: .bottom, animated: false)
+            
             
             
         })
