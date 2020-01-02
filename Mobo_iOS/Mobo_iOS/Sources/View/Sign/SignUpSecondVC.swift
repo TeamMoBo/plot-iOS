@@ -120,10 +120,6 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
     fileprivate let titles = ["20","21","22","23","24","25",
                               "26","27","28","29","30","31",
                               "32"]
-    fileprivate let values = ["20","21","22","23","24","25",
-                              "26","27","28","29","30","31",
-                              "32"]
-    
     
     
     override func viewDidLoad() {
@@ -147,7 +143,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
         self.minAgeField.inputAccessoryView = self.pickerView.toolbar
         
         self.maxAgeField.inputView = self.pickerView2
-        self.maxAgeField.inputAccessoryView = self.pickerView2.toolbar
+        self.maxAgeField.inputAccessoryView = self.pickerView2.toolbar2
         self.pickerView.dataSource = self
         self.pickerView.delegate = self
         self.pickerView.toolbarDelegate = self
@@ -156,7 +152,7 @@ class SignUpSecondVC: UIViewController, UITextFieldDelegate {
         
         self.pickerView2.dataSource = self
         self.pickerView2.delegate = self
-        self.pickerView2.toolbarDelegate = self
+        self.pickerView2.toolbarDelegate2 = self
         self.pickerView2.reloadAllComponents()
     }
     
@@ -267,10 +263,7 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.titles.count
     }
-    func pickerView2(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-           return self.values.count
-       }
-       
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -279,38 +272,25 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
         return self.titles[row]
         
     }
-    func pickerView2(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return self.values[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.minAgeField.text = self.titles[row]
-        
-    }
-    func pickerView2(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.maxAgeField.text = self.values[row]
-        
-    }
+
+
 }
 
-extension SignUpSecondVC: ToolbarPickerViewDelegate {
+extension SignUpSecondVC: ToolbarPickerViewDelegate, ToolbarPickerViewDelegate2 {
     
     func didTapDone() {
         let row = self.pickerView.selectedRow(inComponent: 0)
         self.pickerView.selectRow(row, inComponent: 0, animated: false)
         self.minAgeField.text = self.titles[row]
         self.minAgeField.resignFirstResponder()
-        
-        
-        
-        
     }
+    
     func didTapDone2() {
-           let row = self.pickerView2.selectedRow(inComponent: 0)
-           self.pickerView2.selectRow(row, inComponent: 0, animated: false)
-           self.maxAgeField.text = self.values[row]
-           self.maxAgeField.resignFirstResponder()
-       }
+        let row = self.pickerView2.selectedRow(inComponent: 0)
+        self.pickerView2.selectRow(row, inComponent: 0, animated: false)
+        self.maxAgeField.text = self.titles[row]
+        self.maxAgeField.resignFirstResponder()
+    }
     
     func didTapCancel() {
         self.minAgeField.text = nil

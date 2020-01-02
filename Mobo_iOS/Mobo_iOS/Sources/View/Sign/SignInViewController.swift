@@ -59,17 +59,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func presentSignup() {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatSignupVC") as! ChattingSignUpViewController
-        
-        vc.modalPresentationStyle = .fullScreen
-        
-        self.present(vc, animated: true, completion: nil)
-        
-        
-    }
-    
     func navigationSetup() { //네비게이션 투명색만들기
         
         self.navigationController?.navigationBar.barTintColor = .mainOrange
@@ -99,7 +88,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func SignUpButton(_ sender: Any) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpFirst") as! SignUpFirstViewController
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpNavi")
         
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
