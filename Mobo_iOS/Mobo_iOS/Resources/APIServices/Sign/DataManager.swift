@@ -46,7 +46,33 @@ class DataManager {
         reservationCache[index] = info
     }
     
+    private var id : String!
+    private var pwd : String!
+    private var name : String!
     
+    func getName() -> String {
+        return name
+    }
+    
+    func setName(name : String) {
+        self.name = name
+    }
+    
+    func getId() -> String {
+        return id
+    }
+    
+    func getPwd() -> String {
+        return pwd
+    }
+
+    func setId(id : String) {
+        self.id = id
+    }
+    
+    func setPwd(pwd : String) {
+        self.pwd = pwd
+    }
     
     private var haveImage: UIImage!
     

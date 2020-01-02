@@ -10,6 +10,10 @@ import UIKit
 
 class BeforeChattingViewController: UIViewController {
 
+    
+    public var destinationUid :String? // 나중에 내가 채팅할 대상의 uid
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -18,11 +22,17 @@ class BeforeChattingViewController: UIViewController {
     
     @IBAction func chatbtn(_ sender: Any) {
         
+        
+        
+        
         let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        
+        vc.destinationUid = "chokj"
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
-        self.show(vc, sender: nil)
+        self.present(vc, animated: true, completion: nil)
+//        self.show(vc, sender: nil)
     }
     
 

@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="2089" y="264"/>
         </scene>
-        <!--Chatting People View Controller-->
+        <!--People-->
         <scene sceneID="tDA-Kk-olO">
             <objects>
                 <viewController storyboardIdentifier="ChattingPeopleViewController" id="4WN-X4-862" customClass="ChattingPeopleViewController" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,6 +88,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5cC-BQ-tww"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="People" id="qQz-hr-Ric"/>
                     <navigationItem key="navigationItem" id="vfa-g9-Jc7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNz-cq-ytB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -392,33 +393,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8Bz-mc-JgN" kind="relationship" relationship="viewControllers" id="kQm-mI-dFX"/>
-                        <segue destination="KZb-gf-rSc" kind="relationship" relationship="viewControllers" id="22C-4v-gQb"/>
-                        <segue destination="VYY-as-CSD" kind="relationship" relationship="viewControllers" id="M6U-hi-5Jq"/>
+                        <segue destination="4WN-X4-862" kind="relationship" relationship="viewControllers" id="EhV-PS-xqe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3U2-M9-QP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3003" y="266"/>
-        </scene>
-        <!--People-->
-        <scene sceneID="aqL-MX-NfX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Bz-mc-JgN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="People" image="ic_people" id="kcg-bm-H3P"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3J6-1W-aUD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4WN-X4-862" kind="relationship" relationship="rootViewController" id="nKL-C5-ANL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a8q-sg-kxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4541.6000000000004" y="264.53201970443348"/>
+            <point key="canvasLocation" x="4697" y="264"/>
         </scene>
     </scenes>
     <resources>
@@ -426,6 +406,5 @@
         <image name="ic_account_circle" width="24" height="24"/>
         <image name="ic_add_to_photos" width="24" height="24"/>
         <image name="ic_chat" width="24" height="24"/>
-        <image name="ic_people" width="24" height="24"/>
     </resources>
 </document>

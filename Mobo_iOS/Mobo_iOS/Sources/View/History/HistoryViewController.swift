@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol matchingLinkDelegate {
+    
+    func didClicked()
+    
+}
+
 class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
     var numberOfCell: Int = 4
@@ -16,25 +22,13 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     @IBOutlet weak var collectionview: UICollectionView!
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.numberOfCell
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
-        
-        return cell
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.numberOfCell += 1
-        collectionView.reloadData()
-    }
+    var delegate: matchingLinkDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationSetup()
+        
         
         
         let flowLayout: UICollectionViewFlowLayout
@@ -50,15 +44,66 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
         
     }
     
+    @IBAction func matchingHistoryBtn(_ sender: Any) {
+        
+        self.delegate?.didClicked()
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.numberOfCell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        
+        
+
+        
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.numberOfCell += 1
+        self.delegate = self
+        collectionView.reloadData()
+        
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    
     func navigationSetup() {
+        
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
         self.navigationController?.navigationBar.isTranslucent = true
-        
         self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
     }
     
     
+}
+
+extension HistoryViewController: matchingLinkDelegate {
+    //BeforeChattingViewController
+    //BeforeChat
+    
+    func didClicked() {
+        
+        let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BeforeChat") as! BeforeChattingViewController
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+        self.show(vc, sender: nil)
+        
+        
+    }
 }

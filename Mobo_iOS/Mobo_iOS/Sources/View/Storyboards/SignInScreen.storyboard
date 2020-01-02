@@ -50,7 +50,7 @@
                                         <rect key="frame" x="21" y="0.0" width="314" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -77,6 +77,11 @@
                                     <action selector="SignInButton:" destination="Vcg-46-8lf" eventType="touchUpInside" id="vPk-X7-skX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz9-rV-Hhd">
+                                <rect key="frame" x="286" y="172" width="55" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="imgSymbollogo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94893962144851685" green="0.94907253980636597" blue="0.94889789819717407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1dm-P9-GT0"/>
@@ -98,5 +103,6 @@
     <resources>
         <image name="btnLogin" width="276" height="54"/>
         <image name="imgLoginBackground" width="375" height="812"/>
+        <image name="imgSymbollogo" width="55" height="50"/>
     </resources>
 </document>

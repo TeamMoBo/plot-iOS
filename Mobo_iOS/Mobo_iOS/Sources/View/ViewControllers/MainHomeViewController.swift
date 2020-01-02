@@ -282,14 +282,14 @@ class MainHomeViewController: UIViewController {
         
     }
     
-    @IBAction func chatBtn(_ sender: Any) {
+    @IBAction func HistoryBtn(_ sender: Any) {
         
         
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .mainOrange
+        self.navigationItem.backBarButtonItem?.tintColor = .white
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         //네비게이션바의 백그라운드색 지정. UIImage와 동일
@@ -298,8 +298,8 @@ class MainHomeViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         
         self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
-        let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ChatLoginVC") as! ChattingLoginViewController
+        let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
         self.show(vc, sender: nil)
@@ -308,7 +308,7 @@ class MainHomeViewController: UIViewController {
     
     func navigationSetup() { //네비게이션 투명색만들기
         
-        self.navigationController?.navigationBar.barTintColor = .mainOrange
+        self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
@@ -324,7 +324,7 @@ class MainHomeViewController: UIViewController {
         
         //뷰의 배경색 지정
         
-        //        self.navigationController?.navigationBar.topItem?.title = "Home"
+                self.navigationController?.navigationBar.topItem?.title = "매칭이력"
         //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
         //        navigationController?.navigationBar.titleTextAttributes = textAttributes
         

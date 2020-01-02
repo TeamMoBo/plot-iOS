@@ -21,7 +21,7 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var uni: UITextField!
     @IBOutlet weak var major: UITextField!
     @IBOutlet weak var kakao: UITextField!
-
+    
     @IBOutlet weak var womanimg: UIImageView!
     @IBOutlet weak var manimg: UIImageView!
     
@@ -70,6 +70,17 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
     
     @IBAction func nextPage(_ sender: Any) {
         
+        
+        var idText = id.text!
+        var password = pwd.text!
+        
+       // var email = name + "@naver.com"
+        
+        DataManager.sharedManager.setId(id: idText)
+        DataManager.sharedManager.setPwd(pwd: password)
+        DataManager.sharedManager.setName(name: name.text!)
+        
+        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "SignUpScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignUpSecondVC") as! SignUpSecondVC
         
@@ -97,6 +108,11 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
         
     }
     
+    @objc func cancelEvent(){
+          
+          self.dismiss(animated: true, completion: nil)
+      }
+    
     func openLibrary(){
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
@@ -112,42 +128,52 @@ class SignUpFirstViewController: UIViewController ,UITextFieldDelegate {
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-
-
-        nickname.resignFirstResponder()
-        name.resignFirstResponder()
-        id.resignFirstResponder()
-        age.resignFirstResponder()
-        pwd.resignFirstResponder()
-        uni.resignFirstResponder()
-        major.resignFirstResponder()
-        kakao.resignFirstResponder()
+                
+        if textField == name {
+            age.becomeFirstResponder()
+        }
+        else if textField == age {
+            id.becomeFirstResponder()
+        }
+        else if textField == id {
+            pwd.becomeFirstResponder()
+        }
+        else if textField == pwd {
+            uni.becomeFirstResponder()
+        }else if textField == uni {
+            major.becomeFirstResponder()
+        }
+        else if textField == major {
+            kakao.becomeFirstResponder()
+        }
+        else if textField == kakao {
+            kakao.resignFirstResponder()
+        }
         
         return true
         
     }
     
     
-
+    
     
     func navigationSetup() { //네비게이션 투명색만들기
         
-       
+        
         self.navigationController?.navigationBar.shadowImage = UIImage()
-             
-             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-             
-             self.navigationController?.navigationBar.isTranslucent = true
-             
-             self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-
-      
-       
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        
+        
+        
         
     }
     
-   @objc func womanSelect() {
+    @objc func womanSelect() {
         womanSelected = true
         manSelected = false
     }

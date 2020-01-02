@@ -109,14 +109,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func SignInButton(_ sender: Any) {
         
         navigationSetup()
-        var name = ""
+        var name = Userid.text!
         var password = Userpwd.text!
         var email = name + "@naver.com"
         
         Auth.auth().signIn(withEmail: email, password: Userpwd.text!) { (user, err) in
             
             if(err != nil){
-                let alret = UIAlertController(title: "에러", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                let alret = UIAlertController(title: "로그인 실패", message: "올바르지 않은 아이디 혹은 비밀번호 입니다!", preferredStyle: UIAlertController.Style.alert)
                 alret.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
                 
                 self.present(alret, animated: true, completion: nil)
