@@ -72,7 +72,7 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.numberOfCell += 1
+        
         self.delegate = self
         collectionView.reloadData()
         
@@ -100,8 +100,13 @@ extension HistoryViewController: matchingLinkDelegate {
     //BeforeChattingViewController
     //BeforeChat
     
-    func didClicked() {
+    func didClicked() { 
     
-        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "History", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "HistoryDetailVC") as! HistoryDetailVC
+                
+        //        vc.modalPresentationStyle = .fullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                self.navigationController?.pushViewController(vc, animated: true)
     }
 }

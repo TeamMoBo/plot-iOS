@@ -40,6 +40,7 @@ class MovieTabOneViewController: UIViewController {
     }
     
     var isRevise = false
+
     
     //init
     override func viewDidLoad() {
@@ -57,10 +58,6 @@ class MovieTabOneViewController: UIViewController {
         
         setMovieListCollectionView()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
         if isRevise {
             
             button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
@@ -69,6 +66,13 @@ class MovieTabOneViewController: UIViewController {
             
             button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
         }
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        print(isRevise)
         
     }
     
@@ -97,9 +101,6 @@ class MovieTabOneViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-
-        
         
         self.show(vc, sender: nil)
         
@@ -161,10 +162,7 @@ class MovieTabOneViewController: UIViewController {
             }
             
             do {
-                //                print("!!!!!!!!!!!")
-                //                print(String(data: data!, encoding: .utf8))
-                //                print("!!!!!!!!!!!")
-                
+              
                 let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
                 
                 self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
@@ -332,11 +330,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 12)
             
-            // print(dataManager.setTicketingMoiveList(list: [movie]))
-            
+            cell.movieName.adjustsFontSizeToFitWidth = true
             cell.delegate = self
-            
-            //cell.dateLabel.text = movie.date
             
             cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
@@ -366,7 +361,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
-            
+            cell.movieName.adjustsFontSizeToFitWidth = true
+
             //cell.dateLabel.text = movie.date
             cell.delegate = self
             cell.currentIndex = indexPath
@@ -399,7 +395,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
-            
+            cell.movieName.adjustsFontSizeToFitWidth = true
+
             //cell.dateLabel.text = movie.date
             cell.delegate = self
             cell.currentIndex = indexPath
@@ -491,11 +488,8 @@ extension MovieTabOneViewController: MovieTabDelegate {
         
         dataManager.setMovingMovieList(list: transitMovieData)
         
-        print(dataManager.getMovingMovieList())
+        //print(dataManager.getMovingMovieList())
         
     }
     
 }
-
-
-//var movieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []

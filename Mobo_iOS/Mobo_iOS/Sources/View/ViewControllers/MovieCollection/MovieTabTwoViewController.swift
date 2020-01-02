@@ -26,7 +26,8 @@ class MovieTabTwoViewController: UIViewController {
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
-        
+    var transitMovieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+
     struct Storyboard {
         static let photoCell = "PhotoCell"
         static let showDetailVC = "ShowMovieDetail"
@@ -44,9 +45,6 @@ class MovieTabTwoViewController: UIViewController {
         MovieCollectionView.showsHorizontalScrollIndicator = false
         MovieCollectionView.decelerationRate = .fast
         //  MovieCollectionView.isScrollEnabled = false
-        
-        
-        
         
         self.Title1.text = "    예매율TOP 10" // 띄어쓰기 4 번
         self.Title1.backgroundColor = .groundColor
@@ -150,9 +148,9 @@ func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void
         }
         
         do {
-            print("!!!!!!!!!!!")
-            print(String(data: data!, encoding: .utf8))
-            print("!!!!!!!!!!!")
+//            print("!!!!!!!!!!!")
+//            print(String(data: data!, encoding: .utf8))
+//            print("!!!!!!!!!!!")
             
             let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
             
@@ -290,10 +288,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-//    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
-
-    
+  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
@@ -498,11 +493,12 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
     
 }
 
-
-
 extension MovieTabTwoViewController: MovieTabDelegate {
+    
     func didMovieClicked(index: IndexPath) {
+        
         if selectedIndex.contains(index) {
+            
             for (i, v) in selectedIndex.enumerated() {
                 if v == index {
                     selectedIndex.remove(at: i)
@@ -512,9 +508,34 @@ extension MovieTabTwoViewController: MovieTabDelegate {
             selectedIndex.append(index)
             selectedIndex.sort()
         }
+        
         print(selectedIndex)
+        // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
+        
+        for indexPath in selectedIndex {
+            if indexPath.section == 0 {
+                
+                transitMovieData.append(movieData[indexPath.item])
+                
+            }
+            if indexPath.section == 1 {
+                transitMovieData.append(movieData[indexPath.item + 2])
+                
+            }
+            if indexPath.section == 2 {
+                transitMovieData.append(movieData[indexPath.item + 6])
+                
+            }
+        }
+        
+        //let arr1 = array1.filter{!array2.contains($0)}
+        
+        
+        
+        dataManager.setMovingMovieList(list: transitMovieData)
+        
+        //print(dataManager.getMovingMovieList())
+        
     }
+    
 }
-
-
-
