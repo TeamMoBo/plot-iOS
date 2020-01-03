@@ -553,7 +553,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-Rn-TaV">
-                                <rect key="frame" x="235" y="129" width="110" height="32.666666666666657"/>
+                                <rect key="frame" x="235" y="94" width="110" height="32.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="9Ng-Jd-bD9"/>
                                     <constraint firstAttribute="height" constant="32.670000000000002" id="cvg-BI-QTU"/>
@@ -818,7 +818,7 @@
                             <constraint firstItem="9nm-t3-HTz" firstAttribute="trailing" secondItem="DMr-Pi-6Ze" secondAttribute="trailing" id="ZB7-Ul-kqL"/>
                             <constraint firstAttribute="bottom" secondItem="9nm-t3-HTz" secondAttribute="bottom" id="Zcd-yy-mGa"/>
                             <constraint firstItem="9nm-t3-HTz" firstAttribute="leading" secondItem="DMr-Pi-6Ze" secondAttribute="leading" id="ZxC-B1-lf6"/>
-                            <constraint firstItem="yx2-Rn-TaV" firstAttribute="top" secondItem="4EQ-bT-qvF" secondAttribute="bottom" constant="40" id="h6v-0q-Qdr"/>
+                            <constraint firstItem="yx2-Rn-TaV" firstAttribute="top" secondItem="4EQ-bT-qvF" secondAttribute="bottom" constant="5" id="h6v-0q-Qdr"/>
                             <constraint firstItem="4EQ-bT-qvF" firstAttribute="top" secondItem="DMr-Pi-6Ze" secondAttribute="top" constant="44" id="jcn-4J-JCO"/>
                             <constraint firstAttribute="trailing" secondItem="4EQ-bT-qvF" secondAttribute="trailing" id="leP-tl-hsE"/>
                             <constraint firstItem="yx2-Rn-TaV" firstAttribute="leading" secondItem="DMr-Pi-6Ze" secondAttribute="leading" constant="235" id="qfD-F7-Tzf"/>

@@ -42,6 +42,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if(user != nil){
+                print(auth,user)
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
                 vc.modalPresentationStyle = .fullScreen
