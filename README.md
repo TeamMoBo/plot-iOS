@@ -23,7 +23,7 @@
 
 ### 👏 Application Service Work flow 
 
-![스크린샷 2020-01-03 오전 6 19 26](https://user-images.githubusercontent.com/46750574/71696597-c3e62280-2df8-11ea-8cf2-c1b5b1c29fb7.png)
+<img width="619" alt="워크플로우" src="https://user-images.githubusercontent.com/55737889/71726940-fc7b1000-2e7b-11ea-9067-853ff61b986d.png">
 
 ---
 
