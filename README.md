@@ -106,10 +106,9 @@
 
 매칭 이력
 <br></br>
-<img width="200" alt="스크린샷 2020-01-03 오후 11 39 34" src="https://user-images.githubusercontent.com/55737889/71729142-52eb4d00-2e82-11ea-81a2-626253ef46c8.png">
-<img width="200" alt="스크린샷 2020-01-03 오후 11 52 10" src="https://user-images.githubusercontent.com/55737889/71730107-b0809900-2e84-11ea-89a2-38b9687756e4.png">
-<br></br>
 
+<img width="200" alt="스크린샷 2020-01-03 오후 11 39 34" src="https://user-images.githubusercontent.com/55737889/71729142-52eb4d00-2e82-11ea-81a2-626253ef46c8.png"><img width="200" alt="스크린샷 2020-01-03 오후 11 52 10" src="https://user-images.githubusercontent.com/55737889/71730107-b0809900-2e84-11ea-89a2-38b9687756e4.png">
+<br></br>
 
 ---
 
