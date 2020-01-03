@@ -191,7 +191,7 @@ class MainHomeViewController: UIViewController {
         if !reservationInfo.isEmpty {
             
     
-            print(reservationInfo)
+//            print(reservationInfo)
             
 
             bottomDay1.tintColor = .mainOrange
