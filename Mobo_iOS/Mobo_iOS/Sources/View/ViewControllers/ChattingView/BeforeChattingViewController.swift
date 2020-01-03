@@ -12,7 +12,8 @@ class BeforeChattingViewController: UIViewController {
 
     
     public var destinationUid :String? // 나중에 내가 채팅할 대상의 uid
-
+    @IBOutlet weak var name: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,17 @@ class BeforeChattingViewController: UIViewController {
         let storyboard = UIStoryboard(name: "ChattingScreen", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         
+        //디바이스 용
+        // "AmpQmmXBT1OBqF0cXl8g2VFcPNR2"
+        
+        
+        //내 아이디 용
         vc.destinationUid = "AmpQmmXBT1OBqF0cXl8g2VFcPNR2"
+        
+        if vc.destinationUid == "AmpQmmXBT1OBqF0cXl8g2VFcPNR2" {
+            self.name.text = "조경진"
+        }
+        
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
 //        self.present(vc, animated: true, completion: nil)
