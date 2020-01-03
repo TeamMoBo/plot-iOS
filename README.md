@@ -1,19 +1,23 @@
-#  🎬 영화관에서의 첫 맛남 , 영화 데이트 매칭 서비스 🍿
-## Plot-iOS 📱 
+#  🎬 영화관에서의 첫 맛남 , 영화 데이트 매칭 서비스 , Plot 🍿
 
 >Plot [줄거리]
 >당신의 만남이 가장 쉽고 빠르게 이루어질 수 있도록, Plot은 당신을 위한 줄거리를 준비합니다. 
 
+
 #### 언제까지 답장없는 소개팅 앱에 매달릴거야?  
 #### 준비는 우리가 다 할게. 너는 따라오기만 해 ! 
 #### 10분 만에 대화부터 예매까지 전부 끝나는 영화 데이트 매칭. 
+
+
+<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
+
 
 ![SwiftBadge](https://img.shields.io/badge/Swift-5.1-orange) ![XcodeBadge](https://img.shields.io/badge/Xcode-11.3-blue) ![iOS](https://img.shields.io/badge/iOS-13.3-lightgrey)
 
 > 개발 기간: **2019.12.21 ~ 2020.01.03**
 > iOS : [chokyungjin](https://github.com/chokyungjin) ,  [ujcheon](https://github.com/ujcheon)
 
-<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
+
 
 ---
 
