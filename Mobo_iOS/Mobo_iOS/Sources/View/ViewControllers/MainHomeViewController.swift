@@ -134,7 +134,6 @@ class MainHomeViewController: UIViewController {
     
     func getMovieList(completion: @escaping (ListResponse?) -> Void) {
         
-        // let url: String = baseURL + ServerURLs.movieList.rawValue + orderType
         let appUrl: String = "http://13.125.48.35:7935/main"
         
         guard let finalURL = URL(string: appUrl) else {
@@ -165,13 +164,9 @@ class MainHomeViewController: UIViewController {
                 //                String(bytes: <#T##Sequence#>, encoding: String.Encoding.utf8)
                 //    print(String(data: data!, encoding: .utf8))
                 let movieLists: ListResponse  = try JSONDecoder().decode(ListResponse.self, from: resultData)
-                
                 self.dataManager.setMovieList(list: movieLists.results.randMovie)
-                
                 self.dataManager.setReserveMovieList(list: movieLists.results.reserveMovie)
-                
                 self.dataManager.setReserveDateList(list: movieLists.results.reserveDate)
-                
                 self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
                 self.reloadMovieLists()
                 completion(movieLists)
@@ -196,7 +191,7 @@ class MainHomeViewController: UIViewController {
         if !reservationInfo.isEmpty {
             
     
-            print(reservationInfo)
+//            print(reservationInfo)
             
 
             bottomDay1.tintColor = .mainOrange
@@ -605,7 +600,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
                 DispatchQueue.main.async {
                     cell.imageThumbnail.contentMode = .scaleAspectFill
-                    // cell.ImageThumbnail.image = thumnailImage
                     cell.imageThumbnail.image = thumnailImage
                     
                 }

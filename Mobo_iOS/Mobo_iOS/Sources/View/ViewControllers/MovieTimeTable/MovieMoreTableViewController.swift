@@ -62,11 +62,7 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         
         reservationInfo = DataManager.sharedManager.getReservation()
         
-        
-        if !reservationInfo.isEmpty {
-            return reservationInfo.count
-        }
-        return 7
+        return reservationInfo.count
     }
     
     
@@ -83,6 +79,7 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         //  print(height)
         //  print("==============")
         return height
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,15 +90,9 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         cell.dayLabel.textColor = .mainOrange
       //  cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
         
-        if reservationInfo == nil {
-            print(String(describing: reservationInfo[indexPath.row].date))
-            //날짜 텍스트가 들어가는 곳이지만 이 조건문에 들어가지 않습니다!
         cell.dayLabel.text =  String(describing: reservationInfo[indexPath.row].date)
-        }
-        else {
-            cell.dayLabel.text =  String(describing: "")
+       
 
-        }
         
         return cell
         
@@ -120,8 +111,9 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        print(reservationInfo.count)
-        return reservationInfo.count
+        reservationInfo = DataManager.sharedManager.getReservation()
+
+        return reservationInfo[section].times.count
     }
     
     
@@ -130,27 +122,20 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
         
-        
         cell.makeRounded(cornerRadius: 5)
         cell.setBorder(borderColor: .borderGray, borderWidth: 1)
         
         reservationInfo = DataManager.sharedManager.getReservation()
         
+
+        //print(String(describing: reservationInfo[indexPath.section].times[indexPath.row]))
+                
+    //    print(reservationInfo[indexPath.section].times[indexPath.row])
         
-        //시간대가 들어가야 하는 컬렉션 뷰 입니다!
-        if reservationInfo == nil {
-            //여기로 들어가지가 않습니다!
-            print(String(describing: reservationInfo[indexPath.row].times))
-
-        }
-        else {
-            //무조건 여기로 빠집니다
-            print(String(describing: reservationInfo[indexPath.row].times))
-
-        }
-                                     
         
-
+        cell.timeButton.setTitle(String(describing: reservationInfo[indexPath.section].times[indexPath.row]), for: .normal)
+            
+        
         cell.currentIndex = indexPath.item
      
         
