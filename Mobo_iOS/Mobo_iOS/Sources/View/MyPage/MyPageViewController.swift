@@ -126,6 +126,9 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
         present(alert, animated: true, completion: nil)
         
     }
+    @objc func cancleEvent(){
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func ticketboxbtn(_ sender: Any) {
     }
@@ -167,6 +170,20 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
     
     
     func navigationSetup() {
+       
+ 
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+            
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            
+            self.navigationController?.navigationBar.isTranslucent = true
+            
+            self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+            
+            
+            
+            
+        
     }//네비게이션 투명색만들기
     
     
@@ -188,10 +205,9 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
 
 //}
 
-class 
 
 
-extension MyPageViewController : UIImagePickerControllerDelegate
+extension MyPageViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
     func imagePickerController(_ _picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
