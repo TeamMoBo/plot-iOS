@@ -25,6 +25,7 @@ class MovieMoreTableViewController: UIViewController {
     var cal = Calendar.current
     var currentIndex: Int?
     var reserveDate: [reserveDateInfo] = []
+    private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
 
     
     override func viewDidLoad() {
@@ -67,7 +68,10 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return dummyDay.count
+        reservationInfo = DataManager.sharedManager.getReservation()
+                              
+    
+        return reservationInfo.count
     }
     
     
@@ -92,8 +96,15 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TimeTableViewCell
         
         cell.dayLabel.textColor = .mainOrange
-        cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
+       // cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
         
+        reservationInfo = DataManager.sharedManager.getReservation()
+                              
+        if !reservationInfo.isEmpty {
+                
+            cell.dayLabel.text =  reservationInfo[indexPath.section].date
+            
+        }
         
         return cell
         
@@ -115,7 +126,8 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         
-        return dummyDate3.count
+        return 10
+      //  return reservationInfo.count
     }
     
     
@@ -130,7 +142,18 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         // cell.timeButton.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
         
         
-        cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
+        reservationInfo = DataManager.sharedManager.getReservation()
+        
+        //print(reservationInfo[0].times[indexPath.item] )
+
+                              
+//        if !reservationInfo.isEmpty {
+//
+//            cell.timeButton.setTitle(String(describing: reservationInfo[indexPath.section].times[indexPath.row] ) , for: .normal)
+//
+//        }
+        
+       // cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
         cell.delegate = self
         
 

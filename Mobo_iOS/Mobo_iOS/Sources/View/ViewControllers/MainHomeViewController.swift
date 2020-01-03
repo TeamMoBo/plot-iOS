@@ -711,7 +711,7 @@ extension MainHomeViewController: PlayLinkActionDelegate {
     //https://www.youtube.com/watch?v=28hYUZMufDg&list=RD28hYUZMufDg&start_radio=1
     func didClickedLink(index: Int) {
         
-        guard let url = URL(string: "https://www.youtube.com/watch?v=28hYUZMufDg&list=RD28hYUZMufDg&start_radio=1"), UIApplication.shared.canOpenURL(url) else { return }
+        guard let url = URL(string: "https://www.youtube.com/watch?v=KrM3vS5sy2w"), UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
         
     }

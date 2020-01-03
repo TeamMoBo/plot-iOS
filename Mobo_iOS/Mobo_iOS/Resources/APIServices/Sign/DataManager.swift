@@ -130,18 +130,7 @@ class DataManager {
     func getDidOrderTypeChangedAndDownloaded() -> Bool {
         return didOrderTypeChangedAndDownloaded
     }
-    
-    private var revise: Bool = false
-    
-    func setRevise(revise: Bool) {
-        self.revise = revise
-    }
-    
-    func getRevise() -> Bool {
-        return revise
-    }
-    
-    
+   
     private var toggle: Bool = false
     
     func setMatching(toggle: Bool) {
