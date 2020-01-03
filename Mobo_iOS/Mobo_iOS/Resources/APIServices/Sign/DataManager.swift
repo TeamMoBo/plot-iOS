@@ -15,14 +15,14 @@ class DataManager {
         return dm
     }()
     
+    private init() {
+        
+    }
+    
     struct ReservationInfo {
         
         var date: String
         var times: [Int]
-    }
-    
-    private init() {
-        
     }
     
     var reservationCache: [ReservationInfo] = []
