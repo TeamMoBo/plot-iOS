@@ -59,8 +59,8 @@ class ViewController: UIViewController {
             
             let storyboard = UIStoryboard(name: "SignInScreen", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
+//            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             
         }

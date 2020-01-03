@@ -84,7 +84,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         @objc func timerCallback(){
             number += 1
-            if number == 60 {
+            if number == 3 {
                 
                 //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
                 

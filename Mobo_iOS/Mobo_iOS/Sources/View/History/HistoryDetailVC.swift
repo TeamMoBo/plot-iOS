@@ -9,8 +9,8 @@
 import UIKit
 
 class HistoryDetailVC: UIViewController {
-
-
+    
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var letter: UILabel!
     @IBOutlet weak var hashtags: UILabel!
@@ -24,6 +24,7 @@ class HistoryDetailVC: UIViewController {
     @IBOutlet weak var theater: UILabel!
     @IBOutlet weak var seat: UILabel!
     
+    @IBOutlet weak var profileImg: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,11 +33,30 @@ class HistoryDetailVC: UIViewController {
         
     }
     
-//    if DataManager.sharedManager.getMatching() {
-//    
-//    if !DataManager.sharedManager.getMatchingToggle() {
-//    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        movietitle.text = DataManager.sharedManager.getMovingMovieList()[0].title
+
+               OperationQueue().addOperation {
+                   let thumnailImage = self.getThumnailImage(withURL: DataManager.sharedManager.getMovingMovieList()[0].thumnailImageURL)
+                   DispatchQueue.main.async {
+                       self.profileImg.image = thumnailImage
+                       
+                   }
+               }
+    }
     
+    func getThumnailImage(withURL thumnailURL: String) -> UIImage? {
+        guard let imageURL = URL(string: thumnailURL) else {
+            return UIImage(named: "img_placeholder")
+        }
+        
+        guard let imageData: Data = try? Data(contentsOf: imageURL) else {
+            return UIImage(named: "img_placeholder")
+        }
+        
+        return UIImage(data: imageData)
+    }
     
     @IBAction func cancelbtn(_ sender: Any) {
         
@@ -45,10 +65,10 @@ class HistoryDetailVC: UIViewController {
         DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-               let vc = storyboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
-               vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-               
-               self.show(vc, sender: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+        self.show(vc, sender: nil)
     }
     
     func navigationSetup() {
@@ -62,6 +82,6 @@ class HistoryDetailVC: UIViewController {
     }
     
     
-  
-
+    
+    
 }

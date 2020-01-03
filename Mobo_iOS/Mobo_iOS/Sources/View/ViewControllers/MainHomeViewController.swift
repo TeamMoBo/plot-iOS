@@ -60,6 +60,7 @@ class MainHomeViewController: UIViewController {
     let dataManager = DataManager.sharedManager
     let caLayer: CAGradientLayer = CAGradientLayer()
     
+
     private var selectedIndex: Int = 0
     private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
     
@@ -74,18 +75,14 @@ class MainHomeViewController: UIViewController {
         
         super.viewDidLoad()
         
+        moreBtn.isHidden = true
         noImageLabel.isHidden = false
         view.backgroundColor = .groundColor
         setMovieListCollectionView()
-        
         navigationSetup()
-        
-        
         bottomview.makeRounded(cornerRadius: 10)
         bottomview.dropShadow(color: .lightGray, offSet: CGSize(width: 1, height: 1), opacity: 0.7, radius: 5)
-        
         sendButton.titleEdgeInsets.bottom = 10
-        
         bottomDay1.tintColor = .mainOrange
         bottomDay2.tintColor = .mainOrange
         
@@ -93,7 +90,7 @@ class MainHomeViewController: UIViewController {
    
     
     
-    @IBAction func buyBtn(_ sender: Any) { 
+    @IBAction func buyBtn(_ sender: Any) {
         
         navigationSetup2()
         
@@ -182,18 +179,11 @@ class MainHomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
         reservationInfo = DataManager.sharedManager.getReservation()
-        
-        
-        //   print(reservationInfo)
         
         if !reservationInfo.isEmpty {
             
-    
-//            print(reservationInfo)
-            
-
+            moreBtn.isHidden = false
             bottomDay1.tintColor = .mainOrange
             bottomDay2.tintColor = .mainOrange
             
@@ -313,7 +303,7 @@ class MainHomeViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "홈", style: .done, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .white
         //투명하게 만드는 공식처럼 기억하기
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -322,7 +312,7 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         
-        self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
+      //  self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
         let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
@@ -564,6 +554,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
                 return reservemovies.count
                 
             }
+                
             else {
                 return movingMovie.count
                 
