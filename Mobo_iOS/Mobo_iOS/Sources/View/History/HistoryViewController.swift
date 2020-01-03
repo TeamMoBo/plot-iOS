@@ -64,6 +64,7 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
         let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
         
         
+        self.delegate = self
 
         
         return cell
@@ -72,8 +73,8 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
         self.delegate = self
+
         collectionView.reloadData()
         
     }
@@ -100,7 +101,8 @@ extension HistoryViewController: matchingLinkDelegate {
     //BeforeChattingViewController
     //BeforeChat
     
-    func didClicked() { 
+    func didClicked() {
+        print(11)
     
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "History", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "HistoryDetailVC") as! HistoryDetailVC
