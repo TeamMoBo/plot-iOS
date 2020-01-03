@@ -497,31 +497,31 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선호영화장르" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-19-xpM">
-                                                        <rect key="frame" x="289.66666666666669" y="786" width="52.333333333333314" height="11.666666666666629"/>
+                                                        <rect key="frame" x="286.66666666666669" y="786" width="55.333333333333314" height="15"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심사" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALf-RL-Thd">
-                                                        <rect key="frame" x="302" y="1009.3333333333333" width="36" height="11.666666666666629"/>
+                                                        <rect key="frame" x="302" y="1016" width="36" height="15"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화정보" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-5u-SrL">
-                                                        <rect key="frame" x="289.66666666666669" y="1110" width="48.666666666666686" height="16.333333333333258"/>
+                                                        <rect key="frame" x="286.66666666666669" y="1120" width="51.666666666666686" height="21"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교/직장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tl-ft-Jds">
-                                                        <rect key="frame" x="305" y="631" width="38" height="11.666666666666629"/>
+                                                        <rect key="frame" x="302" y="631" width="41" height="15"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTG-eH-sdW">
-                                                        <rect key="frame" x="325" y="691.33333333333337" width="17.333333333333314" height="11.666666666666629"/>
+                                                        <rect key="frame" x="325" y="688" width="18.666666666666686" height="15"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -541,7 +541,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ume-4I-VLb">
-                                                        <rect key="frame" x="32" y="649.66666666666663" width="312" height="0.33333333333337123"/>
+                                                        <rect key="frame" x="32" y="653" width="312" height="0.33333333333337123"/>
                                                         <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.33000000000000002" id="jxs-jd-buH"/>
@@ -555,21 +555,21 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaA-gk-oWk">
-                                                        <rect key="frame" x="32" y="886.66666666666663" width="312" height="0.33333333333337123"/>
+                                                        <rect key="frame" x="32" y="890" width="312" height="0.33333333333337123"/>
                                                         <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.33000000000000002" id="8BS-pU-pLv"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-VJ-sWS">
-                                                        <rect key="frame" x="32" y="992.33333333333326" width="312" height="0.33333333333337123"/>
+                                                        <rect key="frame" x="32" y="999" width="312" height="0.33333333333337123"/>
                                                         <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.33000000000000002" id="sks-ne-ddF"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnt-fH-KaI">
-                                                        <rect key="frame" x="32" y="1101" width="311" height="0.33333333333325754"/>
+                                                        <rect key="frame" x="32" y="1111" width="311" height="0.33333333333325754"/>
                                                         <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.33000000000000002" id="adg-cK-dnM"/>
@@ -580,7 +580,7 @@
                                                         <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="솝트대학교" placeholder="고려대학교" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-Ix-q8P">
-                                                        <rect key="frame" x="41" y="626" width="249" height="26"/>
+                                                        <rect key="frame" x="41" y="626" width="246" height="26"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -590,7 +590,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qQM-SN-Xze">
-                                                        <rect key="frame" x="211" y="1127" width="132" height="87"/>
+                                                        <rect key="frame" x="211" y="1137" width="132" height="77"/>
                                                         <string key="text">백두산                       2019/12/25 18:20           코엑스 메가박스
 3관 H열 5,6 번 좌석</string>
                                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -609,50 +609,50 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매력포인트" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-Ae-ecw">
-                                                        <rect key="frame" x="290" y="902" width="52" height="11.666666666666629"/>
+                                                        <rect key="frame" x="290" y="905.33333333333337" width="52" height="15"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-dj-zgO">
-                                                        <rect key="frame" x="72" y="825.66666666666663" width="240" height="46"/>
+                                                        <rect key="frame" x="72" y="829" width="240" height="46"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash1" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-bk-69G">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash1" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-bk-69G">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash2" translatesAutoresizingMaskIntoConstraints="NO" id="VMa-jm-1oR">
-                                                                <rect key="frame" x="75" y="0.0" width="0.0" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash2" translatesAutoresizingMaskIntoConstraints="NO" id="VMa-jm-1oR">
+                                                                <rect key="frame" x="75" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash3" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-Oe-vbk">
-                                                                <rect key="frame" x="60" y="0.0" width="180" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash3" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-Oe-vbk">
+                                                                <rect key="frame" x="150" y="0.0" width="90" height="46"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-ii-Mds">
-                                                        <rect key="frame" x="72" y="936.33333333333326" width="240" height="46"/>
+                                                        <rect key="frame" x="72" y="943" width="240" height="46"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash4" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-DW-Tde">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash4" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-DW-Tde">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash5" translatesAutoresizingMaskIntoConstraints="NO" id="07c-oQ-bEl">
-                                                                <rect key="frame" x="75" y="0.0" width="0.0" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash5" translatesAutoresizingMaskIntoConstraints="NO" id="07c-oQ-bEl">
+                                                                <rect key="frame" x="75" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash6" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-uc-4JL">
-                                                                <rect key="frame" x="60" y="0.0" width="180" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash6" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-uc-4JL">
+                                                                <rect key="frame" x="150" y="0.0" width="90" height="46"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="dvq-Qp-RM6">
-                                                        <rect key="frame" x="67" y="1040" width="240" height="46"/>
+                                                        <rect key="frame" x="67" y="1050" width="240" height="46"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash7" translatesAutoresizingMaskIntoConstraints="NO" id="m8y-IZ-0M7">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash7" translatesAutoresizingMaskIntoConstraints="NO" id="m8y-IZ-0M7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash8" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-7r-pDb">
-                                                                <rect key="frame" x="75" y="0.0" width="0.0" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash8" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-7r-pDb">
+                                                                <rect key="frame" x="75" y="0.0" width="90" height="46"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="hash9" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-WW-PeJ">
-                                                                <rect key="frame" x="60" y="0.0" width="180" height="46"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hash9" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-WW-PeJ">
+                                                                <rect key="frame" x="150" y="0.0" width="90" height="46"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
