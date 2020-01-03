@@ -188,7 +188,6 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
 
 //}
 
-class 
 
 
 extension MyPageViewController : UIImagePickerControllerDelegate
