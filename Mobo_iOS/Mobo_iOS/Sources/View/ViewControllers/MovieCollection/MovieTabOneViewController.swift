@@ -106,6 +106,8 @@ class MovieTabOneViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
         self.show(vc, sender: nil)
+        dataManager.setMovingMovieList(list: transitMovieData)
+
         
         //self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
         

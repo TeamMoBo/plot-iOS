@@ -19,8 +19,10 @@ class MatchingFailureViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+//    HistoryDetailVC
     @IBAction func goMainbtn(_ sender: Any) {
+    
+        
     }
     
     /*

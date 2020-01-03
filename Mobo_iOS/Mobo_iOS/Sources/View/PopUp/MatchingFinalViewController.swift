@@ -19,19 +19,22 @@ class MatchingFinalViewController: UIViewController {
    // AfterChatMatchingViewController
     @IBAction func yesbtn(_ sender: Any) {
         
-        self.navigationController?.popToRootViewController(animated: true)
+        DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
+    
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
+        
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "AfterChatMatchingViewController") as! AfterChatMatchingViewController
-                   
+
         vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true, completion: nil)
+               vc.modalPresentationStyle = .overCurrentContext
+               self.present(vc, animated: true, completion: nil)
         
     }
     //AfterChatMatchingFailViewController
     @IBAction func nobtn(_ sender: Any) {
         
+        DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "AfterChatMatchingFailViewController") as! AfterChatMatchingFailViewController
                    

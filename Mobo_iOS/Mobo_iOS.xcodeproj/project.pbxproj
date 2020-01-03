@@ -361,8 +361,8 @@
 		398522D323B06482009C9AE3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */,
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
+				395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */,
 				3962D19723B12935004B11AB /* ChattingView */,
 				391CEEBB23B0DD5000E4C71D /* FindFriend */,
 				39C84F5123B0C43F000130B4 /* MovieCollection */,
