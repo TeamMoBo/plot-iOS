@@ -31,6 +31,15 @@ class HistoryDetailVC: UIViewController {
         navigationSetup()
         
     }
+    
+    @IBAction func cancelbtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+               let vc = storyboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
+               vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+               
+               self.show(vc, sender: nil)
+    }
+    
     func navigationSetup() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         

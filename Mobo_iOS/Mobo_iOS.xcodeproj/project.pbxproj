@@ -18,7 +18,6 @@
 		390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F100823B7816600E81BA2 /* TimeTableViewCell.swift */; };
 		390F100B23B7915300E81BA2 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */; };
 		391CEEBD23B0DD6700E4C71D /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */; };
-		391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */; };
 		391E7ABD23B880F400F7D33D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7ABC23B880F400F7D33D /* ChatModel.swift */; };
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
@@ -105,7 +104,6 @@
 		390F100823B7816600E81BA2 /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
 		390F100A23B7915300E81BA2 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		391CEEBC23B0DD6700E4C71D /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
-		391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendScreen.storyboard; sourceTree = "<group>"; };
 		391E7ABC23B880F400F7D33D /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
@@ -345,7 +343,6 @@
 				398522BD23B05F8D009C9AE3 /* Main.storyboard */,
 				398522C523B05F8F009C9AE3 /* LaunchScreen.storyboard */,
 				390BD67B23B06AEB00FF7E68 /* MovieTabScreen.storyboard */,
-				391CEEBE23B0DD9C00E4C71D /* FriendScreen.storyboard */,
 				39CC509A23B12C9700E24F95 /* ChattingScreen.storyboard */,
 				3989B15A23B75025006ABB26 /* PopUpScreen.storyboard */,
 				EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */,
@@ -541,7 +538,6 @@
 			files = (
 				EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */,
 				3989B15B23B75025006ABB26 /* PopUpScreen.storyboard in Resources */,
-				391CEEBF23B0DD9C00E4C71D /* FriendScreen.storyboard in Resources */,
 				3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */,
 				39CC509B23B12C9700E24F95 /* ChattingScreen.storyboard in Resources */,
 				EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */,

@@ -437,7 +437,7 @@
                                                             <constraint firstAttribute="height" constant="774" id="WdQ-lX-j6l"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtT-ot-nnH">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김영화" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtT-ot-nnH">
                                                         <rect key="frame" x="236" y="371" width="114" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="H3A-ua-Gmj"/>
@@ -447,7 +447,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="3TL-KV-1Pn">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="3TL-KV-1Pn">
                                                         <rect key="frame" x="166" y="415" width="185" height="60"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -460,7 +460,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23세" placeholder="26세" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-nK-4Vg">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="22세" placeholder="26세" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-nK-4Vg">
                                                         <rect key="frame" x="41" y="565" width="232" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="232" id="Kkr-ve-oEE"/>
@@ -591,7 +591,7 @@
                                                     </textField>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qQM-SN-Xze">
                                                         <rect key="frame" x="211" y="1137" width="132" height="77"/>
-                                                        <string key="text">                       2019/12/25 18:20           코엑스 메가박스
+                                                        <string key="text">백두산                       2019/12/25 18:20           코엑스 메가박스
 3관 H열 5,6 번 좌석</string>
                                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
@@ -772,25 +772,10 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="EH7-nk-10x"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="백두산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iot-5u-8vq">
-                                <rect key="frame" x="300" y="712" width="34" height="18"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="px7-Lg-OdT" firstAttribute="trailing" secondItem="Iot-5u-8vq" secondAttribute="trailing" constant="41" id="0KT-d2-SBe"/>
-                            <constraint firstItem="px7-Lg-OdT" firstAttribute="bottom" secondItem="Iot-5u-8vq" secondAttribute="bottom" constant="48" id="iWz-x7-AIH"/>
-                            <constraint firstItem="Iot-5u-8vq" firstAttribute="leading" secondItem="px7-Lg-OdT" secondAttribute="leading" constant="300" id="m29-6h-qoY"/>
-                            <constraint firstItem="Iot-5u-8vq" firstAttribute="top" secondItem="VRe-no-Z4R" secondAttribute="bottom" constant="108" id="rgH-Uk-g9L"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="px7-Lg-OdT"/>
                     </view>
-                    <connections>
-                        <outlet property="movietitle" destination="Iot-5u-8vq" id="9HC-kj-ds0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWu-EP-1lW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

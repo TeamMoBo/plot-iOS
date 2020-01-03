@@ -270,5 +270,4 @@ Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send
 [How to Use Chatting in iOS](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
 
 [ColectionView in TableView](https://www.youtube.com/watch?v=6ZxA2pmV3VM)
-
 [How to Use Lottie](https://www.youtube.com/watch?v=dM6u5FlZB70&t=313s)
