@@ -410,6 +410,7 @@
                         <outlet property="movietitle" destination="Az4-20-Kne" id="T1z-Mk-Qlj"/>
                         <outlet property="name" destination="Z2K-cp-4ca" id="1z2-io-nSB"/>
                         <outlet property="place" destination="9Yy-pE-CD8" id="SqX-uE-jJ5"/>
+                        <outlet property="profileImg" destination="SzC-bT-Oef" id="jHH-ZP-D9H"/>
                         <outlet property="seat" destination="tg1-f2-jaR" id="ANT-98-AQH"/>
                         <outlet property="theater" destination="oEY-Bh-ya9" id="dCm-67-OJz"/>
                         <outlet property="uni" destination="brJ-sD-QT2" id="ni9-ai-AwB"/>
