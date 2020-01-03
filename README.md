@@ -3,6 +3,12 @@
 ---
 
 ##  🎬 영화관에서의 첫 맛남 , 영화 데이트 매칭 서비스 🍿 
+#####Plot [줄거리]
+#####당신의 만남이 가장 쉽고 빠르게 이루어질 수 있도록, Plot은 당신을 위한 줄거리를 준비합니다. 
+
+####언제까지 답장없는 소개팅 앱에 매달릴거야?  
+####준비는 우리가 다 할게. 너는 따라오기만 해 ! 
+####10분 만에 대화부터 예매까지 전부 끝나는 영화 데이트 매칭. 
 
 ![SwiftBadge](https://img.shields.io/badge/Swift-5.1-orange) ![XcodeBadge](https://img.shields.io/badge/Xcode-11.3-blue) ![iOS](https://img.shields.io/badge/iOS-13.3-lightgrey)
 
@@ -58,6 +64,8 @@
 | HashTag                     | ⭕️          | Canceled , [ujcheon](https://github.com/ujcheon) |3|
 | MyPageView                  | ⭕️            | Completed , [ujcheon](https://github.com/ujcheon) |2|
 | urlLinkOpen              | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |2|
+|  MatchingSuggestionView              | ⭕️            | Completed, [ujcheon](https://github.com/ujcheon) |2|
+| ChattingWaitingView              | ⭕️            | Completed, [ujcheon](https://github.com/ujcheon) |2|
 | PaySystem In App | ❌           | Canceled |3|
 | CustomStepper | ❌          | Canceled |3|
 
@@ -104,7 +112,7 @@
   * Master 에서의 Commit 을 피하고 Develop 브랜치를 하나 더 생성하여 충돌 Handling
   
   <img width="350" alt="스크린샷 2020-01-03 오후 7 28 17" src="https://user-images.githubusercontent.com/46750574/71718673-55887b00-2e5f-11ea-8455-fee807e9b1b6.png"><img width="350" alt="스크린샷 2020-01-03 오후 7 53 25" src="https://user-images.githubusercontent.com/46750574/71719779-bcf3fa00-2e62-11ea-844b-dd35b8dea678.png">
-  
+
   
   
 * Issue 2
@@ -209,7 +217,12 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
 ```
 
 ---
+### 👏 Contributor
 
+* 조경진 
+* 천유정
+
+---
 ### 👏 Other Part
 
 👨‍💻 Planner
@@ -239,7 +252,7 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
 
 👨‍💻 iOS 💻
 
-* 조경진
+* 조경진 
 * 천유정
 
 ---
