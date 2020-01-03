@@ -20,7 +20,7 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
  
     
-    var numberOfCell: Int = 4
+    var numberOfCell: Int = 1
     let cellIdentifier: String = "cell"
     
     

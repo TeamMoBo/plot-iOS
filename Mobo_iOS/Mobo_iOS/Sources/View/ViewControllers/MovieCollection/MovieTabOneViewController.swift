@@ -466,7 +466,7 @@ extension MovieTabOneViewController: MovieTabDelegate {
             selectedIndex.sort()
         }
         
-        print(selectedIndex)
+//        print(selectedIndex)
         // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
         
         for indexPath in selectedIndex {
