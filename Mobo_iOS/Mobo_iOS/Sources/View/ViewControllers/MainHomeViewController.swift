@@ -35,6 +35,7 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var noImageLabel: UILabel!
     
     
+    
     private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
     
     var imgArr = [  UIImage(named:"10"),
@@ -49,9 +50,6 @@ class MainHomeViewController: UIViewController {
     var reservemovies: [reserveMovieInfo] = []
     var reserveDate: [reserveDateInfo] = []
     var movingMovie: [TicketResponseString.TicketMovie.movieTicketInfo] = []
-    
-    
-    
     let movieListCellID: String = "MovieListCell"
     let mainListID: String = "mainCollectionViewCell"
     var selectedImage: UIImage!
@@ -70,8 +68,6 @@ class MainHomeViewController: UIViewController {
         static let leftAndRightPaddings: CGFloat = 2.0
         static let numberOfItemsPerRow: CGFloat = 3.0
     }
-    
-    
     
     override func viewDidLoad() {
         
@@ -92,11 +88,11 @@ class MainHomeViewController: UIViewController {
         bottomDay1.tintColor = .mainOrange
         bottomDay2.tintColor = .mainOrange
         
+       
         
         
     }
-    
-    
+   
     
     
     @IBAction func buyBtn(_ sender: Any) {
@@ -107,7 +103,6 @@ class MainHomeViewController: UIViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
         vc.isRevise = false
-        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -244,11 +239,10 @@ class MainHomeViewController: UIViewController {
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
-            
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true, completion: nil)
-
+            
             //            self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -280,8 +274,7 @@ class MainHomeViewController: UIViewController {
         }
     }
     
-    
-    
+  
     
     
     @IBAction func myPageBtn(_ sender: Any) {
@@ -293,6 +286,8 @@ class MainHomeViewController: UIViewController {
         
         
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        
         
     }
     
@@ -308,7 +303,6 @@ class MainHomeViewController: UIViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
         
-        
     }
     
     @IBAction func addMoreBtn(_ sender: Any) {
@@ -317,8 +311,6 @@ class MainHomeViewController: UIViewController {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieMoreTableViewController") as! MovieMoreTableViewController
-        
-        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -436,11 +428,9 @@ class MainHomeViewController: UIViewController {
         // self.navigationController?.navigationBar.tintColor = .white
         
         
-        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
     }
     
+   
     
     
     func reloadMovieLists() {

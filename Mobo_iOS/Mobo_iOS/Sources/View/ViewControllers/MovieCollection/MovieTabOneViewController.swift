@@ -57,20 +57,13 @@ class MovieTabOneViewController: UIViewController {
         
         setMovieListCollectionView()
         
+     
+               
+            //   .addTarget(self, action: #selector(Revise(_:)), for: .touchUpInside)
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        if isRevise {
-            
-            button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
-        }
-        else {
-            
-            button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
-        }
-        
-    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
