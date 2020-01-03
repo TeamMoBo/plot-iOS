@@ -58,21 +58,24 @@ class MovieTabOneViewController: UIViewController {
         
         setMovieListCollectionView()
         
-        if isRevise {
-            
-            button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
-        }
-        else {
-            
-            button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
-        }
+       
         
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        print(isRevise)
+      //  print(isRevise)
+        
+        if DataManager.sharedManager.getRevise() {
+                //수정 완료 버튼으로 바뀌어야함
+                   button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
+               }
+               else {
+                   
+            // 시간 선택 버튼으로 바뀌어야함
+                   button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
+               }
         
     }
     

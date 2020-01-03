@@ -24,7 +24,7 @@ class MainHomeViewController: UIViewController {
     //@IBOutlet var bottomTimeButtons: [UIButton]!
     
     @IBOutlet weak var bottomDay1 : UIButton!
-    @IBOutlet weak var bottomDay2: UIButton!
+    @IBOutlet weak var bottomDay2:  UIButton!
     @IBOutlet weak var bottomTime1: UIButton!
     @IBOutlet weak var bottomTime2: UIButton!
     @IBOutlet weak var bottomTime3: UIButton!
@@ -104,10 +104,9 @@ class MainHomeViewController: UIViewController {
         
         navigationSetup2()
         
-        
+        DataManager.sharedManager.setRevise(revise: false)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-        vc.isRevise = false
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -208,22 +207,36 @@ class MainHomeViewController: UIViewController {
         //   print(reservationInfo)
         
         if !reservationInfo.isEmpty {
-            bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
-            bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
             
+    
+            print(reservationInfo)
+            
+
             bottomDay1.tintColor = .mainOrange
             bottomDay2.tintColor = .mainOrange
             
-            bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00" , for: .normal)
+            
+            //reservationInfo.map {$0 != nil}
+            
+//            times.compactMap { self.times.firstIndex(of: $0) }
+//                           .map { TimeButtons[$0] }
+//                           .forEach { setTimeButtonSelect($0, true) }
+//
+            
+            bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
+            bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
+
+            
+
+            bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00", for: .normal)
             bottomTime3.setTitle(String(describing: reservationInfo[0].times[1]) + ":00", for: .normal)
             bottomTime5.setTitle(String(describing: reservationInfo[0].times[2]) + ":00", for: .normal)
-            
+
             bottomTime2.setTitle(String(describing: reservationInfo[1].times[0]) + ":00", for: .normal)
             bottomTime4.setTitle(String(describing: reservationInfo[1].times[1]) + ":00", for: .normal)
             bottomTime6.setTitle(String(describing: reservationInfo[1].times[2]) + ":00", for: .normal)
-            bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
             
-            moreBtn.isHidden = false
+          //  bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
             
         }
         
@@ -290,10 +303,12 @@ class MainHomeViewController: UIViewController {
     @IBAction func reviseButton(_ sender: Any) {
         
         navigationSetup1()
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "선택한 날짜", style: .done, target: nil, action: nil)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-        
+                
+        DataManager.sharedManager.setRevise(revise: true)
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -558,7 +573,9 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == mainCollectionView {
+            
             return movieInfo.count
+            
         }
         else if collectionView == movieCollectionView {
             
@@ -584,11 +601,9 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainListID, for: indexPath) as! MainViewCollectionViewCell
             
             
-            //   movieInfo = self.dataManager.getMovieList()
-            
             let movie = movieInfo[indexPath.row]
             
-            // print(movie)
+             //print(movie)
             
             cell.delegate = self
             
@@ -601,7 +616,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.currentIndex = indexPath.item
-            //cell.LinkBtn
             
             
             OperationQueue().addOperation {
