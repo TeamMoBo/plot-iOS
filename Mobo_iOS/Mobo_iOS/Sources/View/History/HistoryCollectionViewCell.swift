@@ -21,4 +21,12 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileimg: UIImageView!
     
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+       profileimg.layer.cornerRadius = profileimg.frame.height / 2
+        
+    }
+    
 }
