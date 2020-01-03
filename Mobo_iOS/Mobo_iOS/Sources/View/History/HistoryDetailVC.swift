@@ -32,9 +32,20 @@ class HistoryDetailVC: UIViewController {
         
     }
     
+//    if DataManager.sharedManager.getMatching() {
+//    
+//    if !DataManager.sharedManager.getMatchingToggle() {
+//    
+    
+    
     @IBAction func cancelbtn(_ sender: Any) {
+        
+        
+        DataManager.sharedManager.setMatching(toggle: false)
+        DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-               let vc = storyboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
+               let vc = storyboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
                
                self.show(vc, sender: nil)
