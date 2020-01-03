@@ -489,10 +489,32 @@ extension MovieTabOneViewController: MovieTabDelegate {
         
         
         
-        dataManager.setMovingMovieList(list: transitMovieData)
+        let withoutDuplicates = Array(Set(transitMovieData))
         
+        print("!!!!!!!")
+        print(withoutDuplicates)
+        print("!!!!!!!")
+
+        dataManager.setMovingMovieList(list: withoutDuplicates)
         //print(dataManager.getMovingMovieList())
         
     }
     
+}
+
+extension TicketResponseString.TicketMovie.movieTicketInfo: Equatable {
+    static func ==(lhs: TicketResponseString.TicketMovie.movieTicketInfo, rhs: TicketResponseString.TicketMovie.movieTicketInfo) -> Bool {
+        return lhs.id == rhs.id &&
+               lhs.thumnailImageURL == rhs.thumnailImageURL &&
+            lhs.title == rhs.title && lhs.userRating == rhs.userRating
+    }
+}
+
+extension TicketResponseString.TicketMovie.movieTicketInfo: Hashable {
+    var hashValue: Int {
+        return self.id.hashValue ^
+               self.thumnailImageURL.hashValue ^
+               self.title.hashValue
+               self.userRating.hashValue
+    }
 }

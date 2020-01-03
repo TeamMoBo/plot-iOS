@@ -47,7 +47,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="U1K-xg-ECf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2360"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foot" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-ds-Ar4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guitar" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-ds-Ar4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZN-ET-7s1">
@@ -693,7 +693,7 @@
         <image name="btnCameraEdit" width="22" height="22"/>
         <image name="btnChange" width="35" height="15"/>
         <image name="btnTicketboxMypage" width="140" height="56"/>
-        <image name="foot" width="1000" height="1500"/>
+        <image name="guitar" width="276" height="183"/>
         <image name="icMultiple1" width="13.666666984558105" height="13.666666984558105"/>
         <image name="icUnselected" width="20" height="20"/>
         <image name="imgBackground" width="375" height="1180"/>

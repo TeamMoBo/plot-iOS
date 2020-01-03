@@ -22,7 +22,8 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     var numberOfCell: Int = 1
     let cellIdentifier: String = "cell"
-    
+    private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
+
     
     @IBOutlet weak var collectionview: UICollectionView!
     
@@ -61,13 +62,25 @@ class HistoryViewController: UIViewController ,UICollectionViewDataSource, UICol
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath) as! HistoryCollectionViewCell
         
         
-        self.delegate = self
+          reservationInfo = DataManager.sharedManager.getReservation()
+                
+        //        if reservationInfo[0].date == nil {
+        //            cell.date.text = "2019/12/30"
+        //        }
+        //        else {
+                
+        //            cell.date.text = reservationInfo[0].date
+                 cell.date.text = "2019/12/30"
+                
+        //        }
+                
+                self.delegate = self
 
-        
-        return cell
+                
+                return cell
     }
     
     

@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="guitar" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-bP-1c0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-bP-1c0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="OYc-Av-WYj"/>
@@ -83,7 +83,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생활지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-FF-Dg1">
-                                        <rect key="frame" x="169.66666666666666" y="83" width="37.333333333333343" height="15"/>
+                                        <rect key="frame" x="169.66666666666666" y="83" width="37.333333333333343" height="11.666666666666671"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="10"/>
                                         <color key="textColor" red="0.29803921570000003" green="0.32156862749999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -272,7 +272,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_12" translatesAutoresizingMaskIntoConstraints="NO" id="vWW-PM-AxN">
-                                        <rect key="frame" x="315" y="60" width="20" height="20"/>
+                                        <rect key="frame" x="295" y="60" width="40" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019/1/4 19:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqv-nB-lkp">
                                         <rect key="frame" x="36" y="153" width="127" height="21"/>
@@ -336,7 +336,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn9-cn-txC">
-                                <rect key="frame" x="14" y="258" width="58" height="26"/>
+                                <rect key="frame" x="14" y="258" width="58" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="UQg-p7-mrn"/>
                                     <constraint firstAttribute="width" constant="58" id="Ytd-oy-zQj"/>
@@ -410,6 +410,7 @@
                         <outlet property="movietitle" destination="Az4-20-Kne" id="T1z-Mk-Qlj"/>
                         <outlet property="name" destination="Z2K-cp-4ca" id="1z2-io-nSB"/>
                         <outlet property="place" destination="9Yy-pE-CD8" id="SqX-uE-jJ5"/>
+                        <outlet property="profileImg" destination="SzC-bT-Oef" id="jHH-ZP-D9H"/>
                         <outlet property="seat" destination="tg1-f2-jaR" id="ANT-98-AQH"/>
                         <outlet property="theater" destination="oEY-Bh-ya9" id="dCm-67-OJz"/>
                         <outlet property="uni" destination="brJ-sD-QT2" id="ni9-ai-AwB"/>
@@ -440,9 +441,9 @@
     </scenes>
     <resources>
         <image name="ae9656Be06B91Fd2D661A7091934Cb3E" width="185" height="257"/>
-        <image name="guitar" width="276" height="183"/>
         <image name="ic_12" width="20" height="20"/>
         <image name="imgMatcthingCancel" width="58" height="26"/>
+        <image name="neutral" width="1006" height="1302"/>
         <image name="placeLocalizer" width="12.666666984558105" height="19.333333969116211"/>
         <image name="rectangle" width="375" height="300"/>
         <image name="reviewsIcon" width="21.666666030883789" height="18.333333969116211"/>

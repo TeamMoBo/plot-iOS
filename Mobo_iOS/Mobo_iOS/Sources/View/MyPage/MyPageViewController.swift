@@ -86,6 +86,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
         idtext.delegate = self;
         majortext.delegate = self;
        
+        womanSelected = true
         
         womanbtn.addTarget(self, action: #selector(womanSelect), for: .touchUpInside)
         
