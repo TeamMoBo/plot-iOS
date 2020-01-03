@@ -420,7 +420,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-X8-Ahb">
                                         <rect key="frame" x="0.0" y="44" width="379" height="978"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" fixedFrame="YES" image="guitar" translatesAutoresizingMaskIntoConstraints="NO" id="pZh-BH-97L">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" fixedFrame="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="pZh-BH-97L">
                                                 <rect key="frame" x="0.0" y="80" width="379" height="700"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -937,7 +937,7 @@
                                                         <constraint firstAttribute="width" constant="46" id="KCY-53-PQ5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="guitar" id="haQ-X4-ZGy">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="neutral" id="haQ-X4-ZGy">
                                                     <rect key="frame" x="22" y="89" width="59" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1058,7 +1058,6 @@
     <resources>
         <image name="btnChating" width="174" height="54"/>
         <image name="btnMore" width="42" height="42"/>
-        <image name="guitar" width="276" height="183"/>
         <image name="hash1" width="90" height="46"/>
         <image name="hash2" width="90" height="46"/>
         <image name="hash3" width="90" height="46"/>
@@ -1074,6 +1073,7 @@
         <image name="imgMatchingprofileBg" width="394" height="226"/>
         <image name="imgWaitchatingBackground" width="375" height="1312"/>
         <image name="imgWaitchatingDumy" width="375" height="615"/>
+        <image name="neutral" width="1006" height="1302"/>
         <image name="waitchatingBlackbackground" width="375" height="600"/>
     </resources>
 </document>
