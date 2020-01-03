@@ -1,15 +1,23 @@
-# Plot-iOS 📱 
+#  🎬 영화관에서의 첫 맛남 , 영화 데이트 매칭 서비스 , Plot 🍿
 
----
+>Plot [줄거리]
+>당신의 만남이 가장 쉽고 빠르게 이루어질 수 있도록, Plot은 당신을 위한 줄거리를 준비합니다. 
 
-##  🎬 영화관에서의 첫 맛남 , 영화 데이트 매칭 서비스 🍿 
+
+#### 언제까지 답장없는 소개팅 앱에 매달릴거야?  
+#### 준비는 우리가 다 할게. 너는 따라오기만 해 ! 
+#### 10분 만에 대화부터 예매까지 전부 끝나는 영화 데이트 매칭. 
+
+
+<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
+
 
 ![SwiftBadge](https://img.shields.io/badge/Swift-5.1-orange) ![XcodeBadge](https://img.shields.io/badge/Xcode-11.3-blue) ![iOS](https://img.shields.io/badge/iOS-13.3-lightgrey)
 
 > 개발 기간: **2019.12.21 ~ 2020.01.03**
 > iOS : [chokyungjin](https://github.com/chokyungjin) ,  [ujcheon](https://github.com/ujcheon)
 
-<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71548829-55b7ef00-29f7-11ea-9048-343674ae2774.png">
+
 
 ---
 
@@ -37,48 +45,6 @@
 
 ---
 
-<<<<<<< HEAD
-### Function Introduction
-
-| 기능                         | 개발 여부 | 기타사항     |
-| ---------------------------- | --------- | ------------ |
-| SignIn / SignUp              | (ING)     | Implementing |
-| Rating                       | O         | Completed    |
-| Tabbar On Top                | O         | Completed    |
-| GradientLayer                | O         | Completed    |
-| MultiInteraction             | O         | Completed    |
-| Firebase_Chatting            | O         | Completed    |
-| CustomPopUp                  | O         | Completed    |
-| CustomPickerView             | O         | Completed    |
-| RadioButton , Camera Iibrary | O         | Completed    |
-| CustomNavigationBar          | O         | Completed    |
-| ThreadSleep                  | O         | Completed    |
-| IBCollection                 | O         | Completed    |
-| KeyboardConstraint           | O         | Completed    |
-| SplashLaunScreen             | O         | Completed    |
-| HashTag                      | O         | Completed    |
-| SplashLaunScreen             | O         | Completed    |
-
-### Screenshots
-
-> 초기 로그인, 회원가입 구성
-<img width="250" src="https://user-images.githubusercontent.com/46750574/71696598-c47eb900-2df8-11ea-9bac-45882c59e372.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 02 33" src="https://user-images.githubusercontent.com/46750574/71696602-c5174f80-2df8-11ea-9572-499362f00c48.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 02 41" src="https://user-images.githubusercontent.com/46750574/71696606-c5afe600-2df8-11ea-9916-2d80a52e0945.png">
-
-> 초기 홈 화면은 텅빈 더미 데이터로 구성
-<img width="250" alt="스크린샷 2020-01-03 오전 7 06 22" src="https://user-images.githubusercontent.com/46750574/71696599-c47eb900-2df8-11ea-8e47-db56112f28d9.png">
-
-> 현재 상영작 혹은 개봉 예정작으로 영화 선택과 시간 선택 결정
-<img width="250" alt="스크린샷 2020-01-03 오전 7 06 37" src="https://user-images.githubusercontent.com/46750574/71696603-c5174f80-2df8-11ea-8db1-7f91d70e22db.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 06 44" src="https://user-images.githubusercontent.com/46750574/71696589-c0529b80-2df8-11ea-976d-ab368a79ba07.png">
-
-> 매칭 알고리즘을 통한 채팅 파트너 결정
-<img width="250" alt="스크린샷 2020-01-03 오전 7 03 15" src="https://user-images.githubusercontent.com/46750574/71696596-c3e62280-2df8-11ea-8aa8-0a0f92e610f8.png"><img width="250" alt= "스크린샷 2020-01-03 오전 6 45 00"  src="https://user-images.githubusercontent.com/46750574/71696601-c5174f80-2df8-11ea-9653-2eea8ebf2738.png">
-
-> 매칭 성공 , 실패 팝업
-<img width="250" alt="스크린샷 2020-01-03 오전 7 07 20" src="https://user-images.githubusercontent.com/46750574/71696600-c47eb900-2df8-11ea-9133-e844ccdc32a0.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 07 16" src="https://user-images.githubusercontent.com/46750574/71696605-c5afe600-2df8-11ea-95ce-246d6508ebb0.png">
-
-> 시간 수정 페이지 뷰
-<img width="250" alt="스크린샷 2019-10-22 오후 2 37 38" src="https://user-images.githubusercontent.com/46750574/71572200-56e53b00-2b21-11ea-9eaf-c4beb9077152.png">
-=======
 ### 👏 Function Introduction
 
 | Function                    | Implemention | Etc , Part  | Priority |
@@ -100,6 +66,8 @@
 | HashTag                     | ⭕️          | Canceled , [ujcheon](https://github.com/ujcheon) |3|
 | MyPageView                  | ⭕️            | Completed , [ujcheon](https://github.com/ujcheon) |2|
 | urlLinkOpen              | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |2|
+|  MatchingSuggestionView              | ⭕️            | Completed, [ujcheon](https://github.com/ujcheon) |2|
+| ChattingWaitingView              | ⭕️            | Completed, [ujcheon](https://github.com/ujcheon) |2|
 | PaySystem In App | ❌           | Canceled |3|
 | CustomStepper | ❌          | Canceled |3|
 
@@ -135,7 +103,6 @@
 <br></br>
 <img width="200"  src="https://user-images.githubusercontent.com/46750574/71572200-56e53b00-2b21-11ea-9eaf-c4beb9077152.png">
 <br></br>
->>>>>>> 3b390b0d80ba03cb651b0e8acbc9d02895fddd94
 
 ---
 
@@ -147,7 +114,7 @@
   * Master 에서의 Commit 을 피하고 Develop 브랜치를 하나 더 생성하여 충돌 Handling
   
   <img width="350" alt="스크린샷 2020-01-03 오후 7 28 17" src="https://user-images.githubusercontent.com/46750574/71718673-55887b00-2e5f-11ea-8455-fee807e9b1b6.png"><img width="350" alt="스크린샷 2020-01-03 오후 7 53 25" src="https://user-images.githubusercontent.com/46750574/71719779-bcf3fa00-2e62-11ea-844b-dd35b8dea678.png">
-  
+
   
   
 * Issue 2
@@ -252,7 +219,12 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
 ```
 
 ---
+### 👏 Contributor
 
+* 조경진 
+* 천유정
+
+---
 ### 👏 Other Part
 
 👨‍💻 Planner
@@ -282,7 +254,7 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
 
 👨‍💻 iOS 💻
 
-* 조경진
+* 조경진 
 * 천유정
 
 ---
@@ -298,9 +270,4 @@ Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send
 [How to Use Chatting in iOS](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
 
 [ColectionView in TableView](https://www.youtube.com/watch?v=6ZxA2pmV3VM)
-
-<<<<<<< HEAD
-[Lottie](https://www.youtube.com/watch?v=dM6u5FlZB70&t=313s)
-=======
 [How to Use Lottie](https://www.youtube.com/watch?v=dM6u5FlZB70&t=313s)
->>>>>>> 3b390b0d80ba03cb651b0e8acbc9d02895fddd94
