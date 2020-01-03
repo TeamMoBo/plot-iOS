@@ -26,7 +26,8 @@ class MovieTabTwoViewController: UIViewController {
     var selectedRating: Double!
     var selectedDate: String!
     let dataManager = DataManager.sharedManager
-        
+    var transitMovieData: [TicketResponseString.TicketMovie.movieTicketInfo] = []
+    
     struct Storyboard {
         static let photoCell = "PhotoCell"
         static let showDetailVC = "ShowMovieDetail"
@@ -35,7 +36,7 @@ class MovieTabTwoViewController: UIViewController {
     }
     var isRevise = false
     var selectedIndex: [IndexPath] = []
-
+    
     
     //init
     override func viewDidLoad() {
@@ -44,9 +45,6 @@ class MovieTabTwoViewController: UIViewController {
         MovieCollectionView.showsHorizontalScrollIndicator = false
         MovieCollectionView.decelerationRate = .fast
         //  MovieCollectionView.isScrollEnabled = false
-        
-        
-        
         
         self.Title1.text = "    예매율TOP 10" // 띄어쓰기 4 번
         self.Title1.backgroundColor = .groundColor
@@ -57,12 +55,16 @@ class MovieTabTwoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if isRevise {
+        if DataManager.sharedManager.getRevise() {
+            //수정 완료 버튼으로 바뀌어야함
             Button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
         }
         else {
+            
+            // 시간 선택 버튼으로 바뀌어야함
             Button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
         }
+        
     }
     
     
@@ -77,7 +79,7 @@ class MovieTabTwoViewController: UIViewController {
                 return
             }
             
-         //   print(response)
+            //   print(response)
             
         }
         
@@ -85,93 +87,93 @@ class MovieTabTwoViewController: UIViewController {
     
     
     func navigationSetup() { //네비게이션 투명색만들기
-               
-               //self.navigationController?.navigationBar.barTintColor = .mainOrange
-            self.navigationController?.navigationBar.tintColor = .white
-               self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
-               self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
-               self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간 선택하기", style: .done, target: nil, action: nil)
-    //           self.navigationItem.backBarButtonItem?.tintColor = .white
-               //투명하게 만드는 공식처럼 기억하기
-               self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-               //네비게이션바의 백그라운드색 지정. UIImage와 동일
-               self.navigationController?.navigationBar.shadowImage = UIImage()
-               //shadowImage는 UIImage와 동일. 구분선 없애줌.
-               self.navigationController?.navigationBar.isTranslucent = true
-               //false면 반투명이다.
-               
-               //뷰의 배경색 지정
-               
-                       //self.navigationController?.navigationBar.topItem?.title = "
-               //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
-               //        navigationController?.navigationBar.titleTextAttributes = textAttributes
-               
-           }
+        
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "시간 선택하기", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+        //투명하게 만드는 공식처럼 기억하기
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //네비게이션바의 백그라운드색 지정. UIImage와 동일
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //shadowImage는 UIImage와 동일. 구분선 없애줌.
+        self.navigationController?.navigationBar.isTranslucent = true
+        //false면 반투명이다.
+        
+        //뷰의 배경색 지정
+        
+        //self.navigationController?.navigationBar.topItem?.title = "
+        //        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 211/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1.0)]
+        //        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+    }
     
     @IBAction func pickFinishBtn(_ sender: Any) {
         
         navigationSetup()
+        
         let storyboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TimeTableVC") as! MovieTimeTableViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
         self.show(vc, sender: nil)
-        
-        //self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
+        //        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     
-func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void) {
-    
-    let appUrl: String = "http://13.125.48.35:7935/movie/1"
-    
-    guard let finalURL = URL(string: appUrl) else {
-        return
-    }
-    
-    let session = URLSession(configuration: .default)
-    var request = URLRequest(url: finalURL)
-    
-    request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
-    //    request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "authorization")
-    
-    request.httpMethod = "GET"
-    let task = session.dataTask(with: request) { (data, response, error) in
+    func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void) {
         
-        if let error = error {
-            print(error.localizedDescription)
+        let appUrl: String = "http://13.125.48.35:7935/movie/1"
+        
+        guard let finalURL = URL(string: appUrl) else {
             return
         }
         
-        guard let resultData = data else {
-           // print(data)
-            return
+        let session = URLSession(configuration: .default)
+        var request = URLRequest(url: finalURL)
+        
+        request.addValue("application/x-www-form-urlencoded" , forHTTPHeaderField: "Content-Type")
+        //    request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZHgiOjM3LCJpYXQiOjE1Nzc1MzEyODUsImV4cCI6MTU3ODEzNjA4NSwiaXNzIjoibW9ib21hc3RlciJ9.T1oJedjdkHFdR-ZcN47P2S72nr6LuZ2l1ptJZJHHRAc", forHTTPHeaderField: "authorization")
+        
+        request.httpMethod = "GET"
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let resultData = data else {
+                // print(data)
+                return
+            }
+            
+            do {
+                //            print("!!!!!!!!!!!")
+                //            print(String(data: data!, encoding: .utf8))
+                //            print("!!!!!!!!!!!")
+                
+                let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
+                
+                self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
+                //     print(self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData))
+                
+                
+                //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
+                self.reloadMovieLists()
+                completion(movieTicketLists)
+            }
+            catch let error {
+                print(error.localizedDescription)
+            }
+            
         }
         
-        do {
-            print("!!!!!!!!!!!")
-            print(String(data: data!, encoding: .utf8))
-            print("!!!!!!!!!!!")
-            
-            let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
-            
-            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
-       //     print(self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData))
-            
-            
-          //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
-            self.reloadMovieLists()
-            completion(movieTicketLists)
-        }
-        catch let error {
-            print(error.localizedDescription)
-        }
-        
+        task.resume()
     }
-    
-    task.resume()
-}
     
     func reloadMovieLists() {
         
@@ -221,10 +223,10 @@ func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void
         }
     }
     
-//    func setDefaultMovieOrderType() {
-//        let orderType: String = "0"
-//        dataManager.setMovieOrderType(orderType: orderType)
-//    }
+    //    func setDefaultMovieOrderType() {
+    //        let orderType: String = "0"
+    //        dataManager.setMovieOrderType(orderType: orderType)
+    //    }
     
     func setMovieListCollectionView() {
         MovieCollectionView.delegate = self
@@ -291,48 +293,45 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
         return 0
     }
     
-//    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
-
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
-                
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
-                     
-                     
-                     let movie = movieData[indexPath.row]
-                     
-                     cell.movieName.text = movie.title
-                     cell.movieName.font = .boldSystemFont(ofSize: 12)
-                    cell.movieName.adjustsFontSizeToFitWidth = true
-                    cell.delegate = self
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
+            
+            
+            let movie = movieData[indexPath.row]
+            
+            cell.movieName.text = movie.title
+            cell.movieName.font = .boldSystemFont(ofSize: 12)
+            cell.movieName.adjustsFontSizeToFitWidth = true
+            cell.delegate = self
             cell.currentIndex = indexPath
-
-                     
-                     
-                     //cell.dateLabel.text = movie.date
-                     
-                     
+            
+            
+            
+            //cell.dateLabel.text = movie.date
+            
+            
             cell.rating.rating = Double((movie.userRating) / 2)
-                     cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-                
-//                     let gradeIamge = getGradeImage(grade: movie.grade)
-//                     cell.gradeImage.image = gradeIamge
-                     
-                     OperationQueue().addOperation {
-                         let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                         DispatchQueue.main.async {
-                             cell.imageThumbnail.image = thumnailImage
-                             
-                         }
-                     }
-                     
-                     return cell
+            cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
+            
+            //                     let gradeIamge = getGradeImage(grade: movie.grade)
+            //                     cell.gradeImage.image = gradeIamge
+            
+            OperationQueue().addOperation {
+                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
+                DispatchQueue.main.async {
+                    cell.imageThumbnail.image = thumnailImage
+                    
+                }
             }
             
+            return cell
+        }
             
-            else if indexPath.section == 1 {
+            
+        else if indexPath.section == 1 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieTabTwoViewCell
             
@@ -342,19 +341,19 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             cell.movieName.adjustsFontSizeToFitWidth = true
-
+            
             //cell.dateLabel.text = movie.date
             cell.delegate = self
             cell.currentIndex = indexPath
-
+            
             
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
             
             
-//            let gradeIamge = getGradeImage(grade: movie.grade)
-//            cell.gradeImage.image = gradeIamge
+            //            let gradeIamge = getGradeImage(grade: movie.grade)
+            //            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -366,7 +365,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             
             return cell
             
-            }
+        }
             //        else if collectionView == movieCollectionTwoView {
             //
             //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListTwoCellID, for: indexPath) as! MovieTabTwoViewCell
@@ -410,7 +409,7 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             cell.movieName.adjustsFontSizeToFitWidth = true
-
+            
             //cell.dateLabel.text = movie.date
             
             
@@ -418,11 +417,11 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.delegate = self
             cell.currentIndex = indexPath
-
             
             
-//            let gradeIamge = getGradeImage(grade: movie.grade)
-//            cell.gradeImage.image = gradeIamge
+            
+            //            let gradeIamge = getGradeImage(grade: movie.grade)
+            //            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -434,9 +433,9 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             
             return cell
         }
-            
-            return UICollectionViewCell()
-        }
+        
+        return UICollectionViewCell()
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -498,11 +497,12 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
     
 }
 
-
-
 extension MovieTabTwoViewController: MovieTabDelegate {
+    
     func didMovieClicked(index: IndexPath) {
+        
         if selectedIndex.contains(index) {
+            
             for (i, v) in selectedIndex.enumerated() {
                 if v == index {
                     selectedIndex.remove(at: i)
@@ -512,9 +512,34 @@ extension MovieTabTwoViewController: MovieTabDelegate {
             selectedIndex.append(index)
             selectedIndex.sort()
         }
+        
         print(selectedIndex)
+        // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
+        
+        for indexPath in selectedIndex {
+            if indexPath.section == 0 {
+                
+                transitMovieData.append(movieData[indexPath.item])
+                
+            }
+            if indexPath.section == 1 {
+                transitMovieData.append(movieData[indexPath.item + 2])
+                
+            }
+            if indexPath.section == 2 {
+                transitMovieData.append(movieData[indexPath.item + 6])
+                
+            }
+        }
+        
+        //let arr1 = array1.filter{!array2.contains($0)}
+        
+        
+        
+        dataManager.setMovingMovieList(list: transitMovieData)
+        
+        //print(dataManager.getMovingMovieList())
+        
     }
+    
 }
-
-
-

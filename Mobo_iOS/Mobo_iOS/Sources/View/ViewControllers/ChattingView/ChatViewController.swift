@@ -45,7 +45,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         setupGestureRecognizer()
         // 네트워크가 얼마나 빠른지에 따라 tictok을 건드려야 할듯
-       // tictok()
+        tictok()
 
         // Do any additional setup after loading the view.
     }
@@ -83,17 +83,20 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         @objc func timerCallback(){
             number += 1
-            if number == 10 {
+            if number == 30 {
                 
                 //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
                 
-                self.navigationController?.popViewController(animated: true)
-             //   self.dismiss(animated: true, completion: nil)
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingFinalViewController") as! MatchingFinalViewController
+                           
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overCurrentContext
+                self.present(vc, animated: true, completion: nil)
                 
-    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-    //        vc.modalPresentationStyle = .fullScreen
-    //        self.present(vc, animated: true, completion: nil)
+                
+              //  self.navigationController?.popViewController(animated: true)
+    
                 
             }
         }

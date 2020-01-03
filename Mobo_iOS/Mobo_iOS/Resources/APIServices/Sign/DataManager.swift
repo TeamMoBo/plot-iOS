@@ -40,19 +40,9 @@ class DataManager {
         return reservationCache
     }
     
-    private var ticTimer: Timer? = nil
-    private var ticNumber : Double = 0.0
     
     
-    func getTimer() -> Timer {
-        return ticTimer!
-    }
     
-    func setTimer(ticTimer : Timer) {
-        self.ticTimer = ticTimer
-    }
-    
-   
     
     
     private var id : String!
@@ -130,6 +120,16 @@ class DataManager {
     
     func getDidOrderTypeChangedAndDownloaded() -> Bool {
         return didOrderTypeChangedAndDownloaded
+    }
+    
+    private var revise: Bool = false
+    
+    func setRevise(revise: Bool) {
+        self.revise = revise
+    }
+    
+    func getRevise() -> Bool {
+        return revise
     }
     
     

@@ -24,7 +24,7 @@ class MainHomeViewController: UIViewController {
     //@IBOutlet var bottomTimeButtons: [UIButton]!
     
     @IBOutlet weak var bottomDay1 : UIButton!
-    @IBOutlet weak var bottomDay2: UIButton!
+    @IBOutlet weak var bottomDay2:  UIButton!
     @IBOutlet weak var bottomTime1: UIButton!
     @IBOutlet weak var bottomTime2: UIButton!
     @IBOutlet weak var bottomTime3: UIButton!
@@ -33,6 +33,7 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var bottomTime6: UIButton!
     @IBOutlet weak var bottomTime7: UIButton!
     @IBOutlet weak var noImageLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     
     
     
@@ -87,8 +88,12 @@ class MainHomeViewController: UIViewController {
         
         bottomDay1.tintColor = .mainOrange
         bottomDay2.tintColor = .mainOrange
+<<<<<<< HEAD
         
        
+=======
+        moreBtn.isHidden = true
+>>>>>>> cd816f14ab68043eae00094f9787776a3ee9910a
         
         
     }
@@ -99,10 +104,14 @@ class MainHomeViewController: UIViewController {
         
         navigationSetup2()
         
-        
+        DataManager.sharedManager.setRevise(revise: false)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
+<<<<<<< HEAD
         vc.isRevise = false
+=======
+        
+>>>>>>> cd816f14ab68043eae00094f9787776a3ee9910a
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -123,7 +132,7 @@ class MainHomeViewController: UIViewController {
     
     @objc func timerCallback(){
         number += 1
-       // print(number)
+        // print(number)
         if number == 30 {
             
             //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
@@ -199,43 +208,46 @@ class MainHomeViewController: UIViewController {
         reservationInfo = DataManager.sharedManager.getReservation()
         
         
-        print(reservationInfo)
+        //   print(reservationInfo)
         
         if !reservationInfo.isEmpty {
-            bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
-            bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
             
+    
+            print(reservationInfo)
+            
+
             bottomDay1.tintColor = .mainOrange
             bottomDay2.tintColor = .mainOrange
             
-            bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00" , for: .normal)
+            
+            //reservationInfo.map {$0 != nil}
+            
+//            times.compactMap { self.times.firstIndex(of: $0) }
+//                           .map { TimeButtons[$0] }
+//                           .forEach { setTimeButtonSelect($0, true) }
+//
+            
+            bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
+            bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
+
+            
+
+            bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00", for: .normal)
             bottomTime3.setTitle(String(describing: reservationInfo[0].times[1]) + ":00", for: .normal)
             bottomTime5.setTitle(String(describing: reservationInfo[0].times[2]) + ":00", for: .normal)
-            
+
             bottomTime2.setTitle(String(describing: reservationInfo[1].times[0]) + ":00", for: .normal)
             bottomTime4.setTitle(String(describing: reservationInfo[1].times[1]) + ":00", for: .normal)
             bottomTime6.setTitle(String(describing: reservationInfo[1].times[2]) + ":00", for: .normal)
-            bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
+            
+          //  bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
             
         }
         
         deadlineTitle.textColor = .subOrange
-        print("!!!!!!!!!!!")
-        print(DataManager.sharedManager.getReservation())
-        print("!!!!!!!!!!!")
-        
-        print("???????")
-        print(DataManager.sharedManager.getReservation())
-        print("???????")
-        
-        //MatchingFinalViewController
-        
-        // MatchingCompleteViewController
-        print(DataManager.sharedManager.getMatching())
-        
         
         if DataManager.sharedManager.getMatching() {
-        //    tictok()
+            //    tictok()
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
@@ -295,11 +307,12 @@ class MainHomeViewController: UIViewController {
     @IBAction func reviseButton(_ sender: Any) {
         
         navigationSetup1()
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "선택한 날짜", style: .done, target: nil, action: nil)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-        
-        vc.isRevise = true
+                
+        DataManager.sharedManager.setRevise(revise: true)
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -559,11 +572,13 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == mainCollectionView {
+            
             return movieInfo.count
+            
         }
         else if collectionView == movieCollectionView {
             
-            print(dataManager.getMovingMovieList())
+            //      print(dataManager.getMovingMovieList())
             
             if dataManager.getMovingMovieList() == nil{
                 
@@ -585,11 +600,9 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainListID, for: indexPath) as! MainViewCollectionViewCell
             
             
-            //   movieInfo = self.dataManager.getMovieList()
-            
             let movie = movieInfo[indexPath.row]
             
-            // print(movie)
+             //print(movie)
             
             cell.delegate = self
             
@@ -602,7 +615,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.currentIndex = indexPath.item
-            //cell.LinkBtn
             
             
             OperationQueue().addOperation {
@@ -622,8 +634,6 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         else if collectionView == movieCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCellID, for: indexPath) as! MovieCollectionViewCell
-            
-            
             
             //   movieInfo = self.dataManager.getMovieList()
             

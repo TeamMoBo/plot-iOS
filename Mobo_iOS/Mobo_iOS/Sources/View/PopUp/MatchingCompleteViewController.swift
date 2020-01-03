@@ -13,6 +13,7 @@ class MatchingCompleteViewController: UIViewController {
     
     @IBOutlet weak var date: UILabel!
     
+    var reservationInfo = DataManager.sharedManager.getReservation()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,8 @@ class MatchingCompleteViewController: UIViewController {
         
         Thread.sleep(forTimeInterval: 3) //1초만 재우기
 
+        
+        date.text = reservationInfo[0].date + "일" + String(describing: reservationInfo[0].times[1]) + "시"
         
     }
     

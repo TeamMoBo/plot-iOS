@@ -47,7 +47,7 @@
         <!--History DetailVC-->
         <scene sceneID="MEf-C2-V5w">
             <objects>
-                <viewController id="CiB-WP-5FK" customClass="HistoryDetailVC" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailVC" id="CiB-WP-5FK" customClass="HistoryDetailVC" customModule="Mobo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bE3-MU-QpL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
