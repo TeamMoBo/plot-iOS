@@ -228,7 +228,12 @@ extension SignUpSecondVC: UIPickerViewDataSource, UIPickerViewDelegate {
 ### 👏 Contributor
 
 * 조경진 
+
+  > 안녕하세요!! Sopt 25기 iOS 파트 조경진입니다! 이번 앱잼으로 더욱 더 실력이 상승하고 디테일한 UX에 대해 고려해보는 시간이었습니다!
+
 * 천유정
+
+  > 안녕하세요! Sopt 25기 iOS 파트 조경진의 노예 천유정입니다! 저는  이번 앱잼을 통해 뷰짜개의 삶을 다하고 코딩의 신으로 거듭날 준비가 되었습니다. 
 
 ---
 ### 👏 Other Part
@@ -274,6 +279,5 @@ Please [**file**](https://github.com/TeamMoBo/MoboiOS/issues/new) issues to send
 ### 👏 References
 
 [How to Use Chatting in iOS](https://www.youtube.com/channel/UCScI4bsr-RaGdYSC2QAHWug)
-
 [ColectionView in TableView](https://www.youtube.com/watch?v=6ZxA2pmV3VM)
 [How to Use Lottie](https://www.youtube.com/watch?v=dM6u5FlZB70&t=313s)
