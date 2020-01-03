@@ -131,7 +131,7 @@
 
 * Issue 4
 
-  * 서버 통신 경험 부족으로 인한 잘못된 데이터 저장 , 이미지 URL 같은 경우에는 KingFisher 라는 라이브러리르 쓰기로 함.
+  * 서버 통신 경험 부족으로 인한 잘못된 데이터 저장 , 이미지 URL 같은 경우에는 KingFisher 라는 라이브러리를 쓰기로 함.
 
   ```swift
   func getMovieList(completion: @escaping (ListResponse?) -> Void) {
