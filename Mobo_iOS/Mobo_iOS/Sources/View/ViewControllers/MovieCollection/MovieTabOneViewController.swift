@@ -57,14 +57,7 @@ class MovieTabOneViewController: UIViewController {
         self.title1.backgroundColor = .groundColor
         
         setMovieListCollectionView()
-        
-<<<<<<< HEAD
-     
-               
-            //   .addTarget(self, action: #selector(Revise(_:)), for: .touchUpInside)
-=======
-       
-        
+            
         
     }
     
@@ -81,7 +74,6 @@ class MovieTabOneViewController: UIViewController {
             // 시간 선택 버튼으로 바뀌어야함
                    button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
                }
->>>>>>> cd816f14ab68043eae00094f9787776a3ee9910a
         
     }
     

@@ -41,6 +41,15 @@ class DataManager {
     }
     
     
+    private var revise: Bool = false
+    
+    func setRevise(revise: Bool) {
+        self.revise = revise
+    }
+    
+    func getRevise() -> Bool {
+        return revise
+    }
     
     
     

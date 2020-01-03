@@ -88,13 +88,6 @@ class MainHomeViewController: UIViewController {
         
         bottomDay1.tintColor = .mainOrange
         bottomDay2.tintColor = .mainOrange
-<<<<<<< HEAD
-        
-       
-=======
-        moreBtn.isHidden = true
->>>>>>> cd816f14ab68043eae00094f9787776a3ee9910a
-        
         
     }
    
@@ -107,11 +100,7 @@ class MainHomeViewController: UIViewController {
         DataManager.sharedManager.setRevise(revise: false)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-<<<<<<< HEAD
-        vc.isRevise = false
-=======
-        
->>>>>>> cd816f14ab68043eae00094f9787776a3ee9910a
+
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
