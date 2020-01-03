@@ -55,7 +55,7 @@
 | IBCollection                | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |1|
 | KeyboardConstraint          | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |1|
 | SplashLaunScreen            | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |1|
-| HashTag                     | ❌            | Canceled , [ujcheon](https://github.com/ujcheon) |3|
+| HashTag                     | ⭕️          | Canceled , [ujcheon](https://github.com/ujcheon) |3|
 | MyPageView                  | ⭕️            | Completed , [ujcheon](https://github.com/ujcheon) |2|
 | urlLinkOpen              | ⭕️            | Completed, [chokyungjin](https://github.com/chokyungjin) |2|
 | PaySystem In App | ❌           | Canceled |3|
