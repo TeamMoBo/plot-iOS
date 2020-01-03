@@ -66,7 +66,7 @@
 ### 👏 Screenshots
 
 * 초기 로그인, 회원가입
-<img width="250" src="https://user-images.githubusercontent.com/46750574/71696598-c47eb900-2df8-11ea-9bac-45882c59e372.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 02 33" src="https://user-images.githubusercontent.com/46750574/71696602-c5174f80-2df8-11ea-9572-499362f00c48.png"><img width="250" alt="스크린샷 2020-01-03 오전 7 02 41" src="https://user-images.githubusercontent.com/46750574/71696606-c5afe600-2df8-11ea-9916-2d80a52e0945.png">
+<img width="250" src="https://user-images.githubusercontent.com/46750574/71696598-c47eb900-2df8-11ea-9bac-45882c59e372.png"><img width="250" src="https://user-images.githubusercontent.com/46750574/71696602-c5174f80-2df8-11ea-9572-499362f00c48.png"><img width="250" src="https://user-images.githubusercontent.com/46750574/71696606-c5afe600-2df8-11ea-9916-2d80a52e0945.png">
 
 * 초기 홈 화면은 텅빈 더미 데이터로 구성 , 현재 상영작 혹은 개봉 예정작으로 영화 선택과 시간 선택 결정
 <img width="250" src="https://user-images.githubusercontent.com/46750574/71696599-c47eb900-2df8-11ea-8e47-db56112f28d9.png"><img width="250" src="https://user-images.githubusercontent.com/46750574/71696603-c5174f80-2df8-11ea-8db1-7f91d70e22db.png"><img width="250" src="https://user-images.githubusercontent.com/46750574/71696589-c0529b80-2df8-11ea-976d-ab368a79ba07.png">
