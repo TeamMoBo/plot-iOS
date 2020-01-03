@@ -13,6 +13,7 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var datestatus: UILabel!
     @IBOutlet weak var moviename: UILabel!
     
+    @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var age: UILabel!
     
@@ -21,7 +22,7 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileimg: UIImageView!
     
     
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         

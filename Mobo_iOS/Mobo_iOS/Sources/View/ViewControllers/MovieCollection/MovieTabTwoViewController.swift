@@ -532,13 +532,13 @@ extension MovieTabTwoViewController: MovieTabDelegate {
             }
         }
         
-        //let arr1 = array1.filter{!array2.contains($0)}
-        
-        
-        
-        dataManager.setMovingMovieList(list: transitMovieData)
-        
-        //print(dataManager.getMovingMovieList())
+         let withoutDuplicates = Array(Set(transitMovieData))
+              
+              print("!!!!!!!")
+              print(withoutDuplicates)
+              print("!!!!!!!")
+
+        dataManager.setMovingMovieList(list: withoutDuplicates)
         
     }
     
