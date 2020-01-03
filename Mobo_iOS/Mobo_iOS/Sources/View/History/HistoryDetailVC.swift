@@ -24,7 +24,7 @@ class HistoryDetailVC: UIViewController {
     @IBOutlet weak var theater: UILabel!
     @IBOutlet weak var seat: UILabel!
     
-    @IBOutlet weak var selectedpic: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
