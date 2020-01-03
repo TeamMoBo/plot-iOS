@@ -130,6 +130,17 @@ class DataManager {
     func getDidOrderTypeChangedAndDownloaded() -> Bool {
         return didOrderTypeChangedAndDownloaded
     }
+    
+    private var matchingToggle: Bool = false
+       
+       func setMatchingToggle(matchingToggle: Bool) {
+           self.matchingToggle = matchingToggle
+       }
+       
+       func getMatchingToggle() -> Bool {
+           return matchingToggle
+       }
+    
    
     private var toggle: Bool = false
     

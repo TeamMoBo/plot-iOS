@@ -87,6 +87,7 @@ class MovieTimeTableViewController: UIViewController {
 //        print("!!!!!!!!!!!")
 //        print(DataManager.sharedManager.getReservation())
 //        print("!!!!!!!!!!!")
+        
         DataManager.sharedManager.setMatching(toggle: true)
         
         self.navigationController?.popToRootViewController(animated: true)

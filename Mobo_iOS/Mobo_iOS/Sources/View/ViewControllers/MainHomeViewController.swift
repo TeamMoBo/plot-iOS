@@ -93,7 +93,7 @@ class MainHomeViewController: UIViewController {
    
     
     
-    @IBAction func buyBtn(_ sender: Any) {
+    @IBAction func buyBtn(_ sender: Any) { 
         
         navigationSetup2()
         
@@ -127,13 +127,7 @@ class MainHomeViewController: UIViewController {
             //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
             
             self.navigationController?.popViewController(animated: true)
-            //   self.dismiss(animated: true, completion: nil)
-            
-            //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            //        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-            //        vc.modalPresentationStyle = .fullScreen
-            //        self.present(vc, animated: true, completion: nil)
-            
+          
         }
     }
     
@@ -209,13 +203,6 @@ class MainHomeViewController: UIViewController {
             bottomDay2.tintColor = .mainOrange
             
             
-            //reservationInfo.map {$0 != nil}
-            
-//            times.compactMap { self.times.firstIndex(of: $0) }
-//                           .map { TimeButtons[$0] }
-//                           .forEach { setTimeButtonSelect($0, true) }
-//
-            
             bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
             bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
 
@@ -235,8 +222,11 @@ class MainHomeViewController: UIViewController {
         
         deadlineTitle.textColor = .subOrange
         
+        
+            
         if DataManager.sharedManager.getMatching() {
-            //    tictok()
+            
+            if !DataManager.sharedManager.getMatchingToggle() {
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
@@ -245,7 +235,12 @@ class MainHomeViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
             
             //            self.navigationController?.pushViewController(vc, animated: true)
+            }
+            else {
+                
+            }
         }
+            
         
         
     }

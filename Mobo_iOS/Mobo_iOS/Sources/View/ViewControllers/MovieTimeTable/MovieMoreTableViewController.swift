@@ -20,9 +20,7 @@ class MovieMoreTableViewController: UIViewController {
     var dummyDate2 = [String]()
     var dummyDate3 = [String]()
     
-    
-    var date = Date()
-    var cal = Calendar.current
+    //시간표에서 받아온 데이터 뷰
     var currentIndex: Int?
     var reserveDate: [reserveDateInfo] = []
     private var reservationInfo: [DataManager.ReservationInfo] = [] // 현재 선택한 날짜에 대한 예약 정보
@@ -30,9 +28,6 @@ class MovieMoreTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        print(date)
         
         dummyDay = [17,18,19,20,21,22,23,24,25]
         
@@ -52,9 +47,6 @@ class MovieMoreTableViewController: UIViewController {
     
     @IBAction func timeRevise(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MainHomeVC") as! MainHomeViewController
-             
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -69,9 +61,9 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         reservationInfo = DataManager.sharedManager.getReservation()
-                                     
+        
+        
         if !reservationInfo.isEmpty {
-           // print(reservationInfo.count)
             return reservationInfo.count
         }
         return 7
@@ -103,6 +95,7 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         
         if reservationInfo == nil {
             print(String(describing: reservationInfo[indexPath.row].date))
+            //날짜 텍스트가 들어가는 곳이지만 이 조건문에 들어가지 않습니다!
         cell.dayLabel.text =  String(describing: reservationInfo[indexPath.row].date)
         }
         else {
@@ -113,8 +106,6 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         return cell
         
     }
-    
-    
     
 }
 
@@ -129,8 +120,8 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        
-        return 10
+        print(reservationInfo.count)
+        return reservationInfo.count
     }
     
     
@@ -143,19 +134,21 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         cell.makeRounded(cornerRadius: 5)
         cell.setBorder(borderColor: .borderGray, borderWidth: 1)
         
-        
         reservationInfo = DataManager.sharedManager.getReservation()
         
+        
+        //시간대가 들어가야 하는 컬렉션 뷰 입니다!
         if reservationInfo == nil {
+            //여기로 들어가지가 않습니다!
             print(String(describing: reservationInfo[indexPath.row].times))
 
         }
         else {
+            //무조건 여기로 빠집니다
             print(String(describing: reservationInfo[indexPath.row].times))
 
         }
                                      
-        cell.delegate = self
         
 
         cell.currentIndex = indexPath.item
@@ -168,40 +161,6 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
       
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCollectionCell", for: indexPath) as! TimeCollectionViewCell
-
-        
-        cell.currentIndex = indexPath.item
-        //cell.timeButton.backgroundColor  = .red
-        
-        if cell.timeButton.isTouchInside {
-            
-            print(10)
-            
-            if (cell.timeButton.isSelected) == false {
-                
-                cell.timeButton.isSelected = true
-                cell.timeButton.setTitleColor(.white, for: .normal)
-                cell.timeButton.setBackgroundColor(.mainOrange, for: .normal)
-                
-                
-                
-            }
-                
-            else if cell.timeButton.isSelected
-            {
-                cell.timeButton.isSelected = false
-                cell.timeButton.setTitleColor(.mainOrange, for: .normal)
-                cell.timeButton.setBackgroundColor(.lightGray, for: .normal)
-                //              cell.timeButton.makeRounded(cornerRadius: 5)
-                cell.timeButton.clipsToBounds = true
-                
-                
-            }
-        }
-        
-        
-
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -228,17 +187,5 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
     
     
 }
-
-extension MovieMoreTableViewController: toggleActionDelegate {
-    
-    
-    
-    func didClicked() {
-        
-        print(1010)
-    }
-    
-}
-
 
 

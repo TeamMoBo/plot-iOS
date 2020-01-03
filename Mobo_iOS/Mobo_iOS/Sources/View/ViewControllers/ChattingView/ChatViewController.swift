@@ -33,6 +33,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DataManager.sharedManager.setMatchingToggle(matchingToggle: true)
         
         tableview.backgroundColor = UIColor.init(red: 246 / 255, green: 246 / 255, blue: 246 / 255, alpha: 1)
         
@@ -83,13 +84,14 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         @objc func timerCallback(){
             number += 1
-            if number == 30 {
+            if number == 10 {
                 
                 //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
                 
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingFinalViewController") as! MatchingFinalViewController
-                           
+                
+                
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .overCurrentContext
                 self.present(vc, animated: true, completion: nil)
