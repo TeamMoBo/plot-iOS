@@ -406,9 +406,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
-            
-            
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
+          //  let gradeIamge = getGradeImage(grade: movie.)
             //            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {

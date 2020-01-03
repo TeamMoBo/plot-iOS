@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func startAnimation() {
-        let animationView = Lottie.AnimationView(name:"splah_io_change")
+        let animationView = Lottie.AnimationView(name:"splash_io_changefinal")
         
         animationView.frame = CGRect(x:0, y:0, width:375, height:812)
         animationView.center = self.view.center
@@ -59,7 +59,8 @@ class ViewController: UIViewController {
             
             let storyboard = UIStoryboard(name: "SignInScreen", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true, completion: nil)
             
         }

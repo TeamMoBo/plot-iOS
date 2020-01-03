@@ -69,16 +69,19 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         reservationInfo = DataManager.sharedManager.getReservation()
-                              
-    
-        return reservationInfo.count
+                                     
+        if !reservationInfo.isEmpty {
+           // print(reservationInfo.count)
+            return reservationInfo.count
+        }
+        return 7
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         // print("==============")
-        let dataCount = dummyDate3.count
+        let dataCount = 10
         // print(dataCount)
         let lineCount = (dataCount % 4 == 0) ? (dataCount / 4) : (dataCount / 4 + 1)
         //  print(lineCount)
@@ -96,14 +99,15 @@ extension MovieMoreTableViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TimeTableViewCell
         
         cell.dayLabel.textColor = .mainOrange
-       // cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
+      //  cell.dayLabel.text = String(describing: dummyDay[indexPath.row])
         
-        reservationInfo = DataManager.sharedManager.getReservation()
-                              
-        if !reservationInfo.isEmpty {
-                
-            cell.dayLabel.text =  reservationInfo[indexPath.section].date
-            
+        if reservationInfo == nil {
+            print(String(describing: reservationInfo[indexPath.row].date))
+        cell.dayLabel.text =  String(describing: reservationInfo[indexPath.row].date)
+        }
+        else {
+            cell.dayLabel.text =  String(describing: "")
+
         }
         
         return cell
@@ -127,7 +131,6 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         
         return 10
-      //  return reservationInfo.count
     }
     
     
@@ -139,29 +142,24 @@ extension MovieMoreTableViewController: UICollectionViewDelegate, UICollectionVi
         
         cell.makeRounded(cornerRadius: 5)
         cell.setBorder(borderColor: .borderGray, borderWidth: 1)
-        // cell.timeButton.dropShadow(color: .borderGray, offSet: CGSize(width: 1.0, height: 1.0), opacity: 0.7, radius: 5)
         
         
         reservationInfo = DataManager.sharedManager.getReservation()
         
-        //print(reservationInfo[0].times[indexPath.item] )
+        if reservationInfo == nil {
+            print(String(describing: reservationInfo[indexPath.row].times))
 
-                              
-//        if !reservationInfo.isEmpty {
-//
-//            cell.timeButton.setTitle(String(describing: reservationInfo[indexPath.section].times[indexPath.row] ) , for: .normal)
-//
-//        }
-        
-       // cell.timeButton.setTitle(dummyDate3[indexPath.row], for: .normal)
+        }
+        else {
+            print(String(describing: reservationInfo[indexPath.row].times))
+
+        }
+                                     
         cell.delegate = self
         
 
         cell.currentIndex = indexPath.item
-        
-        
-        
-        
+     
         
         return cell
         

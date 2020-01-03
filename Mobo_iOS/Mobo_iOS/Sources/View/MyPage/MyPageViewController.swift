@@ -22,7 +22,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var selectedpic: UIImageView!
     
     @IBOutlet weak var agetext: UITextField!
-    @IBOutlet weak var pwdtext: UITextField!
+
     @IBOutlet weak var kakaoidtext: UITextField!
     @IBOutlet weak var majortext: UITextField!
     @IBOutlet weak var nametext: UITextField!
