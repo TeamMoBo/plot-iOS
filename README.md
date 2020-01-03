@@ -61,6 +61,7 @@
 | SplashLaunScreen             | O         | Completed    |
 | HashTag                      | O         | Completed    |
 | SplashLaunScreen             | O         | Completed    |
+
 ### Screenshots
 
 > 초기 로그인, 회원가입 구성
