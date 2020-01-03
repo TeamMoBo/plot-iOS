@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class MyPageViewController: UIViewController , UITextFieldDelegate {
+class MyPageViewController: UIViewController , UITextFieldDelegate  {
     
     let picker = UIImagePickerController()
     
@@ -188,14 +188,14 @@ class MyPageViewController: UIViewController , UITextFieldDelegate {
 
 //}
 
-
+class 
 
 
 extension MyPageViewController : UIImagePickerControllerDelegate
 {
     func imagePickerController(_ _picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            selectedpic.image = image
+            profilepic.image = image
             print(info)
         }
         
