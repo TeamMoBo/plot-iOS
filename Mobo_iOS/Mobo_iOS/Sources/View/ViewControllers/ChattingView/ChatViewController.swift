@@ -84,7 +84,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         @objc func timerCallback(){
             number += 1
-            if number == 50 {
+            if number == 20 {
                 
                 //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
                 
@@ -369,15 +369,17 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             print("@@@@@@@@")
             print(self.chatRoomUid!)
+            
             print("@@@@@@@@")
             
             for item in datasnapshot.children.allObjects as! [DataSnapshot]{
                 let comment = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
+                print(comment!)
                 self.comments.append(comment!)
             }
             
             self.tableview.reloadData()
-            self.tableview.scrollToRow(at: IndexPath(item: self.comments.count - 1, section: 0), at: .bottom, animated: false)
+    //        self.tableview.scrollToRow(at: IndexPath(item: self.comments.count - 1, section: 0), at: .bottom, animated: false)
             
             
             

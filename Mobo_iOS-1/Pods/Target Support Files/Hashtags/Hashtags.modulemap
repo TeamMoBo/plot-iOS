@@ -1,6 +1,0 @@
-framework module Hashtags {
-  umbrella header "Hashtags-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -30,15 +30,15 @@ class BeforeChattingViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         
         //디바이스 용
-        // "AmpQmmXBT1OBqF0cXl8g2VFcPNR2"
-        
+        // "sBmWopoMH1fdnzGv7hfESzW2Lx02" //p2 의 uid
+        // "AmpQmmXBT1OBqF0cXl8g2VFcPNR2" //p1 의 uid
         
         //내 아이디 용
-        vc.destinationUid = "AmpQmmXBT1OBqF0cXl8g2VFcPNR2"
+        vc.destinationUid = "AmpQmmXBT1OBqF0cXl8g2VFcPNR2" //p2 의 uid 이다
         
-        if vc.destinationUid == "AmpQmmXBT1OBqF0cXl8g2VFcPNR2" {
-            self.name.text = "조경진"
-        }
+//        if vc.destinationUid == "AmpQmmXBT1OBqF0cXl8g2VFcPNR2" {
+//            self.name.text = "조경진"
+//        }
         
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         
