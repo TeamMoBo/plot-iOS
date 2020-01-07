@@ -104,7 +104,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         var password = Userpwd.text!
         var email = name + "@naver.com"
         
-        // 사실 이거 더미라 이거 고치긴 해야됨....
+        // 사실 이거 더미라 이거 고치긴 해야됨.... p1 으로 핸드폰에 로그인 할거다!!
         Auth.auth().signIn(withEmail: "p2@naver.com", password: "123123" ) { (user, err) in
             
             if(err != nil){

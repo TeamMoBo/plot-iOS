@@ -115,7 +115,6 @@ extension HistoryViewController: matchingLinkDelegate {
     //BeforeChat
     
     func didClicked() {
-        print(11)
     
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "History", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "HistoryDetailVC") as! HistoryDetailVC

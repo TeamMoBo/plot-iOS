@@ -552,7 +552,7 @@
                                     <constraint firstAttribute="height" constant="1" id="Ojd-Wx-KJo"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-Rn-TaV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-Rn-TaV">
                                 <rect key="frame" x="235" y="94" width="110" height="32.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="9Ng-Jd-bD9"/>

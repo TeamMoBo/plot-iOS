@@ -35,15 +35,16 @@ class HistoryDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        movietitle.text = DataManager.sharedManager.getMovingMovieList()[0].title
+       // movietitle.text = DataManager.sharedManager.getMovingMovieList()[0].title
+        movietitle.text = "백두산"
 
-               OperationQueue().addOperation {
-                   let thumnailImage = self.getThumnailImage(withURL: DataManager.sharedManager.getMovingMovieList()[0].thumnailImageURL)
-                   DispatchQueue.main.async {
-                       self.profileImg.image = thumnailImage
-                       
-                   }
-               }
+//               OperationQueue().addOperation {
+//                   let thumnailImage = self.getThumnailImage(withURL: DataManager.sharedManager.getMovingMovieList()[0].thumnailImageURL)
+//                   DispatchQueue.main.async {
+//                       self.profileImg.image = thumnailImage
+//                       
+//                   }
+//               }
     }
     
     func getThumnailImage(withURL thumnailURL: String) -> UIImage? {
@@ -64,11 +65,7 @@ class HistoryDetailVC: UIViewController {
         DataManager.sharedManager.setMatching(toggle: false)
         DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainNaviVC") as! UINavigationController
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        
-        self.show(vc, sender: nil)
+        performSegue(withIdentifier: "unwindToMain", sender: nil)
     }
     
     func navigationSetup() {

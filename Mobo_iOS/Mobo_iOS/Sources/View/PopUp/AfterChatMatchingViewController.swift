@@ -24,8 +24,8 @@ class AfterChatMatchingViewController: UIViewController {
         DataManager.sharedManager.setMatchingToggle(matchingToggle: false)
                      //   self.navigationController?.popViewController(animated: true)
                         
-             let mainStoryboard: UIStoryboard = UIStoryboard(name: "History", bundle: nil)
-             let vc = mainStoryboard.instantiateViewController(withIdentifier: "HistoryDetailVC") as! HistoryDetailVC
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "History", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "HistoryDetailVC") as! HistoryDetailVC
           
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext

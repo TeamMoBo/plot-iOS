@@ -414,9 +414,11 @@
                         <outlet property="seat" destination="tg1-f2-jaR" id="ANT-98-AQH"/>
                         <outlet property="theater" destination="oEY-Bh-ya9" id="dCm-67-OJz"/>
                         <outlet property="uni" destination="brJ-sD-QT2" id="ni9-ai-AwB"/>
+                        <segue destination="BTF-KC-rGL" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="WG3-qo-NSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OW8-9J-MSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BTF-KC-rGL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1762.4000000000001" y="121.92118226600985"/>
         </scene>

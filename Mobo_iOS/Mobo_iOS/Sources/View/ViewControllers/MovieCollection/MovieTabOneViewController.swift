@@ -40,7 +40,7 @@ class MovieTabOneViewController: UIViewController {
     }
     
     var isRevise = false
-
+    
     
     //init
     override func viewDidLoad() {
@@ -57,23 +57,23 @@ class MovieTabOneViewController: UIViewController {
         self.title1.backgroundColor = .groundColor
         
         setMovieListCollectionView()
-            
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-      //  print(isRevise)
+        //  print(isRevise)
         
         if DataManager.sharedManager.getRevise() {
-                //수정 완료 버튼으로 바뀌어야함
-                   button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
-               }
-               else {
-                   
+            //수정 완료 버튼으로 바뀌어야함
+            button1.setImage(UIImage(named: "btnTimeselect-1"), for: .normal)
+        }
+        else {
+            
             // 시간 선택 버튼으로 바뀌어야함
-                   button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
-               }
+            button1.setImage(UIImage(named: "btnTimeselect"), for: .normal)
+        }
         
     }
     
@@ -107,7 +107,7 @@ class MovieTabOneViewController: UIViewController {
         
         self.show(vc, sender: nil)
         dataManager.setMovingMovieList(list: transitMovieData)
-
+        
         
         //self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
         
@@ -167,7 +167,7 @@ class MovieTabOneViewController: UIViewController {
             }
             
             do {
-              
+                
                 let movieTicketLists: TicketResponseString  = try JSONDecoder().decode(TicketResponseString.self, from: resultData)
                 
                 self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
@@ -282,7 +282,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
         if section == 0 {
             return min(movieData.count, 2)
             
-        } else if section == 1{
+        } else if section == 1 {
             return min(max(movieData.count - 2, 0), 4)
         }
         else {
@@ -326,12 +326,6 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             
             let movie = movieData[indexPath.row]
             
-            //            self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
-            
-            
-            // print(movie)
-            
-            
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 12)
             
@@ -341,9 +335,6 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-            
-            //            let gradeIamge = getGradeImage(grade: movie.)
-            //                     cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
                 let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
@@ -367,7 +358,7 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             cell.movieName.adjustsFontSizeToFitWidth = true
-
+            
             //cell.dateLabel.text = movie.date
             cell.delegate = self
             cell.currentIndex = indexPath
@@ -401,14 +392,14 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.movieName.text = movie.title
             cell.movieName.font = .boldSystemFont(ofSize: 10)
             cell.movieName.adjustsFontSizeToFitWidth = true
-
+            
             //cell.dateLabel.text = movie.date
             cell.delegate = self
             cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
-          //  let gradeIamge = getGradeImage(grade: movie.)
+            //  let gradeIamge = getGradeImage(grade: movie.)
             //            cell.gradeImage.image = gradeIamge
             
             OperationQueue().addOperation {
@@ -466,7 +457,7 @@ extension MovieTabOneViewController: MovieTabDelegate {
             selectedIndex.sort()
         }
         
-//        print(selectedIndex)
+        //        print(selectedIndex)
         // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
         
         for indexPath in selectedIndex {
@@ -494,7 +485,7 @@ extension MovieTabOneViewController: MovieTabDelegate {
         print("!!!!!!!")
         print(withoutDuplicates)
         print("!!!!!!!")
-
+        
         dataManager.setMovingMovieList(list: withoutDuplicates)
         //print(dataManager.getMovingMovieList())
         
@@ -505,7 +496,7 @@ extension MovieTabOneViewController: MovieTabDelegate {
 extension TicketResponseString.TicketMovie.movieTicketInfo: Equatable {
     static func ==(lhs: TicketResponseString.TicketMovie.movieTicketInfo, rhs: TicketResponseString.TicketMovie.movieTicketInfo) -> Bool {
         return lhs.id == rhs.id &&
-               lhs.thumnailImageURL == rhs.thumnailImageURL &&
+            lhs.thumnailImageURL == rhs.thumnailImageURL &&
             lhs.title == rhs.title && lhs.userRating == rhs.userRating
     }
 }
@@ -513,8 +504,8 @@ extension TicketResponseString.TicketMovie.movieTicketInfo: Equatable {
 extension TicketResponseString.TicketMovie.movieTicketInfo: Hashable {
     var hashValue: Int {
         return self.id.hashValue ^
-               self.thumnailImageURL.hashValue ^
-               self.title.hashValue
-               self.userRating.hashValue
+            self.thumnailImageURL.hashValue ^
+            self.title.hashValue
+        self.userRating.hashValue
     }
 }
