@@ -27,11 +27,8 @@ class MovieSelectionViewController: TabmanViewController {
         //        let navigationHeight = UIApplication.shared.statusBarFrame.height
         //            + self.navigationController!.navigationBar.frame.height
         
-        
         navigationSetup()
-        
-        
-        
+      
     }
     
     func navigationSetup() { //네비게이션 투명색만들기

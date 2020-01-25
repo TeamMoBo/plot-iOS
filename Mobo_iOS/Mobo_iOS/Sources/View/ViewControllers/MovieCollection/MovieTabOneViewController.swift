@@ -141,7 +141,7 @@ class MovieTabOneViewController: UIViewController {
     
     func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void) {
         
-        let appUrl: String = "http://13.125.48.35:7935/movie/0"
+        let appUrl: String = APIConstants.movieSelectionURL + "0"
         
         guard let finalURL = URL(string: appUrl) else {
             return
@@ -172,10 +172,6 @@ class MovieTabOneViewController: UIViewController {
                 
                 self.dataManager.setTicketingMoiveList(list: movieTicketLists.results.movieData)
                 
-                //       print(self.dataManager.getTicketingMoiveList())
-                
-                
-                //  self.dataManager.setDidOrderTypeChangedAndDownloaded(true)
                 self.reloadMovieLists()
                 completion(movieTicketLists)
             }
@@ -192,7 +188,6 @@ class MovieTabOneViewController: UIViewController {
         
         self.movieData = dataManager.getTicketingMoiveList()
         
-        //        self.movies = dataManager.getMovieList()[0].randMovie
         DispatchQueue.main.async {
             self.movieCollectionView.reloadData()
             //        self.mainCollectionView.reloadData()
@@ -208,19 +203,7 @@ class MovieTabOneViewController: UIViewController {
     func getDate(date: String) -> String? {
         return date
     }
-    
-    func getThumnailImage(withURL thumnailURL: String) -> UIImage? {
-        guard let imageURL = URL(string: thumnailURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        return UIImage(data: imageData)
-    }
-    
+   
     func getGradeImage(grade: Int) -> UIImage? {
         switch grade {
         case 0:
@@ -336,13 +319,8 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
         }
@@ -364,19 +342,9 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-            
-            
-            
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
-            //            cell.gradeImage.image = gradeIamge
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+        
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
             
@@ -398,45 +366,13 @@ extension MovieTabOneViewController: UICollectionViewDataSource, UICollectionVie
             cell.currentIndex = indexPath
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-            
-            //  let gradeIamge = getGradeImage(grade: movie.)
-            //            cell.gradeImage.image = gradeIamge
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
         }
         
         return UICollectionViewCell()
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        //   let cell = collectionView.cellForItem(at: indexPath) as! MovieCollectionTabViewCell
-        
-        //        if selectedIndex.contains(indexPath) {
-        //
-        //            cell.imageSelect.isHidden = true
-        //            for (index , item) in selectedIndex.enumerated() {
-        //                if item == indexPath {
-        //                    selectedIndex.remove(at: index)
-        //                }
-        //            }
-        //        } else {
-        //            cell.imageSelect.isHidden = false
-        //            selectedIndex.append(indexPath)
-        //        }
-        //        print(selectedIndex)
-        
-        
     }
     
 }
@@ -457,8 +393,6 @@ extension MovieTabOneViewController: MovieTabDelegate {
             selectedIndex.sort()
         }
         
-        //        print(selectedIndex)
-        // seelctIndex가 indexPath의 배열이라서 묶여있는 배열로 파싱하는 법
         
         for indexPath in selectedIndex {
             if indexPath.section == 0 {
@@ -476,23 +410,19 @@ extension MovieTabOneViewController: MovieTabDelegate {
             }
         }
         
-        //let arr1 = array1.filter{!array2.contains($0)}
-        
-        
-        
         let withoutDuplicates = Array(Set(transitMovieData))
+        //hashable을 따를 수 있어서 set , array 해서 중복 제거.
         
         print("!!!!!!!")
         print(withoutDuplicates)
         print("!!!!!!!")
         
         dataManager.setMovingMovieList(list: withoutDuplicates)
-        //print(dataManager.getMovingMovieList())
         
     }
     
 }
-
+//구조체 객체에 대한 중복 제거하기위하여 hashable 을 따르게하고 set
 extension TicketResponseString.TicketMovie.movieTicketInfo: Equatable {
     static func ==(lhs: TicketResponseString.TicketMovie.movieTicketInfo, rhs: TicketResponseString.TicketMovie.movieTicketInfo) -> Bool {
         return lhs.id == rhs.id &&

@@ -83,13 +83,7 @@ class MovieTimeTableViewController: UIViewController {
     
     @IBAction func findFriendBtn(_ sender: Any) {
         
-        
-//        print("!!!!!!!!!!!")
-//        print(DataManager.sharedManager.getReservation())
-//        print("!!!!!!!!!!!")
-        
         DataManager.sharedManager.setMatching(toggle: true)
-        
         self.navigationController?.popToRootViewController(animated: true)
     
     }

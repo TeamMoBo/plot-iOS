@@ -106,6 +106,9 @@ PODS:
   - GTMSessionFetcher/Core (1.3.0)
   - Hashtags (0.1.3):
     - AlignedCollectionViewFlowLayout (~> 1.1.2)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
   - leveldb-library (1.22)
   - lottie-ios (3.1.5)
   - nanopb (0.3.9011):
@@ -131,6 +134,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FloatRatingView (~> 4)
   - Hashtags
+  - Kingfisher (~> 5.0)
   - lottie-ios
   - ObjectMapper (~> 3.4)
   - Pageboy (~> 3.2)
@@ -163,6 +167,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - Hashtags
+    - Kingfisher
     - leveldb-library
     - lottie-ios
     - nanopb
@@ -197,6 +202,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
   Hashtags: 6e2fbcb3ec0cae07403aab96985a9497927a5962
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -207,6 +213,6 @@ SPEC CHECKSUMS:
   Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: cdf35b92b1824c4a0d3e31fd9dfdac50f44bc2a6
+PODFILE CHECKSUM: 55d055dc26197b05ef3fb3859cc4c5e3980767fc
 
 COCOAPODS: 1.8.4
