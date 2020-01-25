@@ -198,12 +198,7 @@
 		390BD68123B08A0100FF7E68 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EAA368EA23BA83AA00781C94 /* Purchase */,
-				EA204A1523BA4F1300369BC7 /* History */,
 				398522D223B0646D009C9AE3 /* Storyboards */,
-				3989B15C23B75085006ABB26 /* PopUp */,
-				EA79170123B542AC00DBC79B /* MyPage */,
-				EAC8C3E723B220400061AEEB /* Sign */,
 				390BD68223B08A0500FF7E68 /* Cell */,
 				398522D323B06482009C9AE3 /* ViewControllers */,
 			);
@@ -360,11 +355,16 @@
 			children = (
 				398522BB23B05F8D009C9AE3 /* ViewController.swift */,
 				395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */,
+				39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */,
+				EAA368EA23BA83AA00781C94 /* Purchase */,
+				EA204A1523BA4F1300369BC7 /* History */,
+				3989B15C23B75085006ABB26 /* PopUp */,
+				EA79170123B542AC00DBC79B /* MyPage */,
+				EAC8C3E723B220400061AEEB /* Sign */,
 				3962D19723B12935004B11AB /* ChattingView */,
 				391CEEBB23B0DD5000E4C71D /* FindFriend */,
 				39C84F5123B0C43F000130B4 /* MovieCollection */,
 				39C84F5023B0C422000130B4 /* MovieTimeTable */,
-				39B3BC7C23B4EC4C00A90FFF /* NavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

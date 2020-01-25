@@ -96,17 +96,7 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
         
         
     }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    
-        
-    }
-    
-    
-    
-    
+   
     @IBAction func camerabtn(_ sender: Any) {
         print(11111)
         
@@ -171,42 +161,12 @@ class MyPageViewController: UIViewController , UITextFieldDelegate  {
     
     
     func navigationSetup() {
-       
- 
             self.navigationController?.navigationBar.shadowImage = UIImage()
-            
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            
             self.navigationController?.navigationBar.isTranslucent = true
-            
             self.navigationController?.view.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-            
-            
-            
-            
-        
-    }//네비게이션 투명색만들기
-    
-    
+    }
 }
-
-//extension MyPageViewController : UIImagePickerControllerDelegate,
-//UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            selectedpic.image = image
-//        }
-//
-//        dismiss(animated: true)
-//    }
-//
-//
-//}
-
-
-//}
-
-
 
 extension MyPageViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {

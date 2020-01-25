@@ -196,18 +196,6 @@ class MovieTabTwoViewController: UIViewController {
         return date
     }
     
-    func getThumnailImage(withURL thumnailURL: String) -> UIImage? {
-        guard let imageURL = URL(string: thumnailURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        return UIImage(data: imageData)
-    }
-    
     func getGradeImage(grade: Int) -> UIImage? {
         switch grade {
         case 0:
@@ -222,17 +210,11 @@ class MovieTabTwoViewController: UIViewController {
             return nil
         }
     }
-    
-    //    func setDefaultMovieOrderType() {
-    //        let orderType: String = "0"
-    //        dataManager.setMovieOrderType(orderType: orderType)
-    //    }
+  
     
     func setMovieListCollectionView() {
         MovieCollectionView.delegate = self
         MovieCollectionView.dataSource = self
-        
-        
         MovieCollectionView.backgroundColor = .groundColor
     }
     
@@ -314,17 +296,8 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-            
-            //                     let gradeIamge = getGradeImage(grade: movie.grade)
-            //                     cell.gradeImage.image = gradeIamge
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
         }
@@ -348,19 +321,8 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
-            
-            
-            
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
-            //            cell.gradeImage.image = gradeIamge
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
             
@@ -384,19 +346,8 @@ extension MovieTabTwoViewController: UICollectionViewDataSource, UICollectionVie
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.delegate = self
             cell.currentIndex = indexPath
-            
-            
-            
-            //            let gradeIamge = getGradeImage(grade: movie.grade)
-            //            cell.gradeImage.image = gradeIamge
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
             
             return cell
         }

@@ -14,8 +14,6 @@ protocol PlayLinkActionDelegate {
     
 }
 
-
-
 class MainViewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageThumbnail: UIImageView!

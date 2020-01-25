@@ -60,7 +60,7 @@ class MainHomeViewController: UIViewController {
     let dataManager = DataManager.sharedManager
     let caLayer: CAGradientLayer = CAGradientLayer()
     
-
+    
     private var selectedIndex: Int = 0
     private let times: [Int] = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2]
     
@@ -87,7 +87,7 @@ class MainHomeViewController: UIViewController {
         bottomDay2.tintColor = .mainOrange
         
     }
-   
+    
     
     
     @IBAction func buyBtn(_ sender: Any) {
@@ -97,7 +97,7 @@ class MainHomeViewController: UIViewController {
         DataManager.sharedManager.setRevise(revise: false)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -124,7 +124,7 @@ class MainHomeViewController: UIViewController {
             //여기서 매칭 최종 선택 하는 팝업 띄우자!!!
             
             self.navigationController?.popViewController(animated: true)
-          
+            
         }
     }
     
@@ -190,18 +190,18 @@ class MainHomeViewController: UIViewController {
             
             bottomDay1.setTitle(reservationInfo[0].date, for: .normal)
             bottomDay2.setTitle(reservationInfo[1].date, for: .normal)
-
             
-
+            
+            
             bottomTime1.setTitle(String(describing: reservationInfo[0].times[0]) + ":00", for: .normal)
             bottomTime3.setTitle(String(describing: reservationInfo[0].times[1]) + ":00", for: .normal)
             bottomTime5.setTitle(String(describing: reservationInfo[0].times[2]) + ":00", for: .normal)
-
+            
             bottomTime2.setTitle(String(describing: reservationInfo[1].times[0]) + ":00", for: .normal)
             bottomTime4.setTitle(String(describing: reservationInfo[1].times[1]) + ":00", for: .normal)
             bottomTime6.setTitle(String(describing: reservationInfo[1].times[2]) + ":00", for: .normal)
             
-//            bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
+            //            bottomTime7.setTitle(String(describing: reservationInfo[1].times[3]) + ":00", for: .normal)
             
             
         }
@@ -209,24 +209,24 @@ class MainHomeViewController: UIViewController {
         deadlineTitle.textColor = .subOrange
         
         
-            
+        
         if DataManager.sharedManager.getMatching() {
             
             if !DataManager.sharedManager.getMatchingToggle() {
-            
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
-            let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
-            self.present(vc, animated: true, completion: nil)
-            
-            //            self.navigationController?.pushViewController(vc, animated: true)
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "PopUpScreen", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "MatchingCompleteViewController") as! MatchingCompleteViewController
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overCurrentContext
+                self.present(vc, animated: true, completion: nil)
+                
+                //            self.navigationController?.pushViewController(vc, animated: true)
             }
             else {
                 
             }
         }
-            
+        
         
         
     }
@@ -256,7 +256,7 @@ class MainHomeViewController: UIViewController {
         }
     }
     
-  
+    
     
     
     @IBAction func myPageBtn(_ sender: Any) {
@@ -281,7 +281,7 @@ class MainHomeViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "선택한 날짜", style: .done, target: nil, action: nil)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "MovieTabScreen", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MovieSelectionViewController") as! MovieSelectionViewController
-                
+        
         DataManager.sharedManager.setRevise(revise: true)
         
         self.navigationController?.pushViewController(vc, animated: true)
@@ -313,7 +313,7 @@ class MainHomeViewController: UIViewController {
         //shadowImage는 UIImage와 동일. 구분선 없애줌.
         self.navigationController?.navigationBar.isTranslucent = true
         
-      //  self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
+        //  self.navigationController?.navigationBar.topItem?.title = "매칭 이력"
         let storyboard = UIStoryboard(name: "ChatWaiting", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
@@ -413,7 +413,7 @@ class MainHomeViewController: UIViewController {
         
     }
     
-   
+    
     
     
     func reloadMovieLists() {
@@ -442,18 +442,6 @@ class MainHomeViewController: UIViewController {
         return date
     }
     
-    func getThumnailImage(withURL thumnailURL: String) -> UIImage? {
-        guard let imageURL = URL(string: thumnailURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-            return UIImage(named: "img_placeholder")
-        }
-        
-        return UIImage(data: imageData)
-        
-    }
     
     func getGradeImage(grade: Int) -> UIImage? {
         switch grade {
@@ -470,21 +458,12 @@ class MainHomeViewController: UIViewController {
         }
     }
     
-    //    func setDefaultMovieOrderType() {
-    //        let orderType: String = "0"
-    //        dataManager.setMovieOrderType(orderType: orderType)
-    //    }
-    
     func setMovieListCollectionView() {
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView?.isPagingEnabled = true
-        
-        //        if let layout = mainCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-        //            layout.animator = animator?.0
-        //        }
         
     }
     
@@ -573,7 +552,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             
             let movie = movieInfo[indexPath.row]
             
-             //print(movie)
+            //print(movie)
             
             cell.delegate = self
             
@@ -586,16 +565,11 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.rating.rating = Double((movie.userRating) / 2)
             cell.ratingLabel.text = String(describing: (movie.userRating) / 2)
             cell.currentIndex = indexPath.item
+            cell.imageThumbnail.contentMode = .scaleAspectFill
+            cell.imageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
+
+           
             
-            
-            OperationQueue().addOperation {
-                let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                DispatchQueue.main.async {
-                    cell.imageThumbnail.contentMode = .scaleAspectFill
-                    cell.imageThumbnail.image = thumnailImage
-                    
-                }
-            }
             return cell
             
         }
@@ -616,15 +590,9 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
                 cell.backgroundColor = .groundColor
                 cell.makeRounded(cornerRadius: 10)
                 
-                OperationQueue().addOperation {
-                    let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                    DispatchQueue.main.async {
-                        cell.ImageThumbnail.contentMode = .scaleAspectFill
-                        cell.ImageThumbnail.image = thumnailImage
-                        //                        cell.imageThumbnail.image = thumnailImage
-                        
-                    }
-                }
+                cell.ImageThumbnail.contentMode = .scaleAspectFill
+                cell.ImageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
+
                 return cell
             }
                 
@@ -635,19 +603,8 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
                 
                 cell.backgroundColor = .groundColor
                 cell.makeRounded(cornerRadius: 10)
-                
-                
-                
-                
-                OperationQueue().addOperation {
-                    let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-                    DispatchQueue.main.async {
-                        cell.ImageThumbnail.contentMode = .scaleAspectFill
-                        cell.ImageThumbnail.image = thumnailImage
-                        //                        cell.imageThumbnail.image = thumnailImage
-                        
-                    }
-                }
+                cell.ImageThumbnail.contentMode = .scaleAspectFill
+                cell.ImageThumbnail.imageFromUrl(movie.thumnailImageURL, defaultImgPath: "img1-1")
                 return cell
             }
             
@@ -656,33 +613,7 @@ extension MainHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         return UICollectionViewCell()
         
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        //            let movie = movies[indexPath.row]
-        //            let thumnailImage = self.getThumnailImage(withURL: movie.thumnailImageURL)
-        //            self.selectedImage = thumnailImage
-        //            dataManager.setImage(haveImage: self.selectedImage)
-        //
-        //            let movietitle = self.getTitle(title: movie.title)
-        //            self.selectedTitle = movietitle
-        //            dataManager.setTitle(haveTitle: self.selectedTitle)
-        //
-        //            let movieRating = self.getRating(rating: movie.userRating)
-        //            self.selectedRating = movieRating
-        //            dataManager.setRating(haveRating: self.selectedRating)
-        //
-        //            let movieDate = self.getDate(date: movie.date)
-        //            self.selectedDate = movieDate
-        //            dataManager.setDate(haveDate: self.selectedDate)
-        
-        
-        //ImageManager.imageManager.setTitle(haveTitle: self.)
-        // performSegue(withIdentifier: Storyboard.showDetailVC , sender: nil)
-        
-        
-        
-    }
-    
+  
 }
 
 
