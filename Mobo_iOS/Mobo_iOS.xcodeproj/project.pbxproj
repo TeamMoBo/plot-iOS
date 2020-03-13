@@ -22,6 +22,7 @@
 		393D160B23B527CA00E556C4 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */; };
 		393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */; };
 		39463CD523BD3F280042D2D0 /* TicketMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39463CD423BD3F280042D2D0 /* TicketMovie.swift */; };
+		394F55E7240A7C5E00CCAA74 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F55E6240A7C5E00CCAA74 /* APIConstants.swift */; };
 		395D8C3823B4919A0060D1AF /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */; };
 		3962D19623B1254D004B11AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3962D19523B1254D004B11AB /* GoogleService-Info.plist */; };
 		3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3962D19823B12947004B11AB /* ChattingViewController.swift */; };
@@ -83,7 +84,6 @@
 		EAC724D523BA5AA3005957DE /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC724D423BA5AA3005957DE /* Purchase.storyboard */; };
 		EAC8C3E623B20F3E0061AEEB /* SignInScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */; };
 		EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */; };
-		EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3EF23B222340061AEEB /* APIConstants.swift */; };
 		EAC8C3F623B228BE0061AEEB /* SignUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */; };
 		EAC8C3FA23B323AD0061AEEB /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */; };
 		EAC8C3FC23B324FE0061AEEB /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */; };
@@ -108,6 +108,7 @@
 		393D160A23B527CA00E556C4 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		393D160C23B5367700E556C4 /* MovieCollectionTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionTabViewCell.swift; sourceTree = "<group>"; };
 		39463CD423BD3F280042D2D0 /* TicketMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMovie.swift; sourceTree = "<group>"; };
+		394F55E6240A7C5E00CCAA74 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		395D8C3723B4919A0060D1AF /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		3962D19523B1254D004B11AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3962D19823B12947004B11AB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +177,6 @@
 		EAC8C3E523B20F3E0061AEEB /* SignInScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3E823B2205A0061AEEB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
-		EAC8C3EF23B222340061AEEB /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		EAC8C3F523B228BE0061AEEB /* SignUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpScreen.storyboard; sourceTree = "<group>"; };
 		EAC8C3F923B323AD0061AEEB /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		EAC8C3FB23B324FD0061AEEB /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +278,7 @@
 				398522CF23B06459009C9AE3 /* Extensions */,
 				398522CE23B0644A009C9AE3 /* Sources */,
 				398522B723B05F8D009C9AE3 /* AppDelegate.swift */,
+				394F55E6240A7C5E00CCAA74 /* APIConstants.swift */,
 				398522B923B05F8D009C9AE3 /* SceneDelegate.swift */,
 				398522C823B05F8F009C9AE3 /* Info.plist */,
 				39CC509823B12B6400E24F95 /* RemoteConfigDefaults.plist */,
@@ -459,7 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				EAC8C3ED23B2221A0061AEEB /* ResponseString.swift */,
-				EAC8C3EF23B222340061AEEB /* APIConstants.swift */,
 				390BD68A23B08B9300FF7E68 /* DataManager.swift */,
 				EAA2A95023BC8C96000C4354 /* NetworkResult.swift */,
 			);
@@ -621,7 +621,6 @@
 				39B67B8C23B4947000B745B6 /* MovieSelectionViewController.swift in Sources */,
 				390BD68423B08A4700FF7E68 /* MovieCollectionViewCell.swift in Sources */,
 				391E7ABD23B880F400F7D33D /* ChatModel.swift in Sources */,
-				EAC8C3F023B222340061AEEB /* APIConstants.swift in Sources */,
 				3989B16623B77002006ABB26 /* MatchingFailPopUpViewController.swift in Sources */,
 				393D160D23B5367700E556C4 /* MovieCollectionTabViewCell.swift in Sources */,
 				3989B16A23B77A27006ABB26 /* MovieMoreTableViewController.swift in Sources */,
@@ -659,6 +658,7 @@
 				398522DA23B064DD009C9AE3 /* Extension+GIF.swift in Sources */,
 				EAC8C3E923B2205A0061AEEB /* SignInViewController.swift in Sources */,
 				EAA368EC23BA83C100781C94 /* PurchaseVC.swift in Sources */,
+				394F55E7240A7C5E00CCAA74 /* APIConstants.swift in Sources */,
 				398522BC23B05F8D009C9AE3 /* ViewController.swift in Sources */,
 				3962D19923B12947004B11AB /* ChattingViewController.swift in Sources */,
 				390F100923B7816600E81BA2 /* TimeTableViewCell.swift in Sources */,
@@ -813,8 +813,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5D24S78QBG;
+				DEVELOPMENT_TEAM = C7X33ZVY6P;
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -823,6 +824,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cho.Mobo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobo_iOS/Mobo_iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -837,7 +839,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C7X33ZVY6P;
 				INFOPLIST_FILE = Mobo_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

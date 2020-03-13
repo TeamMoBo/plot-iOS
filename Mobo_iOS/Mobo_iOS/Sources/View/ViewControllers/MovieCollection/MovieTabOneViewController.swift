@@ -141,7 +141,7 @@ class MovieTabOneViewController: UIViewController {
     
     func getTicketingMoiveList(completion: @escaping (TicketResponseString?) -> Void) {
         
-        let appUrl: String = APIConstants.movieSelectionURL + "0"
+        let appUrl: String = "http://13.125.48.35:7935/movie/0"
         
         guard let finalURL = URL(string: appUrl) else {
             return
